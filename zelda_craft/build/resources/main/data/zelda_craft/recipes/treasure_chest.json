@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "minecraft:oak_planks"
+    },
+    "c": {
+      "item": "minecraft:oak_log"
+    },
+    "d": {
+      "item": "minecraft:chest"
+    },
+    "e": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:treasure_chest",
+    "count": 1
+  }
+}

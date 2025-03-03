@@ -1,0 +1,38 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "razorsword",
+    "customModelName": "razor_sword:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Razor Sword",
+    "specialInformation": {
+      "fixedValue": [
+        "Your Kokiri Sword has been strengthened and forged into a Razor Sword! This new",
+        "sharper blade is a cut above the rest. Use it up to 100 times without dulling its superior edge!"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.75,
+    "enchantability": 2,
+    "damageVsEntity": 8.0,
+    "usageCount": 100,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

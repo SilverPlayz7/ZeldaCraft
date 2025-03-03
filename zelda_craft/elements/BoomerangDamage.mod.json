@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "when_caused_by_living_non_player",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s couldn't handle the epicness of %2$s's boomerang",
+    "itemDeathMessage": "%1$s got boomeranged by %2$s while holding %3$s",
+    "playerDeathMessage": "%1$s tried to flee from %2$s's boomerang of epicness"
+  }
+}

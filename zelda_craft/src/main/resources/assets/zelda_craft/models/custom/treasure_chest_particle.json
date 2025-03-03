@@ -1,0 +1,6 @@
+{
+  "parent": "zelda_craft:displaysettings/dungeonchest.item",
+  "textures": {
+    "particle": "zelda_craft:block/treasurechest"
+  }
+}

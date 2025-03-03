@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "c c",
+    "d d"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "zelda_craft:red_rupee"
+    },
+    "c": {
+      "tag": "minecraft:planks"
+    },
+    "d": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:boomerang",
+    "count": 1
+  }
+}

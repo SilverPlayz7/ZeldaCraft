@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "minecraft:golden_chestplate"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:costume_coin",
+    "count": 1
+  }
+}

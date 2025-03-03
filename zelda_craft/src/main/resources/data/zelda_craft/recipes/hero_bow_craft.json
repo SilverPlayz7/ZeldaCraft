@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "bd ",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bow"
+    },
+    "b": {
+      "item": "zelda_craft:goron_steel"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    },
+    "d": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:hero_bow",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:hover_boots_boots"
+    },
+    "title": {
+      "translate": "advancements.cartoon_gravity_joke.title"
+    },
+    "description": {
+      "translate": "advancements.cartoon_gravity_joke.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cartoon_gravity_joke_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:shouldnt_have_skipped_leg_day"
+}

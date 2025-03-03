@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bab",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gunpowder"
+    },
+    "b": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:bomb",
+    "count": 1
+  }
+}

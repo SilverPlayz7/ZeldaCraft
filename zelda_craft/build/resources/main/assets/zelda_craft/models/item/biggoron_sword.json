@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/biggoron_sword",
+  "textures": {
+    "0": "zelda_craft:block/biggoronsword",
+    "particle": "zelda_craft:item/biggoron_sword"
+  }
+}

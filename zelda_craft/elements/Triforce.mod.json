@@ -1,0 +1,64 @@
+{
+  "_fv": 66,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "triforce",
+    "customModelName": "triforce:default",
+    "customProperties": {},
+    "states": [],
+    "name": "Triforce",
+    "rarity": "EPIC",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 0.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "This relic was created by the devine powers of the three goddesses after they created the world."
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onItemInInventoryTick": {
+      "name": "TriforceItemInHandTick"
+    },
+    "onDroppedByPlayer": {
+      "name": "TriforceItemIsDroppedByPlayer"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:BoomerangProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "eat"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "abb",
+    "bb "
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:molten_scrap"
+    },
+    "b": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:goron_steel",
+    "count": 1
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": "Items.DYE#1"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GaroMask"
+    },
+    "name": "garo_mask",
+    "namespace": "mod"
+  }
+}

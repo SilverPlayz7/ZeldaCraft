@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zelda_craft:block/bombablewall",
+    "up": "zelda_craft:block/bombablewall",
+    "north": "zelda_craft:block/bombablewall",
+    "east": "zelda_craft:block/bombablewall",
+    "south": "zelda_craft:block/bombablewall",
+    "west": "zelda_craft:block/bombablewall",
+    "particle": "zelda_craft:block/bombablewall"
+  },
+  "render_type": "solid"
+}

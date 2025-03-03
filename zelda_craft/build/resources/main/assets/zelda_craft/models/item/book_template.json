@@ -1,0 +1,6 @@
+{
+  "parent": "zelda_craft:custom/book_template",
+  "textures": {
+    "layer0": "zelda_craft:items/texture"
+  }
+}

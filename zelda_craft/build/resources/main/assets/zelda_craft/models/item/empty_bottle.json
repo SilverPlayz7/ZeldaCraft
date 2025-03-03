@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/emptybottle",
+  "textures": {
+    "4": "zelda_craft:block/emptybottle",
+    "particle": "zelda_craft:item/emptybottle"
+  }
+}

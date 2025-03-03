@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/demontribeswordstand",
+  "textures": {
+    "all": "zelda_craft:block/demonswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "2": "zelda_craft:block/demonswordstand"
+  },
+  "render_type": "solid"
+}

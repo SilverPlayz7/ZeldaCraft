@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": ""
+      },
+      "name": "default"
+    },
+    "unblocked": {
+      "map": {
+        "0": "texture",
+        "1": "texture1",
+        "2": "texture2",
+        "3": "texture3",
+        "4": "texture4",
+        "5": "texture7"
+      },
+      "name": "unblocked"
+    }
+  }
+}

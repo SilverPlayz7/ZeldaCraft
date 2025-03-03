@@ -1,0 +1,78 @@
+{
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
+    "criteria": {
+      "has_porkchop": "2022-02-17 21:35:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_smoking": {
+    "criteria": {
+      "has_porkchop": "2022-02-17 21:35:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2022-02-17 21:35:38 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop": {
+    "criteria": {
+      "has_porkchop": "2022-02-17 21:35:39 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2022-04-16 15:41:36 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2022-02-17 21:36:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-02-17 21:34:56 -0500",
+      "minecraft:beach": "2022-02-17 21:37:23 -0500",
+      "minecraft:river": "2022-02-17 21:36:16 -0500",
+      "minecraft:wooded_hills": "2022-02-17 21:36:21 -0500"
+    },
+    "done": false
+  },
+  "DataVersion": 2586
+}

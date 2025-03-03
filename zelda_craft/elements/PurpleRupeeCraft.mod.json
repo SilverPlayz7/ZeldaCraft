@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BlueRupee"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RedRupee"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RedRupee"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BlueRupee"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PurpleRupee"
+    },
+    "name": "purple_rupee_craft",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "zelda_craft:giant_knife"
+  },
+  "addition": {
+    "item": "zelda_craft:purified_goron_steel"
+  },
+  "result": {
+    "item": "zelda_craft:biggoron_sword"
+  }
+}

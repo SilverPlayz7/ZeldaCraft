@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    "cdc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:leather"
+    },
+    "b": {
+      "item": "minecraft:ender_eye"
+    },
+    "c": {
+      "item": "minecraft:gold_nugget"
+    },
+    "d": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:garo_mask",
+    "count": 1
+  }
+}

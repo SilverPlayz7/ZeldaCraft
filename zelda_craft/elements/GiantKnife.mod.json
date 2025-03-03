@@ -1,0 +1,35 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "giantknife",
+    "customModelName": "giantknife:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Giant's Knife",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 0.8,
+    "enchantability": 2,
+    "damageVsEntity": 26.0,
+    "usageCount": 8,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

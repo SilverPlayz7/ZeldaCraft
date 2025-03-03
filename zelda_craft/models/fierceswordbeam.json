@@ -1,0 +1,33 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [60, 21],
+	"textures": {
+		"0": "FierceDeitySwordBeam",
+		"particle": "FierceDeitySwordBeam"
+	},
+	"elements": [
+		{
+			"from": [-12, 8, -4],
+			"to": [28, 8, 20],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.84856, 12.42563, 1.44856, 0], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [7.84856, 12.42563, 1.44856, 0], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [7.84856, 12.42563, 1.44856, 0], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [7.84856, 12.42563, 1.44856, 0], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [7.84856, 12.42563, 1.44856, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [7.84856, 0, 1.44856, 12.42563], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"ground": {
+			"scale": [1.33, 1, 1.13]
+		},
+		"head": {
+			"rotation": [-13, 0, 0],
+			"translation": [0, 3.75, 1.5],
+			"scale": [0.71, 1, 1.16]
+		}
+	}
+}

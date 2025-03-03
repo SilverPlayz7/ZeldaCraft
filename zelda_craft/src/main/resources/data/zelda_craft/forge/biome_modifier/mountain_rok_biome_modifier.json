@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_nether",
+  "features": "zelda_craft:mountain_rok",
+  "step": "underground_ores"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/diamond_sword_stand",
+  "textures": {
+    "all": "zelda_craft:block/diamondswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "2": "zelda_craft:block/diamondswordstand"
+  },
+  "render_type": "solid"
+}

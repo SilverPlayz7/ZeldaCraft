@@ -1,0 +1,40 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "oot3d_megaton_hammer_icon",
+    "customModelName": "megatonhammer:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Megaton Hammer",
+    "specialInformation": {
+      "fixedValue": [
+        "An extremely heavy hammer. Learning to use it effectively could take some time",
+        "as its reach is somewhat short for a weapon. Its power and toughness",
+        "however",
+        "far exceed that of any normal sword. It's guaranteed to inspire awe."
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 0.5,
+    "enchantability": 2,
+    "damageVsEntity": 35.0,
+    "usageCount": 0,
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "MegatonHammerToolInHandTick"
+    }
+  }
+}

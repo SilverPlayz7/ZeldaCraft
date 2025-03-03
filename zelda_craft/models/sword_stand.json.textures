@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "stand_base"
+      },
+      "name": "default"
+    }
+  }
+}

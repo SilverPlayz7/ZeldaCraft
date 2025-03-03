@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zelda_craft:hookshot_target",
+    "zelda_craft:timeshift_ore",
+    "zelda_craft:mountain_rok",
+    "zelda_craft:molten_ore"
+  ]
+}

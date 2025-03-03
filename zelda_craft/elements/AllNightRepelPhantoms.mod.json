@@ -1,0 +1,7 @@
+{
+  "_fv": 57,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">entity_joins_world</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_entity_compare\"><field name=\"entity\">EntityPhantom</field><value name=\"compareTo\"><block type=\"entity_from_deps\"></block></value></block></value><statement name=\"DO0\"><block type=\"java_code\"><field name=\"CODE\">((Phantom)entity).goalSelector.addGoal(1, new AvoidEntityGoal((Passive)entity, Player.class, 10f, 1, 1.2) {@Override public boolean shouldExecute() {return super.shouldExecute() &amp;&amp; BbbProcedure.executeProcedure(ImmutableMap.of(\"entity\", this.avoidTarget, \"world\", this.avoidTarget.world));}});</field></block></statement></block></next></block></xml>"
+  }
+}

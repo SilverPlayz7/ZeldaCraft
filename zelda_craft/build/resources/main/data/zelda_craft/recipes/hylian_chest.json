@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:oak_planks"
+    },
+    "b": {
+      "item": "minecraft:gold_ingot"
+    },
+    "c": {
+      "item": "minecraft:spruce_log"
+    },
+    "d": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:hylian_chest",
+    "count": 1
+  }
+}

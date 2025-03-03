@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/chest_oak2",
+  "textures": {
+    "all": "zelda_craft:block/chest",
+    "particle": "zelda_craft:block/chest",
+    "3": "zelda_craft:block/chest"
+  },
+  "render_type": "solid"
+}

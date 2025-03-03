@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/unmastersword_stand",
+  "textures": {
+    "all": "zelda_craft:block/unswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "0": "zelda_craft:block/unswordstand"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:lens_of_truth"
+    },
+    "title": {
+      "translate": "advancements.eye_see_you.title"
+    },
+    "description": {
+      "translate": "advancements.eye_see_you.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "eye_see_you_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zelda_craft:lens_of_truth"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zelda_craft:zelda_craft_advancement_page"
+}

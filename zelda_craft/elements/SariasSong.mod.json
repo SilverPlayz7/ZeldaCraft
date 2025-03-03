@@ -1,0 +1,26 @@
+{
+  "_fv": 66,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "lostwoods",
+    "description": "Saria's Song",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:sarias_song"
+    },
+    "lengthInTicks": 1400,
+    "analogOutput": 15
+  }
+}

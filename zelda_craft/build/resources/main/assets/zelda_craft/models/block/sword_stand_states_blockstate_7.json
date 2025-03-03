@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/razor_sword_stand",
+  "textures": {
+    "all": "zelda_craft:block/razorswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "3": "zelda_craft:block/kokiriswordstand"
+  },
+  "render_type": "solid"
+}

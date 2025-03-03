@@ -1,0 +1,64 @@
+{
+  "_fv": 66,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "bomb",
+    "customModelName": "bomb:default",
+    "customProperties": {},
+    "states": [],
+    "name": "Bomb",
+    "rarity": "COMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "stackSize": 10,
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 0.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "Damage enemies or blow up walls with the Bomb. Be careful not to get too close to the blast or you may get hurt."
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onStoppedUsing": {
+      "name": "BombRangedItemUsed"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:BoomerangProjectile"
+    },
+    "onRangedItemUsed": {
+      "name": "BombRangedItemUsed"
+    },
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "spear"
+  }
+}

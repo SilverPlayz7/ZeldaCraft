@@ -1,0 +1,26 @@
+{
+  "_fv": 66,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "stormdisc",
+    "description": "Song of Storms",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:song_of_storms"
+    },
+    "lengthInTicks": 1740,
+    "analogOutput": 15
+  }
+}

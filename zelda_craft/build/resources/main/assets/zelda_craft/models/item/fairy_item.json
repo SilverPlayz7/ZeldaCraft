@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/fairy_item",
+  "textures": {
+    "1": "zelda_craft:block/fairy",
+    "particle": "zelda_craft:item/fairy_item"
+  }
+}

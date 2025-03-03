@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/sword_stand",
+  "textures": {
+    "all": "zelda_craft:block/stand_base",
+    "particle": "zelda_craft:block/stand_base",
+    "0": "zelda_craft:block/stand_base"
+  },
+  "render_type": "solid"
+}

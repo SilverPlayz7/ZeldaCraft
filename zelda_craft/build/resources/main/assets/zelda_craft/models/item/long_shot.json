@@ -1,0 +1,15 @@
+{
+  "parent": "zelda_craft:custom/long_shot",
+  "textures": {
+    "1": "zelda_craft:block/longshot",
+    "particle": "zelda_craft:item/longshot"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cooldown": 0.000000001
+      },
+      "model": "zelda_craft:item/long_shot_0"
+    }
+  ]
+}

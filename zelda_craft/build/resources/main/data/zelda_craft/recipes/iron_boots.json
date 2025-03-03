@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:leather"
+    },
+    "b": {
+      "item": "zelda_craft:molten_scrap"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:iron_boots_boots",
+    "count": 1
+  }
+}

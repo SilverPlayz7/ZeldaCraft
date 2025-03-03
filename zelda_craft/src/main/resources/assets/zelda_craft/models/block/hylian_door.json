@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/model",
+  "textures": {
+    "all": "zelda_craft:blocks/door",
+    "particle": "zelda_craft:blocks/door",
+    "0": "zelda_craft:blocks/door",
+    "1": "zelda_craft:blocks/knob"
+  }
+}

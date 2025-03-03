@@ -1,0 +1,27 @@
+{
+  "zelda_craft:zelda_craft_advancement_page": {
+    "criteria": {
+      "zelda_craft_advancement_page": "2024-02-28 14:28:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-02-28 14:28:20 -0500"
+    },
+    "done": true
+  },
+  "zelda_craft:eye_see_you": {
+    "criteria": {
+      "eye_see_you": "2024-02-28 14:29:14 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2024-02-28 14:28:21 -0500"
+    },
+    "done": false
+  },
+  "DataVersion": 3465
+}

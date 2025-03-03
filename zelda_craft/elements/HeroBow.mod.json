@@ -1,0 +1,115 @@
+{
+  "_fv": 66,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "herobowthing",
+    "customModelName": "herobow:default",
+    "customProperties": {
+      "pulling": {
+        "name": "HeroBowPropertyValueProvider"
+      }
+    },
+    "states": [
+      {
+        "renderType": 1,
+        "texture": "herobowthing",
+        "customModelName": "herobow_pulling_0:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "renderType": 1,
+        "texture": "herobowthing",
+        "customModelName": "herobow_pulling_1:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 0.75
+          }
+        ]
+      },
+      {
+        "renderType": 1,
+        "texture": "herobowthing",
+        "customModelName": "herobow_pulling_2:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      }
+    ],
+    "name": "Hero's Bow",
+    "rarity": "COMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "HeroBowRightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "HeroBowItemInInventoryTick"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:BoomerangProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "bow"
+  }
+}

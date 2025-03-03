@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:creeper_head"
+    },
+    "title": {
+      "translate": "advancements.blast_mask_2.title"
+    },
+    "description": {
+      "translate": "advancements.blast_mask_2.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "blast_mask_2_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:blast_mask_1"
+}

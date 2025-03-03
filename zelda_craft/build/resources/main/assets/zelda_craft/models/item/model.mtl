@@ -1,0 +1,7 @@
+newmtl material_000AFCEB
+Ka 0.2 0.2 0.2
+Kd 0.8 0.8 0.8
+Ks 0.2 0.2 0.2
+map_Kd zelda_craft:blocks/mask_demon_00_0_1
+Ns 43.2193
+d 1.0

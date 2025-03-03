@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/spiritflute",
+  "textures": {
+    "2": "zelda_craft:block/spiritflute",
+    "particle": "zelda_craft:item/spiritflute"
+  }
+}

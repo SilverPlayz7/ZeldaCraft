@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "zelda_craft:purple_rupee"
+    },
+    {
+      "item": "zelda_craft:purple_rupee"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:silver_rupee",
+    "count": 1
+  }
+}

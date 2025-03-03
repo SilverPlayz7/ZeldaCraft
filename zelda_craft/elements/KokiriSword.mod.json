@@ -1,0 +1,42 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "kokirisword",
+    "customModelName": "kokiri_sword:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Kokiri Sword",
+    "specialInformation": {
+      "fixedValue": [
+        "This is a hidden treasure of the Kokiri",
+        "but you can borrow it for a while. Be sure to practice with it before you really fight!"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.7,
+    "enchantability": 2,
+    "damageVsEntity": 5.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ],
+    "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:giant_knife"
+    },
+    "title": {
+      "translate": "advancements.the_biggoron_sword_at_home.title"
+    },
+    "description": {
+      "translate": "advancements.the_biggoron_sword_at_home.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_biggoron_sword_at_home_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zelda_craft:giant_knife"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zelda_craft:zelda_craft_advancement_page"
+}

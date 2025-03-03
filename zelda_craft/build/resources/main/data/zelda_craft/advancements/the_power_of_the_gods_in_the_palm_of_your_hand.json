@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:triforce"
+    },
+    "title": {
+      "translate": "advancements.the_power_of_the_gods_in_the_palm_of_your_hand.title"
+    },
+    "description": {
+      "translate": "advancements.the_power_of_the_gods_in_the_palm_of_your_hand.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_power_of_the_gods_in_the_palm_of_your_hand_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zelda_craft:triforce"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2000
+  },
+  "parent": "zelda_craft:the_blade_of_evils_bane"
+}

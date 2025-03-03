@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "block.chain.step"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "HookShotProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "HookShotWhileProjectileFlyingTick"
+    }
+  }
+}

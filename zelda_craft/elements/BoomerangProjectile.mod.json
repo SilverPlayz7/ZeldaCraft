@@ -1,0 +1,28 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:FlyingBoomerang"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.trident.riptide_1"
+    },
+    "igniteFire": false,
+    "power": 0.5,
+    "damage": 5.0,
+    "knockback": 2,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "BoomerangBulletHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "BoomerangProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "BoomerangProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

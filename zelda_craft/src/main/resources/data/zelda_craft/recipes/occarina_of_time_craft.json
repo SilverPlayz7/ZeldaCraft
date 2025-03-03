@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "a  ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:timeshift_shard"
+    },
+    "b": {
+      "item": "zelda_craft:fairy_ocarina"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:occarina_of_time",
+    "count": 1
+  }
+}

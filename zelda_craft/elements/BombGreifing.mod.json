@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Bomb Greifing",
+    "description": "Whether ZeldaCraft bombs can destroy blocks (Crumblestone will always be blown up)",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

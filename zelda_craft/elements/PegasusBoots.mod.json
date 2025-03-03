@@ -1,0 +1,109 @@
+{
+  "_fv": 66,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": false,
+    "textureHelmet": "",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": true,
+    "textureBoots": "lans_pegasus_boots_icon",
+    "onBootsTick": {
+      "name": "PegasusBootsBootsTickEvent"
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "armorTextureFile": "link_",
+    "helmetName": "Pegasus Boots Helmet",
+    "bodyName": "Pegasus Boots Body",
+    "leggingsName": "Pegasus Boots Leggings",
+    "bootsName": "Pegasus Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Dash with the speed of the legendary steed"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "boots2.png",
+    "bootsModelName": "ModelPegasusBoots",
+    "bootsModelPartL": "Left",
+    "bootsModelPartR": "Right",
+    "bootsModelTexture": "boots2.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 15,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 3,
+    "enchantability": 10,
+    "toughness": 2.5,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": [
+      {
+        "value": "Items.LEATHER"
+      }
+    ]
+  }
+}

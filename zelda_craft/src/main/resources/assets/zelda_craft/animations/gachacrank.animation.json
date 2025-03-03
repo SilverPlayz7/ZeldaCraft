@@ -1,0 +1,454 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"0": {
+			"loop": true
+		},
+		"1": {
+			"animation_length": 4.5833,
+			"bones": {
+				"crank": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"Ball": {
+					"rotation": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [67.5, 0, 0],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -12.5, 0],
+							"easing": "linear"
+						}
+					},
+					"position": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [0, -5.25, -4.75],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -6.25, -6],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.0": {
+					"effect": "crankaudio"
+				},
+				"2.0": {
+					"effect": "crankaudio"
+				},
+				"3.0": {
+					"effect": "crankaudio"
+				},
+				"4.0": {
+					"effect": "balldrop"
+				}
+			}
+		},
+		"2": {
+			"animation_length": 4.5833,
+			"bones": {
+				"crank": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"Ball2": {
+					"rotation": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [67.5, 0, 0],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -12.5, 0],
+							"easing": "linear"
+						}
+					},
+					"position": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [0, -5.25, -4.75],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -6.25, -6],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.0": {
+					"effect": "crankaudio"
+				},
+				"2.0": {
+					"effect": "crankaudio"
+				},
+				"3.0": {
+					"effect": "crankaudio"
+				},
+				"4.0": {
+					"effect": "balldrop"
+				}
+			}
+		},
+		"3": {
+			"animation_length": 4.5833,
+			"bones": {
+				"crank": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"Ball3": {
+					"rotation": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [67.5, 0, 0],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -12.5, 0],
+							"easing": "linear"
+						}
+					},
+					"position": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [0, -5.25, -4.75],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -6.25, -6],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.0": {
+					"effect": "crankaudio"
+				},
+				"2.0": {
+					"effect": "crankaudio"
+				},
+				"3.0": {
+					"effect": "crankaudio"
+				},
+				"4.0": {
+					"effect": "balldrop"
+				}
+			}
+		},
+		"4": {
+			"animation_length": 4.5833,
+			"bones": {
+				"crank": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"Ball4": {
+					"rotation": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [67.5, 0, 0],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -12.5, 0],
+							"easing": "linear"
+						}
+					},
+					"position": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [0, -5.25, -4.75],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -6.25, -6],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.0": {
+					"effect": "crankaudio"
+				},
+				"2.0": {
+					"effect": "crankaudio"
+				},
+				"3.0": {
+					"effect": "crankaudio"
+				},
+				"4.0": {
+					"effect": "balldrop"
+				}
+			}
+		},
+		"5": {
+			"animation_length": 4.5833,
+			"bones": {
+				"crank": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"hexadecagon": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 125],
+							"easing": "easeInCirc"
+						},
+						"2.0": {
+							"vector": [0, 0, 235],
+							"easing": "easeInCirc"
+						},
+						"3.0": {
+							"vector": [0, 0, 360],
+							"easing": "easeInCirc"
+						}
+					}
+				},
+				"Ball5": {
+					"rotation": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [67.5, 0, 0],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -12.5, 0],
+							"easing": "linear"
+						}
+					},
+					"position": {
+						"3.9": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.95": {
+							"vector": [0, -5.25, -4.75],
+							"easing": "linear"
+						},
+						"4.0": {
+							"vector": [0, -6.25, -6],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.0": {
+					"effect": "crankaudio"
+				},
+				"2.0": {
+					"effect": "crankaudio"
+				},
+				"3.0": {
+					"effect": "crankaudio"
+				},
+				"4.0": {
+					"effect": "balldrop"
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

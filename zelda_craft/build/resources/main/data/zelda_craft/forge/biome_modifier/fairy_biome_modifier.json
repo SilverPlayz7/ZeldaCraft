@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "cherry_grove",
+    "dark_forest",
+    "old_growth_spruce_taiga",
+    "old_growth_pine_taiga"
+  ],
+  "spawners": {
+    "type": "zelda_craft:fairy",
+    "weight": 2,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

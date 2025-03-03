@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:warp_flute",
+    "count": 1
+  }
+}

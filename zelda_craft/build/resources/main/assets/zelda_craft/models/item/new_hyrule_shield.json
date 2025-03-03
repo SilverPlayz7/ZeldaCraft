@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/newhryuleshield",
+  "textures": {
+    "0": "zelda_craft:block/newhyruleshield",
+    "particle": "zelda_craft:item/wip"
+  }
+}

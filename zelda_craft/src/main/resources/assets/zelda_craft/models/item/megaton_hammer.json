@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/megatonhammer",
+  "textures": {
+    "0": "zelda_craft:block/megatonhammer",
+    "particle": "zelda_craft:item/oot3d_megaton_hammer_icon"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "zelda_craft:giant_knife",
+    "zelda_craft:demon_tribe_sword",
+    "zelda_craft:razor_sword",
+    "zelda_craft:lokomo_sword",
+    "zelda_craft:goddess_sword",
+    "zelda_craft:kokiri_sword",
+    "zelda_craft:un_powered_master_sword",
+    "zelda_craft:biggoron_sword",
+    "zelda_craft:master_sword"
+  ]
+}

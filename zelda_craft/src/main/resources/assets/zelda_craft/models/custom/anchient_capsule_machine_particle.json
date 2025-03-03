@@ -1,0 +1,6 @@
+{
+  "parent": "zelda_craft:displaysettings/gachacrank.item",
+  "textures": {
+    "particle": "zelda_craft:block/gachamachine"
+  }
+}

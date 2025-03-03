@@ -1,0 +1,50 @@
+
+package zeldacraft.item;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+
+import java.util.List;
+
+public class RazorSwordItem extends SwordItem {
+	public RazorSwordItem() {
+		super(new Tier() {
+			public int getUses() {
+				return 100;
+			}
+
+			public float getSpeed() {
+				return 4f;
+			}
+
+			public float getAttackDamageBonus() {
+				return 4f;
+			}
+
+			public int getLevel() {
+				return 1;
+			}
+
+			public int getEnchantmentValue() {
+				return 2;
+			}
+
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of();
+			}
+		}, 3, -2.25f, new Item.Properties());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		list.add(Component.literal("Your Kokiri Sword has been strengthened and forged into a Razor Sword! This new"));
+		list.add(Component.literal("sharper blade is a cut above the rest. Use it up to 100 times without dulling its superior edge!"));
+	}
+}

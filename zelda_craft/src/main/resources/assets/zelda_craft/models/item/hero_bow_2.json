@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/herobow_pulling_2",
+  "textures": {
+    "1": "zelda_craft:block/herobow",
+    "particle": "zelda_craft:item/herobowthing"
+  }
+}

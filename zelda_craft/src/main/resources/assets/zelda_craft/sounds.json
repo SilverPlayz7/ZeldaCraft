@@ -1,0 +1,238 @@
+{
+  "fairy_death": {
+    "subtitle": "subtitles.fairy_death",
+    "sounds": [
+      {
+        "name": "zelda_craft:fairydeath",
+        "stream": false
+      }
+    ]
+  },
+  "fairy_hurt": {
+    "subtitle": "subtitles.fairy_hurt",
+    "sounds": [
+      {
+        "name": "zelda_craft:fairhurt",
+        "stream": false
+      }
+    ]
+  },
+  "fairy_living": {
+    "subtitle": "subtitles.fairy_living",
+    "sounds": [
+      {
+        "name": "zelda_craft:fairyliving",
+        "stream": false
+      }
+    ]
+  },
+  "fairy_heal": {
+    "subtitle": "subtitles.fairy_heal",
+    "sounds": [
+      {
+        "name": "zelda_craft:fairyrez",
+        "stream": false
+      }
+    ]
+  },
+  "bomb_defuse": {
+    "subtitle": "subtitles.bomb_defuse",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_bomb_defuse",
+        "stream": false
+      }
+    ]
+  },
+  "bomb_fuse": {
+    "subtitle": "subtitles.bomb_fuse",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_bomb_fuse",
+        "stream": false
+      }
+    ]
+  },
+  "bomb_explode": {
+    "subtitle": "subtitles.bomb_explode",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_bomb_blow",
+        "stream": false
+      }
+    ]
+  },
+  "bomb_thrown": {
+    "subtitle": "subtitles.bomb_thrown",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_bomb_pull",
+        "stream": false
+      }
+    ]
+  },
+  "ocarina_song_error": {
+    "subtitle": "subtitles.ocarina_song_error",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_song_error",
+        "stream": true
+      }
+    ]
+  },
+  "ocarina_song_correct": {
+    "subtitle": "subtitles.ocarina_song_correct",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_song_correct",
+        "stream": true
+      }
+    ]
+  },
+  "ocarina_songofstorms": {
+    "subtitle": "subtitles.ocarina_songofstorms",
+    "sounds": [
+      {
+        "name": "zelda_craft:ocarina_of_time_song_of_storms",
+        "stream": true
+      }
+    ]
+  },
+  "zeldalullaby": {
+    "subtitle": "subtitles.zeldalullaby",
+    "sounds": [
+      {
+        "name": "zelda_craft:zeldalullaby",
+        "stream": true
+      }
+    ]
+  },
+  "lense_of_truth_on": {
+    "subtitle": "subtitles.lense_of_truth_on",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_lensoftruth_on",
+        "stream": false
+      }
+    ]
+  },
+  "lens_of_truth_off": {
+    "subtitle": "subtitles.lens_of_truth_off",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_lensoftruth_off",
+        "stream": false
+      }
+    ]
+  },
+  "zeldachestopeninganditemcatch": {
+    "subtitle": "subtitles.zeldachestopeninganditemcatch",
+    "sounds": [
+      {
+        "name": "zelda_craft:zelda-chest-opening-and-item-catch",
+        "stream": false
+      }
+    ]
+  },
+  "main_theme": {
+    "sounds": [
+      {
+        "name": "zelda_craft:yt5s.com-legend_of_zelda_nes_intro",
+        "stream": true
+      }
+    ]
+  },
+  "song_of_storms": {
+    "sounds": [
+      {
+        "name": "zelda_craft:windmill_hut_-_the_legend_of_zelda_ocarina_of_time",
+        "stream": true
+      }
+    ]
+  },
+  "sarias_song": {
+    "sounds": [
+      {
+        "name": "zelda_craft:lost_woods_-_the_legend_of_zelda_ocarina_of_time",
+        "stream": true
+      }
+    ]
+  },
+  "clocktown": {
+    "sounds": [
+      {
+        "name": "zelda_craft:clocktowntheme",
+        "stream": true
+      }
+    ]
+  },
+  "ballad_of_the_goddess": {
+    "sounds": [
+      {
+        "name": "zelda_craft:1-04_theme_of_skyward_sword_-_ballad_of_the_goddess",
+        "stream": true
+      }
+    ]
+  },
+  "midnas_lament": {
+    "sounds": [
+      {
+        "name": "zelda_craft:4-11_-_midna_in_distress",
+        "stream": true
+      }
+    ]
+  },
+  "gerudo_valley": {
+    "sounds": [
+      {
+        "name": "zelda_craft:zelda_-_ocarina_of_time_-_gerudo_valley",
+        "stream": true
+      }
+    ]
+  },
+  "masterswordbeam": {
+    "subtitle": "subtitles.masterswordbeam",
+    "sounds": [
+      {
+        "name": "zelda_craft:swordbeam",
+        "stream": false
+      }
+    ]
+  },
+  "secret_found": {
+    "subtitle": "subtitles.secret_found",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_secret",
+        "stream": false
+      }
+    ]
+  },
+  "boomerang_throw": {
+    "subtitle": "subtitles.boomerang_throw",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_boomerang_throw",
+        "stream": false
+      }
+    ]
+  },
+  "boomerang_flying_loop": {
+    "subtitle": "subtitles.boomerang_flying_loop",
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_boomerang_fly_loop",
+        "stream": false
+      }
+    ]
+  },
+  "fairy_idle": {
+    "subtitle": "subtitles.fairy_idle",
+    "sounds": [
+      {
+        "name": "zelda_craft:fairyidle",
+        "stream": false
+      }
+    ]
+  }
+}

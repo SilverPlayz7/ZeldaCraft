@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:mountain_rok"
+    },
+    "b": {
+      "item": "zelda_craft:deleted_mod_element"
+    },
+    "c": {
+      "item": "zelda_craft:mystic_steel"
+    },
+    "d": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:deleted_mod_element",
+    "count": 2
+  }
+}

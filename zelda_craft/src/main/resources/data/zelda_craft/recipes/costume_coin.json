@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "zelda_craft:costume_coin_piece"
+    },
+    {
+      "item": "zelda_craft:costume_coin_piece"
+    },
+    {
+      "item": "zelda_craft:costume_coin_piece"
+    },
+    {
+      "item": "zelda_craft:costume_coin_piece"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:costume_coin",
+    "count": 1
+  }
+}

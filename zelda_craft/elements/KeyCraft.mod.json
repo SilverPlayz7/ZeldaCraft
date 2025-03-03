@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GOLD_INGOT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": "Blocks.CARPET#14"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SmallKey"
+    },
+    "name": "small_key",
+    "namespace": "mod"
+  }
+}

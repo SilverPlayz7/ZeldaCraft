@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/giantknife",
+  "textures": {
+    "1": "zelda_craft:block/giantknife",
+    "particle": "zelda_craft:item/giantknife"
+  }
+}

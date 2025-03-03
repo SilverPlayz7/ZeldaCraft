@@ -1,0 +1,105 @@
+{
+  "_fv": 66,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": false,
+    "textureHelmet": "",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": true,
+    "textureBoots": "hover_boots",
+    "onBootsTick": {
+      "name": "HoverBootsBootsTickEvent"
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "armorTextureFile": "link_",
+    "helmetName": "Hover Boots Helmet",
+    "bodyName": "Hover Boots Chestplate",
+    "leggingsName": "Hover Boots Leggings",
+    "bootsName": "Hover Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "You got the Hover Boots! With these mysterious boots you can hover above the ground. You can even use these to walk for short periods where there is no solid ground. Be brave and trust in the boots!"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "ModelHoverBoots",
+    "bootsModelPartL": "Left",
+    "bootsModelPartR": "Right",
+    "bootsModelTexture": "hoverboots.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 0,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 3,
+    "enchantability": 9,
+    "toughness": 2.5,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_gold"
+    },
+    "repairItems": []
+  }
+}

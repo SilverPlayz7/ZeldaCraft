@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Gotta Go Fast!",
+    "achievementDescription": "Equip the Pegasus Boots",
+    "achievementIcon": {
+      "value": "CUSTOM:PegasusBoots.boots"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": false,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 0,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:ZeldaCraftAdvancementPage"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"46\" y=\"92\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

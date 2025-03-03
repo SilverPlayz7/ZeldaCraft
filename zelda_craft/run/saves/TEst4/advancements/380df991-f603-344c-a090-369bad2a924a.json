@@ -1,0 +1,165 @@
+{
+  "minecraft:recipes/building_blocks/chiseled_nether_bricks": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_brick_slab_from_nether_bricks_stonecutting": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_brick_stairs": {
+    "criteria": {
+      "has_nether_brick": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_nether_bricks_from_nether_bricks_stonecutting": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_brick_slab": {
+    "criteria": {
+      "has_nether_brick": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2021-07-14 09:19:01 -0400"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/cracked_nether_bricks": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2021-07-14 09:36:39 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_planks": {
+    "criteria": {
+      "has_logs": "2021-07-14 09:36:39 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2021-07-14 09:38:12 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/nether_brick_fence": {
+    "criteria": {
+      "has_nether_brick": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2021-07-14 09:19:44 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_brick_stairs_from_nether_bricks_stonecutting": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/nether_brick_wall": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/nether_brick_wall_from_nether_bricks_stonecutting": {
+    "criteria": {
+      "has_nether_bricks": "2021-07-14 09:36:30 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_sign": {
+    "criteria": {
+      "has_oak_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_trapdoor": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2021-07-14 09:36:42 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2586
+}

@@ -1,0 +1,70 @@
+{
+  "_fv": 66,
+  "_type": "animatedarmor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "hoodoftwilighticon",
+    "enableBody": true,
+    "textureBody": "tunicoftwilighticon",
+    "enableLeggings": true,
+    "textureLeggings": "greavesoftwilighticon",
+    "enableBoots": true,
+    "textureBoots": "bootsoftwilighticon",
+    "creativeTab": {
+      "value": "CUSTOM:ZeldaCraft"
+    },
+    "creativeTabs": [],
+    "armorTextureFile": "armoroftwilight.png",
+    "model": "twilightset.geo.json",
+    "idle": "animation.TPChest.new",
+    "head": "armorHead",
+    "chest": "armorBody",
+    "rightArm": "armorRightArm",
+    "leftArm": "armorLeftArm",
+    "rightLeg": "armorRightLeg",
+    "leftLeg": "armorLeftLeg",
+    "rightBoot": "armorRightBoot",
+    "leftBoot": "armorLeftBoot",
+    "helmetName": "Hood of Twilight",
+    "bodyName": "Tunic of Twilight",
+    "leggingsName": "Greaves of Twilight",
+    "bootsName": "Boots of Twilight",
+    "helmetSpecialInfo": [
+      "According to legend this cap was once worn by a hero who battled the monsters of twilight. For one reason or another it seems to smell of some beast..."
+    ],
+    "bodySpecialInfo": [
+      "Legend has it this armor was worn by a hero who battled the monsters of twilight. There still seems to be some hair clinging to it... Looks like it may be from a wolf?"
+    ],
+    "leggingsSpecialInfo": [
+      "Legends say these greaves were once worn by a hero who battled the beasts of twilight. There seem to be some unnatural knee bends in them."
+    ],
+    "bootsSpecialInfo": [
+      "Legends say these boots were once worn by a hero who battled the beasts of twilight. The insides are lined with cozy wolf fur."
+    ],
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": true,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "fullyEquipped": true,
+    "maxDamage": 0,
+    "damageValueHelmet": 2,
+    "damageValueBody": 8,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 3,
+    "enchantability": 9,
+    "toughness": 2.5,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": []
+  }
+}

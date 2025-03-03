@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:has_structure/ancient_city",
+  "features": "zelda_craft:ancient_capsule_station",
+  "step": "underground_structures"
+}

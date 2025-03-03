@@ -1,0 +1,26 @@
+{
+  "_fv": 66,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "maintheme",
+    "description": "Main Theme",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:main_theme"
+    },
+    "lengthInTicks": 1600,
+    "analogOutput": 15
+  }
+}

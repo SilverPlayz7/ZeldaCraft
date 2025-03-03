@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/usinglenseoftruth",
+  "textures": {
+    "2": "zelda_craft:block/lens_of_truth_using",
+    "particle": "zelda_craft:item/lenseoftruth"
+  }
+}

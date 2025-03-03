@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/warpflute",
+  "textures": {
+    "1": "zelda_craft:block/warpflute",
+    "particle": "zelda_craft:item/warpflute"
+  }
+}

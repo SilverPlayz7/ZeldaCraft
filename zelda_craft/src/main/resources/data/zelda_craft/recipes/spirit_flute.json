@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "baa",
+    " ba"
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:warp_flute"
+    },
+    "b": {
+      "item": "zelda_craft:timeshift_shard"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:spirit_flute",
+    "count": 1
+  }
+}

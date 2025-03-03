@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:feather"
+    },
+    "b": {
+      "item": "minecraft:leather_boots"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:pegasus_boots_boots",
+    "count": 1
+  }
+}

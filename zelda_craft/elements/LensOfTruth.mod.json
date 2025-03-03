@@ -1,0 +1,85 @@
+{
+  "_fv": 66,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "lenseoftruth",
+    "customModelName": "lense_of_truth:default",
+    "customProperties": {
+      "using_lens": {
+        "name": "LensOfTruthPropertyValueProvider"
+      }
+    },
+    "states": [
+      {
+        "renderType": 1,
+        "texture": "lenseoftruth",
+        "customModelName": "usinglenseoftruth:default",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:using_lens",
+              "type": "number"
+            },
+            "value": 0.5
+          }
+        ]
+      }
+    ],
+    "name": "Lens Of Truth",
+    "rarity": "COMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "This is the Lens of Truth! Gaze through it to see mysteries that are invisible to the naked eye."
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "LensOfTruthRightclicked"
+    },
+    "onStoppedUsing": {
+      "name": "LensOfTruthOnPlayerStoppedUsing"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:BoomerangProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "block"
+  }
+}

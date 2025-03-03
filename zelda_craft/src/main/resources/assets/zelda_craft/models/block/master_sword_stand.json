@@ -1,0 +1,11 @@
+{
+  "parent": "zelda_craft:custom/master_sword_stand",
+  "textures": {
+    "all": "zelda_craft:block/stand_base",
+    "particle": "zelda_craft:block/stand_base",
+    "7": "zelda_craft:block/stand_base",
+    "8": "zelda_craft:block/meister",
+    "9": "zelda_craft:block/meister2"
+  },
+  "render_type": "cutout"
+}

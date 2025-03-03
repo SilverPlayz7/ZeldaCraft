@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "fairy_ocarina_16x"
+      },
+      "name": "default"
+    }
+  }
+}

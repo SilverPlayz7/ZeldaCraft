@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:pegasus_boots_boots"
+    },
+    "title": {
+      "translate": "advancements.gotta_go_fast.title"
+    },
+    "description": {
+      "translate": "advancements.gotta_go_fast.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "gotta_go_fast_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:zelda_craft_advancement_page"
+}

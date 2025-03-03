@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/oot",
+  "textures": {
+    "layer0": "zelda_craft:block/ocarina_16x",
+    "particle": "zelda_craft:item/ocarina_16x"
+  }
+}

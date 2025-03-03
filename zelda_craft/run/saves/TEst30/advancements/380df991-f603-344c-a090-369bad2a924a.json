@@ -1,0 +1,153 @@
+{
+  "zelda_craft:zelda_craft_advancement_page": {
+    "criteria": {
+      "zelda_craft_advancement_page": "2024-03-23 18:01:18 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-03-23 18:01:18 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:old_growth_pine_taiga": "2024-03-23 18:05:14 -0700",
+      "minecraft:beach": "2024-03-23 18:06:12 -0700",
+      "minecraft:lukewarm_ocean": "2024-03-24 12:53:06 -0700",
+      "minecraft:forest": "2024-03-23 18:01:19 -0700",
+      "minecraft:lush_caves": "2024-03-23 18:02:25 -0700",
+      "minecraft:desert": "2024-03-23 18:05:33 -0700",
+      "minecraft:savanna": "2024-03-23 18:05:47 -0700"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/warped_planks": {
+    "criteria": {
+      "has_logs": "2024-03-23 18:03:17 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2024-03-23 18:03:50 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:the_blade_of_evils_bane": {
+    "criteria": {
+      "the_blade_of_evils_bane": "2024-03-29 09:54:09 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:grave_robber": {
+    "criteria": {
+      "grave_robber": "2024-03-29 09:54:10 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:eye_see_you": {
+    "criteria": {
+      "eye_see_you": "2024-03-29 09:57:43 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:the_power_of_the_gods_in_the_palm_of_your_hand": {
+    "criteria": {
+      "the_power_of_the_gods_in_the_palm_of_your_hand": "2024-03-29 10:01:17 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:hammer_down": {
+    "criteria": {
+      "hammer_down": "2024-03-29 10:03:29 -0700"
+    },
+    "done": true
+  },
+  "zelda_craft:bigger_and_better": {
+    "criteria": {
+      "bigger_and_better": "2024-03-29 10:03:37 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2024-03-29 10:50:34 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2024-03-29 10:50:37 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:creeper": "2024-03-29 10:50:37 -0700"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:creeper": "2024-03-29 10:50:37 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-03-29 11:05:09 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

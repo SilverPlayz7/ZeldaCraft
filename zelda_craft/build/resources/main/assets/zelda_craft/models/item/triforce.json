@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/triforce",
+  "textures": {
+    "0": "zelda_craft:block/triangle",
+    "particle": "zelda_craft:item/triforce"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Don't Tell The Treasure Box Lady!",
+    "achievementDescription": "Meet the Happy Mask Salesman",
+    "achievementIcon": {
+      "value": "CUSTOM:HappyMaskSalesman.spawn_egg"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 0,
+    "achievementType": "goal",
+    "parent": {
+      "value": "CUSTOM:ZeldaCraftAdvancementPage"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

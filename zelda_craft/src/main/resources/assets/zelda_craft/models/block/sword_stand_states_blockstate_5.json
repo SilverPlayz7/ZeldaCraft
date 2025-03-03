@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/netheriteswordstand",
+  "textures": {
+    "all": "zelda_craft:block/netheriteswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "2": "zelda_craft:block/netheriteswordstand"
+  },
+  "render_type": "solid"
+}

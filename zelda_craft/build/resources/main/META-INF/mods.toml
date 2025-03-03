@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="zelda_craft"
+version="1.9"
+displayName="Zelda Craft"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/zelda-craft"
+logoFile="logo.png"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="SilverPlayz77"
+description="Hi, this is my first ever mod so if there are any things you think I should add, any bugs, or glitches just comment them or put them in the Discord. This mod aims to give the player the Legend of Zelda experience but inside of Minecraft adding things like the Master Sword, Hylian Shield, and much more to come. I hope you enjoy the mod! "
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.zelda_craft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.zelda_craft]]
+    modId="curios_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.zelda_craft]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

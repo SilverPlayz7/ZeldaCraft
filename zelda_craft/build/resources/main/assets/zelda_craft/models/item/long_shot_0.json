@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/firedlong_shot",
+  "textures": {
+    "2": "zelda_craft:block/longshot",
+    "particle": "zelda_craft:item/longshot"
+  }
+}

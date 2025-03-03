@@ -1,0 +1,6821 @@
+{
+  "mod_elements": [
+    {
+      "name": "MasterSword",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MasterSwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/master_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "HylianShield",
+      "type": "tool",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hylian_shield",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/hylian_shield.json",
+          "src/main/java/zeldacraft/item/HylianShieldItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ZeldaCraft",
+      "type": "tab",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zelda_craft",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "GreenRupie",
+      "type": "item",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rupie",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/GreenRupieItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/green_rupie.json"
+        ]
+      }
+    },
+    {
+      "name": "BlueRupee",
+      "type": "item",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rupee",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/blue_rupee.json",
+          "src/main/java/zeldacraft/item/BlueRupeeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RedRupee",
+      "type": "item",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rupee",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/red_rupee.json",
+          "src/main/java/zeldacraft/item/RedRupeeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PurpleRupee",
+      "type": "item",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_rupee",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/purple_rupee.json",
+          "src/main/java/zeldacraft/item/PurpleRupeeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SilverRupee",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_rupee",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/SilverRupeeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/silver_rupee.json"
+        ]
+      }
+    },
+    {
+      "name": "GoldRupee",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_rupee",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/GoldRupeeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/gold_rupee.json"
+        ]
+      }
+    },
+    {
+      "name": "BoomerangRangedItemUsed",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang_ranged_item_used",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BoomerangRangedItemUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "BoomerangBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang_bullet_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BoomerangBulletHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "BoomerandCraft",
+      "type": "recipe",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerand_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/boomerang.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BombRangedItemUsed",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_ranged_item_used",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BombRangedItemUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    },
+    {
+      "name": "BombCraft",
+      "type": "recipe",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/bomb.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "PegasusBootsBootsTickEvent",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_boots_boots_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/PegasusBootsBootsTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boots"
+    },
+    {
+      "name": "PegasusBoots",
+      "type": "armor",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_boots",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false,
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/pegasus_boots_boots.json",
+          "src/main/java/zeldacraft/item/PegasusBootsItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TriforceItemInHandTick",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "triforce_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/TriforceItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TriforceItemIsDroppedByPlayer",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "triforce_item_is_dropped_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/TriforceItemIsDroppedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Triforce",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "triforce",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/TriforceItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/triforce.json"
+        ]
+      }
+    },
+    {
+      "name": "BiggoronSword",
+      "type": "tool",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/biggoron_sword.json",
+          "src/main/java/zeldacraft/item/BiggoronSwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoronSteel",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goron_steel",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/GoronSteelItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/goron_steel.json"
+        ]
+      }
+    },
+    {
+      "name": "MoltenOre",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/worldgen/configured_feature/molten_ore.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/molten_ore.json",
+          "src/main/resources/assets/zelda_craft/models/block/molten_ore.json",
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/molten_ore_biome_modifier.json",
+          "src/main/resources/data/zelda_craft/worldgen/placed_feature/molten_ore.json",
+          "src/main/resources/assets/zelda_craft/models/item/molten_ore.json",
+          "src/main/resources/assets/zelda_craft/blockstates/molten_ore.json",
+          "src/main/java/zeldacraft/block/MoltenOreBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "GoronIngotSmelt",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goron_ingot_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/goron_steel.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MountainRok",
+      "type": "block",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mountain_rok",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/worldgen/placed_feature/mountain_rok.json",
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/mountain_rok_biome_modifier.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/mountain_rok.json",
+          "src/main/resources/assets/zelda_craft/models/item/mountain_rok.json",
+          "src/main/resources/assets/zelda_craft/blockstates/mountain_rok.json",
+          "src/main/resources/assets/zelda_craft/models/block/mountain_rok.json",
+          "src/main/java/zeldacraft/block/MountainRokBlock.java",
+          "src/main/resources/data/zelda_craft/worldgen/configured_feature/mountain_rok.json"
+        ]
+      }
+    },
+    {
+      "name": "SongOfStorms",
+      "type": "musicdisc",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "song_of_storms",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/SongOfStormsItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/song_of_storms.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "SariasSong",
+      "type": "musicdisc",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sarias_song",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/sarias_song.json",
+          "src/main/java/zeldacraft/item/SariasSongItem.java"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "GurudoVally",
+      "type": "musicdisc",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gurudo_vally",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/gurudo_vally.json",
+          "src/main/java/zeldacraft/item/GurudoVallyItem.java"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "BalladOfTheGoddess",
+      "type": "musicdisc",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballad_of_the_goddess",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/ballad_of_the_goddess.json",
+          "src/main/java/zeldacraft/item/BalladOfTheGoddessItem.java"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "UnPoweredMasterSword",
+      "type": "tool",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "un_powered_master_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/UnPoweredMasterSwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/un_powered_master_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "Pegasus1",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/pegasus_boots.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Pegasus2",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/pegasus_boots_2.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MidnasLament",
+      "type": "musicdisc",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "midnas_lament",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MidnasLamentItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/midnas_lament.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "MainTheme",
+      "type": "musicdisc",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_theme",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MainThemeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/main_theme.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "KokiriSword",
+      "type": "tool",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kokiri_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/kokiri_sword.json",
+          "src/main/java/zeldacraft/item/KokiriSwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "KokiriCraft",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kokiri_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/kokiri_sword.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "FiredHookShot",
+      "type": "item",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_hook_shot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/fired_hook_shot.json",
+          "src/main/java/zeldacraft/item/FiredHookShotItem.java"
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "FiredHookShotRightClickedInAir",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_hook_shot_right_clicked_in_air",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FiredHookShotRightClickedInAirProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "SmallKey",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_key",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/small_key.json",
+          "src/main/java/zeldacraft/item/SmallKeyItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoddessSword",
+      "type": "tool",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goddess_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/goddess_sword.json",
+          "src/main/java/zeldacraft/item/GoddessSwordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ClosedChestOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "closed_chest_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/ClosedChestOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Chest"
+    },
+    {
+      "name": "OpenChest",
+      "type": "block",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/blockstates/open_chest.json",
+          "src/main/java/zeldacraft/block/entity/OpenChestBlockEntity.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/open_chest.json",
+          "src/main/resources/assets/zelda_craft/models/item/open_chest.json",
+          "src/main/resources/assets/zelda_craft/models/block/open_chest.json",
+          "src/main/java/zeldacraft/block/OpenChestBlock.java"
+        ]
+      },
+      "path": "~/Procedures/Chest"
+    },
+    {
+      "name": "ClosedChest",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hylian_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/blockstates/hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/models/block/hylian_chest.json",
+          "src/main/java/zeldacraft/block/ClosedChestBlock.java",
+          "src/main/java/zeldacraft/block/entity/ClosedChestBlockEntity.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/hylian_chest.json"
+        ]
+      },
+      "path": "~/Procedures/Chest"
+    },
+    {
+      "name": "OpenChestOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_chest_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OpenChestOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Chest"
+    },
+    {
+      "name": "Chest",
+      "type": "gui",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/world/inventory/ChestMenu.java",
+          "src/main/java/zeldacraft/client/gui/ChestScreen.java"
+        ]
+      },
+      "path": "~/GUI/Chest"
+    },
+    {
+      "name": "HookShotCraft",
+      "type": "recipe",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/hook_shot.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "KeyCraft",
+      "type": "recipe",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/small_key.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ChestCraft",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/hylian_chest.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GreenRupeeCraft",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/green_rupee_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BlueRupeeCraft",
+      "type": "recipe",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/blue_rupee.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "RedRupeeCraft",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/red_rupee.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "PurpleRupeeCraft",
+      "type": "recipe",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/purple_rupee_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SilverRupeeCraft",
+      "type": "recipe",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/silver_rupee.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GoldRupeeCraft",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_rupee_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/gold_rupee.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/SwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "SwordStand",
+      "type": "block",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/block/SwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/sword_stand.json"
+        ]
+      }
+    },
+    {
+      "name": "MasterSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MasterSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "MasterSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MasterSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "MasterSwordStand",
+      "type": "block",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_stand.json",
+          "src/main/java/zeldacraft/block/MasterSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/master_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/master_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/master_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "FiredHookShotItemInHandTick",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_hook_shot_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FiredHookShotItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "FiredLongShot",
+      "type": "item",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_long_shot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/fired_long_shot.json",
+          "src/main/java/zeldacraft/item/FiredLongShotItem.java"
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "FiredLongShotEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_long_shot_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FiredLongShotEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "LongShotRangedItemUsed",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_shot_ranged_item_used",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/LongShotRangedItemUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "FiredLongShotItemInHandTick",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fired_long_shot_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FiredLongShotItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "HookShotRangedItemUsed",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_ranged_item_used",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookShotRangedItemUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "ChainSpool",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chain_spool",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/chain_spool.json",
+          "src/main/java/zeldacraft/item/ChainSpoolItem.java"
+        ]
+      }
+    },
+    {
+      "name": "LongShotMake",
+      "type": "recipe",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_shot_make",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/long_shot_make.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LongShotWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_shot_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/LongShotWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "HookShotWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookShotWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "HookShotProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookShotProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "HookOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "HookOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "Hook",
+      "type": "livingentity",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/client/renderer/HookRenderer.java",
+          "src/main/java/zeldacraft/entity/HookEntity.java"
+        ]
+      },
+      "path": "~/Procedures/Hookshot"
+    },
+    {
+      "name": "DiamondSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DiamondSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "DiamondSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DiamondSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "DiamondSwordStand",
+      "type": "block",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/diamond_sword_stand.json",
+          "src/main/java/zeldacraft/block/DiamondSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/diamond_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/diamond_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/diamond_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "UnSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "un_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/UnSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "UnSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "un_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/UnSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "UnSwordStand",
+      "type": "block",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "un_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/blockstates/un_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/un_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/un_sword_stand.json",
+          "src/main/java/zeldacraft/block/UnSwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/un_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoldSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GoldSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoldSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GoldSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoldSwordStand",
+      "type": "block",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/gold_sword_stand.json",
+          "src/main/java/zeldacraft/block/GoldSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/models/block/gold_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/gold_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/gold_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "NetheriteSwordStand",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/netherite_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/netherite_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/netherite_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/netherite_sword_stand.json",
+          "src/main/java/zeldacraft/block/NetheriteSwordStandBlock.java"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "NetheriteSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/NetheriteSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "NetheriteSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/NetheriteSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "IronSwordStand",
+      "type": "block",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/block/IronSwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/iron_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/iron_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/iron_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/iron_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "IronSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/IronSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "IronSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/IronSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "StoneSwordStand",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/blockstates/stone_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/stone_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/stone_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/stone_sword_stand.json",
+          "src/main/java/zeldacraft/block/StoneSwordStandBlock.java"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "StoneSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/StoneSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "StoneSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/StoneSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "WoodenSwordStand",
+      "type": "block",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/block/wooden_sword_stand.json",
+          "src/main/java/zeldacraft/block/WoodenSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/models/item/wooden_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/wooden_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/wooden_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "WoodenSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/WoodenSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "WoodenSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/WoodenSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoddessSword1Stand",
+      "type": "block",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goddess_sword_1_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/goddess_sword_1_stand.json",
+          "src/main/java/zeldacraft/block/GoddessSword1StandBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/goddess_sword_1_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/goddess_sword_1_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/goddess_sword_1_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoddessSword1StandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goddess_sword_1_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GoddessSword1StandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "GoddessSword1StandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goddess_sword_1_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GoddessSword1StandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "ChainSpoolCraft",
+      "type": "recipe",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chain_spool_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/chain_spool_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BiggoronSwordStand",
+      "type": "block",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/blockstates/biggoron_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/biggoron_sword_stand.json",
+          "src/main/java/zeldacraft/block/BiggoronSwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/biggoron_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/biggoron_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "BiggoronSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BiggoronSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "BiggoronSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BiggoronSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "KokiriSwordStand",
+      "type": "block",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kokiri_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/block/KokiriSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/kokiri_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/kokiri_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/kokiri_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/kokiri_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "KokiriSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kokiri_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/KokiriSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "KokiriSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kokiri_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/KokiriSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "BoomerangProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BoomerangProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "StunnedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stunned_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/StunnedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "Stunned",
+      "type": "potioneffect",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stunned",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/potion/StunnedMobEffect.java"
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "OccarinaOfTime",
+      "type": "item",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "occarina_of_time",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/OccarinaOfTimeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/occarina_of_time.json"
+        ]
+      }
+    },
+    {
+      "name": "HeroBowCraft",
+      "type": "recipe",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hero_bow_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/hero_bow_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "FairyPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FairyPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "FairyOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FairyOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "EmptyBottle",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_bottle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/empty_bottle.json",
+          "src/main/java/zeldacraft/item/EmptyBottleItem.java"
+        ]
+      }
+    },
+    {
+      "name": "FairyBottle",
+      "type": "item",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_bottle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/fairy_bottle.json",
+          "src/main/java/zeldacraft/item/FairyBottleItem.java"
+        ]
+      }
+    },
+    {
+      "name": "FairyBottleItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_bottle_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FairyBottleItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "FairyRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FairyRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "FairyBottleRightclicked",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_bottle_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FairyBottleRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "FairyItem",
+      "type": "item",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_item",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/FairyItemItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/fairy_item.json"
+        ]
+      },
+      "path": "~/Procedures/Fairy"
+    },
+    {
+      "name": "LokomoSword",
+      "type": "tool",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lokomo_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/LokomoSwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/lokomo_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "IronBoots",
+      "type": "armor",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_boots",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/IronBootsItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/iron_boots_boots.json"
+        ]
+      }
+    },
+    {
+      "name": "IronBootsBootsTickEvent",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_boots_boots_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/IronBootsBootsTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boots"
+    },
+    {
+      "name": "MaskAbility",
+      "type": "keybind",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mask_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/MaskAbilityMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "BlastMask",
+      "type": "armor",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_mask",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/BlastMaskItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/blast_mask_helmet.json"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "MaskAbilityOnKeyPressed",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mask_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MaskAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "MasterSwordBeamProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_beam_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MasterSwordBeamProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MasterSwordBeam",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MasterSwordBeamProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "HoverBoots",
+      "type": "armor",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hover_boots",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/HoverBootsItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/hover_boots_boots.json"
+        ]
+      }
+    },
+    {
+      "name": "HoverBootsBootsTickEvent",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hover_boots_boots_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HoverBootsBootsTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boots"
+    },
+    {
+      "name": "RazorSword",
+      "type": "tool",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/RazorSwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/razor_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "RazorSwordToolInHandTick",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_sword_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/RazorSwordToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Destruction"
+    },
+    {
+      "name": "MegatonHammer",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaton_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MegatonHammerItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/megaton_hammer.json"
+        ]
+      }
+    },
+    {
+      "name": "RazorSmith",
+      "type": "recipe",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/razor_smith.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ThePowerOfTheGodsInThePalmOfYourHand",
+      "type": "achievement",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_power_of_the_gods_in_the_palm_of_your_hand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/the_power_of_the_gods_in_the_palm_of_your_hand.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "TheBladeOfEvilsBane",
+      "type": "achievement",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_blade_of_evils_bane",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/the_blade_of_evils_bane.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "MoltenScrap",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_scrap",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/molten_scrap.json",
+          "src/main/java/zeldacraft/item/MoltenScrapItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ScrapUse",
+      "type": "recipe",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_use",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/goronsteel_scrap_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MegatonHammerToolInHandTick",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaton_hammer_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/MegatonHammerToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "HammerDown",
+      "type": "achievement",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammer_down",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/hammer_down.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "ZeldaCraftAdvancementPage",
+      "type": "achievement",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zelda_craft_advancement_page",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/zelda_craft_advancement_page.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "SpriritFlute",
+      "type": "item",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_flute",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/SpriritFluteItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/spirit_flute.json"
+        ]
+      }
+    },
+    {
+      "name": "HyruleCrest",
+      "type": "item",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hyrule_crest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/hyrule_crest.json",
+          "src/main/java/zeldacraft/item/HyruleCrestItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HylianShieldCraft",
+      "type": "recipe",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hylian_shield_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/hylian_shield_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LokomoSwordStand",
+      "type": "block",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lokomo_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/lokomo_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/item/lokomo_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/lokomo_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/lokomo_sword_stand.json",
+          "src/main/java/zeldacraft/block/LokomoSwordStandBlock.java"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "LokomoSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lokomo_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/LokomoSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "LokomoSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lokomo_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/LokomoSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "RazorSwordStand",
+      "type": "block",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/razor_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/razor_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/models/block/razor_sword_stand.json",
+          "src/main/java/zeldacraft/block/RazorSwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/razor_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "RazorSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/RazorSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "RazorSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "razor_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/RazorSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "ClockTown",
+      "type": "musicdisc",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clock_town",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/ClockTownItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/clock_town.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "MasterSwordBeamRepresentitive",
+      "type": "item",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_beam_representitive",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MasterSwordBeamRepresentitiveItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_representitive.json"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "NewHyrleShieldBetterWayTest",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "new_hyrule_shield",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/NewHyrleShieldBetterWayTestItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/new_hyrule_shield.json"
+        ]
+      }
+    },
+    {
+      "name": "GraveRobber",
+      "type": "achievement",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grave_robber",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/grave_robber.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "BoomerangProjectile",
+      "type": "projectile",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/BoomerangProjectileEntity.java"
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "Boomerang",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/BoomerangItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/boomerang.json"
+        ]
+      }
+    },
+    {
+      "name": "BombProjectile",
+      "type": "projectile",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/BombProjectileEntity.java"
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    },
+    {
+      "name": "Bomb",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/BombItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/bomb.json"
+        ]
+      }
+    },
+    {
+      "name": "HookShotProjectile",
+      "type": "projectile",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/HookShotProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "HookShot",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/hook_shot.json",
+          "src/main/java/zeldacraft/item/HookShotItem.java"
+        ]
+      }
+    },
+    {
+      "name": "LongShotProjectile",
+      "type": "projectile",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_shot_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/LongShotProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "LongShot",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_shot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/long_shot.json",
+          "src/main/java/zeldacraft/item/LongShotItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MasterSwordBeamProjectileProjectile",
+      "type": "projectile",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_beam_projectile_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/MasterSwordBeamProjectileProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MasterSwordBeamProjectile",
+      "type": "item",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_sword_beam_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MasterSwordBeamProjectileItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_projectile.json"
+        ]
+      }
+    },
+    {
+      "name": "LensOfTruth",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lens_of_truth",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/lens_of_truth.json",
+          "src/main/java/zeldacraft/item/LensOfTruthItem.java"
+        ]
+      }
+    },
+    {
+      "name": "AllNightMask",
+      "type": "armor",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "all_night_mask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/all_night_mask_helmet.json",
+          "src/main/java/zeldacraft/item/AllNightMaskItem.java"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "AllNightMaskInsomnia",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "all_night_mask_insomnia",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/AllNightMaskInsomniaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/AllNight"
+    },
+    {
+      "name": "DemonTribeSword",
+      "type": "tool",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_tribe_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/DemonTribeSwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/demon_tribe_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "BombEntityOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_entity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BombEntityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    },
+    {
+      "name": "BombEntityOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_entity_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BombEntityOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    },
+    {
+      "name": "GeroMask",
+      "type": "armor",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gero_mask",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/GeroMaskItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/gero_mask_helmet.json"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "LockedHylianChest",
+      "type": "block",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "locked_hylian_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/locked_hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/models/item/locked_hylian_chest.json",
+          "src/main/java/zeldacraft/block/entity/LockedHylianChestBlockEntity.java",
+          "src/main/resources/assets/zelda_craft/models/block/locked_hylian_chest.json",
+          "src/main/java/zeldacraft/block/LockedHylianChestBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/locked_hylian_chest.json"
+        ]
+      }
+    },
+    {
+      "name": "LockedHylianChestOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "locked_hylian_chest_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/LockedHylianChestOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Chest"
+    },
+    {
+      "name": "FeirceDeityMask",
+      "type": "armor",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feirce_deity_mask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/feirce_deity_mask_helmet.json",
+          "src/main/java/zeldacraft/item/FeirceDeityMaskItem.java"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "DemonTribeSwordStand",
+      "type": "block",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_tribe_sword_stand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/demon_tribe_sword_stand.json",
+          "src/main/resources/assets/zelda_craft/blockstates/demon_tribe_sword_stand.json",
+          "src/main/java/zeldacraft/block/DemonTribeSwordStandBlock.java",
+          "src/main/resources/assets/zelda_craft/models/block/demon_tribe_sword_stand.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/demon_tribe_sword_stand.json"
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "DemonTribeSwordStandOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_tribe_sword_stand_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DemonTribeSwordStandOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "DemonTribeSwordStandBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_tribe_sword_stand_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DemonTribeSwordStandBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/SwordStand"
+    },
+    {
+      "name": "AnchientCapsuleMachineOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anchient_capsule_machine_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/AnchientCapsuleMachineOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gacha"
+    },
+    {
+      "name": "RoyalTomb",
+      "type": "structure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "royal_tomb",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/worldgen/structure_set/royal_tomb.json",
+          "src/main/resources/data/zelda_craft/worldgen/template_pool/royal_tomb.json",
+          "src/main/resources/data/zelda_craft/worldgen/structure/royal_tomb.json"
+        ]
+      }
+    },
+    {
+      "name": "DekuMask",
+      "type": "armor",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deku_mask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/deku_mask_helmet.json",
+          "src/main/java/zeldacraft/item/DekuMaskItem.java"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "ZoraMask",
+      "type": "armor",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zora_mask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/zora_mask_helmet.json",
+          "src/main/java/zeldacraft/item/ZoraMaskItem.java"
+        ]
+      },
+      "path": "~/Masks"
+    },
+    {
+      "name": "TimeshiftOre",
+      "type": "block",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timeshift_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/timeshift_ore.json",
+          "src/main/resources/assets/zelda_craft/models/item/timeshift_ore.json",
+          "src/main/resources/assets/zelda_craft/models/block/timeshift_ore.json",
+          "src/main/java/zeldacraft/block/TimeshiftOreBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/timeshift_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "TimeshiftShard",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timeshift_shard",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/TimeshiftShardItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/timeshift_shard.json"
+        ]
+      }
+    },
+    {
+      "name": "WarpFlute",
+      "type": "item",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_flute",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/warp_flute.json",
+          "src/main/java/zeldacraft/item/WarpFluteItem.java"
+        ]
+      }
+    },
+    {
+      "name": "OccarinaOfTimeCraft",
+      "type": "recipe",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "occarina_of_time_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/occarina_of_time_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "PurifiedGoronSteel",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purified_goron_steel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/purified_goron_steel.json",
+          "src/main/java/zeldacraft/item/PurifiedGoronSteelItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MysticSteel",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mystic_steel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/mystic_steel.json",
+          "src/main/java/zeldacraft/item/MysticSteelItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MegatonCraft",
+      "type": "recipe",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaton_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/megaton_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BiggoronCraft",
+      "type": "recipe",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/biggoron_craft.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GiantKnife",
+      "type": "tool",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/giant_knife.json",
+          "src/main/java/zeldacraft/item/GiantKnifeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "BiggoronSmith",
+      "type": "recipe",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "biggoron_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/biggoron_smith.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "IronBoots1",
+      "type": "recipe",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_boots_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/iron_boots_1.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BrokenGiantKnife",
+      "type": "item",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "broken_giant_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/broken_giant_knife.json",
+          "src/main/java/zeldacraft/item/BrokenGiantKnifeItem.java"
+        ]
+      },
+      "path": "~/Procedures/Destruction"
+    },
+    {
+      "name": "GiantKnifeOnBreak",
+      "type": "procedure",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_knife_on_break",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GiantKnifeOnBreakProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Destruction"
+    },
+    {
+      "name": "GiantKnifeCraft",
+      "type": "recipe",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_knife_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/giant_knife.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GiantKnifeReforge",
+      "type": "recipe",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_knife_reforge",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/giant_knife_reforge.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CostumeCoin",
+      "type": "item",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costume_coin",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/CostumeCoinItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/costume_coin.json"
+        ]
+      },
+      "path": "~/Coins"
+    },
+    {
+      "name": "TheBiggoronSwordAtHome",
+      "type": "achievement",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_biggoron_sword_at_home",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/the_biggoron_sword_at_home.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "YouFellVictimToOneOfTheClasicBlunders",
+      "type": "achievement",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "you_fell_victim_to_one_of_the_clasic_blunders",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/you_fell_victim_to_one_of_the_clasic_blunders.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "GiantKnifeBreakAchievement",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_knife_break_achievement",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/GiantKnifeBreakAchievementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Achievements/AdvancementProcedures"
+    },
+    {
+      "name": "BiggerAndBetter",
+      "type": "achievement",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bigger_and_better",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/bigger_and_better.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "EyeSeeYou",
+      "type": "achievement",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eye_see_you",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/eye_see_you.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "OcarinaBlank",
+      "type": "gui",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_blank",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/client/gui/OcarinaBlankScreen.java",
+          "src/main/java/zeldacraft/world/inventory/OcarinaBlankMenu.java",
+          "src/main/java/zeldacraft/network/OcarinaBlankButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI/Ocarina"
+    },
+    {
+      "name": "OccarinaOfTimeOpen",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "occarina_of_time_open",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OccarinaOfTimeOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaGUIClose",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_gui_close",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaGUICloseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaAButton",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_a_button",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaAButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "Show1A",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_1_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show1AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show2A",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_2_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show2AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show3A",
+      "type": "procedure",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_3_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show3AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show4A",
+      "type": "procedure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_4_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show4AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show5A",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_5_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show5AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show6A",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_6_a",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show6AProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowA"
+    },
+    {
+      "name": "Show1X",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_1_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show1XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show2X",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_2_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show2XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show3X",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_3_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show3XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show4X",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_4_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show4XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show5X",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_5_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show5XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show6X",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_6_x",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show6XProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowX"
+    },
+    {
+      "name": "Show1Y",
+      "type": "procedure",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_1_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show1YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show2Y",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_2_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show2YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show3Y",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_3_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show3YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show4Y",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_4_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show4YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show5Y",
+      "type": "procedure",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_5_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show5YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show6Y",
+      "type": "procedure",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_6_y",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show6YProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowY"
+    },
+    {
+      "name": "Show1R",
+      "type": "procedure",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_1_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show1RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show2R",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_2_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show2RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show3R",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_3_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show3RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show4R",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_4_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show4RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show5R",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_5_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show5RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show6R",
+      "type": "procedure",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_6_r",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show6RProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowR"
+    },
+    {
+      "name": "Show1L",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_1_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show1LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "Show2L",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_2_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show2LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "Show3L",
+      "type": "procedure",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_3_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show3LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "Show4L",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_4_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show4LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "Show5L",
+      "type": "procedure",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_5_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show5LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "Show6L",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_6_l",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Show6LProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
+    },
+    {
+      "name": "OcarinaXButton",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_x_button",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaXButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaYButton",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_y_button",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaYButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaRButton",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_r_button",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaRButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaLButton",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_l_button",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaLButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina/ButtonFunctions"
+    },
+    {
+      "name": "OcarinaOfTimeSongCheck",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_of_time_song_check",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaOfTimeSongCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina"
+    },
+    {
+      "name": "OcarinaBlankThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_blank_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaBlankThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Ocarina"
+    },
+    {
+      "name": "StatueMenu",
+      "type": "gui",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "statue_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/world/inventory/StatueMenuMenu.java",
+          "src/main/java/zeldacraft/client/gui/StatueMenuScreen.java",
+          "src/main/java/zeldacraft/network/StatueMenuButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring"
+    },
+    {
+      "name": "Warp1Teleport",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_1_teleport",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp1TeleportProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring"
+    },
+    {
+      "name": "OwlStatueOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owl_statue_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/OwlStatueOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Warp1Clear",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_1_clear",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp1ClearProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring"
+    },
+    {
+      "name": "WarpFlutePlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_flute_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/WarpFlutePlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Warp1Show",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_1_show",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp1ShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/WarpShowConditions"
+    },
+    {
+      "name": "RupeeWallet",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rupee_wallet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/rupee_wallet.json",
+          "src/main/java/zeldacraft/item/RupeeWalletItem.java"
+        ]
+      }
+    },
+    {
+      "name": "WalletDeposit",
+      "type": "gui",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wallet_deposit",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/WalletDepositButtonMessage.java",
+          "src/main/java/zeldacraft/client/gui/WalletDepositScreen.java",
+          "src/main/java/zeldacraft/world/inventory/WalletDepositMenu.java"
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "WalletWithdraw",
+      "type": "gui",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wallet_withdraw",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/world/inventory/WalletWithdrawMenu.java",
+          "src/main/java/zeldacraft/client/gui/WalletWithdrawScreen.java"
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "RupeeCounter",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rupee_counter",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/RupeeCounterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "RupeeWalletRightclicked",
+      "type": "procedure",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rupee_wallet_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/RupeeWalletRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "HeroBow",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hero_bow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/hero_bow_1.json",
+          "src/main/resources/assets/zelda_craft/models/item/hero_bow_3.json",
+          "src/main/java/zeldacraft/item/HeroBowItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/hero_bow_0.json",
+          "src/main/resources/assets/zelda_craft/models/item/hero_bow_2.json",
+          "src/main/resources/assets/zelda_craft/models/item/hero_bow.json"
+        ]
+      }
+    },
+    {
+      "name": "TwilightArmor",
+      "type": "animatedarmor",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twilight_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/TwilightArmorItem.java",
+          "src/main/java/zeldacraft/item/model/TwilightArmorModel.java",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_chestplate.json",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_helmet.json",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_boots.json",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_leggings.json",
+          "src/main/java/zeldacraft/client/renderer/TwilightArmorArmorRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "ModItemProperties",
+      "type": "code",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_item_properties",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/ModItemProperties.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "AnchientCapsuleMachine",
+      "type": "animatedblock",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anchient_capsule_machine",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/block/entity/AnchientCapsuleMachineTileEntity.java",
+          "src/main/resources/assets/zelda_craft/blockstates/anchient_capsule_machine.json",
+          "src/main/java/zeldacraft/block/renderer/AnchientCapsuleMachineDisplayItemRenderer.java",
+          "src/main/resources/assets/zelda_craft/models/custom/anchient_capsule_machine_particle.json",
+          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineDisplayModel.java",
+          "src/main/java/zeldacraft/block/AnchientCapsuleMachineBlock.java",
+          "src/main/java/zeldacraft/block/display/AnchientCapsuleMachineDisplayItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/anchient_capsule_machine.json",
+          "src/main/java/zeldacraft/block/renderer/AnchientCapsuleMachineTileRenderer.java",
+          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineBlockModel.java"
+        ]
+      }
+    },
+    {
+      "name": "DepositRupees",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deposit_rupees",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DepositRupeesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "RoyalTombDoorOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "royal_tomb_door_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/RoyalTombDoorOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FierceDeitySword",
+      "type": "animateditem",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fierce_deity_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/renderer/FierceDeitySwordItemRenderer.java",
+          "src/main/java/zeldacraft/item/model/FierceDeitySwordItemModel.java",
+          "src/main/java/zeldacraft/item/FierceDeitySwordItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/fierce_deity_sword.json"
+        ]
+      }
+    },
+    {
+      "name": "OcarinaPlayNoteA",
+      "type": "keybind",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_play_note_a",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/OcarinaPlayNoteAMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "OcarinaPlayNoteX",
+      "type": "keybind",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_play_note_x",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/OcarinaPlayNoteXMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "OcarinaPlayNoteY",
+      "type": "keybind",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_play_note_y",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/OcarinaPlayNoteYMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "OcarinaPlayNoteR",
+      "type": "keybind",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_play_note_r",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/OcarinaPlayNoteRMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "OcarinaPlayNoteL",
+      "type": "keybind",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_play_note_l",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/OcarinaPlayNoteLMessage.java"
+        ]
+      },
+      "path": "~/Procedures/KeyBinds"
+    },
+    {
+      "name": "FierceDeitySwordBeamRepresentative",
+      "type": "item",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fierce_deity_sword_beam_representative",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/fierce_deity_sword_beam_representative.json",
+          "src/main/java/zeldacraft/item/FierceDeitySwordBeamRepresentativeItem.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FierceDeitySwordBeam",
+      "type": "projectile",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fierce_deity_sword_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/entity/FierceDeitySwordBeamEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "FierceDeitySwordEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fierce_deity_sword_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/FierceDeitySwordEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TimeArmor",
+      "type": "animatedarmor",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_leggings.json",
+          "src/main/java/zeldacraft/client/renderer/TimeArmorArmorRenderer.java",
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_boots.json",
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_helmet.json",
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_chestplate.json",
+          "src/main/java/zeldacraft/item/TimeArmorItem.java",
+          "src/main/java/zeldacraft/item/model/TimeArmorModel.java"
+        ]
+      }
+    },
+    {
+      "name": "BombProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BombProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    },
+    {
+      "name": "BoomerangProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomerang_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BoomerangProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "GottaGoFast",
+      "type": "achievement",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gotta_go_fast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/gotta_go_fast.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "PegasusBootsEquiped",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pegasus_boots_equiped",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/PegasusBootsEquipedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Achievements/AdvancementProcedures"
+    },
+    {
+      "name": "ABlessingFromTheLord",
+      "type": "achievement",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_blessing_from_the_lord",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/a_blessing_from_the_lord.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "FlyingBoomerang",
+      "type": "animateditem",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying_boomerang",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/FlyingBoomerangItem.java",
+          "src/main/java/zeldacraft/item/renderer/FlyingBoomerangItemRenderer.java",
+          "src/main/resources/assets/zelda_craft/models/item/flying_boomerang.json",
+          "src/main/java/zeldacraft/item/model/FlyingBoomerangItemModel.java"
+        ]
+      },
+      "path": "~/Procedures/Boomerang"
+    },
+    {
+      "name": "WarpFluteRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_flute_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/WarpFluteRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SmallRupeeCounter",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_rupee_counter",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/SmallRupeeCounterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "FairyOcarina",
+      "type": "item",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_ocarina",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/fairy_ocarina.json",
+          "src/main/java/zeldacraft/item/FairyOcarinaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CostumeCoinPiece",
+      "type": "item",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costume_coin_piece",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/CostumeCoinPieceItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/costume_coin_piece.json"
+        ]
+      },
+      "path": "~/Coins"
+    },
+    {
+      "name": "CostumeCoinCraft",
+      "type": "recipe",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costume_coin_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/costume_coin.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "TwilightArmorBundle",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twilight_armor_bundle",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/TwilightArmorBundleItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_bundle.json"
+        ]
+      }
+    },
+    {
+      "name": "TimeArmorBundle",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_armor_bundle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_bundle.json",
+          "src/main/java/zeldacraft/item/TimeArmorBundleItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TimeArmorBundleRightclicked",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_armor_bundle_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/TimeArmorBundleRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TwilightArmorBundleRightclicked",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twilight_armor_bundle_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/TwilightArmorBundleRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MysticUpgrade",
+      "type": "item",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mystic_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MysticUpgradeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/mystic_upgrade.json"
+        ]
+      }
+    },
+    {
+      "name": "DepositRupeesAdult",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deposit_rupees_adult",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DepositRupeesAdultProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "DepositRupeesGiant",
+      "type": "procedure",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deposit_rupees_giant",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DepositRupeesGiantProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "DepositRupeesTycoon",
+      "type": "procedure",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deposit_rupees_tycoon",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/DepositRupeesTycoonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Wallet"
+    },
+    {
+      "name": "FairyOcarinaCraft",
+      "type": "recipe",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_ocarina_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/fairy_ocarina.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MysticUpgradeDuplicate",
+      "type": "recipe",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mystic_upgrade_duplicate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/mystic_upgrade.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LensOfTruthCraft",
+      "type": "recipe",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lens_of_truth_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/lens_of_truth.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "WarpFluteCraft",
+      "type": "recipe",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_flute_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/warp_flute.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "IronBoots2",
+      "type": "recipe",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_boots_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/iron_boots.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SpiritFluteCraft",
+      "type": "recipe",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_flute_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/spirit_flute.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ChildWalletCraft",
+      "type": "recipe",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "child_wallet_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/rupee_wallet.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CostumeCoinCraft2",
+      "type": "recipe",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "costume_coin_craft_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/costume_coin_craft_2.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "HeroBowRightclicked",
+      "type": "procedure",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hero_bow_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HeroBowRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bow/Hero"
+    },
+    {
+      "name": "HeroBowItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hero_bow_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HeroBowItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bow/Hero"
+    },
+    {
+      "name": "HeroBowOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hero_bow_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HeroBowOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bow/Hero"
+    },
+    {
+      "name": "HeroBowPropertyValueProvider",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hero_bow_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/zeldacraft/procedures/HeroBowPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bow/Hero"
+    },
+    {
+      "name": "SwordShrine",
+      "type": "structure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_shrine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/worldgen/template_pool/sword_shrine.json",
+          "src/main/resources/data/zelda_craft/worldgen/structure_set/sword_shrine.json",
+          "src/main/resources/data/zelda_craft/worldgen/structure/sword_shrine.json"
+        ]
+      }
+    },
+    {
+      "name": "PurifiedGoronSteelCraft",
+      "type": "recipe",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purified_goron_steel_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/recipes/purified_goron_steel.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BombProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/BombProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Bomb"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "OcarinaNote1",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "OcarinaNote2",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "OcarinaNote3",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "OcarinaNote4",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "OcarinaNote5",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "OcarinaNote6",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Warp1X",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp1Y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp1Z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HasWarp1",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Warp2X",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp2Y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp2Z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HasWarp2",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Warp3X",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp3Y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp3Z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HasWarp3",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Warp4X",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp4Y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp4Z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HasWarp4",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Warp5X",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp5Y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Warp5Z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HasWarp5",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "songofstorms",
+      "files": [
+        "song_of_storms_extended_hd"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sariassong",
+      "files": [
+        "mp3download.to_sarias_song_lost_woods_the_legend_of_zelda__ocarina_of_time_music_box-320k"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "gerudovally",
+      "files": [
+        "zelda_-_ocarina_of_time_-_gerudo_valley"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "ballad",
+      "files": [
+        "1-04_theme_of_skyward_sword_-_ballad_of_the_goddess"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "main_theme",
+      "files": [
+        "07_-_the_legend_of_zelda_main_theme_-_legend_of_zelda_25th_anniversary_orchestra"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "midna_lament",
+      "files": [
+        "4-11_-_midna_in_distress"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "maintheme2",
+      "files": [
+        "yt5s.com-legend_of_zelda_nes_intro-128kbps"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sarias_song2",
+      "files": [
+        "yt5s.com_-_sarias_song_extended_10_minutes_128_kbps"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fairy_idle",
+      "files": [
+        "fairyidle"
+      ],
+      "category": "neutral",
+      "subtitle": "Fairy floating"
+    },
+    {
+      "name": "fairy_death",
+      "files": [
+        "fairydeath"
+      ],
+      "category": "neutral",
+      "subtitle": "Fairy dies"
+    },
+    {
+      "name": "fairy_hurt",
+      "files": [
+        "fairhurt"
+      ],
+      "category": "neutral",
+      "subtitle": "Fairy hurt"
+    },
+    {
+      "name": "fairy_living",
+      "files": [
+        "fairyliving"
+      ],
+      "category": "neutral",
+      "subtitle": "Hey!"
+    },
+    {
+      "name": "fairy_heal",
+      "files": [
+        "fairyrez"
+      ],
+      "category": "neutral",
+      "subtitle": "Fairy healing"
+    },
+    {
+      "name": "masterswordbeamfire",
+      "files": [
+        "the_legend_of_zelda_sound_effects_-_sword_shoot_tuberipper.com"
+      ],
+      "category": "neutral",
+      "subtitle": "Sword beam fired"
+    },
+    {
+      "name": "clocktown",
+      "files": [
+        "clocktowntheme"
+      ],
+      "category": "music",
+      "subtitle": "Clock town theme playing"
+    },
+    {
+      "name": "bomb_defuse",
+      "files": [
+        "oot_bomb_defuse"
+      ],
+      "category": "neutral",
+      "subtitle": "Bomb Defuses"
+    },
+    {
+      "name": "bomb_fuse",
+      "files": [
+        "oot_bomb_fuse"
+      ],
+      "category": "neutral",
+      "subtitle": "Bomb Ignited"
+    },
+    {
+      "name": "bomb_explode",
+      "files": [
+        "oot_bomb_blow"
+      ],
+      "category": "neutral",
+      "subtitle": "Bomb Explodes"
+    },
+    {
+      "name": "bomb_thrown",
+      "files": [
+        "oot_bomb_pull"
+      ],
+      "category": "neutral",
+      "subtitle": "Bomb thrown"
+    },
+    {
+      "name": "ocarina_song_error",
+      "files": [
+        "oot_song_error"
+      ],
+      "category": "music",
+      "subtitle": "Ocarina song error"
+    },
+    {
+      "name": "ocarina_song_correct",
+      "files": [
+        "oot_song_correct"
+      ],
+      "category": "music",
+      "subtitle": "Ocarina song correct"
+    },
+    {
+      "name": "ocarina_songofstorms",
+      "files": [
+        "ocarina_of_time_song_of_storms"
+      ],
+      "category": "music",
+      "subtitle": "Song of Stoms played"
+    },
+    {
+      "name": "zeldalullaby",
+      "files": [
+        "zeldalullaby"
+      ],
+      "category": "music",
+      "subtitle": "Played zelda\u0027s lullaby"
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:TimeshiftOre",
+      "~CUSTOM:MountainRok",
+      "~CUSTOM:MoltenOre"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:TimeshiftOre",
+      "~CUSTOM:MountainRok",
+      "~CUSTOM:MoltenOre"
+    ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:LockedHylianChest",
+      "~CUSTOM:ClosedChest",
+      "~CUSTOM:OpenChest"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:ClosedChest",
+      "~CUSTOM:OpenChest"
+    ],
+    "ITEMS:mod:rupee": [
+      "CUSTOM:GreenRupie",
+      "CUSTOM:BlueRupee",
+      "CUSTOM:RedRupee",
+      "CUSTOM:PurpleRupee",
+      "CUSTOM:SilverRupee",
+      "CUSTOM:GoldRupee"
+    ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:ClockTown",
+      "~CUSTOM:MainTheme",
+      "~CUSTOM:MidnasLament",
+      "~CUSTOM:BalladOfTheGoddess",
+      "~CUSTOM:GurudoVally",
+      "~CUSTOM:SariasSong",
+      "~CUSTOM:SongOfStorms"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "key.zelda_craft.ocarina_play_note_a": "Ocarina Play Note \u0027A\u0027",
+      "block.zelda_craft.razor_sword_stand": "Razor Sword Stand",
+      "block.zelda_craft.demon_tribe_sword_stand": "Demon Tribe Sword Stand",
+      "item.zelda_craft.clock_town.desc": "Clock Town",
+      "gui.zelda_craft.statue_menu.label_pick_your_warp": "Pick Your Warp",
+      "item.zelda_craft.blue_rupee": "Blue Rupee",
+      "block.zelda_craft.locked_hylian_chest": "Hylian Chest",
+      "item.zelda_craft.time_armor_chestplate": "Tunic of Time",
+      "gui.zelda_craft.chest.label_hylian_chest": "Hylian Chest",
+      "item.zelda_craft.master_sword_beam_representitive": "Master Sword Beam Representitive",
+      "gui.zelda_craft.wallet_withdraw.button_deposit": "Deposit",
+      "advancements.grave_robber.descr": "Get the Hylian Shield",
+      "item.zelda_craft.time_armor_helmet": "Cap of Time",
+      "gui.zelda_craft.ocarina_blank.button_empty5": "",
+      "gui.zelda_craft.ocarina_blank.button_empty4": "",
+      "block.zelda_craft.diamond_sword_stand": "Diamond Sword Stand",
+      "item.zelda_craft.main_theme.desc": "Main Theme",
+      "item.zelda_craft.broken_giant_knife": "Broken Giant\u0027s Knife",
+      "item.zelda_craft.midnas_lament": "Music Disc",
+      "item.zelda_craft.mystic_upgrade": "Mystic Upgrade",
+      "advancements.the_biggoron_sword_at_home.descr": "Obtain the Giant\u0027s Knife",
+      "gui.zelda_craft.ocarina_blank.button_empty1": "",
+      "block.zelda_craft.open_chest": "Open Chest",
+      "item.zelda_craft.warp_flute": "Flute",
+      "gui.zelda_craft.ocarina_blank.button_empty3": "",
+      "item.zelda_craft.rupee_wallet": "Child\u0027s Wallet",
+      "gui.zelda_craft.ocarina_blank.button_empty2": "",
+      "item.zelda_craft.hero_bow": "Hero Bow",
+      "advancements.the_power_of_the_gods_in_the_palm_of_your_hand.title": "The Power Of The Gods In The Palm Of Your Hand",
+      "item.zelda_craft.hook_shot": "Hook Shot",
+      "item.zelda_craft.molten_scrap": "Molten Scrap",
+      "item.zelda_craft.timeshift_shard": "Timeshift Shard",
+      "item.zelda_craft.twilight_armor_boots": "Boots of Twilight",
+      "gui.zelda_craft.ocarina_blank.button_empty": "",
+      "advancements.bigger_and_better.title": "Bigger And Better",
+      "item.zelda_craft.giant_knife": "Giant\u0027s Knife",
+      "item.zelda_craft.clock_town": "Music Disc",
+      "item.zelda_craft.spirit_flute": "Spirit Flute",
+      "item.zelda_craft.hyrule_crest": "Hyrule Crest",
+      "gui.zelda_craft.statue_menu.Warp1": "Warp 1",
+      "item.zelda_craft.twilight_armor_chestplate": "Tunic of Twilight",
+      "gui.zelda_craft.statue_menu.Warp5": "Warp 5",
+      "item.zelda_craft.silver_rupee": "Silver Rupee",
+      "gui.zelda_craft.statue_menu.Warp4": "Warp 4",
+      "block.zelda_craft.gold_sword_stand": "Gold Sword Stand",
+      "gui.zelda_craft.statue_menu.Warp3": "Warp 3",
+      "entity.zelda_craft.fairy": "Fairy",
+      "gui.zelda_craft.statue_menu.Warp2": "Warp 2",
+      "item.zelda_craft.costume_coin_piece": "Costume Coin Piece",
+      "item.zelda_craft.fierce_deity_sword": "Fierce Deity Sword",
+      "item.zelda_craft.blast_mask_helmet": "Blast Mask",
+      "key.zelda_craft.ocarina_play_note_y": "Ocarina Play Note \u0027Y\u0027",
+      "key.zelda_craft.ocarina_play_note_x": "Ocarina Play Note \u0027X\u0027",
+      "item.zelda_craft.goddess_sword": "Goddess Sword",
+      "block.zelda_craft.netherite_sword_stand": "Netherite Sword Stand",
+      "subtitles.fairy_living": "Hey!",
+      "subtitles.masterswordbeamfire": "Sword beam fired",
+      "subtitles.songofstorms": "",
+      "item.zelda_craft.razor_sword": "Razor Sword",
+      "block.zelda_craft.molten_ore": "Molten Ore",
+      "key.zelda_craft.ocarina_play_note_r": "Ocarina Play Note \u0027R\u0027",
+      "item.zelda_craft.occarina_of_time": "Ocarina Of Time",
+      "item.zelda_craft.new_hyrule_shield": "New Hyrle Shield",
+      "key.zelda_craft.ocarina_play_note_l": "Ocarina Play Note \u0027L\u0027",
+      "item.zelda_craft.song_of_storms.desc": "Song of Storms",
+      "item.zelda_craft.main_theme": "Music Disc",
+      "item.zelda_craft.twilight_armor_bundle": "Twilight Armor Bundle",
+      "item.zelda_craft.hover_boots_boots": "Hover Boots",
+      "advancements.the_power_of_the_gods_in_the_palm_of_your_hand.descr": "Acquire the Triforce",
+      "advancements.the_biggoron_sword_at_home.title": "The Biggoron Sword at Home",
+      "item.zelda_craft.lokomo_sword": "Lokomo Sword",
+      "gui.zelda_craft.statue_menu.button_empty4": "",
+      "gui.zelda_craft.statue_menu.button_empty3": "",
+      "gui.zelda_craft.statue_menu.button_empty2": "",
+      "gui.zelda_craft.statue_menu.button_empty1": "",
+      "advancements.grave_robber.title": "Grave Robber",
+      "item.zelda_craft.master_sword_beam_projectile": "Master Sword Beam Projectile",
+      "subtitles.bomb_defuse": "Bomb Defuses",
+      "gui.zelda_craft.statue_menu.button_x3": "X",
+      "gui.zelda_craft.statue_menu.button_x4": "X",
+      "item.zelda_craft.bomb": "Bomb",
+      "subtitles.bomb_fuse": "Bomb Ignited",
+      "gui.zelda_craft.statue_menu.button_x1": "X",
+      "gui.zelda_craft.statue_menu.button_x2": "X",
+      "item.zelda_craft.biggoron_sword": "Biggoron Sword",
+      "item.zelda_craft.deku_mask_helmet": "Deku Mask Helmet",
+      "item.zelda_craft.time_armor_leggings": "Greaves of Time",
+      "gui.zelda_craft.statue_menu.button_x": "X",
+      "item.zelda_craft.gurudo_vally.desc": "Gerudo Vally",
+      "advancements.zelda_craft_advancement_page.descr": "Load a world with the ZeldaCraft mod installed",
+      "item.zelda_craft.master_sword": "Master Sword",
+      "item.zelda_craft.mystic_steel": "Mystic Steel",
+      "gui.zelda_craft.statue_menu.button_empty": "",
+      "item.zelda_craft.fairy_ocarina": "Fairy Ocarina",
+      "key.categories.zeldacraft": "Zelda Craft",
+      "item.zelda_craft.fierce_deity_sword_beam_representative": "Fierce Deity Sword Beam Representative",
+      "subtitles.main_theme": "",
+      "item_group.zelda_craft.zelda_craft": "Zelda Craft",
+      "gui.zelda_craft.wallet_deposit.button_deposit_ruppes": "Deposit Ruppes",
+      "gui.zelda_craft.wallet_deposit.label_ruppes": "Ruppes:",
+      "item.zelda_craft.goron_steel": "Goron Steel",
+      "block.zelda_craft.lokomo_sword_stand": "Lokomo Sword Stand",
+      "advancements.you_fell_victim_to_one_of_the_clasic_blunders.descr": "Break a Goron Knife",
+      "advancements.the_blade_of_evils_bane.title": "The Blade Of Evil\u0027s Bane",
+      "gui.zelda_craft.statue_menu.tooltip_delete": "Delete?",
+      "advancements.gotta_go_fast.title": "Gotta Go Fast!",
+      "subtitles.maintheme2": "",
+      "subtitles.bomb_thrown": "Bomb thrown",
+      "block.zelda_craft.sword_stand": "Sword Stand",
+      "gui.zelda_craft.wallet_deposit.label_wallet": "Wallet",
+      "block.zelda_craft.un_sword_stand": "Un Sword Stand",
+      "item.zelda_craft.midnas_lament.desc": "Midna\u0027s Lament",
+      "key.zelda_craft.mask_ability": "Use Mask Ability",
+      "item.zelda_craft.pegasus_boots_boots": "Pegasus Boots",
+      "advancements.eye_see_you.descr": "Get the Lens of Truth",
+      "block.zelda_craft.kokiri_sword_stand": "Kokiri Sword Stand",
+      "item.zelda_craft.red_rupee": "Red Rupee",
+      "item.zelda_craft.ballad_of_the_goddess": "Music Disc",
+      "item.zelda_craft.gurudo_vally": "Music Disc",
+      "block.zelda_craft.mountain_rok": "Mountain Rock",
+      "subtitles.sarias_song2": "",
+      "item.zelda_craft.empty_bottle": "Empty Bottle",
+      "item.zelda_craft.costume_coin": "Costume Coin",
+      "effect.zelda_craft.stunned": "Stunned",
+      "item.zelda_craft.ballad_of_the_goddess.desc": "Ballad of the Goddess",
+      "item.zelda_craft.fairy_bottle": "Fairy Bottle",
+      "item.zelda_craft.green_rupie": "Green Rupee",
+      "gui.zelda_craft.wallet_withdraw.label_rupees": "Rupees: 000",
+      "item.zelda_craft.sarias_song.desc": "Saria\u0027s Song",
+      "item.zelda_craft.megaton_hammer": "Megaton Hammer",
+      "item.zelda_craft.twilight_armor_helmet": "Hood of Twilight",
+      "itemGroup.tabzelda_craft": "Zelda Craft",
+      "item.zelda_craft.gold_rupee": "Gold Rupee",
+      "advancements.bigger_and_better.descr": "Obtain the Biggoron Sword",
+      "item.zelda_craft.twilight_armor_leggings": "Greaves of Twilight",
+      "block.zelda_craft.wooden_sword_stand": "Wooden Sword Stand",
+      "item.zelda_craft.all_night_mask_helmet": "All Night Mask",
+      "advancements.eye_see_you.title": "EYE See You",
+      "advancements.you_fell_victim_to_one_of_the_clasic_blunders.title": "You Fell Victim to One of the Classic Blunders",
+      "advancements.a_blessing_from_the_lord.descr": "Pull the Goddess Sword from the pedastal (this isn\u0027t possible yet)",
+      "advancements.hammer_down.descr": "Acquire the Megaton Hammer",
+      "item.zelda_craft.fired_hook_shot": "Fired Hook Shot",
+      "subtitles.ocarina_songofstorms": "Song of Stoms played",
+      "item.zelda_craft.sarias_song": "Music Disc",
+      "subtitles.zeldalullaby": "Played zelda\u0027s lullaby",
+      "block.zelda_craft.stone_sword_stand": "Stone Sword Stand",
+      "item.zelda_craft.chain_spool": "Chain Spool",
+      "subtitles.fairy_heal": "Fairy healing",
+      "item.zelda_craft.kokiri_sword": "Kokiri Sword",
+      "item.zelda_craft.lens_of_truth": "Lens Of Truth",
+      "item.zelda_craft.iron_boots_boots": "Iron Boots",
+      "item.zelda_craft.purified_goron_steel": "Purified Goron Steel",
+      "item.zelda_craft.gero_mask_helmet": "Gero Mask",
+      "block.zelda_craft.hylian_chest": "Hylian Chest",
+      "advancements.a_blessing_from_the_lord.title": "A Blessing From The Lord",
+      "subtitles.fairy_hurt": "Fairy hurt",
+      "advancements.hammer_down.title": "Hammer down!",
+      "item.zelda_craft.hylian_shield": "Hylian Shield",
+      "block.zelda_craft.biggoron_sword_stand": "Biggoron Sword Stand",
+      "gui.zelda_craft.statue_menu.tooltip_delete3": "Delete?",
+      "gui.zelda_craft.statue_menu.tooltip_delete4": "Delete",
+      "gui.zelda_craft.statue_menu.tooltip_delete1": "Delete?",
+      "gui.zelda_craft.statue_menu.tooltip_delete2": "Delete?",
+      "item.zelda_craft.time_armor_bundle": "Time Armor Bundle",
+      "subtitles.sariassong": "",
+      "block.zelda_craft.goddess_sword_1_stand": "Goddess Sword 1 Stand",
+      "item.zelda_craft.feirce_deity_mask_helmet": "Feirce Deity Mask",
+      "block.zelda_craft.timeshift_ore": "Timeshift Ore",
+      "subtitles.ballad": "",
+      "subtitles.midna_lament": "",
+      "subtitles.ocarina_song_correct": "Ocarina song correct",
+      "subtitles.bomb_explode": "Bomb Explodes",
+      "gui.zelda_craft.wallet_withdraw.label_wallet": "Wallet",
+      "item.zelda_craft.boomerang": "Boomerang",
+      "item.zelda_craft.zora_mask_helmet": "Zora Mask",
+      "advancements.gotta_go_fast.descr": "Equip the Pegasus Boots",
+      "block.zelda_craft.iron_sword_stand": "Iron Sword Stand",
+      "block.zelda_craft.master_sword_stand": "Master Sword Stand",
+      "advancements.the_blade_of_evils_bane.descr": "Acquire the Master Sword",
+      "gui.zelda_craft.wallet_withdraw.button_3": "3",
+      "item.zelda_craft.triforce": "Triforce",
+      "subtitles.fairy_idle": "Fairy floating",
+      "gui.zelda_craft.wallet_withdraw.button_4": "4",
+      "gui.zelda_craft.wallet_deposit.label_rupees_000": "Rupees: 000",
+      "gui.zelda_craft.wallet_withdraw.button_1": "1",
+      "gui.zelda_craft.wallet_withdraw.button_2": "2",
+      "block.zelda_craft.anchient_capsule_machine": "Anchient Capsule Machine",
+      "item.zelda_craft.time_armor_boots": "Boots of Time",
+      "gui.zelda_craft.wallet_withdraw.button_5": "5",
+      "gui.zelda_craft.wallet_withdraw.button_6": "6",
+      "subtitles.clocktown": "Clock town theme playing",
+      "item.zelda_craft.fairy_item": "Fairy Item",
+      "item.zelda_craft.fairy_spawn_egg": "Fairy Spawn Egg",
+      "item.zelda_craft.demon_tribe_sword": "Demon Tribe Sword",
+      "item.zelda_craft.small_key": "Small Key",
+      "entity.zelda_craft.hook": "Hook",
+      "subtitles.ocarina_song_error": "Ocarina song error",
+      "item.zelda_craft.fired_long_shot": "Fired Long Shot",
+      "item.zelda_craft.book_template": "Book Template",
+      "item.zelda_craft.purple_rupee": "Purple Rupee",
+      "gui.zelda_craft.wallet_deposit.button_withdraw": "Withdraw",
+      "subtitles.gerudovally": "",
+      "item.zelda_craft.flying_boomerang": "Flying Boomerang",
+      "item.zelda_craft.long_shot": "Long Shot",
+      "item.zelda_craft.song_of_storms": "Music Disc",
+      "item.zelda_craft.un_powered_master_sword": "Unpowered Master Sword",
+      "advancements.zelda_craft_advancement_page.title": "Zelda Craft",
+      "subtitles.fairy_death": "Fairy dies"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "Boomerang",
+            "children": []
+          },
+          {
+            "name": "Hookshot",
+            "children": []
+          },
+          {
+            "name": "SwordStand",
+            "children": []
+          },
+          {
+            "name": "Bow",
+            "children": [
+              {
+                "name": "Hero",
+                "children": []
+              },
+              {
+                "name": "Arrows",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Fairy",
+            "children": []
+          },
+          {
+            "name": "Destruction",
+            "children": []
+          },
+          {
+            "name": "KeyBinds",
+            "children": []
+          },
+          {
+            "name": "Gacha",
+            "children": []
+          },
+          {
+            "name": "AllNight",
+            "children": []
+          },
+          {
+            "name": "Bomb",
+            "children": []
+          },
+          {
+            "name": "Boots",
+            "children": []
+          },
+          {
+            "name": "Chest",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "GUI",
+        "children": [
+          {
+            "name": "Chest",
+            "children": []
+          },
+          {
+            "name": "Ocarina",
+            "children": [
+              {
+                "name": "NoteShowConditions",
+                "children": [
+                  {
+                    "name": "ShowA",
+                    "children": []
+                  },
+                  {
+                    "name": "ShowX",
+                    "children": []
+                  },
+                  {
+                    "name": "ShowY",
+                    "children": []
+                  },
+                  {
+                    "name": "ShowR",
+                    "children": []
+                  },
+                  {
+                    "name": "ShowL",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "ButtonFunctions",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "SongOfSoaring",
+            "children": [
+              {
+                "name": "WarpShowConditions",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Wallet",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Achievements",
+        "children": [
+          {
+            "name": "AdvancementProcedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Coins",
+        "children": []
+      },
+      {
+        "name": "Masks",
+        "children": []
+      },
+      {
+        "name": "MusicDiscs",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "zelda_craft",
+    "modName": "Zelda Craft",
+    "version": "1.9",
+    "description": "Hi, this is my first ever mod so if there are any things you think I should add, any bugs, or glitches just comment them or put them in the Discord. This mod aims to give the player the Legend of Zelda experience but inside of Minecraft adding things like the Master Sword, Hylian Shield, and much more to come. I hope you enjoy the mod! ",
+    "author": "SilverPlayz77",
+    "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/zelda-craft",
+    "license": "All Rights Reserved",
+    "serverSideOnly": false,
+    "modPicture": "637555750961528605",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "zeldacraft"
+  },
+  "mcreatorVersion": 202400118518
+}

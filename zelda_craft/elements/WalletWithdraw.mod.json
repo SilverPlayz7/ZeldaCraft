@@ -1,0 +1,165 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 208,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 205,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rupees",
+          "text": {
+            "fixedValue": "Rupees:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 254,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_rupee_counter",
+          "text": {
+            "fixedValue": "",
+            "name": "RupeeCounter"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 293,
+          "y": 41
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupeedepositmenu.png",
+          "use1Xscale": false,
+          "x": 110,
+          "y": 37
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_withdraw1",
+          "image": "withdraw1.png",
+          "hoveredImage": "deposit1h.png",
+          "onClick": {
+            "name": "Withdraw1"
+          },
+          "x": 114,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deposit2",
+          "image": "deposit2.png",
+          "hoveredImage": "deposit5h.png",
+          "onClick": {
+            "name": "Withdraw5"
+          },
+          "x": 147,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deposit20",
+          "image": "deposit20.png",
+          "hoveredImage": "deposit20h.png",
+          "onClick": {
+            "name": "Withdraw20"
+          },
+          "x": 180,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deposit50",
+          "image": "deposit50.png",
+          "hoveredImage": "deposit50h.png",
+          "onClick": {
+            "name": "Withdraw50"
+          },
+          "x": 214,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deposit100",
+          "image": "deposit100.png",
+          "hoveredImage": "deposit100h.png",
+          "onClick": {
+            "name": "Withdraw100"
+          },
+          "x": 247,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deposit300",
+          "image": "deposit300.png",
+          "hoveredImage": "deposit300h.png",
+          "onClick": {
+            "name": "Withdraw300"
+          },
+          "x": 280,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_depositswitch",
+          "image": "depositswitch.png",
+          "hoveredImage": "depositswitchhilighted.png",
+          "onClick": {
+            "name": "OpenDepositMenu"
+          },
+          "x": 238,
+          "y": 103
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

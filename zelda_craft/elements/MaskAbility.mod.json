@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "M",
+    "keyBindingName": "Use Mask Ability",
+    "keyBindingCategoryKey": "zeldacraft",
+    "onKeyPressed": {
+      "name": "MaskAbilityOnKeyPressed"
+    }
+  }
+}

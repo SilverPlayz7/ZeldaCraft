@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/lokomo_sword_stand",
+  "textures": {
+    "all": "zelda_craft:block/lokomoswordstand",
+    "particle": "zelda_craft:block/lokomoswordstand",
+    "3": "zelda_craft:block/lokomoswordstand"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "lens_of_truth"
+      },
+      "name": "default"
+    }
+  }
+}

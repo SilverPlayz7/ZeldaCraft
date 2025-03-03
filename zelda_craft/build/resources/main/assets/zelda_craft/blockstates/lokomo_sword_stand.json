@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zelda_craft:block/lokomo_sword_stand"
+    },
+    "facing=east": {
+      "model": "zelda_craft:block/lokomo_sword_stand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zelda_craft:block/lokomo_sword_stand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zelda_craft:block/lokomo_sword_stand",
+      "y": 270
+    }
+  }
+}

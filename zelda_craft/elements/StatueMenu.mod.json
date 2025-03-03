@@ -1,0 +1,326 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "songofsoaringgui.png",
+          "use1Xscale": false,
+          "x": 93,
+          "y": 3
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Warp 1",
+          "name": "Warp1",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 53
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Warp 2",
+          "name": "Warp2",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 84
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Warp 3",
+          "name": "Warp3",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 114
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Warp 4",
+          "name": "Warp4",
+          "width": 120,
+          "height": 20,
+          "x": 155,
+          "y": 144
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Warp 5",
+          "name": "Warp5",
+          "width": 120,
+          "height": 20,
+          "x": 155,
+          "y": 174
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete",
+          "text": {
+            "fixedValue": "Delete?"
+          },
+          "displayCondition": {
+            "name": "Warp1Show"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 280,
+          "y": 51
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete1",
+          "text": {
+            "fixedValue": "Delete?"
+          },
+          "displayCondition": {
+            "name": "Warp2Show"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 280,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete2",
+          "text": {
+            "fixedValue": "Delete?"
+          },
+          "displayCondition": {
+            "name": "Warp3Show"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 280,
+          "y": 112
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete3",
+          "text": {
+            "fixedValue": "Delete?"
+          },
+          "displayCondition": {
+            "name": "Warp4Show"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 280,
+          "y": 142
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete4",
+          "text": {
+            "fixedValue": "Delete"
+          },
+          "displayCondition": {
+            "name": "Warp5Show"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 280,
+          "y": 172
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_owlstatueactive",
+          "image": "owlstatueactive.png",
+          "hoveredImage": "owlstatueactivehovering.png",
+          "onClick": {
+            "name": "Warp1Teleport"
+          },
+          "displayCondition": {
+            "name": "Warp1Show"
+          },
+          "x": 125,
+          "y": 51
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_owlstatueactive1",
+          "image": "owlstatueactive.png",
+          "hoveredImage": "owlstatueactivehovering.png",
+          "onClick": {
+            "name": "Warp2Teleport"
+          },
+          "displayCondition": {
+            "name": "Warp2Show"
+          },
+          "x": 125,
+          "y": 81
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_owlstatueactive2",
+          "image": "owlstatueactive.png",
+          "hoveredImage": "owlstatueactivehovering.png",
+          "onClick": {
+            "name": "Warp3Teleport"
+          },
+          "displayCondition": {
+            "name": "Warp3Show"
+          },
+          "x": 125,
+          "y": 111
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_owlstatueactive3",
+          "image": "owlstatueactive.png",
+          "hoveredImage": "owlstatueactivehovering.png",
+          "onClick": {
+            "name": "Warp4Teleport"
+          },
+          "displayCondition": {
+            "name": "Warp4Show"
+          },
+          "x": 125,
+          "y": 141
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_owlstatueactive4",
+          "image": "owlstatueactive.png",
+          "hoveredImage": "owlstatueactivehovering.png",
+          "onClick": {
+            "name": "Warp5Teleport"
+          },
+          "displayCondition": {
+            "name": "Warp5Show"
+          },
+          "x": 125,
+          "y": 171
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deletewarp",
+          "image": "deletewarp.png",
+          "hoveredImage": "deletewarphovering.png",
+          "onClick": {
+            "name": "Warp1Clear"
+          },
+          "displayCondition": {
+            "name": "Warp1Show"
+          },
+          "x": 280,
+          "y": 50
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deletewarp1",
+          "image": "deletewarp.png",
+          "hoveredImage": "deletewarphovering.png",
+          "onClick": {
+            "name": "Warp2Clear"
+          },
+          "displayCondition": {
+            "name": "Warp2Show"
+          },
+          "x": 280,
+          "y": 81
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deletewarp2",
+          "image": "deletewarp.png",
+          "hoveredImage": "deletewarphovering.png",
+          "onClick": {
+            "name": "Warp3Clear"
+          },
+          "displayCondition": {
+            "name": "Warp3Show"
+          },
+          "x": 280,
+          "y": 111
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deletewarp3",
+          "image": "deletewarp.png",
+          "hoveredImage": "deletewarphovering.png",
+          "onClick": {
+            "name": "Warp4Clear"
+          },
+          "displayCondition": {
+            "name": "Warp4Show"
+          },
+          "x": 280,
+          "y": 141
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_deletewarp4",
+          "image": "deletewarp.png",
+          "hoveredImage": "deletewarphovering.png",
+          "onClick": {
+            "name": "Warp5Clear"
+          },
+          "displayCondition": {
+            "name": "Warp5Show"
+          },
+          "x": 280,
+          "y": 171
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

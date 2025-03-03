@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:iron_boots_boots"
+    },
+    "title": {
+      "translate": "advancements.shouldnt_have_skipped_leg_day.title"
+    },
+    "description": {
+      "translate": "advancements.shouldnt_have_skipped_leg_day.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shouldnt_have_skipped_leg_day_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:gotta_go_fast"
+}

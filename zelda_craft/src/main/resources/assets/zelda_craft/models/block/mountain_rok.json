@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zelda_craft:block/moltenrock",
+    "up": "zelda_craft:block/moltenrock",
+    "north": "zelda_craft:block/moltenrock",
+    "east": "zelda_craft:block/moltenrock",
+    "south": "zelda_craft:block/moltenrock",
+    "west": "zelda_craft:block/moltenrock",
+    "particle": "zelda_craft:block/moltenrock"
+  },
+  "render_type": "solid"
+}

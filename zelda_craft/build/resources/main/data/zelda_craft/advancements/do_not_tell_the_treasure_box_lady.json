@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:happy_mask_salesman_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.do_not_tell_the_treasure_box_lady.title"
+    },
+    "description": {
+      "translate": "advancements.do_not_tell_the_treasure_box_lady.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "do_not_tell_the_treasure_box_lady_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:zelda_craft_advancement_page"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:broken_giant_knife"
+    },
+    "title": {
+      "translate": "advancements.you_fell_victim_to_one_of_the_clasic_blunders.title"
+    },
+    "description": {
+      "translate": "advancements.you_fell_victim_to_one_of_the_clasic_blunders.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "you_fell_victim_to_one_of_the_clasic_blunders_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:the_biggoron_sword_at_home"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/hookshottarget",
+  "textures": {
+    "all": "zelda_craft:block/hookshottarget",
+    "particle": "zelda_craft:block/hookshottarget",
+    "1": "zelda_craft:block/hookshottarget"
+  },
+  "render_type": "cutout"
+}

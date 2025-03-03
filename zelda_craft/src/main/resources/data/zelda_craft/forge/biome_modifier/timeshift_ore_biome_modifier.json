@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "desert",
+  "features": "zelda_craft:timeshift_ore",
+  "step": "underground_ores"
+}

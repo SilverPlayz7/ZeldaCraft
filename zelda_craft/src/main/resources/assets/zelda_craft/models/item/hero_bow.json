@@ -1,0 +1,27 @@
+{
+  "parent": "zelda_craft:custom/herobow",
+  "textures": {
+    "1": "zelda_craft:block/herobow",
+    "particle": "zelda_craft:item/herobowthing"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "zelda_craft:hero_bow_pulling": 0.01
+      },
+      "model": "zelda_craft:item/hero_bow_0"
+    },
+    {
+      "predicate": {
+        "zelda_craft:hero_bow_pulling": 0.75
+      },
+      "model": "zelda_craft:item/hero_bow_1"
+    },
+    {
+      "predicate": {
+        "zelda_craft:hero_bow_pulling": 1
+      },
+      "model": "zelda_craft:item/hero_bow_2"
+    }
+  ]
+}

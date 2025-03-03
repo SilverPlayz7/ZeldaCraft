@@ -1,0 +1,7 @@
+
+{
+  "parent": "zelda_craft:displaysettings/smallchest.item",
+  "textures": {
+    "particle": "zelda_craft:block/smallchest"
+  }
+}

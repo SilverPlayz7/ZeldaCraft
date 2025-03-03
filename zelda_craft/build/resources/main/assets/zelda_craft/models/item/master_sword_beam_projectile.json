@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/swordbeam",
+  "textures": {
+    "2": "zelda_craft:block/masterswordbeam",
+    "particle": "zelda_craft:item/swordbeam"
+  }
+}

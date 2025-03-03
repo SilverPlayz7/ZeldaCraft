@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "Zelda Craft",
+    "icon": {
+      "value": "CUSTOM:Triforce"
+    },
+    "showSearch": false
+  }
+}

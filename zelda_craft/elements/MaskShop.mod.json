@@ -1,0 +1,130 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 300,
+    "height": 220,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 28,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "maskshop.png",
+          "use1Xscale": false,
+          "x": 64,
+          "y": 10
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_bm",
+          "text": "bm",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BlastMaskButton"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 102,
+          "y": 51
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy",
+          "text": "buy",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BuyMaskButton"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 194,
+          "y": 111
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 164,
+          "y": 112
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 247,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_bh",
+          "text": "bh",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BunnyHoodButton"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 66,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "withdraw1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BunnyHoodSelected"
+          },
+          "x": 198,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "deposit2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlastMaskSelected"
+          },
+          "x": 198,
+          "y": 55
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

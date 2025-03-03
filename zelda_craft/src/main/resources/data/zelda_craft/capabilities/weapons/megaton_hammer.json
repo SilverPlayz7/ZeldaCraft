@@ -1,0 +1,11 @@
+ {
+    "type": "epicfight:axe",
+    "attributes": {
+        "common": {
+            "armor_negation": 50.0,
+                "impact": 2.25,
+            "max_strikes": 6,
+	    "speed_bonus": 0.4
+        }
+    }
+ }

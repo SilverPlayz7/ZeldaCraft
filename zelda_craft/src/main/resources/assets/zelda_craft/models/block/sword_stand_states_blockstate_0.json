@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/woodenswordstand",
+  "textures": {
+    "all": "zelda_craft:block/woodenswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "2": "zelda_craft:block/woodenswordstand"
+  },
+  "render_type": "solid"
+}

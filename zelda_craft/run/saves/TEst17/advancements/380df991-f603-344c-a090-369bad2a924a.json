@@ -1,0 +1,22 @@
+{
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2023-01-12 17:50:17 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2023-01-12 17:50:17 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:birch_forest": "2023-01-12 17:50:45 -0500",
+      "minecraft:forest": "2023-01-12 17:49:31 -0500"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

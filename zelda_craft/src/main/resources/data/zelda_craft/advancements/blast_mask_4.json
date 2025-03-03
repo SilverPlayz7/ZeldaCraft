@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "zelda_craft:blast_mask"
+    },
+    "title": {
+      "translate": "advancements.blast_mask_4.title"
+    },
+    "description": {
+      "translate": "advancements.blast_mask_4.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "blast_mask_4_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "zelda_craft:blast_mask_3"
+}

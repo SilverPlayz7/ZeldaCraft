@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zelda_craft:block/hookshot_target"
+    },
+    "facing=east": {
+      "model": "zelda_craft:block/hookshot_target",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zelda_craft:block/hookshot_target",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zelda_craft:block/hookshot_target",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "zelda_craft:block/hookshot_target",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "zelda_craft:block/hookshot_target",
+      "x": 90
+    }
+  }
+}

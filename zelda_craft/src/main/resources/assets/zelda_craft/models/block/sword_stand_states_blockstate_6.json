@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/kokiriswordstand",
+  "textures": {
+    "all": "zelda_craft:block/kokiriswordstand",
+    "particle": "zelda_craft:block/stand_base",
+    "1": "zelda_craft:block/kokiriswordstand"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "zelda_craft:hook_shot"
+  },
+  "addition": {
+    "item": "zelda_craft:chain_spool"
+  },
+  "result": {
+    "item": "zelda_craft:long_shot"
+  }
+}

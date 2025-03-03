@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "zelda_craft:happy_mask_salesman",
+    "weight": 5,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

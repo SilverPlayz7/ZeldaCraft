@@ -1,0 +1,48 @@
+{
+  "feature": "zelda_craft:ancient_capsule_station",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 15
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:constant",
+        "value": {
+          "absolute": -51
+        }
+      }
+    },
+    {
+      "type": "environment_scan",
+      "direction_of_search": "up",
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      },
+      "max_steps": 5
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:deepslate",
+          "minecraft:sculk"
+        ],
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

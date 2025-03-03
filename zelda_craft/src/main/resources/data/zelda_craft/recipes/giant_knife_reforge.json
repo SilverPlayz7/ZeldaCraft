@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "a",
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:purified_goron_steel"
+    },
+    "b": {
+      "item": "zelda_craft:broken_giant_knife"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:biggoron_sword",
+    "count": 1
+  }
+}

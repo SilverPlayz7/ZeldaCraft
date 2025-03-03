@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/unsword",
+  "textures": {
+    "1": "zelda_craft:block/unmeister",
+    "particle": "zelda_craft:item/master_sword"
+  }
+}

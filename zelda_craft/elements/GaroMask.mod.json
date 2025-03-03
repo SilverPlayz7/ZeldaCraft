@@ -1,0 +1,56 @@
+{
+  "_fv": 66,
+  "_type": "curiosbauble",
+  "definition": {
+    "renderType": 0,
+    "texture": "mm_garos_mask_icon",
+    "customModelName": "Normal",
+    "name": "Garo Mask",
+    "rarity": "COMMON",
+    "slotType": "Masks",
+    "baubleModel": "ModelGaro_Mask",
+    "baubleModelTexture": "gaeromask.png",
+    "creativeTab": {
+      "value": "CUSTOM:ZeldaCraft"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "addSlot": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hasGlow": false,
+    "customProperties": {},
+    "states": [],
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "slotAmount": 1,
+    "isFood": false,
+    "friendlyPigs": true,
+    "enderMask": true,
+    "rotateModel": false,
+    "translateModel": true,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "hasModel": true,
+    "animation": "none"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": "Blocks.PLANKS#0"
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "Blocks.CHEST"
+      },
+      {
+        "value": "Blocks.LOG#0"
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": "Items.GOLD_INGOT"
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TreasureChest"
+    },
+    "name": "treasure_chest",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s got a bit too carried away with exploding",
+    "itemDeathMessage": "%1$s had a blast with %2$s",
+    "playerDeathMessage": "%1$s blew up whilst trying to escape %2$s"
+  }
+}

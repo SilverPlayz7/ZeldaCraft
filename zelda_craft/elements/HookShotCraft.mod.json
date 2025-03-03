@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.TRIPWIRE_HOOK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.OXIDIZED_COPPER"
+      },
+      {
+        "value": "Blocks.CHAIN"
+      },
+      {
+        "value": "Blocks.OXIDIZED_COPPER"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:HookShot"
+    },
+    "name": "hook_shot",
+    "namespace": "mod"
+  }
+}

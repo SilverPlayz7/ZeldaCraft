@@ -1,0 +1,107 @@
+{
+  "_fv": 66,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": false,
+    "textureHelmet": "",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": true,
+    "textureBoots": "iron_boots",
+    "onBootsTick": {
+      "name": "IronBootsBootsTickEvent"
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "armorTextureFile": "link_",
+    "helmetName": "Iron Boots Helmet",
+    "bodyName": "Iron Boots Chestplate",
+    "leggingsName": "Iron Boots Leggings",
+    "bootsName": "Iron Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "You got the Iron Boots! So heavy",
+        "you can't run. So heavy",
+        "you can't float."
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "ModelIronBoots",
+    "bootsModelPartL": "Left",
+    "bootsModelPartR": "Left",
+    "bootsModelTexture": "ironboots.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 0,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 3,
+    "enchantability": 9,
+    "toughness": 2.5,
+    "knockbackResistance": 1.0,
+    "equipSound": {
+      "value": "block.anvil.place"
+    },
+    "repairItems": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "zelda_craft:time_armor_helmet"
+    },
+    {
+      "item": "minecraft:black_dye"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:dark_time_armor_helmet",
+    "count": 1
+  }
+}

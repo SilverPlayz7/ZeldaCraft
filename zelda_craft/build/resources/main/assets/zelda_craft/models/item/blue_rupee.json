@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/bluerupee",
+  "textures": {
+    "0": "zelda_craft:block/bluerupee",
+    "particle": "zelda_craft:item/blue_rupee"
+  }
+}

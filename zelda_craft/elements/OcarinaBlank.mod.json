@@ -1,0 +1,397 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ocarinastaff.png",
+          "use1Xscale": true,
+          "x": 115,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show1A"
+          },
+          "x": 151,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show2A"
+          },
+          "x": 170,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show3A"
+          },
+          "x": 188,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show4A"
+          },
+          "x": 208,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show5A"
+          },
+          "x": 228,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "a.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show6A"
+          },
+          "x": 247,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show1X"
+          },
+          "x": 152,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show2X"
+          },
+          "x": 171,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show3X"
+          },
+          "x": 189,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show4X"
+          },
+          "x": 209,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show5X"
+          },
+          "x": 229,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show6X"
+          },
+          "x": 248,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show1Y"
+          },
+          "x": 151,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show2Y"
+          },
+          "x": 170,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show3Y"
+          },
+          "x": 189,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show4Y"
+          },
+          "x": 208,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show5Y"
+          },
+          "x": 228,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "y.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show6Y"
+          },
+          "x": 247,
+          "y": 195
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show1R"
+          },
+          "x": 152,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show2R"
+          },
+          "x": 171,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show3R"
+          },
+          "x": 190,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show4R"
+          },
+          "x": 209,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show5R"
+          },
+          "x": 229,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "r.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show6R"
+          },
+          "x": 248,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show1L"
+          },
+          "x": 152,
+          "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show2L"
+          },
+          "x": 171,
+          "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show3L"
+          },
+          "x": 190,
+          "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show4L"
+          },
+          "x": 209,
+          "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show5L"
+          },
+          "x": 229,
+          "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "l.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Show6L"
+          },
+          "x": 248,
+          "y": 211
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "OcarinaBlankThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "OcarinaBlankThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 9,
+      "ox": 11,
+      "oy": 20,
+      "snapOnGrid": false
+    }
+  }
+}

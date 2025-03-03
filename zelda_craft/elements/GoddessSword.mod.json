@@ -1,0 +1,37 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "unnamed",
+    "customModelName": "goddess_sword:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Goddess Sword",
+    "specialInformation": {
+      "fixedValue": [
+        "The Statue of the Goddess enshrines this sword. Its blade glimmers with divine light."
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.8,
+    "enchantability": 2,
+    "damageVsEntity": 8.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

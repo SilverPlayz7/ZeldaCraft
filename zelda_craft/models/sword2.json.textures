@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "meister",
+        "2": "meister2"
+      },
+      "name": "default"
+    }
+  }
+}
