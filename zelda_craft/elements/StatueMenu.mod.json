@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "songofsoaringgui.png",
           "use1Xscale": false,
           "x": 93,
-          "y": 3
+          "y": 3,
+          "locked": false
         }
       },
       {
@@ -27,7 +28,8 @@
           "width": 120,
           "height": 20,
           "x": 154,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -38,7 +40,8 @@
           "width": 120,
           "height": 20,
           "x": 154,
-          "y": 84
+          "y": 84,
+          "locked": false
         }
       },
       {
@@ -49,7 +52,8 @@
           "width": 120,
           "height": 20,
           "x": 154,
-          "y": 114
+          "y": 114,
+          "locked": false
         }
       },
       {
@@ -60,7 +64,8 @@
           "width": 120,
           "height": 20,
           "x": 155,
-          "y": 144
+          "y": 144,
+          "locked": false
         }
       },
       {
@@ -71,7 +76,8 @@
           "width": 120,
           "height": 20,
           "x": 155,
-          "y": 174
+          "y": 174,
+          "locked": false
         }
       },
       {
@@ -87,7 +93,8 @@
           "width": 24,
           "height": 24,
           "x": 280,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -103,7 +110,8 @@
           "width": 24,
           "height": 24,
           "x": 280,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -119,7 +127,8 @@
           "width": 24,
           "height": 24,
           "x": 280,
-          "y": 112
+          "y": 112,
+          "locked": false
         }
       },
       {
@@ -135,7 +144,8 @@
           "width": 24,
           "height": 24,
           "x": 280,
-          "y": 142
+          "y": 142,
+          "locked": false
         }
       },
       {
@@ -151,7 +161,8 @@
           "width": 24,
           "height": 24,
           "x": 280,
-          "y": 172
+          "y": 172,
+          "locked": false
         }
       },
       {
@@ -167,7 +178,8 @@
             "name": "Warp1Show"
           },
           "x": 125,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -183,7 +195,8 @@
             "name": "Warp2Show"
           },
           "x": 125,
-          "y": 81
+          "y": 81,
+          "locked": false
         }
       },
       {
@@ -199,7 +212,8 @@
             "name": "Warp3Show"
           },
           "x": 125,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -215,7 +229,8 @@
             "name": "Warp4Show"
           },
           "x": 125,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -231,7 +246,8 @@
             "name": "Warp5Show"
           },
           "x": 125,
-          "y": 171
+          "y": 171,
+          "locked": false
         }
       },
       {
@@ -247,7 +263,8 @@
             "name": "Warp1Show"
           },
           "x": 280,
-          "y": 50
+          "y": 50,
+          "locked": false
         }
       },
       {
@@ -263,7 +280,8 @@
             "name": "Warp2Show"
           },
           "x": 280,
-          "y": 81
+          "y": 81,
+          "locked": false
         }
       },
       {
@@ -279,7 +297,8 @@
             "name": "Warp3Show"
           },
           "x": 280,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -295,7 +314,8 @@
             "name": "Warp4Show"
           },
           "x": 280,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -311,7 +331,8 @@
             "name": "Warp5Show"
           },
           "x": 280,
-          "y": 171
+          "y": 171,
+          "locked": false
         }
       }
     ],

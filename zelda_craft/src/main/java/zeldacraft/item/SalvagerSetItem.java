@@ -1,8 +1,6 @@
 
 package zeldacraft.item;
 
-import zeldacraft.procedures.SalvagerSetChestplateTickEventProcedure;
-
 import zeldacraft.client.renderer.SalvagerSetArmorRenderer;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
@@ -26,7 +24,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -105,12 +102,6 @@ public class SalvagerSetItem extends ArmorItem implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-	}
-
-	@Override
-	public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-		if (itemstack.getItem() instanceof SalvagerSetItem armor && armor.getType() == ArmorItem.Type.CHESTPLATE)
-			SalvagerSetChestplateTickEventProcedure.execute(entity);
 	}
 
 	private PlayState predicate(AnimationState event) {

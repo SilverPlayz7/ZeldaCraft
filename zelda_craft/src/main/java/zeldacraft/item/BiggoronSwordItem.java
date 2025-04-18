@@ -44,6 +44,6 @@ public class BiggoronSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("A legendary greatsword forged by a Goron craftsman for a hero who traveled through time. The exceptionally sharp cutting edge is a testament to the craftsman's mastery."));
+		list.add(Component.translatable("item.zelda_craft.biggoron_sword.description_0"));
 	}
 }

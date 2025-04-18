@@ -1,4 +1,4 @@
-# net.minecraftforge:forge:1.20.1-47.2.0:userdev - sas/forge.sas
+# net.minecraftforge:forge:1.20.1-47.3.0:userdev - sas/forge.sas
 # Forge Sided Annotation Stripper Config
 # Please keep this file organized. And use the forge:checkAndFixSAS task to generate/validate inheritance.
 # So only add the root function that needs to have the annotation stripped.

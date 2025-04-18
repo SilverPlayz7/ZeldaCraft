@@ -18,6 +18,6 @@ public class HyruleCrestItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("The crest of the great kingdom of Hyrule"));
+		list.add(Component.translatable("item.zelda_craft.hyrule_crest.description_0"));
 	}
 }

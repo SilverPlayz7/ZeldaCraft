@@ -45,7 +45,7 @@ public class KokiriSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This is a hidden treasure of the Kokiri"));
-		list.add(Component.literal("but you can borrow it for a while. Be sure to practice with it before you really fight!"));
+		list.add(Component.translatable("item.zelda_craft.kokiri_sword.description_0"));
+		list.add(Component.translatable("item.zelda_craft.kokiri_sword.description_1"));
 	}
 }

@@ -24,6 +24,6 @@ public class GoldRupeeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This is a GOLD RUPEE! It's worth 300 rupees!!!"));
+		list.add(Component.translatable("item.zelda_craft.gold_rupee.description_0"));
 	}
 }

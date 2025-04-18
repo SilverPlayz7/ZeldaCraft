@@ -44,6 +44,6 @@ public class GoddessSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("The Statue of the Goddess enshrines this sword. Its blade glimmers with divine light."));
+		list.add(Component.translatable("item.zelda_craft.goddess_sword.description_0"));
 	}
 }

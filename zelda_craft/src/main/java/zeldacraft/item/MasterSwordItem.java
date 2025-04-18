@@ -47,7 +47,7 @@ public class MasterSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\"The Master Sword is a sacred blade which evil ones may never touch... Only one worthy of the \"Hero of Time\" can pull it from the pedistal\" -Rauru"));
+		list.add(Component.translatable("item.zelda_craft.master_sword.description_0"));
 	}
 
 	@Override

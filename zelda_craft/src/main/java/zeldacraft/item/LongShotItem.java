@@ -10,7 +10,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -46,13 +45,13 @@ public class LongShotItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("It's an upgraded Hookshot. It extends twice as far!"));
+		list.add(Component.translatable("item.zelda_craft.long_shot.description_0"));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.fail(entity.getItemInHand(hand));
-		if (entity.getAbilities().instabuild || findAmmo(entity) == ItemStack.EMPTY) {
+		if (entity.getAbilities().instabuild || findAmmo(entity) != ItemStack.EMPTY) {
 			ar = InteractionResultHolder.success(entity.getItemInHand(hand));
 			entity.startUsingItem(hand);
 		}
@@ -63,7 +62,7 @@ public class LongShotItem extends Item {
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
 			ItemStack stack = findAmmo(player);
-			if (player.getAbilities().instabuild || stack == ItemStack.EMPTY) {
+			if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
 				LongShotProjectileEntity projectile = LongShotProjectileEntity.shoot(world, entity, world.getRandom());
 				if (player.getAbilities().instabuild) {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
@@ -87,16 +86,6 @@ public class LongShotItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == LongShotProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack != ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == LongShotProjectileEntity.PROJECTILE_ITEM.getItem()) {
-					stack = teststack;
-					break;
-				}
-			}
-		}
-		return stack;
+		return new ItemStack(LongShotProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

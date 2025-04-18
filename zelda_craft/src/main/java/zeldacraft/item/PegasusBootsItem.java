@@ -108,7 +108,7 @@ public abstract class PegasusBootsItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("Dash with the speed of the legendary steed"));
+			list.add(Component.translatable("item.zelda_craft.pegasus_boots_boots.description_0"));
 		}
 
 		@Override

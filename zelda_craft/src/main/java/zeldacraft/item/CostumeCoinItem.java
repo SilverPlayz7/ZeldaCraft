@@ -18,9 +18,9 @@ public class CostumeCoinItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This coin allows you roll the Anchient Capsule Machine's costume pool"));
-		list.add(Component.literal("Drops:"));
-		list.add(Component.literal(" Armor of Time - 50%"));
-		list.add(Component.literal(" Armor of Twilight - 50%"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_0"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_1"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_2"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_3"));
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "maskshop.png",
           "use1Xscale": false,
           "x": 64,
-          "y": 10
+          "y": 10,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
           "width": 35,
           "height": 20,
           "x": 102,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
           "width": 40,
           "height": 20,
           "x": 194,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -64,7 +67,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 164,
-          "y": 112
+          "y": 112,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 247,
-          "y": 113
+          "y": 113,
+          "locked": false
         }
       },
       {
@@ -91,7 +96,8 @@
           "width": 35,
           "height": 20,
           "x": 66,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -103,7 +109,8 @@
             "name": "BunnyHoodSelected"
           },
           "x": 198,
-          "y": 55
+          "y": 55,
+          "locked": false
         }
       },
       {
@@ -115,7 +122,8 @@
             "name": "BlastMaskSelected"
           },
           "x": 198,
-          "y": 55
+          "y": 55,
+          "locked": false
         }
       }
     ],

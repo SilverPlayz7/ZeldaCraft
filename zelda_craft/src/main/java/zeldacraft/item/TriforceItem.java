@@ -35,7 +35,7 @@ public class TriforceItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This relic was created by the devine powers of the three goddesses after they created the world."));
+		list.add(Component.translatable("item.zelda_craft.triforce.description_0"));
 	}
 
 	@Override

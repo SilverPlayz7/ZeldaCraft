@@ -25,7 +25,7 @@ public class OccarinaOfTimeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This mystical ocarina has been passed down through generations by the Hyrulian royal family. It's believed that the material is embued with the power of time itself."));
+		list.add(Component.translatable("item.zelda_craft.occarina_of_time.description_0"));
 	}
 
 	@Override

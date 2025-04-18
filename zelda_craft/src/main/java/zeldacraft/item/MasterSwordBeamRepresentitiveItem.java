@@ -18,6 +18,6 @@ public class MasterSwordBeamRepresentitiveItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("You shouldn't have this! but if you somehow did get this if you glitch it onto your helmet slot you get a cool sunvisor."));
+		list.add(Component.translatable("item.zelda_craft.master_sword_beam_representitive.description_0"));
 	}
 }

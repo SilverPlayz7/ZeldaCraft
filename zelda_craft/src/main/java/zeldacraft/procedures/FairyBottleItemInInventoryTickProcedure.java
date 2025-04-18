@@ -44,8 +44,6 @@ public class FairyBottleItemInInventoryTickProcedure {
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(ZeldaCraftModItems.FAIRY_BOTTLE.get())) : false) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 			{
 				boolean _setval = true;

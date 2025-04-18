@@ -79,6 +79,8 @@ public class WalletWithdrawMenu extends AbstractContainerMenu implements Supplie
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 96, 61) {
 			private final int slot = 0;
+			private int x = WalletWithdrawMenu.this.x;
+			private int y = WalletWithdrawMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {

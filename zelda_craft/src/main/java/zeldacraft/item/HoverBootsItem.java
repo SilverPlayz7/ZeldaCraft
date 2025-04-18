@@ -107,7 +107,7 @@ public abstract class HoverBootsItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("You got the Hover Boots! With these mysterious boots you can hover above the ground. You can even use these to walk for short periods where there is no solid ground. Be brave and trust in the boots!"));
+			list.add(Component.translatable("item.zelda_craft.hover_boots_boots.description_0"));
 		}
 
 		@Override

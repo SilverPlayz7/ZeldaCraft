@@ -18,6 +18,6 @@ public class FairyItemItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Here's a little trophy for your cheating."));
+		list.add(Component.translatable("item.zelda_craft.fairy_item.description_0"));
 	}
 }

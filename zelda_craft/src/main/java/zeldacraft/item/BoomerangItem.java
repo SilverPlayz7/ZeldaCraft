@@ -35,7 +35,7 @@ public class BoomerangItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("If you throw it, it comes back! The boomerang can be used to stun or defeat enemies."));
+		list.add(Component.translatable("item.zelda_craft.boomerang.description_0"));
 	}
 
 	@Override

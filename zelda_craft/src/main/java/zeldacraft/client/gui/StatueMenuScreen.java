@@ -270,9 +270,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp1ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp1ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_owlstatueactive", imagebutton_owlstatueactive);
@@ -284,9 +284,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp2ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp2ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_owlstatueactive1", imagebutton_owlstatueactive1);
@@ -298,9 +298,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp3ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp3ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_owlstatueactive2", imagebutton_owlstatueactive2);
@@ -312,9 +312,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp4ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp4ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_owlstatueactive3", imagebutton_owlstatueactive3);
@@ -326,9 +326,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp5ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp5ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_owlstatueactive4", imagebutton_owlstatueactive4);
@@ -340,9 +340,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp1ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp1ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_deletewarp", imagebutton_deletewarp);
@@ -354,9 +354,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp2ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp2ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_deletewarp1", imagebutton_deletewarp1);
@@ -368,9 +368,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp3ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp3ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_deletewarp2", imagebutton_deletewarp2);
@@ -382,9 +382,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp4ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp4ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_deletewarp3", imagebutton_deletewarp3);
@@ -396,9 +396,9 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> {
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Warp5ShowProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = Warp5ShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_deletewarp4", imagebutton_deletewarp4);

@@ -44,6 +44,6 @@ public class UnPoweredMasterSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("The flames of Din have imbued your blade with a sacred white light that demons revile."));
+		list.add(Component.translatable("item.zelda_craft.un_powered_master_sword.description_0"));
 	}
 }

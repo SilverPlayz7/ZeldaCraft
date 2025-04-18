@@ -26,7 +26,7 @@ public class BombableWallBlock extends Block {
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This was once an impervious rock but due to internal structural weaknesses, is now extremely vulnerable to explosions"));
+		list.add(Component.translatable("block.zelda_craft.bombable_wall.description_0"));
 	}
 
 	@Override

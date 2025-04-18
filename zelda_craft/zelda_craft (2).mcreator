@@ -31,8 +31,8 @@
       "registry_name": "green_rupie",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/GreenRupieItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/green_rupie.json"
+          "src/main/resources/assets/zelda_craft/models/item/green_rupie.json",
+          "src/main/java/zeldacraft/item/GreenRupieItem.java"
         ]
       }
     },
@@ -44,8 +44,8 @@
       "registry_name": "blue_rupee",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/blue_rupee.json",
-          "src/main/java/zeldacraft/item/BlueRupeeItem.java"
+          "src/main/java/zeldacraft/item/BlueRupeeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/blue_rupee.json"
         ]
       }
     },
@@ -70,8 +70,8 @@
       "registry_name": "purple_rupee",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/purple_rupee.json",
-          "src/main/java/zeldacraft/item/PurpleRupeeItem.java"
+          "src/main/java/zeldacraft/item/PurpleRupeeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/purple_rupee.json"
         ]
       }
     },
@@ -83,8 +83,8 @@
       "registry_name": "silver_rupee",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/SilverRupeeItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/silver_rupee.json"
+          "src/main/resources/assets/zelda_craft/models/item/silver_rupee.json",
+          "src/main/java/zeldacraft/item/SilverRupeeItem.java"
         ]
       }
     },
@@ -267,8 +267,8 @@
         "eb": true,
         "ec": false,
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/pegasus_boots_boots.json",
-          "src/main/java/zeldacraft/item/PegasusBootsItem.java"
+          "src/main/java/zeldacraft/item/PegasusBootsItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/pegasus_boots_boots.json"
         ]
       }
     },
@@ -330,8 +330,8 @@
       "registry_name": "triforce",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/TriforceItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/triforce.json"
+          "src/main/resources/assets/zelda_craft/models/item/triforce.json",
+          "src/main/java/zeldacraft/item/TriforceItem.java"
         ]
       }
     },
@@ -369,14 +369,14 @@
       "registry_name": "molten_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/zelda_craft/models/item/molten_ore.json",
           "src/main/resources/data/zelda_craft/worldgen/configured_feature/molten_ore.json",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/molten_ore.json",
-          "src/main/resources/assets/zelda_craft/models/block/molten_ore.json",
+          "src/main/java/zeldacraft/block/MoltenOreBlock.java",
           "src/main/resources/data/zelda_craft/forge/biome_modifier/molten_ore_biome_modifier.json",
           "src/main/resources/data/zelda_craft/worldgen/placed_feature/molten_ore.json",
-          "src/main/resources/assets/zelda_craft/models/item/molten_ore.json",
           "src/main/resources/assets/zelda_craft/blockstates/molten_ore.json",
-          "src/main/java/zeldacraft/block/MoltenOreBlock.java"
+          "src/main/resources/assets/zelda_craft/models/block/molten_ore.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/molten_ore.json"
         ]
       }
     },
@@ -388,72 +388,16 @@
       "registry_name": "mountain_rok",
       "metadata": {
         "files": [
-          "src/main/resources/data/zelda_craft/worldgen/placed_feature/mountain_rok.json",
-          "src/main/resources/data/zelda_craft/forge/biome_modifier/mountain_rok_biome_modifier.json",
           "src/main/resources/data/zelda_craft/loot_tables/blocks/mountain_rok.json",
           "src/main/resources/assets/zelda_craft/models/item/mountain_rok.json",
-          "src/main/resources/assets/zelda_craft/blockstates/mountain_rok.json",
+          "src/main/resources/data/zelda_craft/worldgen/configured_feature/mountain_rok.json",
           "src/main/resources/assets/zelda_craft/models/block/mountain_rok.json",
           "src/main/java/zeldacraft/block/MountainRokBlock.java",
-          "src/main/resources/data/zelda_craft/worldgen/configured_feature/mountain_rok.json"
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/mountain_rok_biome_modifier.json",
+          "src/main/resources/data/zelda_craft/worldgen/placed_feature/mountain_rok.json",
+          "src/main/resources/assets/zelda_craft/blockstates/mountain_rok.json"
         ]
       }
-    },
-    {
-      "name": "SongOfStorms",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "song_of_storms",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/item/SongOfStormsItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/song_of_storms.json"
-        ]
-      },
-      "path": "~/MusicDiscs"
-    },
-    {
-      "name": "SariasSong",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sarias_song",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/zelda_craft/models/item/sarias_song.json",
-          "src/main/java/zeldacraft/item/SariasSongItem.java"
-        ]
-      },
-      "path": "~/MusicDiscs"
-    },
-    {
-      "name": "GurudoVally",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gurudo_vally",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/zelda_craft/models/item/gurudo_vally.json",
-          "src/main/java/zeldacraft/item/GurudoVallyItem.java"
-        ]
-      },
-      "path": "~/MusicDiscs"
-    },
-    {
-      "name": "BalladOfTheGoddess",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ballad_of_the_goddess",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/zelda_craft/models/item/ballad_of_the_goddess.json",
-          "src/main/java/zeldacraft/item/BalladOfTheGoddessItem.java"
-        ]
-      },
-      "path": "~/MusicDiscs"
     },
     {
       "name": "UnPoweredMasterSword",
@@ -493,34 +437,6 @@
         ]
       },
       "path": "~/Recipes"
-    },
-    {
-      "name": "MidnasLament",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "midnas_lament",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/item/MidnasLamentItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/midnas_lament.json"
-        ]
-      },
-      "path": "~/MusicDiscs"
-    },
-    {
-      "name": "MainTheme",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_theme",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/item/MainThemeItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/main_theme.json"
-        ]
-      },
-      "path": "~/MusicDiscs"
     },
     {
       "name": "KokiriSword",
@@ -621,12 +537,12 @@
       "registry_name": "open_chest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/blockstates/open_chest.json",
-          "src/main/java/zeldacraft/block/entity/OpenChestBlockEntity.java",
           "src/main/resources/data/zelda_craft/loot_tables/blocks/open_chest.json",
-          "src/main/resources/assets/zelda_craft/models/item/open_chest.json",
+          "src/main/java/zeldacraft/block/OpenChestBlock.java",
+          "src/main/java/zeldacraft/block/entity/OpenChestBlockEntity.java",
+          "src/main/resources/assets/zelda_craft/blockstates/open_chest.json",
           "src/main/resources/assets/zelda_craft/models/block/open_chest.json",
-          "src/main/java/zeldacraft/block/OpenChestBlock.java"
+          "src/main/resources/assets/zelda_craft/models/item/open_chest.json"
         ]
       },
       "path": "~/Procedures/Chest"
@@ -639,12 +555,12 @@
       "registry_name": "hylian_chest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/hylian_chest.json",
-          "src/main/resources/assets/zelda_craft/blockstates/hylian_chest.json",
-          "src/main/resources/assets/zelda_craft/models/block/hylian_chest.json",
-          "src/main/java/zeldacraft/block/ClosedChestBlock.java",
           "src/main/java/zeldacraft/block/entity/ClosedChestBlockEntity.java",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/hylian_chest.json"
+          "src/main/java/zeldacraft/block/ClosedChestBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/hylian_chest.json",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/models/item/hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/models/block/hylian_chest.json"
         ]
       }
     },
@@ -691,8 +607,8 @@
       "registry_name": "chest",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/world/inventory/ChestMenu.java",
-          "src/main/java/zeldacraft/client/gui/ChestScreen.java"
+          "src/main/java/zeldacraft/client/gui/ChestScreen.java",
+          "src/main/java/zeldacraft/world/inventory/ChestMenu.java"
         ]
       },
       "path": "~/GUI/Chest"
@@ -861,11 +777,11 @@
       "registry_name": "sword_stand",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/block/SwordStandBlock.java",
-          "src/main/java/zeldacraft/block/entity/SwordStandBlockEntity.java",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/sword_stand.json",
           "src/main/resources/assets/zelda_craft/blockstates/sword_stand.json",
+          "src/main/java/zeldacraft/block/entity/SwordStandBlockEntity.java",
           "src/main/resources/assets/zelda_craft/models/block/sword_stand.json",
+          "src/main/java/zeldacraft/block/SwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/sword_stand.json",
           "src/main/resources/assets/zelda_craft/models/item/sword_stand.json"
         ]
       }
@@ -913,12 +829,12 @@
       "registry_name": "master_sword_stand",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/block/entity/MasterSwordStandBlockEntity.java",
-          "src/main/resources/assets/zelda_craft/models/item/master_sword_stand.json",
           "src/main/java/zeldacraft/block/MasterSwordStandBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/master_sword_stand.json",
+          "src/main/java/zeldacraft/block/entity/MasterSwordStandBlockEntity.java",
           "src/main/resources/assets/zelda_craft/blockstates/master_sword_stand.json",
           "src/main/resources/assets/zelda_craft/models/block/master_sword_stand.json",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/master_sword_stand.json"
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_stand.json"
         ]
       },
       "path": "~/Procedures/SwordStand"
@@ -977,8 +893,8 @@
       "registry_name": "chain_spool",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/chain_spool.json",
-          "src/main/java/zeldacraft/item/ChainSpoolItem.java"
+          "src/main/java/zeldacraft/item/ChainSpoolItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/chain_spool.json"
         ]
       }
     },
@@ -1172,8 +1088,8 @@
       "registry_name": "occarina_of_time",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/OccarinaOfTimeItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/occarina_of_time.json"
+          "src/main/resources/assets/zelda_craft/models/item/occarina_of_time.json",
+          "src/main/java/zeldacraft/item/OccarinaOfTimeItem.java"
         ]
       }
     },
@@ -1237,8 +1153,8 @@
       "registry_name": "empty_bottle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/empty_bottle.json",
-          "src/main/java/zeldacraft/item/EmptyBottleItem.java"
+          "src/main/java/zeldacraft/item/EmptyBottleItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/empty_bottle.json"
         ]
       }
     },
@@ -1399,8 +1315,8 @@
       "registry_name": "iron_boots",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/IronBootsItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/iron_boots_boots.json"
+          "src/main/resources/assets/zelda_craft/models/item/iron_boots_boots.json",
+          "src/main/java/zeldacraft/item/IronBootsItem.java"
         ]
       }
     },
@@ -1537,8 +1453,8 @@
       "registry_name": "hover_boots",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/HoverBootsItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/hover_boots_boots.json"
+          "src/main/resources/assets/zelda_craft/models/item/hover_boots_boots.json",
+          "src/main/java/zeldacraft/item/HoverBootsItem.java"
         ]
       }
     },
@@ -1585,8 +1501,8 @@
       "registry_name": "razor_sword",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/RazorSwordItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/razor_sword.json"
+          "src/main/resources/assets/zelda_craft/models/item/razor_sword.json",
+          "src/main/java/zeldacraft/item/RazorSwordItem.java"
         ]
       }
     },
@@ -1677,8 +1593,8 @@
       "registry_name": "molten_scrap",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/molten_scrap.json",
-          "src/main/java/zeldacraft/item/MoltenScrapItem.java"
+          "src/main/java/zeldacraft/item/MoltenScrapItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/molten_scrap.json"
         ]
       }
     },
@@ -1787,12 +1703,12 @@
       "registry_name": "lokomo_sword_stand",
       "metadata": {
         "files": [
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/lokomo_sword_stand.json",
+          "src/main/java/zeldacraft/block/LokomoSwordStandBlock.java",
+          "src/main/java/zeldacraft/block/entity/LokomoSwordStandBlockEntity.java",
           "src/main/resources/assets/zelda_craft/models/item/lokomo_sword_stand.json",
           "src/main/resources/assets/zelda_craft/models/block/lokomo_sword_stand.json",
           "src/main/resources/assets/zelda_craft/blockstates/lokomo_sword_stand.json",
-          "src/main/java/zeldacraft/block/LokomoSwordStandBlock.java",
-          "src/main/java/zeldacraft/block/entity/LokomoSwordStandBlockEntity.java"
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/lokomo_sword_stand.json"
         ]
       },
       "path": "~/Procedures/SwordStand"
@@ -1833,20 +1749,6 @@
       "path": "~/Procedures/SwordStand"
     },
     {
-      "name": "ClockTown",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clock_town",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/item/ClockTownItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/clock_town.json"
-        ]
-      },
-      "path": "~/MusicDiscs"
-    },
-    {
       "name": "MasterSwordBeamRepresentitive",
       "type": "item",
       "compiles": true,
@@ -1854,8 +1756,8 @@
       "registry_name": "master_sword_beam_representitive",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/MasterSwordBeamRepresentitiveItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_representitive.json"
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_representitive.json",
+          "src/main/java/zeldacraft/item/MasterSwordBeamRepresentitiveItem.java"
         ]
       },
       "path": "~/Procedures"
@@ -1920,8 +1822,8 @@
       "registry_name": "bomb",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/BombItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/bomb.json"
+          "src/main/resources/assets/zelda_craft/models/item/bomb.json",
+          "src/main/java/zeldacraft/item/BombItem.java"
         ]
       }
     },
@@ -1941,13 +1843,13 @@
       "name": "HookShot",
       "type": "item",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "hook_shot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/hook_shot_0.json",
+          "src/main/java/zeldacraft/item/HookShotItem.java",
           "src/main/resources/assets/zelda_craft/models/item/hook_shot.json",
-          "src/main/java/zeldacraft/item/HookShotItem.java"
+          "src/main/resources/assets/zelda_craft/models/item/hook_shot_0.json"
         ]
       }
     },
@@ -1967,13 +1869,13 @@
       "name": "LongShot",
       "type": "item",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "long_shot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/long_shot.json",
+          "src/main/resources/assets/zelda_craft/models/item/long_shot_0.json",
           "src/main/java/zeldacraft/item/LongShotItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/long_shot_0.json"
+          "src/main/resources/assets/zelda_craft/models/item/long_shot.json"
         ]
       }
     },
@@ -1997,8 +1899,8 @@
       "registry_name": "master_sword_beam_projectile",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/MasterSwordBeamProjectileItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_projectile.json"
+          "src/main/resources/assets/zelda_craft/models/item/master_sword_beam_projectile.json",
+          "src/main/java/zeldacraft/item/MasterSwordBeamProjectileItem.java"
         ]
       }
     },
@@ -2033,8 +1935,8 @@
       "registry_name": "demon_tribe_sword",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/DemonTribeSwordItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/demon_tribe_sword.json"
+          "src/main/resources/assets/zelda_craft/models/item/demon_tribe_sword.json",
+          "src/main/java/zeldacraft/item/DemonTribeSwordItem.java"
         ]
       }
     },
@@ -2047,11 +1949,11 @@
       "metadata": {
         "files": [
           "src/main/resources/data/zelda_craft/loot_tables/blocks/locked_hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/models/block/locked_hylian_chest.json",
+          "src/main/resources/assets/zelda_craft/blockstates/locked_hylian_chest.json",
           "src/main/resources/assets/zelda_craft/models/item/locked_hylian_chest.json",
           "src/main/java/zeldacraft/block/entity/LockedHylianChestBlockEntity.java",
-          "src/main/resources/assets/zelda_craft/models/block/locked_hylian_chest.json",
-          "src/main/java/zeldacraft/block/LockedHylianChestBlock.java",
-          "src/main/resources/assets/zelda_craft/blockstates/locked_hylian_chest.json"
+          "src/main/java/zeldacraft/block/LockedHylianChestBlock.java"
         ]
       },
       "path": "~/Procedures/Chest"
@@ -2148,14 +2050,14 @@
       "registry_name": "timeshift_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/zelda_craft/worldgen/placed_feature/timeshift_ore.json",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/timeshift_ore.json",
-          "src/main/resources/assets/zelda_craft/models/item/timeshift_ore.json",
-          "src/main/resources/assets/zelda_craft/models/block/timeshift_ore.json",
-          "src/main/resources/data/zelda_craft/worldgen/configured_feature/timeshift_ore.json",
           "src/main/java/zeldacraft/block/TimeshiftOreBlock.java",
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/timeshift_ore.json",
+          "src/main/resources/data/zelda_craft/worldgen/placed_feature/timeshift_ore.json",
+          "src/main/resources/assets/zelda_craft/models/block/timeshift_ore.json",
           "src/main/resources/data/zelda_craft/forge/biome_modifier/timeshift_ore_biome_modifier.json",
-          "src/main/resources/assets/zelda_craft/blockstates/timeshift_ore.json"
+          "src/main/resources/assets/zelda_craft/blockstates/timeshift_ore.json",
+          "src/main/resources/data/zelda_craft/worldgen/configured_feature/timeshift_ore.json",
+          "src/main/resources/assets/zelda_craft/models/item/timeshift_ore.json"
         ]
       }
     },
@@ -2167,8 +2069,8 @@
       "registry_name": "timeshift_shard",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/TimeshiftShardItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/timeshift_shard.json"
+          "src/main/resources/assets/zelda_craft/models/item/timeshift_shard.json",
+          "src/main/java/zeldacraft/item/TimeshiftShardItem.java"
         ]
       }
     },
@@ -2180,8 +2082,8 @@
       "registry_name": "warp_flute",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/warp_flute.json",
-          "src/main/java/zeldacraft/item/WarpFluteItem.java"
+          "src/main/java/zeldacraft/item/WarpFluteItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/warp_flute.json"
         ]
       }
     },
@@ -2206,8 +2108,8 @@
       "registry_name": "purified_goron_steel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/purified_goron_steel.json",
-          "src/main/java/zeldacraft/item/PurifiedGoronSteelItem.java"
+          "src/main/java/zeldacraft/item/PurifiedGoronSteelItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/purified_goron_steel.json"
         ]
       }
     },
@@ -2258,8 +2160,8 @@
       "registry_name": "giant_knife",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/giant_knife.json",
-          "src/main/java/zeldacraft/item/GiantKnifeItem.java"
+          "src/main/java/zeldacraft/item/GiantKnifeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/giant_knife.json"
         ]
       }
     },
@@ -2364,8 +2266,8 @@
       "registry_name": "costume_coin",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/CostumeCoinItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/costume_coin.json"
+          "src/main/resources/assets/zelda_craft/models/item/costume_coin.json",
+          "src/main/java/zeldacraft/item/CostumeCoinItem.java"
         ]
       },
       "path": "~/Coins"
@@ -3485,10 +3387,10 @@
           "src/main/java/zeldacraft/item/TwilightArmorItem.java",
           "src/main/java/zeldacraft/item/model/TwilightArmorModel.java",
           "src/main/resources/assets/zelda_craft/models/item/twilight_armor_chestplate.json",
-          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_helmet.json",
-          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_boots.json",
           "src/main/resources/assets/zelda_craft/models/item/twilight_armor_leggings.json",
-          "src/main/java/zeldacraft/client/renderer/TwilightArmorArmorRenderer.java"
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_boots.json",
+          "src/main/java/zeldacraft/client/renderer/TwilightArmorArmorRenderer.java",
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_helmet.json"
         ]
       }
     },
@@ -3501,15 +3403,15 @@
       "metadata": {
         "files": [
           "src/main/java/zeldacraft/block/entity/AnchientCapsuleMachineTileEntity.java",
-          "src/main/resources/assets/zelda_craft/blockstates/anchient_capsule_machine.json",
+          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineBlockModel.java",
           "src/main/java/zeldacraft/block/renderer/AnchientCapsuleMachineDisplayItemRenderer.java",
+          "src/main/resources/assets/zelda_craft/blockstates/anchient_capsule_machine.json",
           "src/main/resources/assets/zelda_craft/models/custom/anchient_capsule_machine_particle.json",
-          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineDisplayModel.java",
-          "src/main/java/zeldacraft/block/AnchientCapsuleMachineBlock.java",
           "src/main/java/zeldacraft/block/display/AnchientCapsuleMachineDisplayItem.java",
           "src/main/resources/assets/zelda_craft/models/item/anchient_capsule_machine.json",
+          "src/main/java/zeldacraft/block/AnchientCapsuleMachineBlock.java",
           "src/main/java/zeldacraft/block/renderer/AnchientCapsuleMachineTileRenderer.java",
-          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineBlockModel.java"
+          "src/main/java/zeldacraft/block/model/AnchientCapsuleMachineDisplayModel.java"
         ]
       }
     },
@@ -3540,8 +3442,8 @@
       "registry_name": "fierce_deity_sword_beam_representative",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/fierce_deity_sword_beam_representative.json",
-          "src/main/java/zeldacraft/item/FierceDeitySwordBeamRepresentativeItem.java"
+          "src/main/java/zeldacraft/item/FierceDeitySwordBeamRepresentativeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/fierce_deity_sword_beam_representative.json"
         ]
       },
       "path": "~/Procedures"
@@ -3585,13 +3487,13 @@
       "registry_name": "time_armor",
       "metadata": {
         "files": [
+          "src/main/java/zeldacraft/item/TimeArmorItem.java",
+          "src/main/java/zeldacraft/item/model/TimeArmorModel.java",
+          "src/main/resources/assets/zelda_craft/models/item/time_armor_chestplate.json",
           "src/main/resources/assets/zelda_craft/models/item/time_armor_leggings.json",
-          "src/main/java/zeldacraft/client/renderer/TimeArmorArmorRenderer.java",
           "src/main/resources/assets/zelda_craft/models/item/time_armor_boots.json",
           "src/main/resources/assets/zelda_craft/models/item/time_armor_helmet.json",
-          "src/main/resources/assets/zelda_craft/models/item/time_armor_chestplate.json",
-          "src/main/java/zeldacraft/item/TimeArmorItem.java",
-          "src/main/java/zeldacraft/item/model/TimeArmorModel.java"
+          "src/main/java/zeldacraft/client/renderer/TimeArmorArmorRenderer.java"
         ]
       }
     },
@@ -3690,10 +3592,10 @@
       "registry_name": "flying_boomerang",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/FlyingBoomerangItem.java",
-          "src/main/java/zeldacraft/item/renderer/FlyingBoomerangItemRenderer.java",
           "src/main/resources/assets/zelda_craft/models/item/flying_boomerang.json",
-          "src/main/java/zeldacraft/item/model/FlyingBoomerangItemModel.java"
+          "src/main/java/zeldacraft/item/model/FlyingBoomerangItemModel.java",
+          "src/main/java/zeldacraft/item/renderer/FlyingBoomerangItemRenderer.java",
+          "src/main/java/zeldacraft/item/FlyingBoomerangItem.java"
         ]
       },
       "path": "~/Procedures/Boomerang"
@@ -3761,8 +3663,8 @@
       "registry_name": "fairy_ocarina",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/fairy_ocarina.json",
-          "src/main/java/zeldacraft/item/FairyOcarinaItem.java"
+          "src/main/java/zeldacraft/item/FairyOcarinaItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/fairy_ocarina.json"
         ]
       }
     },
@@ -3774,8 +3676,8 @@
       "registry_name": "costume_coin_piece",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/CostumeCoinPieceItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/costume_coin_piece.json"
+          "src/main/resources/assets/zelda_craft/models/item/costume_coin_piece.json",
+          "src/main/java/zeldacraft/item/CostumeCoinPieceItem.java"
         ]
       },
       "path": "~/Coins/pieces"
@@ -3801,8 +3703,8 @@
       "registry_name": "twilight_armor_bundle",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/TwilightArmorBundleItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_bundle.json"
+          "src/main/resources/assets/zelda_craft/models/item/twilight_armor_bundle.json",
+          "src/main/java/zeldacraft/item/TwilightArmorBundleItem.java"
         ]
       }
     },
@@ -4090,9 +3992,9 @@
       "registry_name": "sword_shrine",
       "metadata": {
         "files": [
+          "src/main/resources/data/zelda_craft/worldgen/structure/sword_shrine.json",
           "src/main/resources/data/zelda_craft/worldgen/template_pool/sword_shrine.json",
-          "src/main/resources/data/zelda_craft/worldgen/structure_set/sword_shrine.json",
-          "src/main/resources/data/zelda_craft/worldgen/structure/sword_shrine.json"
+          "src/main/resources/data/zelda_craft/worldgen/structure_set/sword_shrine.json"
         ]
       }
     },
@@ -4118,8 +4020,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/zelda_craft/worldgen/placed_feature/ancient_capsule_station.json",
-          "src/main/resources/data/zelda_craft/worldgen/configured_feature/ancient_capsule_station.json",
-          "src/main/resources/data/zelda_craft/forge/biome_modifier/ancient_capsule_station_biome_modifier.json"
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/ancient_capsule_station_biome_modifier.json",
+          "src/main/resources/data/zelda_craft/worldgen/configured_feature/ancient_capsule_station.json"
         ],
         "has_nbt_structure": true
       }
@@ -4132,20 +4034,20 @@
       "registry_name": "sword_stand_states",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_3.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_0.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_6.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_11.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_9.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_7.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_1.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_4.json",
           "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_5.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_12.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_2.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_13.json",
           "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_8.json",
-          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_10.json"
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_11.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_2.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_7.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_13.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_4.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_10.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_0.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_1.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_3.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_9.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_6.json",
+          "src/main/resources/assets/zelda_craft/models/block/sword_stand_states_blockstate_12.json"
         ]
       },
       "path": "~/Procedures/SwordStand"
@@ -4442,13 +4344,13 @@
       "registry_name": "dark_time_armor",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/DarkTimeArmorItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_leggings.json",
           "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_helmet.json",
-          "src/main/java/zeldacraft/item/model/DarkTimeArmorModel.java",
-          "src/main/java/zeldacraft/client/renderer/DarkTimeArmorArmorRenderer.java",
           "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_boots.json",
-          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_chestplate.json"
+          "src/main/java/zeldacraft/item/DarkTimeArmorItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_chestplate.json",
+          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_leggings.json",
+          "src/main/java/zeldacraft/item/model/DarkTimeArmorModel.java",
+          "src/main/java/zeldacraft/client/renderer/DarkTimeArmorArmorRenderer.java"
         ]
       }
     },
@@ -4483,8 +4385,8 @@
       "registry_name": "lens_of_truth",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/lens_of_truth.json",
           "src/main/java/zeldacraft/item/LensOfTruthItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/lens_of_truth.json",
           "src/main/resources/assets/zelda_craft/models/item/lens_of_truth_0.json"
         ]
       }
@@ -4552,16 +4454,16 @@
       "registry_name": "treasure_chest",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/block/entity/TreasureChestTileEntity.java",
-          "src/main/java/zeldacraft/block/TreasureChestBlock.java",
+          "src/main/java/zeldacraft/block/model/TreasureChestDisplayModel.java",
+          "src/main/resources/assets/zelda_craft/blockstates/treasure_chest.json",
           "src/main/java/zeldacraft/block/renderer/TreasureChestTileRenderer.java",
           "src/main/java/zeldacraft/block/model/TreasureChestBlockModel.java",
-          "src/main/resources/assets/zelda_craft/blockstates/treasure_chest.json",
-          "src/main/resources/assets/zelda_craft/models/custom/treasure_chest_particle.json",
-          "src/main/java/zeldacraft/block/model/TreasureChestDisplayModel.java",
           "src/main/resources/assets/zelda_craft/models/item/treasure_chest.json",
-          "src/main/java/zeldacraft/block/renderer/TreasureChestDisplayItemRenderer.java",
-          "src/main/java/zeldacraft/block/display/TreasureChestDisplayItem.java"
+          "src/main/resources/assets/zelda_craft/models/custom/treasure_chest_particle.json",
+          "src/main/java/zeldacraft/block/display/TreasureChestDisplayItem.java",
+          "src/main/java/zeldacraft/block/entity/TreasureChestTileEntity.java",
+          "src/main/java/zeldacraft/block/TreasureChestBlock.java",
+          "src/main/java/zeldacraft/block/renderer/TreasureChestDisplayItemRenderer.java"
         ]
       }
     },
@@ -4608,9 +4510,9 @@
       "registry_name": "blast_mask",
       "metadata": {
         "files": [
+          "src/main/resources/assets/zelda_craft/models/item/blast_mask.json",
           "src/main/java/zeldacraft/item/BlastMaskBaubleItem.java",
-          "src/main/java/zeldacraft/client/renderer/BlastMaskBaubleRenderer.java",
-          "src/main/resources/assets/zelda_craft/models/item/blast_mask.json"
+          "src/main/java/zeldacraft/client/renderer/BlastMaskBaubleRenderer.java"
         ]
       },
       "path": "~/Masks"
@@ -4905,9 +4807,9 @@
       "registry_name": "garo_mask",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/garo_mask.json",
           "src/main/java/zeldacraft/item/GaroMaskItem.java",
-          "src/main/java/zeldacraft/client/renderer/GaroMaskRenderer.java"
+          "src/main/java/zeldacraft/client/renderer/GaroMaskRenderer.java",
+          "src/main/resources/assets/zelda_craft/models/item/garo_mask.json"
         ]
       },
       "path": "~/Masks"
@@ -4921,8 +4823,8 @@
       "metadata": {
         "files": [
           "src/main/java/zeldacraft/client/renderer/AllNightMaskRenderer.java",
-          "src/main/resources/assets/zelda_craft/models/item/all_night_mask.json",
-          "src/main/java/zeldacraft/item/AllNightMaskItem.java"
+          "src/main/java/zeldacraft/item/AllNightMaskItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/all_night_mask.json"
         ]
       },
       "path": "~/Masks"
@@ -4948,8 +4850,8 @@
       "registry_name": "dark_time_armor_bundle",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/DarkTimeArmorBundleItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_bundle.json"
+          "src/main/resources/assets/zelda_craft/models/item/dark_time_armor_bundle.json",
+          "src/main/java/zeldacraft/item/DarkTimeArmorBundleItem.java"
         ]
       }
     },
@@ -5111,11 +5013,11 @@
       "registry_name": "happy_mask_salesman",
       "metadata": {
         "files": [
-          "src/main/resources/data/zelda_craft/forge/biome_modifier/happy_mask_salesman_biome_modifier.json",
-          "src/main/resources/assets/zelda_craft/models/item/happy_mask_salesman_spawn_egg.json",
           "src/main/java/zeldacraft/entity/model/HappyMaskSalesmanModel.java",
+          "src/main/java/zeldacraft/entity/HappyMaskSalesmanEntity.java",
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/happy_mask_salesman_biome_modifier.json",
           "src/main/java/zeldacraft/client/renderer/HappyMaskSalesmanRenderer.java",
-          "src/main/java/zeldacraft/entity/HappyMaskSalesmanEntity.java"
+          "src/main/resources/assets/zelda_craft/models/item/happy_mask_salesman_spawn_egg.json"
         ]
       }
     },
@@ -5209,11 +5111,11 @@
       "registry_name": "bombable_wall",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/block/BombableWallBlock.java",
+          "src/main/resources/assets/zelda_craft/models/item/bombable_wall.json",
           "src/main/resources/assets/zelda_craft/blockstates/bombable_wall.json",
           "src/main/resources/data/zelda_craft/loot_tables/blocks/bombable_wall.json",
-          "src/main/resources/assets/zelda_craft/models/block/bombable_wall.json",
-          "src/main/resources/assets/zelda_craft/models/item/bombable_wall.json"
+          "src/main/java/zeldacraft/block/BombableWallBlock.java",
+          "src/main/resources/assets/zelda_craft/models/block/bombable_wall.json"
         ]
       }
     },
@@ -5236,9 +5138,9 @@
       "registry_name": "dungeons",
       "metadata": {
         "files": [
-          "src/main/resources/data/zelda_craft/dimension/dungeons.json",
+          "src/main/java/zeldacraft/world/dimension/DungeonsDimension.java",
           "src/main/resources/data/zelda_craft/dimension_type/dungeons.json",
-          "src/main/java/zeldacraft/world/dimension/DungeonsDimension.java"
+          "src/main/resources/data/zelda_craft/dimension/dungeons.json"
         ]
       },
       "path": "~/Procedures/DungeonShit"
@@ -5373,10 +5275,10 @@
       "metadata": {
         "files": [
           "src/main/resources/data/zelda_craft/loot_tables/blocks/dungeon_1_portal.json",
-          "src/main/resources/assets/zelda_craft/models/block/dungeon_1_portal.json",
-          "src/main/java/zeldacraft/block/Dungeon1PortalBlock.java",
+          "src/main/resources/assets/zelda_craft/blockstates/dungeon_1_portal.json",
           "src/main/resources/assets/zelda_craft/models/item/dungeon_1_portal.json",
-          "src/main/resources/assets/zelda_craft/blockstates/dungeon_1_portal.json"
+          "src/main/java/zeldacraft/block/Dungeon1PortalBlock.java",
+          "src/main/resources/assets/zelda_craft/models/block/dungeon_1_portal.json"
         ]
       }
     },
@@ -5439,8 +5341,8 @@
       "registry_name": "zora_coin",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/ZoraCoinItem.java",
-          "src/main/resources/assets/zelda_craft/models/item/zora_coin.json"
+          "src/main/resources/assets/zelda_craft/models/item/zora_coin.json",
+          "src/main/java/zeldacraft/item/ZoraCoinItem.java"
         ]
       },
       "path": "~/Coins"
@@ -5453,8 +5355,8 @@
       "registry_name": "gerudo_coin",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/gerudo_coin.json",
-          "src/main/java/zeldacraft/item/GerudoCoinItem.java"
+          "src/main/java/zeldacraft/item/GerudoCoinItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/gerudo_coin.json"
         ]
       },
       "path": "~/Coins"
@@ -5493,9 +5395,9 @@
       "metadata": {
         "files": [
           "src/main/java/zeldacraft/entity/BombProjectileEntity.java",
-          "src/main/java/zeldacraft/client/renderer/BombProjectileRenderer.java",
           "src/main/java/zeldacraft/entity/model/BombProjectileModel.java",
-          "src/main/java/zeldacraft/entity/layer/BombProjectileLayer.java"
+          "src/main/java/zeldacraft/entity/layer/BombProjectileLayer.java",
+          "src/main/java/zeldacraft/client/renderer/BombProjectileRenderer.java"
         ]
       },
       "path": "~/Procedures/Bomb"
@@ -5571,9 +5473,9 @@
       "registry_name": "mask_shop",
       "metadata": {
         "files": [
+          "src/main/java/zeldacraft/client/gui/MaskShopScreen.java",
           "src/main/java/zeldacraft/world/inventory/MaskShopMenu.java",
-          "src/main/java/zeldacraft/network/MaskShopButtonMessage.java",
-          "src/main/java/zeldacraft/client/gui/MaskShopScreen.java"
+          "src/main/java/zeldacraft/network/MaskShopButtonMessage.java"
         ]
       },
       "path": "~/GUI/HappyMaskSalesman"
@@ -5675,10 +5577,10 @@
       "metadata": {
         "files": [
           "src/main/java/zeldacraft/block/HookshotTargetBlock.java",
-          "src/main/resources/data/zelda_craft/loot_tables/blocks/hookshot_target.json",
+          "src/main/resources/assets/zelda_craft/models/item/hookshot_target.json",
           "src/main/resources/assets/zelda_craft/blockstates/hookshot_target.json",
           "src/main/resources/assets/zelda_craft/models/block/hookshot_target.json",
-          "src/main/resources/assets/zelda_craft/models/item/hookshot_target.json"
+          "src/main/resources/data/zelda_craft/loot_tables/blocks/hookshot_target.json"
         ]
       }
     },
@@ -5742,9 +5644,9 @@
       "registry_name": "roc_cape",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/RocCapeItem.java",
           "src/main/resources/assets/zelda_craft/models/item/roc_cape.json",
-          "src/main/java/zeldacraft/client/renderer/RocCapeRenderer.java"
+          "src/main/java/zeldacraft/client/renderer/RocCapeRenderer.java",
+          "src/main/java/zeldacraft/item/RocCapeItem.java"
         ]
       }
     },
@@ -5770,9 +5672,9 @@
       "registry_name": "deku_mask",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/deku_mask.json",
+          "src/main/java/zeldacraft/item/DekuMaskItem.java",
           "src/main/java/zeldacraft/client/renderer/DekuMaskRenderer.java",
-          "src/main/java/zeldacraft/item/DekuMaskItem.java"
+          "src/main/resources/assets/zelda_craft/models/item/deku_mask.json"
         ]
       },
       "path": "~/Masks"
@@ -5817,12 +5719,12 @@
       "registry_name": "salvager_armor",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/item/SalvagerSetItem.java",
-          "src/main/java/zeldacraft/item/model/SalvagerSetModel.java",
-          "src/main/resources/assets/zelda_craft/models/item/salvager_armor_chestplate.json",
           "src/main/resources/assets/zelda_craft/models/item/salvager_armor_helmet.json",
           "src/main/resources/assets/zelda_craft/models/item/salvager_armor_boots.json",
+          "src/main/java/zeldacraft/item/model/SalvagerSetModel.java",
           "src/main/java/zeldacraft/client/renderer/SalvagerSetArmorRenderer.java",
+          "src/main/java/zeldacraft/item/SalvagerSetItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/salvager_armor_chestplate.json",
           "src/main/resources/assets/zelda_craft/models/item/salvager_armor_leggings.json"
         ]
       }
@@ -5854,8 +5756,8 @@
       "registry_name": "salvager_armor_bundle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/zelda_craft/models/item/salvager_armor_bundle.json",
-          "src/main/java/zeldacraft/item/SalvagerArmorBundleItem.java"
+          "src/main/java/zeldacraft/item/SalvagerArmorBundleItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/salvager_armor_bundle.json"
         ]
       }
     },
@@ -5886,12 +5788,12 @@
       "registry_name": "wind_armor",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/client/renderer/WindArmorArmorRenderer.java",
-          "src/main/resources/assets/zelda_craft/models/item/wind_armor_helmet.json",
-          "src/main/java/zeldacraft/item/WindArmorItem.java",
           "src/main/java/zeldacraft/item/model/WindArmorModel.java",
+          "src/main/java/zeldacraft/client/renderer/WindArmorArmorRenderer.java",
           "src/main/resources/assets/zelda_craft/models/item/wind_armor_chestplate.json",
           "src/main/resources/assets/zelda_craft/models/item/wind_armor_leggings.json",
+          "src/main/resources/assets/zelda_craft/models/item/wind_armor_helmet.json",
+          "src/main/java/zeldacraft/item/WindArmorItem.java",
           "src/main/resources/assets/zelda_craft/models/item/wind_armor_boots.json"
         ]
       }
@@ -5990,11 +5892,11 @@
       "registry_name": "fairy",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/entity/model/FairyModel.java",
           "src/main/resources/assets/zelda_craft/models/item/fairy_spawn_egg.json",
           "src/main/java/zeldacraft/client/renderer/FairyRenderer.java",
           "src/main/java/zeldacraft/entity/FairyEntity.java",
-          "src/main/resources/data/zelda_craft/forge/biome_modifier/fairy_biome_modifier.json"
+          "src/main/resources/data/zelda_craft/forge/biome_modifier/fairy_biome_modifier.json",
+          "src/main/java/zeldacraft/entity/model/FairyModel.java"
         ]
       }
     },
@@ -6433,16 +6335,16 @@
       "registry_name": "small_dungeon_chest",
       "metadata": {
         "files": [
-          "src/main/java/zeldacraft/block/display/SmallDungeonChestDisplayItem.java",
-          "src/main/java/zeldacraft/block/entity/SmallDungeonChestTileEntity.java",
-          "src/main/java/zeldacraft/block/model/SmallDungeonChestDisplayModel.java",
-          "src/main/resources/assets/zelda_craft/blockstates/small_dungeon_chest.json",
           "src/main/java/zeldacraft/block/SmallDungeonChestBlock.java",
-          "src/main/resources/assets/zelda_craft/models/custom/small_dungeon_chest_particle.json",
-          "src/main/java/zeldacraft/block/model/SmallDungeonChestBlockModel.java",
-          "src/main/resources/assets/zelda_craft/models/item/small_dungeon_chest.json",
           "src/main/java/zeldacraft/block/renderer/SmallDungeonChestTileRenderer.java",
-          "src/main/java/zeldacraft/block/renderer/SmallDungeonChestDisplayItemRenderer.java"
+          "src/main/resources/assets/zelda_craft/models/item/small_dungeon_chest.json",
+          "src/main/java/zeldacraft/block/model/SmallDungeonChestBlockModel.java",
+          "src/main/resources/assets/zelda_craft/models/custom/small_dungeon_chest_particle.json",
+          "src/main/java/zeldacraft/block/display/SmallDungeonChestDisplayItem.java",
+          "src/main/resources/assets/zelda_craft/blockstates/small_dungeon_chest.json",
+          "src/main/java/zeldacraft/block/model/SmallDungeonChestDisplayModel.java",
+          "src/main/java/zeldacraft/block/renderer/SmallDungeonChestDisplayItemRenderer.java",
+          "src/main/java/zeldacraft/block/entity/SmallDungeonChestTileEntity.java"
         ]
       }
     },
@@ -6480,6 +6382,104 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "SongOfStorms",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "song_of_storms",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/SongOfStormsItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/song_of_storms.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "SariasSong",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sarias_song",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/sarias_song.json",
+          "src/main/java/zeldacraft/item/SariasSongItem.java"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "GurudoVally",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gurudo_vally",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/GurudoVallyItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/gurudo_vally.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "BalladOfTheGoddess",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballad_of_the_goddess",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/zelda_craft/models/item/ballad_of_the_goddess.json",
+          "src/main/java/zeldacraft/item/BalladOfTheGoddessItem.java"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "MidnasLament",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "midnas_lament",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MidnasLamentItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/midnas_lament.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "MainTheme",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_theme",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/MainThemeItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/main_theme.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
+    },
+    {
+      "name": "ClockTown",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clock_town",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/item/ClockTownItem.java",
+          "src/main/resources/assets/zelda_craft/models/item/clock_town.json"
+        ]
+      },
+      "path": "~/MusicDiscs"
     }
   ],
   "variable_elements": [
@@ -6953,6 +6953,9 @@
       "CUSTOM:SilverRupee",
       "CUSTOM:GoldRupee"
     ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.AIR"
+    ],
     "ITEMS:minecraft:music_discs": [
       "~CUSTOM:ClockTown",
       "~CUSTOM:MainTheme",
@@ -6961,9 +6964,6 @@
       "~CUSTOM:GurudoVally",
       "~CUSTOM:SariasSong",
       "~CUSTOM:SongOfStorms"
-    ],
-    "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR"
     ],
     "BLOCKS:zelda_craft:boomerang_breakable": [
       "Blocks.REEDS",
@@ -7135,25 +7135,30 @@
       "gui.zelda_craft.statue_menu.label_pick_your_warp": "Pick Your Warp",
       "item.zelda_craft.blue_rupee": "Blue Rupee",
       "item.zelda_craft.all_night_mask": "All Night Mask",
-      "advancements.cartoon_gravity_joke.title": "*insert cartoon gravity joke here*",
       "block.zelda_craft.locked_hylian_chest": "Hylian Chest",
-      "item.zelda_craft.happy_mask_salesman_spawn_egg": "Happy Mask Salesman Spawn Egg",
+      "advancements.cartoon_gravity_joke.title": "*insert cartoon gravity joke here*",
+      "block.zelda_craft.bombable_wall.description_0": "This was once an impervious rock but due to internal structural weaknesses, is now extremely vulnerable to explosions",
       "item.zelda_craft.time_armor_chestplate": "Tunic of Time",
+      "item.zelda_craft.happy_mask_salesman_spawn_egg": "Happy Mask Salesman Spawn Egg",
       "gui.zelda_craft.chest.label_hylian_chest": "Hylian Chest",
-      "item.zelda_craft.master_sword_beam_representitive": "Master Sword Beam Representitive",
       "gui.zelda_craft.wallet_withdraw.button_deposit": "Deposit",
+      "item.zelda_craft.master_sword_beam_representitive": "Master Sword Beam Representitive",
+      "item.zelda_craft.occarina_of_time.description_0": "This mystical ocarina has been passed down through generations by the Hyrulian royal family. It\u0027s believed that the material is embued with the power of time itself.",
       "advancements.grave_robber.descr": "Get the Hylian Shield",
       "gamerule.bombGreifing": "Bomb Greifing",
       "item.zelda_craft.wind_armor_bundle": "Wind Armor Bundle",
+      "item.zelda_craft.master_sword.description_0": "\"The Master Sword is a sacred blade which evil ones may never touch... Only one worthy of the \"Hero of Time\" can pull it from the pedistal\" -Rauru",
       "item.zelda_craft.time_armor_helmet": "Cap of Time",
       "death.attack.bomb_mask.player": "%1$s blew up whilst trying to escape %2$s",
-      "gui.zelda_craft.ocarina_blank.button_empty5": "",
       "death.attack.bomb_mask.item": "%1$s had a blast with %2$s",
-      "block.zelda_craft.hookshot_target": "Hookshot Target",
+      "gui.zelda_craft.ocarina_blank.button_empty5": "",
+      "item.zelda_craft.triforce.description_0": "This relic was created by the devine powers of the three goddesses after they created the world.",
       "gui.zelda_craft.ocarina_blank.button_empty4": "",
+      "block.zelda_craft.hookshot_target": "Hookshot Target",
+      "item.zelda_craft.blue_rupee.description_0": "This is a Blue Rupee it\u0027s worth 5 rupees!",
       "item.zelda_craft.main_theme.desc": "Main Theme",
-      "item.zelda_craft.midnas_lament": "Music Disc",
       "item.zelda_craft.broken_giant_knife": "Broken Giant\u0027s Knife",
+      "item.zelda_craft.midnas_lament": "Music Disc",
       "advancements.the_biggoron_sword_at_home.descr": "Obtain the Giant\u0027s Knife",
       "item.zelda_craft.roc_cape": "Roc\u0027s Cape",
       "gui.zelda_craft.ocarina_blank.button_empty1": "",
@@ -7172,13 +7177,14 @@
       "subtitles.boomerang_throw": "Boomerang thrown",
       "gui.zelda_craft.mask_shop.button_bm": "bm",
       "subtitles.masterswordbeam": "Sword beam fired",
-      "item.zelda_craft.giant_knife": "Giant\u0027s Knife",
       "advancements.bigger_and_better.title": "Bigger And Better",
+      "item.zelda_craft.giant_knife": "Giant\u0027s Knife",
       "item.zelda_craft.clock_town": "Music Disc",
       "item.zelda_craft.spirit_flute": "Spirit Flute",
       "gui.zelda_craft.mask_shop.button_bh": "bh",
       "item.zelda_craft.hyrule_crest": "Hyrule Crest",
       "gui.zelda_craft.statue_menu.Warp1": "Warp 1",
+      "item.zelda_craft.small_key.description_0": "You got a small key!",
       "block.zelda_craft.bombable_wall": "Crumblestone",
       "item.zelda_craft.twilight_armor_chestplate": "Tunic of Twilight",
       "gui.zelda_craft.statue_menu.Warp5": "Warp 5",
@@ -7188,10 +7194,12 @@
       "gui.zelda_craft.statue_menu.Warp3": "Warp 3",
       "entity.zelda_craft.fairy": "Fairy",
       "gui.zelda_craft.statue_menu.Warp2": "Warp 2",
+      "item.zelda_craft.hook_shot.description_0": "It\u0027s a spring-loaded chain that you can cast out to hook things.",
       "item.zelda_craft.costume_coin_piece": "Costume Coin Piece",
+      "item.zelda_craft.lokomo_sword.description_0": "A sword wielded by the Spirits of Good during the fight against the great evil Malladus.",
       "item.zelda_craft.goddess_sword": "Goddess Sword",
-      "subtitles.masterswordbeamfire": "Sword beam fired",
       "subtitles.fairy_living": "Hey!",
+      "subtitles.masterswordbeamfire": "Sword beam fired",
       "subtitles.songofstorms": "",
       "block.zelda_craft.molten_ore": "Molten Ore",
       "item.zelda_craft.razor_sword": "Razor Sword",
@@ -7226,6 +7234,7 @@
       "subtitles.bomb_fuse": "Bomb Ignited",
       "gui.zelda_craft.statue_menu.button_x1": "X",
       "gui.zelda_craft.statue_menu.button_x2": "X",
+      "item.zelda_craft.master_sword_beam_representitive.description_0": "You shouldn\u0027t have this! but if you somehow did get this if you glitch it onto your helmet slot you get a cool sunvisor.",
       "item.zelda_craft.biggoron_sword": "Biggoron Sword",
       "advancements.blast_mask_3.descr": "Killed 25 Mobs With Explosives",
       "item.zelda_craft.time_armor_leggings": "Greaves of Time",
@@ -7251,9 +7260,14 @@
       "advancements.you_fell_victim_to_one_of_the_clasic_blunders.descr": "Break a Goron Knife",
       "advancements.blast_mask_1.descr": "Crafted 10 Bombs",
       "entity.zelda_craft.bomb_projectile": "Bomb Projectile",
+      "item.zelda_craft.costume_coin.description_3": "   Armor of Twilight - 50%",
       "advancements.the_blade_of_evils_bane.title": "The Blade Of Evil\u0027s Bane",
+      "item.zelda_craft.costume_coin.description_2": "   Armor of Time - 50%",
+      "item.zelda_craft.costume_coin.description_1": "Drops:",
+      "item.zelda_craft.costume_coin.description_0": "This coin allows you roll the Anchient Capsule Machine\u0027s costume pool",
       "subtitles.fairyidle": "Fairy floating",
       "gui.zelda_craft.statue_menu.tooltip_delete": "Delete?",
+      "item.zelda_craft.fairy_item.description_0": "Here\u0027s a little trophy for your cheating.",
       "advancements.gotta_go_fast.title": "Gotta Go Fast!",
       "item.zelda_craft.salvager_armor_bundle": "Salvager Armor Bundle",
       "subtitles.maintheme2": "",
@@ -7262,19 +7276,30 @@
       "gui.zelda_craft.wallet_deposit.label_wallet": "Wallet",
       "block.zelda_craft.treasure_chest": "Treasure Chest",
       "item.zelda_craft.midnas_lament.desc": "Midna\u0027s Lament",
+      "item.zelda_craft.razor_sword.description_1": "sharper blade is a cut above the rest. Use it up to 100 times without dulling its superior edge!",
       "key.zelda_craft.mask_ability": "Use Mask Ability",
+      "item.zelda_craft.razor_sword.description_0": "Your Kokiri Sword has been strengthened and forged into a Razor Sword! This new",
       "item.zelda_craft.pegasus_boots_boots": "Pegasus Boots",
       "item.zelda_craft.wind_armor_boots": "Boots of Wind",
+      "item.zelda_craft.megaton_hammer.description_3": "far exceed that of any normal sword. It\u0027s guaranteed to inspire awe.",
+      "item.zelda_craft.long_shot.description_0": "It\u0027s an upgraded Hookshot. It extends twice as far!",
       "advancements.eye_see_you.descr": "Get the Lens of Truth",
       "advancements.blast_mask_2.descr": "Detonated 5 Creepers",
       "item.zelda_craft.red_rupee": "Red Rupee",
+      "item.zelda_craft.hover_boots_boots.description_0": "You got the Hover Boots! With these mysterious boots you can hover above the ground. You can even use these to walk for short periods where there is no solid ground. Be brave and trust in the boots!",
+      "item.zelda_craft.fierce_deity_sword_beam_representative.description_0": "Well, well, well. Looks like we got another cheater on our hands. You really should stop poking around back here, you never know what I might be trying to hide from you.",
       "item.zelda_craft.ballad_of_the_goddess": "Music Disc",
+      "item.zelda_craft.megaton_hammer.description_0": "An extremely heavy hammer. Learning to use it effectively could take some time",
       "item.zelda_craft.gurudo_vally": "Music Disc",
+      "item.zelda_craft.megaton_hammer.description_2": "however",
       "key.zelda_craft.double_jump_key": "Double Jump Key",
+      "item.zelda_craft.megaton_hammer.description_1": "as its reach is somewhat short for a weapon. Its power and toughness",
       "block.zelda_craft.mountain_rok": "Mountain Rock",
       "subtitles.sarias_song2": "",
       "item.zelda_craft.hylian_coin": "Hylian Coin",
       "item.zelda_craft.empty_bottle": "Empty Bottle",
+      "item.zelda_craft.silver_rupee.description_0": "This is a Silver Rupee it\u0027s worth 100 rupees!!!",
+      "item.zelda_craft.boomerang.description_0": "If you throw it, it comes back! The boomerang can be used to stun or defeat enemies.",
       "item.zelda_craft.costume_coin": "Costume Coin",
       "effect.zelda_craft.stunned": "Stunned",
       "item.zelda_craft.ballad_of_the_goddess.desc": "Ballad of the Goddess",
@@ -7286,12 +7311,14 @@
       "item.zelda_craft.megaton_hammer": "Megaton Hammer",
       "item.zelda_craft.twilight_armor_helmet": "Hood of Twilight",
       "item.zelda_craft.deku_mask": "Deku Mask",
+      "item.zelda_craft.red_rupee.description_0": "This is a Red Rupee it\u0027s worth 20 rupees!",
       "itemGroup.tabzelda_craft": "Zelda Craft",
       "item.zelda_craft.gold_rupee": "Gold Rupee",
       "item.zelda_craft.child_wallet": "Child Wallet",
       "advancements.bigger_and_better.descr": "Obtain the Biggoron Sword",
       "block.zelda_craft.small_dungeon_chest": "Small Chest",
       "item.zelda_craft.twilight_armor_leggings": "Greaves of Twilight",
+      "item.zelda_craft.bomb.description_0": "Damage enemies or blow up walls with the Bomb. Be careful not to get too close to the blast or you may get hurt.",
       "advancements.eye_see_you.title": "EYE See You",
       "advancements.you_fell_victim_to_one_of_the_clasic_blunders.title": "You Fell Victim to One of the Classic Blunders",
       "advancements.hammer_down.descr": "Acquire the Megaton Hammer",
@@ -7306,20 +7333,25 @@
       "item.zelda_craft.gerudo_coin": "Gerudo Coin",
       "entity.zelda_craft.happy_mask_salesman": "Happy Mask Salesman",
       "curios.identifier.wallet": "Wallet",
+      "item.zelda_craft.pegasus_boots_boots.description_0": "Dash with the speed of the legendary steed",
       "item.zelda_craft.kokiri_sword": "Kokiri Sword",
       "item.zelda_craft.lens_of_truth": "Lens Of Truth",
       "item.zelda_craft.wind_armor_leggings": "Greaves of Wind",
+      "item.zelda_craft.lens_of_truth.description_0": "This is the Lens of Truth! Gaze through it to see mysteries that are invisible to the naked eye.",
       "item.zelda_craft.iron_boots_boots": "Iron Boots",
       "item.zelda_craft.dark_time_armor_chestplate": "Dark Time Armor Chestplate",
       "item.zelda_craft.purified_goron_steel": "Purified Goron Steel",
       "block.zelda_craft.hylian_chest": "Hylian Chest",
       "item.zelda_craft.blast_mask_contract": "Blast Mask Contract",
       "advancements.blast_mask_3.title": "Mobs Killed With Explosives",
+      "item.zelda_craft.goron_steel.description_0": "This is steel mined from Death Mountain and then refined by the most skilled metal worker",
+      "item.zelda_craft.chain_spool.description_0": "This seems like it would increase the chain length on your hookshot",
       "death.attack.boomerang_damage.player": "%1$s tried to flee from %2$s\u0027s boomerang of epicness",
       "subtitles.fairy_hurt": "Fairy hurt",
       "advancements.hammer_down.title": "Hammer down!",
       "item.zelda_craft.hylian_shield": "Hylian Shield",
       "subtitles.gerudo_valley": "",
+      "item.zelda_craft.green_rupie.description_0": "This is a Green Rupee it\u0027s worth 1 rupee.",
       "gui.zelda_craft.statue_menu.tooltip_delete3": "Delete?",
       "item.zelda_craft.dark_time_armor_bundle": "Dark Time Armor Bundle",
       "gui.zelda_craft.statue_menu.tooltip_delete4": "Delete",
@@ -7329,6 +7361,7 @@
       "item.zelda_craft.blast_mask": "Blast Mask",
       "death.attack.boomerang_damage.item": "%1$s got boomeranged by %2$s while holding %3$s",
       "subtitles.sariassong": "",
+      "item.zelda_craft.hyrule_crest.description_0": "The crest of the great kingdom of Hyrule",
       "block.zelda_craft.dungeon_1_portal": "Dungeon 1 Portal (WIP)",
       "advancements.blast_mask_2.title": "Creepers Detonated",
       "block.zelda_craft.timeshift_ore": "Timeshift Ore",
@@ -7341,6 +7374,7 @@
       "item.zelda_craft.boomerang": "Boomerang",
       "item.zelda_craft.dark_time_armor_boots": "Dark Time Armor Boots",
       "item.zelda_craft.mirror_shield_oot": "Mirror Shield",
+      "item.zelda_craft.gold_rupee.description_0": "This is a GOLD RUPEE! It\u0027s worth 300 rupees!!!",
       "advancements.gotta_go_fast.descr": "Equip the Pegasus Boots",
       "subtitles.sarias_song": "",
       "block.zelda_craft.master_sword_stand": "Master Sword Stand",
@@ -7349,6 +7383,7 @@
       "item.zelda_craft.garo_mask": "Garo Mask",
       "item.zelda_craft.wind_armor_chestplate": "Tunic of Wind",
       "gui.zelda_craft.wallet_withdraw.button_3": "20",
+      "item.zelda_craft.purple_rupee.description_0": "This is a Purple Rupee it\u0027s worth 50 rupees!!",
       "item.zelda_craft.triforce": "Triforce",
       "subtitles.fairy_idle": "Fairy floating",
       "gui.zelda_craft.wallet_withdraw.button_4": "50",
@@ -7365,8 +7400,12 @@
       "item.zelda_craft.salvager_armor_helmet": "Salvager\u0027s Helmet",
       "subtitles.boomerang_flying_loop": "Boomerang flying",
       "item.zelda_craft.fairy_item": "Fairy Item",
+      "item.zelda_craft.iron_boots_boots.description_1": "you can\u0027t run. So heavy",
+      "item.zelda_craft.iron_boots_boots.description_2": "you can\u0027t float.",
       "item.zelda_craft.fairy_spawn_egg": "Fairy Spawn Egg",
+      "item.zelda_craft.iron_boots_boots.description_0": "You got the Iron Boots! So heavy",
       "item.zelda_craft.roc_feather": "Roc\u0027s Feather",
+      "item.zelda_craft.un_powered_master_sword.description_0": "The flames of Din have imbued your blade with a sacred white light that demons revile.",
       "item.zelda_craft.demon_tribe_sword": "Demon Tribe Sword",
       "advancements.da_na_na_naa.title": "Da Na Na Naaaaa",
       "advancements.do_not_tell_the_treasure_box_lady.title": "Don\u0027t Tell The Treasure Box Lady!",
@@ -7381,9 +7420,13 @@
       "subtitles.gerudovally": "",
       "subtitles.song_of_storms": "",
       "item.zelda_craft.magic_mirror": "Magic Mirror",
+      "item.zelda_craft.biggoron_sword.description_0": "A legendary greatsword forged by a Goron craftsman for a hero who traveled through time. The exceptionally sharp cutting edge is a testament to the craftsman\u0027s mastery.",
       "item.zelda_craft.flying_boomerang": "Flying Boomerang",
       "item.zelda_craft.zora_coin": "Zora Coin",
+      "item.zelda_craft.kokiri_sword.description_1": "but you can borrow it for a while. Be sure to practice with it before you really fight!",
       "item.zelda_craft.long_shot": "Long Shot",
+      "item.zelda_craft.kokiri_sword.description_0": "This is a hidden treasure of the Kokiri",
+      "item.zelda_craft.goddess_sword.description_0": "The Statue of the Goddess enshrines this sword. Its blade glimmers with divine light.",
       "item.zelda_craft.song_of_storms": "Music Disc",
       "item.zelda_craft.un_powered_master_sword": "Unpowered Master Sword",
       "advancements.zelda_craft_advancement_page.title": "Zelda Craft",
@@ -7621,5 +7664,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "zeldacraft"
   },
-  "mcreatorVersion": 202400232117
+  "mcreatorVersion": 202400452410
 }

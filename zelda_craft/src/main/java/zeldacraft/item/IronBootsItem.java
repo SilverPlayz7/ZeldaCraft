@@ -107,9 +107,9 @@ public abstract class IronBootsItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, level, list, flag);
-			list.add(Component.literal("You got the Iron Boots! So heavy"));
-			list.add(Component.literal("you can't run. So heavy"));
-			list.add(Component.literal("you can't float."));
+			list.add(Component.translatable("item.zelda_craft.iron_boots_boots.description_0"));
+			list.add(Component.translatable("item.zelda_craft.iron_boots_boots.description_1"));
+			list.add(Component.translatable("item.zelda_craft.iron_boots_boots.description_2"));
 		}
 
 		@Override

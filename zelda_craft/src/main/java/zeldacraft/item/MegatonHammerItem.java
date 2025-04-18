@@ -64,10 +64,10 @@ public class MegatonHammerItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("An extremely heavy hammer. Learning to use it effectively could take some time"));
-		list.add(Component.literal("as its reach is somewhat short for a weapon. Its power and toughness"));
-		list.add(Component.literal("however"));
-		list.add(Component.literal("far exceed that of any normal sword. It's guaranteed to inspire awe."));
+		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_0"));
+		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_1"));
+		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_2"));
+		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_3"));
 	}
 
 	@Override

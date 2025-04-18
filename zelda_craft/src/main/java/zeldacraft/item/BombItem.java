@@ -41,7 +41,7 @@ public class BombItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Damage enemies or blow up walls with the Bomb. Be careful not to get too close to the blast or you may get hurt."));
+		list.add(Component.translatable("item.zelda_craft.bomb.description_0"));
 	}
 
 	@Override

@@ -6,43 +6,8 @@
     "targets": [
       {
         "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:stone"
-          }
-        },
-        "state": {
-          "Name": "zelda_craft:timeshift_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:granite"
-          }
-        },
-        "state": {
-          "Name": "zelda_craft:timeshift_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:diorite"
-          }
-        },
-        "state": {
-          "Name": "zelda_craft:timeshift_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:andesite"
-          }
+          "predicate_type": "tag_match",
+          "tag": "minecraft:base_stone_overworld"
         },
         "state": {
           "Name": "zelda_craft:timeshift_ore"

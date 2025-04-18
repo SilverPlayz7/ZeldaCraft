@@ -128,13 +128,7 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> GORON_STEEL = REGISTRY.register("goron_steel", () -> new GoronSteelItem());
 	public static final RegistryObject<Item> MOLTEN_ORE = block(ZeldaCraftModBlocks.MOLTEN_ORE);
 	public static final RegistryObject<Item> MOUNTAIN_ROK = block(ZeldaCraftModBlocks.MOUNTAIN_ROK);
-	public static final RegistryObject<Item> SONG_OF_STORMS = REGISTRY.register("song_of_storms", () -> new SongOfStormsItem());
-	public static final RegistryObject<Item> SARIAS_SONG = REGISTRY.register("sarias_song", () -> new SariasSongItem());
-	public static final RegistryObject<Item> GURUDO_VALLY = REGISTRY.register("gurudo_vally", () -> new GurudoVallyItem());
-	public static final RegistryObject<Item> BALLAD_OF_THE_GODDESS = REGISTRY.register("ballad_of_the_goddess", () -> new BalladOfTheGoddessItem());
 	public static final RegistryObject<Item> UN_POWERED_MASTER_SWORD = REGISTRY.register("un_powered_master_sword", () -> new UnPoweredMasterSwordItem());
-	public static final RegistryObject<Item> MIDNAS_LAMENT = REGISTRY.register("midnas_lament", () -> new MidnasLamentItem());
-	public static final RegistryObject<Item> MAIN_THEME = REGISTRY.register("main_theme", () -> new MainThemeItem());
 	public static final RegistryObject<Item> KOKIRI_SWORD = REGISTRY.register("kokiri_sword", () -> new KokiriSwordItem());
 	public static final RegistryObject<Item> SMALL_KEY = REGISTRY.register("small_key", () -> new SmallKeyItem());
 	public static final RegistryObject<Item> GODDESS_SWORD = REGISTRY.register("goddess_sword", () -> new GoddessSwordItem());
@@ -156,7 +150,6 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> SPIRIT_FLUTE = REGISTRY.register("spirit_flute", () -> new SpriritFluteItem());
 	public static final RegistryObject<Item> HYRULE_CREST = REGISTRY.register("hyrule_crest", () -> new HyruleCrestItem());
 	public static final RegistryObject<Item> LOKOMO_SWORD_STAND = block(ZeldaCraftModBlocks.LOKOMO_SWORD_STAND);
-	public static final RegistryObject<Item> CLOCK_TOWN = REGISTRY.register("clock_town", () -> new ClockTownItem());
 	public static final RegistryObject<Item> MASTER_SWORD_BEAM_REPRESENTITIVE = REGISTRY.register("master_sword_beam_representitive", () -> new MasterSwordBeamRepresentitiveItem());
 	public static final RegistryObject<Item> NEW_HYRULE_SHIELD = REGISTRY.register("new_hyrule_shield", () -> new NewHyrleShieldBetterWayTestItem());
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
@@ -231,6 +224,13 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> CHILD_WALLET = REGISTRY.register("child_wallet", () -> new ChildWalletItem());
 	public static final RegistryObject<Item> SMALL_DUNGEON_CHEST = REGISTRY.register(ZeldaCraftModBlocks.SMALL_DUNGEON_CHEST.getId().getPath(),
 			() -> new SmallDungeonChestDisplayItem(ZeldaCraftModBlocks.SMALL_DUNGEON_CHEST.get(), new Item.Properties()));
+	public static final RegistryObject<Item> SONG_OF_STORMS = REGISTRY.register("song_of_storms", () -> new SongOfStormsItem());
+	public static final RegistryObject<Item> SARIAS_SONG = REGISTRY.register("sarias_song", () -> new SariasSongItem());
+	public static final RegistryObject<Item> GURUDO_VALLY = REGISTRY.register("gurudo_vally", () -> new GurudoVallyItem());
+	public static final RegistryObject<Item> BALLAD_OF_THE_GODDESS = REGISTRY.register("ballad_of_the_goddess", () -> new BalladOfTheGoddessItem());
+	public static final RegistryObject<Item> MIDNAS_LAMENT = REGISTRY.register("midnas_lament", () -> new MidnasLamentItem());
+	public static final RegistryObject<Item> MAIN_THEME = REGISTRY.register("main_theme", () -> new MainThemeItem());
+	public static final RegistryObject<Item> CLOCK_TOWN = REGISTRY.register("clock_town", () -> new ClockTownItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

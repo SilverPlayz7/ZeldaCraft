@@ -44,7 +44,7 @@ public class RazorSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Your Kokiri Sword has been strengthened and forged into a Razor Sword! This new"));
-		list.add(Component.literal("sharper blade is a cut above the rest. Use it up to 100 times without dulling its superior edge!"));
+		list.add(Component.translatable("item.zelda_craft.razor_sword.description_0"));
+		list.add(Component.translatable("item.zelda_craft.razor_sword.description_1"));
 	}
 }

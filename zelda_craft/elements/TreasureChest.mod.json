@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "animatedblock",
   "definition": {
     "texture": "treasurechest",
@@ -13,6 +13,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animateBlockItem": false,
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",

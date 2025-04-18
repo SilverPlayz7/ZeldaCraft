@@ -26,7 +26,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -121,10 +120,6 @@ public class TwilightArmorItem extends ArmorItem implements GeoItem {
 		if (itemstack.getItem() instanceof TwilightArmorItem armor && armor.getType() == ArmorItem.Type.BOOTS) {
 			list.add(Component.literal("Legends say these boots were once worn by a hero who battled the beasts of twilight. The insides are lined with cozy wolf fur."));
 		}
-	}
-
-	@Override
-	public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
 	}
 
 	private PlayState predicate(AnimationState event) {

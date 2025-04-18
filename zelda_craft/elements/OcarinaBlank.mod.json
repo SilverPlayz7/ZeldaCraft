@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "ocarinastaff.png",
           "use1Xscale": true,
           "x": 115,
-          "y": 177
+          "y": 177,
+          "locked": false
         }
       },
       {
@@ -28,7 +29,8 @@
             "name": "Show1A"
           },
           "x": 151,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
             "name": "Show2A"
           },
           "x": 170,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -52,7 +55,8 @@
             "name": "Show3A"
           },
           "x": 188,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -64,7 +68,8 @@
             "name": "Show4A"
           },
           "x": 208,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -76,7 +81,8 @@
             "name": "Show5A"
           },
           "x": 228,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -88,7 +94,8 @@
             "name": "Show6A"
           },
           "x": 247,
-          "y": 183
+          "y": 183,
+          "locked": false
         }
       },
       {
@@ -100,7 +107,8 @@
             "name": "Show1X"
           },
           "x": 152,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -112,7 +120,8 @@
             "name": "Show2X"
           },
           "x": 171,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -124,7 +133,8 @@
             "name": "Show3X"
           },
           "x": 189,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -136,7 +146,8 @@
             "name": "Show4X"
           },
           "x": 209,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -148,7 +159,8 @@
             "name": "Show5X"
           },
           "x": 229,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -160,7 +172,8 @@
             "name": "Show6X"
           },
           "x": 248,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -172,7 +185,8 @@
             "name": "Show1Y"
           },
           "x": 151,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -184,7 +198,8 @@
             "name": "Show2Y"
           },
           "x": 170,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -196,7 +211,8 @@
             "name": "Show3Y"
           },
           "x": 189,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -208,7 +224,8 @@
             "name": "Show4Y"
           },
           "x": 208,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -220,7 +237,8 @@
             "name": "Show5Y"
           },
           "x": 228,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -232,7 +250,8 @@
             "name": "Show6Y"
           },
           "x": 247,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -244,7 +263,8 @@
             "name": "Show1R"
           },
           "x": 152,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -256,7 +276,8 @@
             "name": "Show2R"
           },
           "x": 171,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -268,7 +289,8 @@
             "name": "Show3R"
           },
           "x": 190,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -280,7 +302,8 @@
             "name": "Show4R"
           },
           "x": 209,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -292,7 +315,8 @@
             "name": "Show5R"
           },
           "x": 229,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -304,7 +328,8 @@
             "name": "Show6R"
           },
           "x": 248,
-          "y": 204
+          "y": 204,
+          "locked": false
         }
       },
       {
@@ -316,7 +341,8 @@
             "name": "Show1L"
           },
           "x": 152,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       },
       {
@@ -328,7 +354,8 @@
             "name": "Show2L"
           },
           "x": 171,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       },
       {
@@ -340,7 +367,8 @@
             "name": "Show3L"
           },
           "x": 190,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       },
       {
@@ -352,7 +380,8 @@
             "name": "Show4L"
           },
           "x": 209,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       },
       {
@@ -364,7 +393,8 @@
             "name": "Show5L"
           },
           "x": 229,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       },
       {
@@ -376,7 +406,8 @@
             "name": "Show6L"
           },
           "x": 248,
-          "y": 211
+          "y": 211,
+          "locked": false
         }
       }
     ],

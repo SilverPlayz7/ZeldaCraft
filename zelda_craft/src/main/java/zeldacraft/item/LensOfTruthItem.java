@@ -37,7 +37,7 @@ public class LensOfTruthItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This is the Lens of Truth! Gaze through it to see mysteries that are invisible to the naked eye."));
+		list.add(Component.translatable("item.zelda_craft.lens_of_truth.description_0"));
 	}
 
 	@Override

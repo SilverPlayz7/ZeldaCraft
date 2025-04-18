@@ -124,9 +124,7 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.GORON_COIN.get());
 				tabData.accept(ZeldaCraftModItems.ZORA_COIN.get());
 				tabData.accept(ZeldaCraftModItems.GERUDO_COIN.get());
-			})
-
-					.build());
+			}).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {

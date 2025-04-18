@@ -79,9 +79,13 @@ public class MaskShopMenu extends AbstractContainerMenu implements Supplier<Map<
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 101, 103) {
 			private final int slot = 0;
+			private int x = MaskShopMenu.this.x;
+			private int y = MaskShopMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 184, 104) {
 			private final int slot = 1;
+			private int x = MaskShopMenu.this.x;
+			private int y = MaskShopMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {

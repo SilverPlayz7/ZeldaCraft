@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "item",
   "definition": {
     "renderType": 1,
@@ -53,7 +53,6 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": true,
@@ -62,6 +61,7 @@
     "projectile": {
       "value": "CUSTOM:HookShotProjectile"
     },
+    "projectileDisableAmmoCheck": true,
     "onRangedItemUsed": {
       "name": "HookShotRangedItemUsed"
     },
@@ -73,6 +73,13 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "bow"
+    "animation": "bow",
+    "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
+    "musicDiscLengthInTicks": 0,
+    "musicDiscAnalogOutput": 0
   }
 }

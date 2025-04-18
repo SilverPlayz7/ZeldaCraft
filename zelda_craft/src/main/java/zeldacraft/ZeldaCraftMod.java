@@ -59,6 +59,7 @@ public class ZeldaCraftMod {
 		ZeldaCraftModMobEffects.REGISTRY.register(bus);
 
 		ZeldaCraftModMenus.REGISTRY.register(bus);
+
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

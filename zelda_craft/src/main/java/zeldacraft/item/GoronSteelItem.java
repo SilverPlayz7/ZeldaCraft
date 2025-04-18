@@ -24,6 +24,6 @@ public class GoronSteelItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This is steel mined from Death Mountain and then refined by the most skilled metal worker"));
+		list.add(Component.translatable("item.zelda_craft.goron_steel.description_0"));
 	}
 }

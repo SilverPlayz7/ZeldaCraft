@@ -44,6 +44,6 @@ public class LokomoSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("A sword wielded by the Spirits of Good during the fight against the great evil Malladus."));
+		list.add(Component.translatable("item.zelda_craft.lokomo_sword.description_0"));
 	}
 }

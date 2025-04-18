@@ -79,138 +79,228 @@ public class ChestMenu extends AbstractContainerMenu implements Supplier<Map<Int
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 5, 29) {
 			private final int slot = 0;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 24, 29) {
 			private final int slot = 1;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 29) {
 			private final int slot = 2;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 62, 29) {
 			private final int slot = 3;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 81, 29) {
 			private final int slot = 4;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 100, 29) {
 			private final int slot = 5;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 119, 29) {
 			private final int slot = 6;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 138, 29) {
 			private final int slot = 7;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 157, 29) {
 			private final int slot = 8;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 176, 29) {
 			private final int slot = 9;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 195, 29) {
 			private final int slot = 10;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 214, 29) {
 			private final int slot = 11;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 233, 29) {
 			private final int slot = 12;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 252, 29) {
 			private final int slot = 13;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 271, 29) {
 			private final int slot = 14;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 5, 49) {
 			private final int slot = 15;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 24, 49) {
 			private final int slot = 16;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 43, 49) {
 			private final int slot = 17;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 62, 49) {
 			private final int slot = 18;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 81, 49) {
 			private final int slot = 19;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 100, 49) {
 			private final int slot = 20;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 119, 49) {
 			private final int slot = 21;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 138, 49) {
 			private final int slot = 22;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 157, 49) {
 			private final int slot = 23;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 176, 49) {
 			private final int slot = 24;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 195, 49) {
 			private final int slot = 25;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 214, 49) {
 			private final int slot = 26;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 233, 49) {
 			private final int slot = 28;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 252, 49) {
 			private final int slot = 29;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 271, 49) {
 			private final int slot = 30;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 5, 69) {
 			private final int slot = 31;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 24, 69) {
 			private final int slot = 32;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 43, 69) {
 			private final int slot = 33;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 62, 69) {
 			private final int slot = 34;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 81, 69) {
 			private final int slot = 35;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 100, 69) {
 			private final int slot = 36;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 119, 69) {
 			private final int slot = 37;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 138, 69) {
 			private final int slot = 38;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(39, this.addSlot(new SlotItemHandler(internal, 39, 157, 69) {
 			private final int slot = 39;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(40, this.addSlot(new SlotItemHandler(internal, 40, 176, 69) {
 			private final int slot = 40;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(41, this.addSlot(new SlotItemHandler(internal, 41, 195, 69) {
 			private final int slot = 41;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(42, this.addSlot(new SlotItemHandler(internal, 42, 214, 69) {
 			private final int slot = 42;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(43, this.addSlot(new SlotItemHandler(internal, 43, 233, 69) {
 			private final int slot = 43;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(44, this.addSlot(new SlotItemHandler(internal, 44, 252, 69) {
 			private final int slot = 44;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		this.customSlots.put(45, this.addSlot(new SlotItemHandler(internal, 45, 271, 69) {
 			private final int slot = 45;
+			private int x = ChestMenu.this.x;
+			private int y = ChestMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
