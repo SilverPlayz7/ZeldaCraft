@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "PERIOD",
+    "keyBindingName": "Open Wallet",
+    "keyBindingCategoryKey": "zeldacraft",
+    "onKeyPressed": {
+      "name": "RupeeWalletRightclicked"
+    }
+  }
+}

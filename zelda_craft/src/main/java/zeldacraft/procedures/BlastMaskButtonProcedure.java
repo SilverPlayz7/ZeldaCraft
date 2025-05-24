@@ -15,5 +15,12 @@ public class BlastMaskButtonProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			double _setval = 15;
+			entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaskPrice = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

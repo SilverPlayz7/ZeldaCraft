@@ -32,11 +32,10 @@ import zeldacraft.procedures.Show1XProcedure;
 import zeldacraft.procedures.Show1RProcedure;
 import zeldacraft.procedures.Show1LProcedure;
 import zeldacraft.procedures.Show1AProcedure;
-import zeldacraft.procedures.OcarinaYButtonProcedure;
-import zeldacraft.procedures.OcarinaXButtonProcedure;
-import zeldacraft.procedures.OcarinaRButtonProcedure;
-import zeldacraft.procedures.OcarinaLButtonProcedure;
-import zeldacraft.procedures.OcarinaAButtonProcedure;
+
+import zeldacraft.network.OcarinaBlankButtonMessage;
+
+import zeldacraft.ZeldaCraftMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -44,6 +43,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -55,6 +56,11 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_x;
+	Button button_a;
+	Button button_y;
+	Button button_l;
+	Button button_r;
 
 	public OcarinaBlankScreen(OcarinaBlankMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -183,23 +189,28 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 			return true;
 		} else {
 			if (key == 68) {
-				OcarinaAButtonProcedure.execute(entity);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(1, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 1, x, y, z);
 				return true;
 			} else {
 				if (key == 87) {
-					OcarinaXButtonProcedure.execute(entity);
+					ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(0, x, y, z));
+					OcarinaBlankButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					return true;
 				} else {
 					if (key == 65) {
-						OcarinaYButtonProcedure.execute(entity);
+						ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(2, x, y, z));
+						OcarinaBlankButtonMessage.handleButtonAction(entity, 2, x, y, z);
 						return true;
 					} else {
-						if (key == 16) {
-							OcarinaLButtonProcedure.execute(entity);
+						if (Screen.hasShiftDown()) {
+							ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(3, x, y, z));
+							OcarinaBlankButtonMessage.handleButtonAction(entity, 3, x, y, z);
 							return true;
 						} else {
 							if (key == 32) {
-								OcarinaRButtonProcedure.execute(entity);
+								ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(4, x, y, z));
+								OcarinaBlankButtonMessage.handleButtonAction(entity, 4, x, y, z);
 								return true;
 							}
 						}
@@ -217,5 +228,45 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 	@Override
 	public void init() {
 		super.init();
+		button_x = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_x"), e -> {
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(0, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + -16, this.topPos + -81, 30, 20).build();
+		guistate.put("button:button_x", button_x);
+		this.addRenderableWidget(button_x);
+		button_a = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_a"), e -> {
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(1, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 13, this.topPos + -62, 30, 20).build();
+		guistate.put("button:button_a", button_a);
+		this.addRenderableWidget(button_a);
+		button_y = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_y"), e -> {
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(2, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + -45, this.topPos + -62, 30, 20).build();
+		guistate.put("button:button_y", button_y);
+		this.addRenderableWidget(button_y);
+		button_l = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_l"), e -> {
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(3, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}).bounds(this.leftPos + -64, this.topPos + -93, 30, 20).build();
+		guistate.put("button:button_l", button_l);
+		this.addRenderableWidget(button_l);
+		button_r = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_r"), e -> {
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(4, x, y, z));
+				OcarinaBlankButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}).bounds(this.leftPos + 29, this.topPos + -93, 30, 20).build();
+		guistate.put("button:button_r", button_r);
+		this.addRenderableWidget(button_r);
 	}
 }

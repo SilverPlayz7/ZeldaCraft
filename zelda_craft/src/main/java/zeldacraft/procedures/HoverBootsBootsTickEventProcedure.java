@@ -2,8 +2,6 @@ package zeldacraft.procedures;
 
 import zeldacraft.init.ZeldaCraftModItems;
 
-import zeldacraft.ZeldaCraftMod;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,12 +20,10 @@ public class HoverBootsBootsTickEventProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.HOVER_BOOTS_BOOTS.get()) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 1, -1, false, false));
-			if (!world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
-				ZeldaCraftMod.queueServerWork(30, () -> {
-					if (entity instanceof LivingEntity _entity)
-						_entity.removeEffect(MobEffects.LEVITATION);
+			if (!world.getBlockState(BlockPos.containing(x, y - 0.1, z)).canOcclude()) {
+				if (entity.getPersistentData().getDouble("htimer") < 30) {
+					entity.getPersistentData().putDouble("htimer", (entity.getPersistentData().getDouble("htimer") + 1));
+				} else {
 					if (entity instanceof ServerPlayer _player) {
 						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:cartoon_gravity_joke"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -36,7 +32,15 @@ public class HoverBootsBootsTickEventProcedure {
 								_player.getAdvancements().award(_adv, criteria);
 						}
 					}
-				});
+					if (entity instanceof LivingEntity _entity)
+						_entity.removeEffect(MobEffects.LEVITATION);
+				}
+			} else {
+				entity.getPersistentData().putDouble("htimer", 0);
+			}
+			if (entity.getPersistentData().getDouble("htimer") < 30) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 1, -1, false, false));
 			}
 		}
 	}

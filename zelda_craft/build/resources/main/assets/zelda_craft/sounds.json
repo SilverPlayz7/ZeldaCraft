@@ -234,5 +234,45 @@
         "stream": false
       }
     ]
+  },
+  "note_a": {
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_notes_ocarina_a_short",
+        "stream": true
+      }
+    ]
+  },
+  "note_b": {
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_notes_ocarina_b_short",
+        "stream": true
+      }
+    ]
+  },
+  "note_d": {
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_notes_ocarina_d_short",
+        "stream": true
+      }
+    ]
+  },
+  "note_d2": {
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_notes_ocarina_d2_short",
+        "stream": true
+      }
+    ]
+  },
+  "note_f": {
+    "sounds": [
+      {
+        "name": "zelda_craft:oot_notes_ocarina_f_short",
+        "stream": true
+      }
+    ]
   }
 }

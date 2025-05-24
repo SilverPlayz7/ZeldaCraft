@@ -36,14 +36,9 @@
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "OcarinaBlank",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "OccarinaOfTimeOpen"
-    },
-    "onItemInUseTick": {
-      "name": "OcarinaOfTimeSongCheck"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -61,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

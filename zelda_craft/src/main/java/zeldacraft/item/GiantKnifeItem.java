@@ -26,7 +26,7 @@ public class GiantKnifeItem extends SwordItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 2;
+				return 10;
 			}
 
 			public Ingredient getRepairIngredient() {

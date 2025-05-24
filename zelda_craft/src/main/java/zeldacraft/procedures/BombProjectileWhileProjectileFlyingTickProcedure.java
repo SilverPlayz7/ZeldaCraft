@@ -3,8 +3,6 @@ package zeldacraft.procedures;
 import zeldacraft.init.ZeldaCraftModGameRules;
 import zeldacraft.init.ZeldaCraftModBlocks;
 
-import zeldacraft.entity.BombProjectileEntity;
-
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.phys.Vec3;
@@ -12,12 +10,17 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
@@ -66,14 +69,8 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 			entity.getPersistentData().putDouble("SoundClock", 1);
 		}
 		if (!entity.onGround()) {
-			if (!world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3(x, y, z), 2, 2, 2), e -> true).isEmpty()) {
-				if (!(((Entity) world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3(x, y, z), 2, 2, 2), e -> true).stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof BombProjectileEntity)) {
-					entity.getPersistentData().putDouble("FuseTime", 80);
-				}
+			if (!world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty() || !world.getEntitiesOfClass(Animal.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty()) {
+				entity.getPersistentData().putDouble("FuseTime", 80);
 			}
 		}
 		if (entity.getPersistentData().getDouble("FuseTime") < 80) {
@@ -83,7 +80,12 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 				entity.discard();
 			if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.BOMB_GREIFING) == false) {
 				if (world instanceof Level _level && !_level.isClientSide())
-					_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.NONE);
+					_level.explode(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+						}
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)), new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION)), null, x, y, z, 3, false,
+							Level.ExplosionInteraction.NONE);
 				sx = -1.6;
 				found = false;
 				for (int index0 = 0; index0 < 4; index0++) {

@@ -16,7 +16,7 @@ public class UnPoweredMasterSwordItem extends SwordItem {
 	public UnPoweredMasterSwordItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 99999;
+				return 0;
 			}
 
 			public float getSpeed() {
@@ -32,7 +32,7 @@ public class UnPoweredMasterSwordItem extends SwordItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 2;
+				return 0;
 			}
 
 			public Ingredient getRepairIngredient() {

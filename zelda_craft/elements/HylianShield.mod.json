@@ -6,14 +6,15 @@
     "texture": "hylianshield",
     "name": "Hylian Shield",
     "idle": "animation.example.idle",
-    "rarity": "COMMON",
+    "rarity": "RARE",
     "displaySettings": "hylianshield.item.json",
     "leftArm": "",
     "rightArm": "",
-    "creativeTab": {
-      "value": "CUSTOM:ZeldaCraft"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
     "firstPersonArms": false,
     "stackSize": 1,
     "enchantability": 0,

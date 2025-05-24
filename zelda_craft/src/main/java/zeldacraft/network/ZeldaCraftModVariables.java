@@ -91,12 +91,6 @@ public class ZeldaCraftModVariables {
 			clone.CreepersDetonated = original.CreepersDetonated;
 			clone.ExplosiveKills = original.ExplosiveKills;
 			if (!event.isWasDeath()) {
-				clone.OcarinaNote1 = original.OcarinaNote1;
-				clone.OcarinaNote2 = original.OcarinaNote2;
-				clone.OcarinaNote3 = original.OcarinaNote3;
-				clone.OcarinaNote4 = original.OcarinaNote4;
-				clone.OcarinaNote5 = original.OcarinaNote5;
-				clone.OcarinaNote6 = original.OcarinaNote6;
 				clone.jumpvar = original.jumpvar;
 				clone.DungeontoLoad = original.DungeontoLoad;
 				clone.BoomerangOwner = original.BoomerangOwner;
@@ -105,6 +99,7 @@ public class ZeldaCraftModVariables {
 				clone.HookZ = original.HookZ;
 				clone.Hooked = original.Hooked;
 				clone.selectedmask = original.selectedmask;
+				clone.MaskPrice = original.MaskPrice;
 			}
 		}
 	}
@@ -140,12 +135,6 @@ public class ZeldaCraftModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double OcarinaNote1 = 0;
-		public double OcarinaNote2 = 0;
-		public double OcarinaNote3 = 0;
-		public double OcarinaNote4 = 0;
-		public double OcarinaNote5 = 0;
-		public double OcarinaNote6 = 0;
 		public double Warp1X = 0;
 		public double Warp1Y = 0;
 		public double Warp1Z = 0;
@@ -178,6 +167,7 @@ public class ZeldaCraftModVariables {
 		public double CreepersDetonated = 0;
 		public double ExplosiveKills = 0;
 		public double selectedmask = 0;
+		public double MaskPrice = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -186,12 +176,6 @@ public class ZeldaCraftModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("OcarinaNote1", OcarinaNote1);
-			nbt.putDouble("OcarinaNote2", OcarinaNote2);
-			nbt.putDouble("OcarinaNote3", OcarinaNote3);
-			nbt.putDouble("OcarinaNote4", OcarinaNote4);
-			nbt.putDouble("OcarinaNote5", OcarinaNote5);
-			nbt.putDouble("OcarinaNote6", OcarinaNote6);
 			nbt.putDouble("Warp1X", Warp1X);
 			nbt.putDouble("Warp1Y", Warp1Y);
 			nbt.putDouble("Warp1Z", Warp1Z);
@@ -224,17 +208,12 @@ public class ZeldaCraftModVariables {
 			nbt.putDouble("CreepersDetonated", CreepersDetonated);
 			nbt.putDouble("ExplosiveKills", ExplosiveKills);
 			nbt.putDouble("selectedmask", selectedmask);
+			nbt.putDouble("MaskPrice", MaskPrice);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
-			OcarinaNote1 = nbt.getDouble("OcarinaNote1");
-			OcarinaNote2 = nbt.getDouble("OcarinaNote2");
-			OcarinaNote3 = nbt.getDouble("OcarinaNote3");
-			OcarinaNote4 = nbt.getDouble("OcarinaNote4");
-			OcarinaNote5 = nbt.getDouble("OcarinaNote5");
-			OcarinaNote6 = nbt.getDouble("OcarinaNote6");
 			Warp1X = nbt.getDouble("Warp1X");
 			Warp1Y = nbt.getDouble("Warp1Y");
 			Warp1Z = nbt.getDouble("Warp1Z");
@@ -267,6 +246,7 @@ public class ZeldaCraftModVariables {
 			CreepersDetonated = nbt.getDouble("CreepersDetonated");
 			ExplosiveKills = nbt.getDouble("ExplosiveKills");
 			selectedmask = nbt.getDouble("selectedmask");
+			MaskPrice = nbt.getDouble("MaskPrice");
 		}
 	}
 
@@ -291,12 +271,6 @@ public class ZeldaCraftModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.OcarinaNote1 = message.data.OcarinaNote1;
-					variables.OcarinaNote2 = message.data.OcarinaNote2;
-					variables.OcarinaNote3 = message.data.OcarinaNote3;
-					variables.OcarinaNote4 = message.data.OcarinaNote4;
-					variables.OcarinaNote5 = message.data.OcarinaNote5;
-					variables.OcarinaNote6 = message.data.OcarinaNote6;
 					variables.Warp1X = message.data.Warp1X;
 					variables.Warp1Y = message.data.Warp1Y;
 					variables.Warp1Z = message.data.Warp1Z;
@@ -329,6 +303,7 @@ public class ZeldaCraftModVariables {
 					variables.CreepersDetonated = message.data.CreepersDetonated;
 					variables.ExplosiveKills = message.data.ExplosiveKills;
 					variables.selectedmask = message.data.selectedmask;
+					variables.MaskPrice = message.data.MaskPrice;
 				}
 			});
 			context.setPacketHandled(true);

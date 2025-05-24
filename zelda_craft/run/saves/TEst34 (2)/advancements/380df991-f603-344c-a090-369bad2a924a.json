@@ -1,39 +1,45 @@
 {
   "zelda_craft:zelda_craft_advancement_page": {
     "criteria": {
-      "zelda_craft_advancement_page_0": "2024-12-02 19:18:46 -0500"
+      "zelda_craft_advancement_page_0": "2025-05-18 13:17:24 -0400"
     },
     "done": true
   },
   "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
-      "unlock_right_away": "2024-12-02 19:18:46 -0500"
+      "unlock_right_away": "2025-05-18 13:17:24 -0400"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:cherry_grove": "2024-12-02 19:18:47 -0500",
-      "minecraft:forest": "2024-12-17 15:02:25 -0500",
-      "minecraft:plains": "2025-04-18 10:54:08 -0400"
+      "minecraft:cherry_grove": "2025-05-18 13:17:25 -0400",
+      "minecraft:forest": "2025-05-18 13:17:49 -0400",
+      "minecraft:plains": "2025-05-18 13:17:48 -0400"
     },
     "done": false
   },
   "zelda_craft:grave_robber": {
     "criteria": {
-      "grave_robber_0": "2024-12-17 15:02:20 -0500"
+      "grave_robber_0": "2025-05-18 13:17:42 -0400"
     },
     "done": true
   },
-  "zelda_craft:do_not_tell_the_treasure_box_lady": {
+  "zelda_craft:blast_mask_0": {
     "criteria": {
-      "do_not_tell_the_treasure_box_lady_0": "2025-04-18 10:53:00 -0400"
+      "blast_mask_0_0": "2025-05-18 13:17:45 -0400"
     },
     "done": true
   },
-  "zelda_craft:eye_see_you": {
+  "minecraft:recipes/misc/firework_rocket_simple": {
     "criteria": {
-      "eye_see_you_0": "2025-04-18 10:51:49 -0400"
+      "has_gunpowder": "2025-05-18 13:23:24 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2025-05-18 13:23:24 -0400"
     },
     "done": true
   },

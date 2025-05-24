@@ -17,7 +17,7 @@
           "use1Xscale": false,
           "x": 64,
           "y": 10,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -123,6 +123,23 @@
           },
           "x": 198,
           "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_price",
+          "text": {
+            "fixedValue": "",
+            "name": "RupeeCounter"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 133,
+          "y": 134,
           "locked": false
         }
       }

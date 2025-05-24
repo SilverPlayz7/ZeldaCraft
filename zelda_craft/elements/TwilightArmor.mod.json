@@ -10,10 +10,11 @@
     "textureLeggings": "greavesoftwilighticon",
     "enableBoots": true,
     "textureBoots": "bootsoftwilighticon",
-    "creativeTab": {
-      "value": "CUSTOM:ZeldaCraft"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
     "armorTextureFile": "armoroftwilight.png",
     "model": "twilightset.geo.json",
     "idle": "animation.TPChest.new",

@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "zelda_craft:block/timeshiftore",
-    "up": "zelda_craft:block/timeshiftore",
-    "north": "zelda_craft:block/timeshiftore",
-    "east": "zelda_craft:block/timeshiftore",
-    "south": "zelda_craft:block/timeshiftore",
-    "west": "zelda_craft:block/timeshiftore",
+    "all": "zelda_craft:block/timeshiftore",
     "particle": "zelda_craft:block/timeshiftore"
   },
   "render_type": "solid"

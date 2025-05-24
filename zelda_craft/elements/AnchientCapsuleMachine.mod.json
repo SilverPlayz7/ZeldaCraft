@@ -15,7 +15,7 @@
     "displayFluidOverlay": false,
     "animateBlockItem": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "minecraft:stone_bricks",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,

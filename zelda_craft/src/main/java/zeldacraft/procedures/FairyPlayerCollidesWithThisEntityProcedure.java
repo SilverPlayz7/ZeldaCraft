@@ -21,7 +21,7 @@ public class FairyPlayerCollidesWithThisEntityProcedure {
 			return;
 		if (sourceentity instanceof Player) {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) != (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) {
-				if (world.isClientSide())
+				if (true)
 					Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(ZeldaCraftModItems.FAIRY_ITEM.get()));
 				if (sourceentity instanceof LivingEntity _entity)
 					_entity.setHealth(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);

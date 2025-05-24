@@ -39,9 +39,6 @@
     "onRightClickedOnBlock": {
       "name": "FairyBottleRightclicked"
     },
-    "onItemInInventoryTick": {
-      "name": "FairyBottleItemInInventoryTick2"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -59,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

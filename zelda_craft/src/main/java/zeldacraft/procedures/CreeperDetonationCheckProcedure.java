@@ -40,7 +40,7 @@ public class CreeperDetonationCheckProcedure {
 				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_2"))).isDone())) {
 			if (sourceentity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel
 					&& _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_0"))).isDone()) {
-				if (entity instanceof Creeper) {
+				if (!(entity instanceof Creeper _creeper ? _creeper.isIgnited() : true)) {
 					if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.FLINT_AND_STEEL) {
 						{
 							double _setval = (sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).CreepersDetonated + 1;

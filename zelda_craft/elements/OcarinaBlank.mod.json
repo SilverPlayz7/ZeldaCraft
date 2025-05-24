@@ -409,6 +409,86 @@
           "y": 211,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_x",
+          "text": "x",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OcarinaXButton"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 198,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_a",
+          "text": "a",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OcarinaAButton"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 227,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_y",
+          "text": "y",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OcarinaYButton"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 169,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_l",
+          "text": "l",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OcarinaLButton"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 150,
+          "y": 27,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_r",
+          "text": "r",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OcarinaRButton"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 243,
+          "y": 27,
+          "locked": false
+        }
       }
     ],
     "onOpen": {

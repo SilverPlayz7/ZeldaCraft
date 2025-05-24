@@ -2,6 +2,7 @@ package zeldacraft.client.gui;
 
 import zeldacraft.world.inventory.MaskShopMenu;
 
+import zeldacraft.procedures.RupeeCounterProcedure;
 import zeldacraft.procedures.BunnyHoodSelectedProcedure;
 import zeldacraft.procedures.BlastMaskSelectedProcedure;
 
@@ -80,6 +81,9 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font,
+
+				RupeeCounterProcedure.execute(entity), 69, 124, -12829636, false);
 	}
 
 	@Override

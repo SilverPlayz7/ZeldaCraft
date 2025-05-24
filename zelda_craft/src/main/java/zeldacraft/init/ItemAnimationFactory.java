@@ -1,5 +1,6 @@
 package zeldacraft.init;
 
+import zeldacraft.item.ReplicaHylianShieldItem;
 import zeldacraft.item.MirrorShieldOotItem;
 import zeldacraft.item.HylianShieldItem;
 import zeldacraft.item.FlyingBoomerangItem;
@@ -71,6 +72,24 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((MirrorShieldOotItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof ReplicaHylianShieldItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((ReplicaHylianShieldItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof ReplicaHylianShieldItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((ReplicaHylianShieldItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 					}
 				}
 			}

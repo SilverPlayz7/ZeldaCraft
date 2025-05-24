@@ -1,7 +1,5 @@
 package zeldacraft.procedures;
 
-import zeldacraft.network.ZeldaCraftModVariables;
-
 import zeldacraft.init.ZeldaCraftModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,6 +20,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -45,13 +44,8 @@ public class FairyBottleItemInInventoryTickProcedure {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.BeenResed = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+			if (true)
+				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(ZeldaCraftModItems.FAIRY_ITEM.get()));
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:fairy_heal")), SoundSource.NEUTRAL, 1, 1);

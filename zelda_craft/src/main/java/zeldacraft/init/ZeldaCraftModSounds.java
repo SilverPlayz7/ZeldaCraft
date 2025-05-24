@@ -42,4 +42,9 @@ public class ZeldaCraftModSounds {
 	public static final RegistryObject<SoundEvent> BOOMERANG_THROW = REGISTRY.register("boomerang_throw", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "boomerang_throw")));
 	public static final RegistryObject<SoundEvent> BOOMERANG_FLYING_LOOP = REGISTRY.register("boomerang_flying_loop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "boomerang_flying_loop")));
 	public static final RegistryObject<SoundEvent> FAIRY_IDLE = REGISTRY.register("fairy_idle", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "fairy_idle")));
+	public static final RegistryObject<SoundEvent> NOTE_A = REGISTRY.register("note_a", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_a")));
+	public static final RegistryObject<SoundEvent> NOTE_B = REGISTRY.register("note_b", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_b")));
+	public static final RegistryObject<SoundEvent> NOTE_D = REGISTRY.register("note_d", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_d")));
+	public static final RegistryObject<SoundEvent> NOTE_D2 = REGISTRY.register("note_d2", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_d2")));
+	public static final RegistryObject<SoundEvent> NOTE_F = REGISTRY.register("note_f", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_f")));
 }

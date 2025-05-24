@@ -43,7 +43,7 @@ public class ZeldaCraftModEntities {
 			.setCustomClientFactory(FierceDeitySwordBeamEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HappyMaskSalesmanEntity>> HAPPY_MASK_SALESMAN = register("happy_mask_salesman", EntityType.Builder.<HappyMaskSalesmanEntity>of(HappyMaskSalesmanEntity::new, MobCategory.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HappyMaskSalesmanEntity::new).fireImmune().sized(1f, 2f));
-	public static final RegistryObject<EntityType<BombProjectileEntity>> BOMB_PROJECTILE = register("bomb_projectile", EntityType.Builder.<BombProjectileEntity>of(BombProjectileEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+	public static final RegistryObject<EntityType<BombProjectileEntity>> BOMB_PROJECTILE = register("bomb_projectile", EntityType.Builder.<BombProjectileEntity>of(BombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BombProjectileEntity::new).fireImmune().sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<FairyEntity>> FAIRY = register("fairy",
 			EntityType.Builder.<FairyEntity>of(FairyEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FairyEntity::new)

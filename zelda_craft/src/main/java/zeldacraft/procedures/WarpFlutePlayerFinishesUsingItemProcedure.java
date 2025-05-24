@@ -17,6 +17,8 @@ public class WarpFlutePlayerFinishesUsingItemProcedure {
 				if (_ent instanceof ServerPlayer _serverPlayer)
 					_serverPlayer.connection.teleport((itemstack.getOrCreateTag().getDouble("TPX")), (itemstack.getOrCreateTag().getDouble("TPY")), (itemstack.getOrCreateTag().getDouble("TPZ")), _ent.getYRot(), _ent.getXRot());
 			}
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 100);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("There is no warp set"), true);

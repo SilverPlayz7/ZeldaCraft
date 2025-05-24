@@ -4,6 +4,7 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.network.OpenWalletMessage;
 import zeldacraft.network.MaskAbilityMessage;
 import zeldacraft.network.DoubleJumpKeyMessage;
 
@@ -48,11 +49,25 @@ public class ZeldaCraftModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPEN_WALLET = new KeyMapping("key.zelda_craft.open_wallet", GLFW.GLFW_KEY_PERIOD, "key.categories.zeldacraft") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OpenWalletMessage(0, 0));
+				OpenWalletMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(MASK_ABILITY);
 		event.register(DOUBLE_JUMP_KEY);
+		event.register(OPEN_WALLET);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -62,6 +77,7 @@ public class ZeldaCraftModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				MASK_ABILITY.consumeClick();
 				DOUBLE_JUMP_KEY.consumeClick();
+				OPEN_WALLET.consumeClick();
 			}
 		}
 	}

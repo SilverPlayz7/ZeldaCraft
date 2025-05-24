@@ -72,7 +72,7 @@ public class WalletWithdrawButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Withdraw1Procedure.execute(entity);
+			Withdraw1Procedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 

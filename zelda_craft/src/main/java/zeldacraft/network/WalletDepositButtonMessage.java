@@ -71,7 +71,7 @@ public class WalletDepositButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			DepositRupeesProcedure.execute(entity);
+			DepositRupeesProcedure.execute(world, entity);
 		}
 	}
 

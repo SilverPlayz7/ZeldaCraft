@@ -16,7 +16,7 @@
             "price2": {
               "value": ""
             },
-            "countPrice2": 1,
+            "countPrice2": 3,
             "offer": {
               "value": "CUSTOM:NewHyrleShieldBetterWayTest"
             },
@@ -24,6 +24,24 @@
             "level": 3,
             "maxTrades": 3,
             "xp": 6,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:BlueRupee"
+            },
+            "countPrice1": 16,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 16,
+            "offer": {
+              "value": "CUSTOM:ReplicaHylianShield"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 1,
+            "xp": 10,
             "priceMultiplier": 0.05
           }
         ]

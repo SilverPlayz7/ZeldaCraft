@@ -15,5 +15,12 @@ public class BunnyHoodButtonProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			double _setval = 10;
+			entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaskPrice = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }
