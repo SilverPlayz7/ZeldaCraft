@@ -43,6 +43,9 @@ public class HookShotProjectileHitsBlockProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else {
+			if (!immediatesourceentity.level().isClientSide())
+				immediatesourceentity.discard();
 		}
 	}
 }

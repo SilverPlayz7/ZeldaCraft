@@ -13,7 +13,10 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:snowy_slopes": "2025-05-24 18:39:35 -0400",
       "minecraft:cherry_grove": "2025-05-18 13:24:40 -0400",
+      "minecraft:river": "2025-05-24 20:37:45 -0400",
+      "minecraft:forest": "2025-05-24 18:45:18 -0400",
       "minecraft:plains": "2025-05-18 13:25:57 -0400"
     },
     "done": false
@@ -569,6 +572,66 @@
   "minecraft:story/deflect_arrow": {
     "criteria": {
       "deflected_projectile": "2025-05-22 19:08:40 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dispenser": {
+    "criteria": {
+      "has_bow": "2025-05-24 18:39:39 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:cartoon_gravity_joke": {
+    "criteria": {
+      "cartoon_gravity_joke_0": "2025-05-24 18:40:16 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef_from_smoking": {
+    "criteria": {
+      "has_beef": "2025-05-24 18:42:14 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef": {
+    "criteria": {
+      "has_beef": "2025-05-24 18:42:14 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef_from_campfire_cooking": {
+    "criteria": {
+      "has_beef": "2025-05-24 18:42:14 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:shouldnt_have_skipped_leg_day": {
+    "criteria": {
+      "shouldnt_have_skipped_leg_day_0": "2025-05-24 18:49:58 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:the_power_of_the_gods_in_the_palm_of_your_hand": {
+    "criteria": {
+      "the_power_of_the_gods_in_the_palm_of_your_hand_0": "2025-05-24 18:50:25 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:da_na_na_naa": {
+    "criteria": {
+      "da_na_na_naa_0": "2025-05-24 18:50:42 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:you_fell_victim_to_one_of_the_clasic_blunders": {
+    "criteria": {
+      "you_fell_victim_to_one_of_the_clasic_blunders_0": "2025-05-24 18:51:21 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_poppy": {
+    "criteria": {
+      "has_poppy": "2025-05-24 18:51:30 -0400"
     },
     "done": true
   },

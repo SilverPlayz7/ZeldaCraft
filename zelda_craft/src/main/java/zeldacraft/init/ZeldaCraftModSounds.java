@@ -47,4 +47,17 @@ public class ZeldaCraftModSounds {
 	public static final RegistryObject<SoundEvent> NOTE_D = REGISTRY.register("note_d", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_d")));
 	public static final RegistryObject<SoundEvent> NOTE_D2 = REGISTRY.register("note_d2", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_d2")));
 	public static final RegistryObject<SoundEvent> NOTE_F = REGISTRY.register("note_f", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "note_f")));
+	public static final RegistryObject<SoundEvent> EPONAS_SONG = REGISTRY.register("eponas_song", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "eponas_song")));
+	public static final RegistryObject<SoundEvent> SUNS_SONG = REGISTRY.register("suns_song", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "suns_song")));
+	public static final RegistryObject<SoundEvent> NOCTURNE_OF_SHADOW = REGISTRY.register("nocturne_of_shadow", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "nocturne_of_shadow")));
+	public static final RegistryObject<SoundEvent> MINUET_OF_FOREST = REGISTRY.register("minuet_of_forest", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "minuet_of_forest")));
+	public static final RegistryObject<SoundEvent> SERENADE_OF_WATER = REGISTRY.register("serenade_of_water", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "serenade_of_water")));
+	public static final RegistryObject<SoundEvent> PRELUDE_OF_LIGHT = REGISTRY.register("prelude_of_light", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "prelude_of_light")));
+	public static final RegistryObject<SoundEvent> BOLERO_OF_FIRE = REGISTRY.register("bolero_of_fire", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "bolero_of_fire")));
+	public static final RegistryObject<SoundEvent> REQUIREM_OF_SPIRIT = REGISTRY.register("requirem_of_spirit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "requirem_of_spirit")));
+	public static final RegistryObject<SoundEvent> SONG_OF_TIME = REGISTRY.register("song_of_time", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_time")));
+	public static final RegistryObject<SoundEvent> SONG_OF_DOUBLE_TIME = REGISTRY.register("song_of_double_time", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_double_time")));
+	public static final RegistryObject<SoundEvent> INVERTED_SONG_OF_TIME = REGISTRY.register("inverted_song_of_time", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "inverted_song_of_time")));
+	public static final RegistryObject<SoundEvent> SONG_OF_SOARING = REGISTRY.register("song_of_soaring", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_soaring")));
+	public static final RegistryObject<SoundEvent> SONG_OF_HEALING = REGISTRY.register("song_of_healing", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_healing")));
 }

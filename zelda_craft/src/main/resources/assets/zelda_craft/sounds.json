@@ -274,5 +274,122 @@
         "stream": true
       }
     ]
+  },
+  "eponas_song": {
+    "subtitle": "subtitles.eponas_song",
+    "sounds": [
+      {
+        "name": "zelda_craft:eponas_song",
+        "stream": true
+      }
+    ]
+  },
+  "suns_song": {
+    "subtitle": "subtitles.suns_song",
+    "sounds": [
+      {
+        "name": "zelda_craft:suns_song",
+        "stream": true
+      }
+    ]
+  },
+  "nocturne_of_shadow": {
+    "subtitle": "subtitles.nocturne_of_shadow",
+    "sounds": [
+      {
+        "name": "zelda_craft:nocturne_of_shadow",
+        "stream": true
+      }
+    ]
+  },
+  "minuet_of_forest": {
+    "subtitle": "subtitles.minuet_of_forest",
+    "sounds": [
+      {
+        "name": "zelda_craft:minuet_of_forest",
+        "stream": true
+      }
+    ]
+  },
+  "serenade_of_water": {
+    "subtitle": "subtitles.serenade_of_water",
+    "sounds": [
+      {
+        "name": "zelda_craft:serenade_of_water",
+        "stream": false
+      }
+    ]
+  },
+  "prelude_of_light": {
+    "subtitle": "subtitles.prelude_of_light",
+    "sounds": [
+      {
+        "name": "zelda_craft:prelude_of_light",
+        "stream": true
+      }
+    ]
+  },
+  "bolero_of_fire": {
+    "subtitle": "subtitles.bolero_of_fire",
+    "sounds": [
+      {
+        "name": "zelda_craft:bolero_of_fire",
+        "stream": true
+      }
+    ]
+  },
+  "requirem_of_spirit": {
+    "subtitle": "subtitles.requirem_of_spirit",
+    "sounds": [
+      {
+        "name": "zelda_craft:requirem_of_spirit",
+        "stream": true
+      }
+    ]
+  },
+  "song_of_time": {
+    "subtitle": "subtitles.song_of_time",
+    "sounds": [
+      {
+        "name": "zelda_craft:song_of_time_ocarina",
+        "stream": true
+      }
+    ]
+  },
+  "song_of_double_time": {
+    "subtitle": "subtitles.song_of_double_time",
+    "sounds": [
+      {
+        "name": "zelda_craft:song_of_double_time",
+        "stream": true
+      }
+    ]
+  },
+  "inverted_song_of_time": {
+    "subtitle": "subtitles.inverted_song_of_time",
+    "sounds": [
+      {
+        "name": "zelda_craft:inverted_song_of_time",
+        "stream": true
+      }
+    ]
+  },
+  "song_of_soaring": {
+    "subtitle": "subtitles.song_of_soaring",
+    "sounds": [
+      {
+        "name": "zelda_craft:song_of_soaring",
+        "stream": true
+      }
+    ]
+  },
+  "song_of_healing": {
+    "subtitle": "subtitles.song_of_healing",
+    "sounds": [
+      {
+        "name": "zelda_craft:song_of_healing",
+        "stream": true
+      }
+    ]
   }
 }

@@ -2,13 +2,17 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
+import zeldacraft.ZeldaCraftMod;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 public class HookShotWhileProjectileFlyingTickProcedure {
-	public static void execute(Entity entity, Entity immediatesourceentity) {
+	public static void execute(LevelAccessor world, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		double MVZ = 0;
@@ -31,8 +35,23 @@ public class HookShotWhileProjectileFlyingTickProcedure {
 			immediatesourceentity.getPersistentData().putDouble("DistanceTime", (immediatesourceentity.getPersistentData().getDouble("DistanceTime") + 1));
 		} else {
 			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).Hooked == false) {
-				if (!immediatesourceentity.level().isClientSide())
-					immediatesourceentity.discard();
+				DVX = entity.getX() - immediatesourceentity.getX();
+				NDVX = DVX;
+				MVX = NDVX * 0.15;
+				DVY = (entity.getY() + 1) - immediatesourceentity.getY();
+				NDVY = DVY;
+				MVY = NDVY * 0.15;
+				DVZ = entity.getZ() - immediatesourceentity.getZ();
+				NDVZ = DVZ;
+				MVZ = NDVZ * 0.15;
+				immediatesourceentity.setDeltaMovement(new Vec3(MVX, MVY, MVZ));
+			} else {
+				ZeldaCraftMod.queueServerWork((int) Math.sqrt(Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookX, 2)
+						+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookY, 2)
+						+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookZ, 2)), () -> {
+							if (!immediatesourceentity.level().isClientSide())
+								immediatesourceentity.discard();
+						});
 			}
 		}
 	}

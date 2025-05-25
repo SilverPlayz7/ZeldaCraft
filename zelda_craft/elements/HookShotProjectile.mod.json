@@ -5,7 +5,7 @@
     "projectileItem": {
       "value": "Blocks.AIR"
     },
-    "showParticles": true,
+    "showParticles": false,
     "actionSound": {
       "value": "block.chain.step"
     },
@@ -13,12 +13,15 @@
     "power": 1.0,
     "damage": 5.0,
     "knockback": 0,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "Modelfiredhook",
+    "customModelTexture": "hook.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
     "onHitsBlock": {
       "name": "HookShotProjectileHitsBlock"
+    },
+    "onHitsPlayer": {
+      "name": "HookShotProjectileProjectileHitsPlayer"
     },
     "onFlyingTick": {
       "name": "HookShotWhileProjectileFlyingTick"

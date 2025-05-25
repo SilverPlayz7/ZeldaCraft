@@ -4,6 +4,8 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.client.renderer.LongShotProjectileRenderer;
+import zeldacraft.client.renderer.HookShotProjectileRenderer;
 import zeldacraft.client.renderer.HappyMaskSalesmanRenderer;
 import zeldacraft.client.renderer.FairyRenderer;
 import zeldacraft.client.renderer.BombProjectileRenderer;
@@ -20,8 +22,8 @@ public class ZeldaCraftModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ZeldaCraftModEntities.BOOMERANG_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(ZeldaCraftModEntities.HOOK_SHOT_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(ZeldaCraftModEntities.LONG_SHOT_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(ZeldaCraftModEntities.HOOK_SHOT_PROJECTILE.get(), HookShotProjectileRenderer::new);
+		event.registerEntityRenderer(ZeldaCraftModEntities.LONG_SHOT_PROJECTILE.get(), LongShotProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.FIERCE_DEITY_SWORD_BEAM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.HAPPY_MASK_SALESMAN.get(), HappyMaskSalesmanRenderer::new);

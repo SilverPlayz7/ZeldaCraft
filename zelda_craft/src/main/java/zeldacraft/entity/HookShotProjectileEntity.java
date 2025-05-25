@@ -2,6 +2,7 @@
 package zeldacraft.entity;
 
 import zeldacraft.procedures.HookShotWhileProjectileFlyingTickProcedure;
+import zeldacraft.procedures.HookShotProjectileProjectileHitsPlayerProcedure;
 import zeldacraft.procedures.HookShotProjectileHitsBlockProcedure;
 
 import zeldacraft.init.ZeldaCraftModEntities;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
@@ -69,6 +71,12 @@ public class HookShotProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	@Override
+	public void playerTouch(Player entity) {
+		super.playerTouch(entity);
+		HookShotProjectileProjectileHitsPlayerProcedure.execute(entity, this, this.getOwner());
+	}
+
+	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
 		HookShotProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ(), this.getOwner(), this);
@@ -77,9 +85,7 @@ public class HookShotProjectileEntity extends AbstractArrow implements ItemSuppl
 	@Override
 	public void tick() {
 		super.tick();
-		HookShotWhileProjectileFlyingTickProcedure.execute(this.getOwner(), this);
-		if (this.inGround)
-			this.discard();
+		HookShotWhileProjectileFlyingTickProcedure.execute(this.level(), this.getOwner(), this);
 	}
 
 	public static HookShotProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
@@ -94,7 +100,7 @@ public class HookShotProjectileEntity extends AbstractArrow implements ItemSuppl
 		HookShotProjectileEntity entityarrow = new HookShotProjectileEntity(ZeldaCraftModEntities.HOOK_SHOT_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
@@ -111,7 +117,7 @@ public class HookShotProjectileEntity extends AbstractArrow implements ItemSuppl
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
 		entityarrow.setKnockback(0);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chain.step")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
