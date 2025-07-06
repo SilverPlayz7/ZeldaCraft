@@ -1,0 +1,41 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "wip",
+    "customModelName": "newhryuleshield:default",
+    "blockingModelName": "newhyruleshieldblocking:default",
+    "name": "New Hyrule Shield",
+    "specialInformation": {
+      "fixedValue": [
+        "This shield can commonly be found in shops across the kingdom of New Hyrule and is believed to be used by the Hero of Spirits for a while."
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 450,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

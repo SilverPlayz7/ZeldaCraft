@@ -2,9 +2,9 @@
   "mappings": {
     "default": {
       "map": {
-        "7": "stand_base",
-        "8": "meister",
-        "9": "meister2"
+        "3": "stand_base",
+        "4": "meister",
+        "5": "meister2"
       },
       "name": "default"
     }

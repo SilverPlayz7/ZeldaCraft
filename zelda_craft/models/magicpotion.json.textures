@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "emptybottle",
+        "4": "magicpotion"
+      },
+      "name": "default"
+    }
+  }
+}

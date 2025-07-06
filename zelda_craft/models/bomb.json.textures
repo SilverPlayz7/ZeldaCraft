@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "bomb2"
+        "1": "bomb"
       },
       "name": "default"
     }

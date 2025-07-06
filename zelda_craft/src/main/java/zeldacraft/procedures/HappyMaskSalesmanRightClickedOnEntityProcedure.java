@@ -26,8 +26,8 @@ import net.minecraft.advancements.Advancement;
 import io.netty.buffer.Unpooled;
 
 public class HappyMaskSalesmanRightClickedOnEntityProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
+		if (sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.BLAST_MASK_CONTRACT.get()) {
 			if (sourceentity instanceof ServerPlayer _plr2 && _plr2.level() instanceof ServerLevel && _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_1"))).isDone()
@@ -42,7 +42,7 @@ public class HappyMaskSalesmanRightClickedOnEntityProcedure {
 							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
-				if (entity instanceof Player _player) {
+				if (sourceentity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(ZeldaCraftModItems.BLAST_MASK_CONTRACT.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}

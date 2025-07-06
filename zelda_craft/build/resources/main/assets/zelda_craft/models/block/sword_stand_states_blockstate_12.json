@@ -5,5 +5,5 @@
     "particle": "zelda_craft:block/stand_base",
     "0": "zelda_craft:block/unswordstand"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }

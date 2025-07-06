@@ -20,6 +20,7 @@ public class BunnyHoodTickEventProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2, 1, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 2, 1, false, false));
+			entity.fallDistance = 0;
 		}
 	}
 }

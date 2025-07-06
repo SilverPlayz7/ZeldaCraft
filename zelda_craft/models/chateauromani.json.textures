@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "6": "milkbottle",
+        "7": "romanilable",
+        "8": "romanilogo",
+        "9": "romanilogo2"
+      },
+      "name": "default"
+    }
+  }
+}

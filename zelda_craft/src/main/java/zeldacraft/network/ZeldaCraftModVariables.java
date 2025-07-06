@@ -100,6 +100,7 @@ public class ZeldaCraftModVariables {
 				clone.Hooked = original.Hooked;
 				clone.selectedmask = original.selectedmask;
 				clone.MaskPrice = original.MaskPrice;
+				clone.UsingLens = original.UsingLens;
 			}
 		}
 	}
@@ -168,6 +169,7 @@ public class ZeldaCraftModVariables {
 		public double ExplosiveKills = 0;
 		public double selectedmask = 0;
 		public double MaskPrice = 0;
+		public double UsingLens = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -209,6 +211,7 @@ public class ZeldaCraftModVariables {
 			nbt.putDouble("ExplosiveKills", ExplosiveKills);
 			nbt.putDouble("selectedmask", selectedmask);
 			nbt.putDouble("MaskPrice", MaskPrice);
+			nbt.putDouble("UsingLens", UsingLens);
 			return nbt;
 		}
 
@@ -247,6 +250,7 @@ public class ZeldaCraftModVariables {
 			ExplosiveKills = nbt.getDouble("ExplosiveKills");
 			selectedmask = nbt.getDouble("selectedmask");
 			MaskPrice = nbt.getDouble("MaskPrice");
+			UsingLens = nbt.getDouble("UsingLens");
 		}
 	}
 
@@ -304,6 +308,7 @@ public class ZeldaCraftModVariables {
 					variables.ExplosiveKills = message.data.ExplosiveKills;
 					variables.selectedmask = message.data.selectedmask;
 					variables.MaskPrice = message.data.MaskPrice;
+					variables.UsingLens = message.data.UsingLens;
 				}
 			});
 			context.setPacketHandled(true);

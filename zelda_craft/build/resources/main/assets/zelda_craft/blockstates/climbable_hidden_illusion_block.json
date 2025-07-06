@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,lens=true": {
+      "model": "zelda_craft:block/hidden_ladder"
+    },
+    "facing=east,lens=true": {
+      "model": "zelda_craft:block/hidden_ladder",
+      "y": 90
+    },
+    "facing=south,lens=true": {
+      "model": "zelda_craft:block/hidden_ladder",
+      "y": 180
+    },
+    "facing=west,lens=true": {
+      "model": "zelda_craft:block/hidden_ladder",
+      "y": 270
+    },
+    "facing=north,lens=false": {
+      "model": "zelda_craft:block/hidden"
+    },
+    "facing=east,lens=false": {
+      "model": "zelda_craft:block/hidden",
+      "y": 90
+    },
+    "facing=south,lens=false": {
+      "model": "zelda_craft:block/hidden",
+      "y": 180
+    },
+    "facing=west,lens=false": {
+      "model": "zelda_craft:block/hidden",
+      "y": 270
+    }
+  }
+}

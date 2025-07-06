@@ -1,5 +1,7 @@
 package zeldacraft.procedures;
 
+import zeldacraft.network.ZeldaCraftModVariables;
+
 import zeldacraft.init.ZeldaCraftModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,10 +20,16 @@ public class LensOfTruthRightclickedProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entUseItem0 ? _entUseItem0.getUseItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.LENS_OF_TRUTH.get()) {
-			if (entity.getPersistentData().getDouble("UsingLens") == 0) {
-				entity.getPersistentData().putDouble("UsingLens", 0.75);
+			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).UsingLens == 0) {
+				{
+					double _setval = 0.75;
+					entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.UsingLens = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
-			if (entity.getPersistentData().getDouble("UsingLens") == 0.75) {
+			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).UsingLens == 0.75) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1);
@@ -29,10 +37,22 @@ public class LensOfTruthRightclickedProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1, false);
 					}
 				}
-				entity.getPersistentData().putDouble("UsingLens", 1);
+				{
+					double _setval = 1;
+					entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.UsingLens = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("UsingLens", 0);
+			{
+				double _setval = 0;
+				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.UsingLens = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

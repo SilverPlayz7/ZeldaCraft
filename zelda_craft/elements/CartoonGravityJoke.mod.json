@@ -2,8 +2,8 @@
   "_fv": 73,
   "_type": "achievement",
   "definition": {
-    "achievementName": "*insert cartoon gravity joke here*",
-    "achievementDescription": "Equip the Hover Boots",
+    "achievementName": "You looked down didn't you?",
+    "achievementDescription": "Fall after 1.5 seconds of floating with the Hover Boots",
     "achievementIcon": {
       "value": "CUSTOM:HoverBoots.boots"
     },

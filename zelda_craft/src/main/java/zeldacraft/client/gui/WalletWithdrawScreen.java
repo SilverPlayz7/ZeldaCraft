@@ -74,10 +74,10 @@ public class WalletWithdrawScreen extends AbstractContainerScreen<WalletWithdraw
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_withdraw.label_rupees"), 144, 4, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_withdraw.label_rupees"), 141, 7, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				RupeeCounterProcedure.execute(entity), 183, 4, -12829636, false);
+				RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
 	}
 
 	@Override
@@ -116,10 +116,6 @@ public class WalletWithdrawScreen extends AbstractContainerScreen<WalletWithdraw
 		guistate.put("button:imagebutton_deposit50", imagebutton_deposit50);
 		this.addRenderableWidget(imagebutton_deposit50);
 		imagebutton_deposit100 = new ImageButton(this.leftPos + 137, this.topPos + 35, 34, 22, 0, 0, 22, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_deposit100.png"), 34, 44, e -> {
-			if (true) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletWithdrawButtonMessage(4, x, y, z));
-				WalletWithdrawButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
 		});
 		guistate.put("button:imagebutton_deposit100", imagebutton_deposit100);
 		this.addRenderableWidget(imagebutton_deposit100);
@@ -131,7 +127,7 @@ public class WalletWithdrawScreen extends AbstractContainerScreen<WalletWithdraw
 		});
 		guistate.put("button:imagebutton_deposit300", imagebutton_deposit300);
 		this.addRenderableWidget(imagebutton_deposit300);
-		imagebutton_depositswitch = new ImageButton(this.leftPos + 128, this.topPos + 66, 78, 17, 0, 0, 17, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_depositswitch.png"), 78, 34, e -> {
+		imagebutton_depositswitch = new ImageButton(this.leftPos + 127, this.topPos + 66, 78, 17, 0, 0, 17, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_depositswitch.png"), 78, 34, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletWithdrawButtonMessage(6, x, y, z));
 				WalletWithdrawButtonMessage.handleButtonAction(entity, 6, x, y, z);

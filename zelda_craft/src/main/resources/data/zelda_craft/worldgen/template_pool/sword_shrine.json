@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "zelda_craft:goddess_sword_shrine",
+        "location": "zelda_craft:master_sword_shrine4",
         "projection": "rigid",
         "processors": {
           "processors": [

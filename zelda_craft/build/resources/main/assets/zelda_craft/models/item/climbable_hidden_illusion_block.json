@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "zelda_craft:item/hidden_ladder"
+  },
+  "render_type": "translucent"
+}

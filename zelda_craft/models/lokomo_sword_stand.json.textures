@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "3": "lokomoswordstand"
+        "0": "lokomosword",
+        "2": "stand_base"
       },
       "name": "default"
     }

@@ -138,8 +138,35 @@
             "value": -12829636,
             "falpha": 0.0
           },
+          "x": 144,
+          "y": 136,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_price1",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskPrice"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 209,
+          "y": 101,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupee_icon.png",
+          "use1Xscale": true,
           "x": 133,
-          "y": 134,
+          "y": 136,
           "locked": false
         }
       }

@@ -3,6 +3,7 @@ package zeldacraft.client.gui;
 import zeldacraft.world.inventory.MaskShopMenu;
 
 import zeldacraft.procedures.RupeeCounterProcedure;
+import zeldacraft.procedures.MaskPriceProcedure;
 import zeldacraft.procedures.BunnyHoodSelectedProcedure;
 import zeldacraft.procedures.BlastMaskSelectedProcedure;
 
@@ -67,6 +68,9 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 		if (BlastMaskSelectedProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/deposit2.png"), this.leftPos + 134, this.topPos + 45, 0, 0, 34, 22, 34, 22);
 		}
+
+		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/rupee_icon.png"), this.leftPos + 69, this.topPos + 126, 0, 0, 8, 8, 8, 8);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -83,7 +87,10 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				RupeeCounterProcedure.execute(entity), 69, 124, -12829636, false);
+				RupeeCounterProcedure.execute(world, entity), 80, 126, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				MaskPriceProcedure.execute(entity), 145, 91, -12829636, false);
 	}
 
 	@Override

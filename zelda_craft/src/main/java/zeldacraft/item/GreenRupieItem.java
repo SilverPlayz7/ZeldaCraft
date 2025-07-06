@@ -24,6 +24,6 @@ public class GreenRupieItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.translatable("item.zelda_craft.green_rupie.description_0"));
+		list.add(Component.translatable("item.zelda_craft.green_rupee.description_0"));
 	}
 }

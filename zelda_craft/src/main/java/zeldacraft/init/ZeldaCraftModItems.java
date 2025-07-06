@@ -31,6 +31,7 @@ import zeldacraft.item.ReplicaHylianShieldItem;
 import zeldacraft.item.RedTimeArmorItem;
 import zeldacraft.item.RedTimeArmorBundleItem;
 import zeldacraft.item.RedRupeeItem;
+import zeldacraft.item.RedPotionItem;
 import zeldacraft.item.RazorSwordItem;
 import zeldacraft.item.PurpleTimeArmorItem;
 import zeldacraft.item.PurpleTimeArmorBundleItem;
@@ -38,7 +39,7 @@ import zeldacraft.item.PurpleRupeeItem;
 import zeldacraft.item.PurifiedGoronSteelItem;
 import zeldacraft.item.PegasusBootsItem;
 import zeldacraft.item.OccarinaOfTimeItem;
-import zeldacraft.item.NewHyrleShieldBetterWayTestItem;
+import zeldacraft.item.NewHyruleShieldItem;
 import zeldacraft.item.MysticSteelItem;
 import zeldacraft.item.MoltenScrapItem;
 import zeldacraft.item.MirrorShieldOotItem;
@@ -50,6 +51,7 @@ import zeldacraft.item.MasterSwordBeamProjectileItem;
 import zeldacraft.item.MainThemeItem;
 import zeldacraft.item.MagicMirrorItem;
 import zeldacraft.item.LongShotItem;
+import zeldacraft.item.LonLonMilkItem;
 import zeldacraft.item.LokomoSwordItem;
 import zeldacraft.item.LensOfTruthItem;
 import zeldacraft.item.KokiriSwordItem;
@@ -85,6 +87,7 @@ import zeldacraft.item.CostumeCoinPieceItem;
 import zeldacraft.item.CostumeCoinItem;
 import zeldacraft.item.ClockTownItem;
 import zeldacraft.item.ChildWalletItem;
+import zeldacraft.item.ChateauRomaniItem;
 import zeldacraft.item.ChainSpoolItem;
 import zeldacraft.item.BunnyHoodItem;
 import zeldacraft.item.BrokenGiantKnifeItem;
@@ -115,6 +118,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ArmorItem;
@@ -125,7 +129,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 public class ZeldaCraftModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, ZeldaCraftMod.MODID);
 	public static final RegistryObject<Item> MASTER_SWORD = REGISTRY.register("master_sword", () -> new MasterSwordItem());
-	public static final RegistryObject<Item> GREEN_RUPIE = REGISTRY.register("green_rupie", () -> new GreenRupieItem());
+	public static final RegistryObject<Item> GREEN_RUPEE = REGISTRY.register("green_rupee", () -> new GreenRupieItem());
 	public static final RegistryObject<Item> BLUE_RUPEE = REGISTRY.register("blue_rupee", () -> new BlueRupeeItem());
 	public static final RegistryObject<Item> RED_RUPEE = REGISTRY.register("red_rupee", () -> new RedRupeeItem());
 	public static final RegistryObject<Item> PURPLE_RUPEE = REGISTRY.register("purple_rupee", () -> new PurpleRupeeItem());
@@ -144,7 +148,6 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> OPEN_CHEST = block(ZeldaCraftModBlocks.OPEN_CHEST);
 	public static final RegistryObject<Item> HYLIAN_CHEST = block(ZeldaCraftModBlocks.HYLIAN_CHEST);
 	public static final RegistryObject<Item> SWORD_STAND = block(ZeldaCraftModBlocks.SWORD_STAND);
-	public static final RegistryObject<Item> MASTER_SWORD_STAND = block(ZeldaCraftModBlocks.MASTER_SWORD_STAND);
 	public static final RegistryObject<Item> CHAIN_SPOOL = REGISTRY.register("chain_spool", () -> new ChainSpoolItem());
 	public static final RegistryObject<Item> OCCARINA_OF_TIME = REGISTRY.register("occarina_of_time", () -> new OccarinaOfTimeItem());
 	public static final RegistryObject<Item> EMPTY_BOTTLE = REGISTRY.register("empty_bottle", () -> new EmptyBottleItem());
@@ -158,9 +161,7 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> MOLTEN_SCRAP = REGISTRY.register("molten_scrap", () -> new MoltenScrapItem());
 	public static final RegistryObject<Item> SPIRIT_FLUTE = REGISTRY.register("spirit_flute", () -> new SpriritFluteItem());
 	public static final RegistryObject<Item> HYRULE_CREST = REGISTRY.register("hyrule_crest", () -> new HyruleCrestItem());
-	public static final RegistryObject<Item> LOKOMO_SWORD_STAND = block(ZeldaCraftModBlocks.LOKOMO_SWORD_STAND);
 	public static final RegistryObject<Item> MASTER_SWORD_BEAM_REPRESENTITIVE = REGISTRY.register("master_sword_beam_representitive", () -> new MasterSwordBeamRepresentitiveItem());
-	public static final RegistryObject<Item> NEW_HYRULE_SHIELD = REGISTRY.register("new_hyrule_shield", () -> new NewHyrleShieldBetterWayTestItem());
 	public static final RegistryObject<Item> BOOMERANG = REGISTRY.register("boomerang", () -> new BoomerangItem());
 	public static final RegistryObject<Item> BOMB = REGISTRY.register("bomb", () -> new BombItem());
 	public static final RegistryObject<Item> HOOK_SHOT = REGISTRY.register("hook_shot", () -> new HookShotItem());
@@ -200,7 +201,6 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> TREASURE_CHEST = REGISTRY.register(ZeldaCraftModBlocks.TREASURE_CHEST.getId().getPath(), () -> new TreasureChestDisplayItem(ZeldaCraftModBlocks.TREASURE_CHEST.get(), new Item.Properties()));
 	public static final RegistryObject<Item> BLAST_MASK = REGISTRY.register("blast_mask", () -> new BlastMaskBaubleItem());
 	public static final RegistryObject<Item> HYLIAN_SHIELD = REGISTRY.register("hylian_shield", () -> new HylianShieldItem());
-	public static final RegistryObject<Item> GARO_MASK = REGISTRY.register("garo_mask", () -> new GaroMaskItem());
 	public static final RegistryObject<Item> ALL_NIGHT_MASK = REGISTRY.register("all_night_mask", () -> new AllNightMaskItem());
 	public static final RegistryObject<Item> DARK_TIME_ARMOR_BUNDLE = REGISTRY.register("dark_time_armor_bundle", () -> new DarkTimeArmorBundleItem());
 	public static final RegistryObject<Item> HAPPY_MASK_SALESMAN_SPAWN_EGG = REGISTRY.register("happy_mask_salesman_spawn_egg", () -> new ForgeSpawnEggItem(ZeldaCraftModEntities.HAPPY_MASK_SALESMAN, -13434778, -6750055, new Item.Properties()));
@@ -257,6 +257,15 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> GOLD_TIME_ARMOR_BUNDLE = REGISTRY.register("gold_time_armor_bundle", () -> new GoldTimeArmorBundleItem());
 	public static final RegistryObject<Item> PURPLE_TIME_ARMOR_BUNDLE = REGISTRY.register("purple_time_armor_bundle", () -> new PurpleTimeArmorBundleItem());
 	public static final RegistryObject<Item> REPLICA_HYLIAN_SHIELD = REGISTRY.register("replica_hylian_shield", () -> new ReplicaHylianShieldItem());
+	public static final RegistryObject<Item> NEW_HYRULE_SHIELD = REGISTRY.register("new_hyrule_shield", () -> new NewHyruleShieldItem());
+	public static final RegistryObject<Item> ILLUSION_BLOCK = block(ZeldaCraftModBlocks.ILLUSION_BLOCK);
+	public static final RegistryObject<Item> FALSE_ILLUSION_BLOCK = block(ZeldaCraftModBlocks.FALSE_ILLUSION_BLOCK);
+	public static final RegistryObject<Item> HIDDEN_ILLUSION_BLOCK = block(ZeldaCraftModBlocks.HIDDEN_ILLUSION_BLOCK);
+	public static final RegistryObject<Item> CLIMBABLE_HIDDEN_ILLUSION_BLOCK = block(ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK);
+	public static final RegistryObject<Item> LON_LON_MILK = REGISTRY.register("lon_lon_milk", () -> new LonLonMilkItem());
+	public static final RegistryObject<Item> CHATEAU_ROMANI = REGISTRY.register("chateau_romani", () -> new ChateauRomaniItem());
+	public static final RegistryObject<Item> GARO_MASK_HELMET = REGISTRY.register("garo_mask_helmet", () -> new GaroMaskItem.Helmet());
+	public static final RegistryObject<Item> RED_POTION = REGISTRY.register("red_potion", () -> new RedPotionItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -269,6 +278,7 @@ public class ZeldaCraftModItems {
 		event.enqueueWork(() -> {
 			ItemProperties.register(LENS_OF_TRUTH.get(), new ResourceLocation("zelda_craft:lens_of_truth_using_lens"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LensOfTruthPropertyValueProviderProcedure.execute(entity));
 			ItemProperties.register(HERO_BOW.get(), new ResourceLocation("zelda_craft:hero_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) HeroBowPropertyValueProviderProcedure.execute(entity));
+			ItemProperties.register(NEW_HYRULE_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 		});
 	}
 }

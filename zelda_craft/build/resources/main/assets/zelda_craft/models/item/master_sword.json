@@ -1,9 +1,8 @@
 {
   "parent": "zelda_craft:custom/sword3",
   "textures": {
-    "4": "zelda_craft:block/meister",
-    "5": "zelda_craft:block/meister_e",
-    "6": "zelda_craft:block/meister2",
+    "0": "zelda_craft:block/meister",
+    "2": "zelda_craft:block/meister2",
     "particle": "zelda_craft:item/master_sword"
   }
 }

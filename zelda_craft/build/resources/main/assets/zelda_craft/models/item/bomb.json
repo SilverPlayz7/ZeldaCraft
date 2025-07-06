@@ -1,7 +1,7 @@
 {
   "parent": "zelda_craft:custom/bomb",
   "textures": {
-    "1": "zelda_craft:block/bomb2",
+    "1": "zelda_craft:block/bomb",
     "particle": "zelda_craft:item/bomb"
   }
 }

@@ -3,5 +3,13 @@
   "textures": {
     "0": "zelda_craft:block/newhyruleshield",
     "particle": "zelda_craft:item/wip"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "zelda_craft:item/new_hyrule_shield_0"
+    }
+  ]
 }

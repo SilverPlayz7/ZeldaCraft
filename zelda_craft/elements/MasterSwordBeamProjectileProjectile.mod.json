@@ -3,9 +3,9 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:MasterSwordBeamRepresentitive"
+      "value": "Blocks.AIR"
     },
-    "showParticles": false,
+    "showParticles": true,
     "actionSound": {
       "value": ""
     },
@@ -13,10 +13,10 @@
     "power": 1.0,
     "damage": 5.0,
     "knockback": 5,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "ModelSwordBeam",
+    "customModelTexture": "swordbeam2.png",
     "modelWidth": 0.5,
-    "modelHeight": 0.5,
+    "modelHeight": 0.1,
     "onFlyingTick": {
       "name": "MasterSwordBeamProjectileWhileProjectileFlyingTick"
     }

@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Gotta Go Fast!",
-    "achievementDescription": "Equip the Pegasus Boots",
+    "achievementDescription": "Run like the wind with the Pegasus Boots",
     "achievementIcon": {
       "value": "CUSTOM:PegasusBoots.boots"
     },

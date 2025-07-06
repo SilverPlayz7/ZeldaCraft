@@ -3,7 +3,7 @@
   "textures": {
     "all": "zelda_craft:block/stand_base",
     "particle": "zelda_craft:block/stand_base",
-    "0": "zelda_craft:block/stand_base"
+    "1": "zelda_craft:block/stand_base"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }

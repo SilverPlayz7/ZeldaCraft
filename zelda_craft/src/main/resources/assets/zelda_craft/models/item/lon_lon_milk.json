@@ -1,0 +1,10 @@
+{
+  "parent": "zelda_craft:custom/lonlonmilk",
+  "textures": {
+    "11": "zelda_craft:block/lonlonlogo2",
+    "4": "zelda_craft:block/milkbottle",
+    "9": "zelda_craft:block/lonlonlable",
+    "10": "zelda_craft:block/lonlonlogo",
+    "particle": "zelda_craft:item/lonlon_milk"
+  }
+}

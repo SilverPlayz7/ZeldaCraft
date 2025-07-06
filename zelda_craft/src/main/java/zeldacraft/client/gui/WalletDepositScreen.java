@@ -69,16 +69,16 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_deposit.label_ruppes"), 140, 5, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_deposit.label_ruppes"), 141, 7, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				RupeeCounterProcedure.execute(entity), 180, 5, -12829636, false);
+				RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_withdrawbutton = new ImageButton(this.leftPos + 129, this.topPos + 61, 77, 22, 0, 0, 22, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_withdrawbutton.png"), 77, 44, e -> {
+		imagebutton_withdrawbutton = new ImageButton(this.leftPos + 128, this.topPos + 61, 77, 22, 0, 0, 22, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_withdrawbutton.png"), 77, 44, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletDepositButtonMessage(0, x, y, z));
 				WalletDepositButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -86,7 +86,7 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 		});
 		guistate.put("button:imagebutton_withdrawbutton", imagebutton_withdrawbutton);
 		this.addRenderableWidget(imagebutton_withdrawbutton);
-		imagebutton_depositbutton = new ImageButton(this.leftPos + 43, this.topPos + 24, 88, 27, 0, 0, 27, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_depositbutton.png"), 88, 54, e -> {
+		imagebutton_depositbutton = new ImageButton(this.leftPos + 43, this.topPos + 23, 88, 27, 0, 0, 27, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_depositbutton.png"), 88, 54, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletDepositButtonMessage(1, x, y, z));
 				WalletDepositButtonMessage.handleButtonAction(entity, 1, x, y, z);

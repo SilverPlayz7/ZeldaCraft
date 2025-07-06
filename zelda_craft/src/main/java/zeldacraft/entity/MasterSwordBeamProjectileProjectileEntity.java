@@ -3,7 +3,6 @@ package zeldacraft.entity;
 
 import zeldacraft.procedures.MasterSwordBeamProjectileWhileProjectileFlyingTickProcedure;
 
-import zeldacraft.init.ZeldaCraftModItems;
 import zeldacraft.init.ZeldaCraftModEntities;
 
 import net.minecraftforge.network.PlayMessages;
@@ -11,6 +10,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -23,7 +23,7 @@ import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class MasterSwordBeamProjectileProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ZeldaCraftModItems.MASTER_SWORD_BEAM_REPRESENTITIVE.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
 
 	public MasterSwordBeamProjectileProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), world);
@@ -83,7 +83,7 @@ public class MasterSwordBeamProjectileProjectileEntity extends AbstractArrow imp
 		MasterSwordBeamProjectileProjectileEntity entityarrow = new MasterSwordBeamProjectileProjectileEntity(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
@@ -99,7 +99,7 @@ public class MasterSwordBeamProjectileProjectileEntity extends AbstractArrow imp
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
 		entityarrow.setKnockback(5);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entity.level().addFreshEntity(entityarrow);
 		return entityarrow;
 	}

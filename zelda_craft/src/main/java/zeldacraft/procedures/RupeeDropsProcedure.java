@@ -47,7 +47,7 @@ public class RupeeDropsProcedure {
 		} else {
 			if (num >= 10 && num <= 70) {
 				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GREEN_RUPIE.get()));
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GREEN_RUPEE.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
 				}

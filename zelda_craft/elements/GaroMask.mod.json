@@ -1,56 +1,100 @@
 {
   "_fv": 73,
-  "_type": "curiosbauble",
+  "_type": "armor",
   "definition": {
-    "renderType": 0,
-    "texture": "mm_garos_mask_icon",
-    "customModelName": "Normal",
-    "name": "Garo Mask",
-    "rarity": "COMMON",
-    "slotType": "Masks",
-    "baubleModel": "ModelGaro_Mask",
-    "baubleModelTexture": "gaeromask.png",
-    "creativeTab": {
-      "value": "CUSTOM:ZeldaCraft"
-    },
-    "stackSize": 1,
-    "enchantability": 0,
-    "useDuration": 0,
-    "toolType": 1.0,
-    "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
-    "destroyAnyBlock": false,
-    "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "enableMeleeDamage": false,
-    "addSlot": false,
-    "damageVsEntity": 0.0,
-    "specialInformation": {
+    "enableHelmet": true,
+    "textureHelmet": "mm_garos_mask_icon",
+    "enableBody": false,
+    "textureBody": "",
+    "enableLeggings": false,
+    "textureLeggings": "",
+    "enableBoots": false,
+    "textureBoots": "",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "armorTextureFile": "link_",
+    "helmetName": "Garo Mask",
+    "bodyName": "Garo Mask Chestplate",
+    "leggingsName": "Garo Mask Leggings",
+    "bootsName": "Garo Mask Boots",
+    "helmetSpecialInformation": {
       "fixedValue": []
     },
-    "hasGlow": false,
-    "customProperties": {},
-    "states": [],
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
-    "inventoryStackSize": 64,
-    "slotAmount": 1,
-    "isFood": false,
-    "friendlyPigs": true,
-    "enderMask": true,
-    "rotateModel": false,
-    "translateModel": true,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
-    "eatResultItem": {
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
+    "helmetModelName": "ModelGaro_Mask",
+    "helmetModelPart": "Mask",
+    "helmetModelTexture": "gaeromask.png",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": true
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 0,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 0,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
       "value": ""
     },
-    "isMeat": false,
-    "isAlwaysEdible": false,
-    "hasModel": true,
-    "animation": "none"
+    "repairItems": []
   }
 }

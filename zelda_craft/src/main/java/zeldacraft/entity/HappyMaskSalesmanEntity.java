@@ -168,7 +168,7 @@ public class HappyMaskSalesmanEntity extends PathfinderMob implements GeoEntity 
 		Entity entity = this;
 		Level world = this.level();
 
-		HappyMaskSalesmanRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
+		HappyMaskSalesmanRightClickedOnEntityProcedure.execute(world, x, y, z, sourceentity);
 		return retval;
 	}
 

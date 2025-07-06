@@ -1,0 +1,10 @@
+{
+  "parent": "zelda_craft:custom/chateauromani",
+  "textures": {
+    "6": "zelda_craft:block/milkbottle",
+    "7": "zelda_craft:block/romanilable",
+    "8": "zelda_craft:block/romanilogo",
+    "9": "zelda_craft:block/romanilogo2",
+    "particle": "zelda_craft:item/chateau_romani"
+  }
+}
