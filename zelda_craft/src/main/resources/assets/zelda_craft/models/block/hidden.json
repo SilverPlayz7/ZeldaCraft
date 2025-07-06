@@ -1,5 +1,6 @@
 {
   "textures": {
+    "all": "zelda_craft:block/hidden",
     "particle": "zelda_craft:block/illusionblock"
   }
 }

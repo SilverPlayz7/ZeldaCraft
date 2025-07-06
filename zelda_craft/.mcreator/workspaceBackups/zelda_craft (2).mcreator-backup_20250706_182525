@@ -1783,6 +1783,7 @@
       "registry_name": "master_sword_beam_projectile_projectile",
       "metadata": {
         "files": [
+          "src/main/java/zeldacraft/client/renderer/MasterSwordBeamProjectileProjectileRenderer.java",
           "src/main/java/zeldacraft/entity/MasterSwordBeamProjectileProjectileEntity.java"
         ]
       }
@@ -6817,6 +6818,28 @@
         ]
       },
       "path": "~/GUI/Wallet/Withdraw"
+    },
+    {
+      "name": "HookShotItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookShotItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7414,6 +7437,21 @@
       "CUSTOM:SilverRupee",
       "CUSTOM:GoldRupee"
     ],
+    "BLOCKS:zelda_craft:hookshot_hitable": [
+      "CUSTOM:HookshotTarget",
+      "TAG:forge:barrels/wooden",
+      "TAG:forge:chests/wooden",
+      "TAG:forge:fence_gates/wooden",
+      "TAG:forge:fences/wooden",
+      "TAG:minecraft:logs",
+      "TAG:minecraft:planks",
+      "TAG:minecraft:wooden_buttons",
+      "TAG:minecraft:wooden_doors",
+      "TAG:minecraft:wooden_pressure_plates",
+      "TAG:minecraft:wooden_slabs",
+      "TAG:minecraft:wooden_stairs",
+      "TAG:minecraft:wooden_trapdoors"
+    ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~Blocks.AIR"
     ],
@@ -7477,6 +7515,13 @@
       "~CUSTOM:UnPoweredMasterSword",
       "~CUSTOM:BiggoronSword",
       "~CUSTOM:MasterSword"
+    ],
+    "BLOCKS:forge:chests/wooden": [
+      "CUSTOM:SmallDungeonChest",
+      "CUSTOM:OpenChest",
+      "CUSTOM:ClosedChest",
+      "CUSTOM:LockedHylianChest",
+      "CUSTOM:TreasureChest"
     ],
     "ITEMS:minecraft:creeper_drop_music_discs": [
       "CUSTOM:SongOfStorms",

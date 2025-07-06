@@ -2,8 +2,6 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
-import zeldacraft.init.ZeldaCraftModBlocks;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
@@ -14,7 +12,7 @@ public class HookShotProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/axe"))) || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == ZeldaCraftModBlocks.HOOKSHOT_TARGET.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("zelda_craft:hookshot_hitable")))) {
 			{
 				double _setval = immediatesourceentity.getX() - entity.getX();
 				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

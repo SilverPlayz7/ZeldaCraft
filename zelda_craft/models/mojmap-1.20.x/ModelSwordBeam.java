@@ -21,11 +21,11 @@ public class ModelSwordBeam<T extends Entity> extends EntityModel<T> {
 				PartPose.offset(0.0F, 24.0F, 0.0F));
 
 		PartDefinition cube_r1 = Swordbeam.addOrReplaceChild("cube_r1",
-				CubeListBuilder.create().texOffs(-16, 0).addBox(-8.0F, 0.0F, -8.0F, 16.0F, 0.0F, 16.0F,
+				CubeListBuilder.create().texOffs(-32, 0).addBox(-16.0F, 0.0F, -16.0F, 32.0F, 0.0F, 32.0F,
 						new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, -1.5708F));
 
-		return LayerDefinition.create(meshdefinition, 16, 16);
+		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override

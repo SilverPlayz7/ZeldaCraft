@@ -6818,6 +6818,28 @@
         ]
       },
       "path": "~/GUI/Wallet/Withdraw"
+    },
+    {
+      "name": "HookShotItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hook_shot_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/procedures/HookShotItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7389,14 +7411,14 @@
     }
   ],
   "tag_elements": {
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:FalseIllusionBlock",
+      "~CUSTOM:IllusionBlock"
+    ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:TimeshiftOre",
       "~CUSTOM:MountainRok",
       "~CUSTOM:MoltenOre"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:FalseIllusionBlock",
-      "~CUSTOM:IllusionBlock"
     ],
     "DAMAGE_TYPES:minecraft:is_explosion": [
       "CUSTOM:BombMask"
