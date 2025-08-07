@@ -55,6 +55,6 @@ public class LensOfTruthItem extends Item {
 
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-		LensOfTruthOnPlayerStoppedUsingProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+		LensOfTruthOnPlayerStoppedUsingProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
 	}
 }

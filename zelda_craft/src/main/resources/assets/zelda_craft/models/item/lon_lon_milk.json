@@ -6,5 +6,13 @@
     "9": "zelda_craft:block/lonlonlable",
     "10": "zelda_craft:block/lonlonlogo",
     "particle": "zelda_craft:item/lonlon_milk"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 1
+      },
+      "model": "zelda_craft:item/lon_lon_milk_0"
+    }
+  ]
 }

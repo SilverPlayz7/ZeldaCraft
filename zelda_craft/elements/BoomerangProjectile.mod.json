@@ -7,7 +7,7 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "item.trident.riptide_1"
+      "value": ""
     },
     "igniteFire": false,
     "power": 0.5,

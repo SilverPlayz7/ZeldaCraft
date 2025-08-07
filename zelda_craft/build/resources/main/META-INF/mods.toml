@@ -35,6 +35,12 @@ description="Hi, this is my first ever mod so if there are any things you think 
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.zelda_craft]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

@@ -34,23 +34,23 @@ public class ZeldaCraftModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelroccape.LAYER_LOCATION, Modelroccape::createBodyLayer);
+		event.registerLayerDefinition(ModelBootsofTwilight.LAYER_LOCATION, ModelBootsofTwilight::createBodyLayer);
+		event.registerLayerDefinition(ModelSwordBeam.LAYER_LOCATION, ModelSwordBeam::createBodyLayer);
+		event.registerLayerDefinition(ModelFierceMask.LAYER_LOCATION, ModelFierceMask::createBodyLayer);
+		event.registerLayerDefinition(Modelfiredhook.LAYER_LOCATION, Modelfiredhook::createBodyLayer);
+		event.registerLayerDefinition(ModelGreavesofTwilight.LAYER_LOCATION, ModelGreavesofTwilight::createBodyLayer);
+		event.registerLayerDefinition(ModelHoodOfTwilight.LAYER_LOCATION, ModelHoodOfTwilight::createBodyLayer);
 		event.registerLayerDefinition(ModelHoverBoots.LAYER_LOCATION, ModelHoverBoots::createBodyLayer);
 		event.registerLayerDefinition(ModelPegasusBoots.LAYER_LOCATION, ModelPegasusBoots::createBodyLayer);
 		event.registerLayerDefinition(ModelTPChest.LAYER_LOCATION, ModelTPChest::createBodyLayer);
-		event.registerLayerDefinition(ModelBootsofTwilight.LAYER_LOCATION, ModelBootsofTwilight::createBodyLayer);
 		event.registerLayerDefinition(ModelBunnyHood.LAYER_LOCATION, ModelBunnyHood::createBodyLayer);
 		event.registerLayerDefinition(ModelIronBoots.LAYER_LOCATION, ModelIronBoots::createBodyLayer);
 		event.registerLayerDefinition(ModelAllNightMask.LAYER_LOCATION, ModelAllNightMask::createBodyLayer);
 		event.registerLayerDefinition(Modelnorender.LAYER_LOCATION, Modelnorender::createBodyLayer);
 		event.registerLayerDefinition(ModelBombEntity.LAYER_LOCATION, ModelBombEntity::createBodyLayer);
-		event.registerLayerDefinition(ModelSwordBeam.LAYER_LOCATION, ModelSwordBeam::createBodyLayer);
 		event.registerLayerDefinition(ModelHeroArrow.LAYER_LOCATION, ModelHeroArrow::createBodyLayer);
-		event.registerLayerDefinition(ModelFierceMask.LAYER_LOCATION, ModelFierceMask::createBodyLayer);
-		event.registerLayerDefinition(Modelfiredhook.LAYER_LOCATION, Modelfiredhook::createBodyLayer);
 		event.registerLayerDefinition(ModelGaro_Mask.LAYER_LOCATION, ModelGaro_Mask::createBodyLayer);
 		event.registerLayerDefinition(ModelBlastMask.LAYER_LOCATION, ModelBlastMask::createBodyLayer);
-		event.registerLayerDefinition(ModelGreavesofTwilight.LAYER_LOCATION, ModelGreavesofTwilight::createBodyLayer);
 		event.registerLayerDefinition(ModelDekuMask.LAYER_LOCATION, ModelDekuMask::createBodyLayer);
-		event.registerLayerDefinition(ModelHoodOfTwilight.LAYER_LOCATION, ModelHoodOfTwilight::createBodyLayer);
 	}
 }

@@ -25,6 +25,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
@@ -46,6 +47,8 @@ public class TreasureChestOnBlockRightClickedProcedure {
 			}
 		}.getAmount(world, BlockPos.containing(x, y, z), 0) == 0) {
 			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+				if (world instanceof ServerLevel)
+					((ServerLevel) world).sendParticles((ParticleTypes.CLOUD), (x + 0.5), y, (z + 0.5), 10, 0.1, 0.5, 0.1, 0.25);
 				{
 					int _value = 2;
 					BlockPos _pos = BlockPos.containing(x, y, z);

@@ -1,6 +1,7 @@
 
 package zeldacraft.item;
 
+import zeldacraft.procedures.HookShotRightclickedProcedure;
 import zeldacraft.procedures.HookShotRangedItemUsedProcedure;
 
 import zeldacraft.entity.HookShotProjectileEntity;
@@ -55,6 +56,7 @@ public class HookShotItem extends Item {
 			ar = InteractionResultHolder.success(entity.getItemInHand(hand));
 			entity.startUsingItem(hand);
 		}
+		HookShotRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 		return ar;
 	}
 
@@ -80,7 +82,7 @@ public class HookShotItem extends Item {
 							player.getInventory().removeItem(stack);
 					}
 				}
-				HookShotRangedItemUsedProcedure.execute(entity, itemstack);
+				HookShotRangedItemUsedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
 			}
 		}
 	}

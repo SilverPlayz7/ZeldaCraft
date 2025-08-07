@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/phantomhourglass",
+  "textures": {
+    "all": "minecraft:block/sand",
+    "particle": "minecraft:block/sand",
+    "2": "zelda_craft:block/phantom_hourglass"
+  },
+  "render_type": "translucent"
+}

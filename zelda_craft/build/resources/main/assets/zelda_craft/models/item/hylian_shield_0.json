@@ -1,5 +1,5 @@
 {
-  "parent": "zelda_craft:displaysettings/hylianshieldblocking.item",
+  "parent": "zelda_craft:displaysettings/hylianshieldblocking",
   "textures": {
     "layer0": "zelda_craft:item/hylianshield"
   }

@@ -72,6 +72,10 @@ public class BoomerangProjectileHitsLivingEntityProcedure {
 				}
 			}
 		} else {
+			if (entity instanceof LivingEntity _livEnt13 && _livEnt13.isBlocking()) {
+				if (!immediatesourceentity.level().isClientSide())
+					immediatesourceentity.discard();
+			}
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:boomerang_damage")))), 1);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(ZeldaCraftModMobEffects.STUNNED.get(), 60, 1));

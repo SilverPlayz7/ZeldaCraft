@@ -46,7 +46,7 @@
         "value": "CUSTOM:ZeldaCraft"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },

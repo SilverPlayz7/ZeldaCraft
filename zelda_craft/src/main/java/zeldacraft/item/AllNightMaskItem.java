@@ -2,6 +2,7 @@
 package zeldacraft.item;
 
 import zeldacraft.procedures.AllNightMaskWhileBaubleIsEquippedTickProcedure;
+import zeldacraft.procedures.AllNightMaskWhenUnequippedProcedure;
 
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 import top.theillusivec4.curios.api.SlotContext;
@@ -18,5 +19,10 @@ public class AllNightMaskItem extends Item implements ICurioItem {
 	@Override
 	public void curioTick(SlotContext slotContext, ItemStack stack) {
 		AllNightMaskWhileBaubleIsEquippedTickProcedure.execute(slotContext.entity());
+	}
+
+	@Override
+	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+		AllNightMaskWhenUnequippedProcedure.execute(slotContext.entity());
 	}
 }

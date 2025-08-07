@@ -18,7 +18,6 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.Item;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 
@@ -27,10 +26,14 @@ import java.util.function.Consumer;
 public class MirrorShieldOotItem extends ShieldItem implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	public String animationprocedure = "empty";
-	public static ItemDisplayContext transformType;
 
 	public MirrorShieldOotItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+	}
+
+	@Override
+	public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+		return false;
 	}
 
 	@Override
@@ -46,16 +49,10 @@ public class MirrorShieldOotItem extends ShieldItem implements GeoItem {
 		});
 	}
 
-	public void getTransformType(ItemDisplayContext type) {
-		this.transformType = type;
-	}
-
 	private PlayState idlePredicate(AnimationState event) {
-		if (this.transformType != null ? true : false) {
-			if (this.animationprocedure.equals("empty")) {
-				event.getController().setAnimation(RawAnimation.begin().thenLoop("animation.TPChest.new"));
-				return PlayState.CONTINUE;
-			}
+		if (this.animationprocedure.equals("empty")) {
+			event.getController().setAnimation(RawAnimation.begin().thenLoop("animation.TPChest.new"));
+			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;
 	}
@@ -63,19 +60,17 @@ public class MirrorShieldOotItem extends ShieldItem implements GeoItem {
 	String prevAnim = "empty";
 
 	private PlayState procedurePredicate(AnimationState event) {
-		if (this.transformType != null ? true : false) {
-			if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
-				if (!this.animationprocedure.equals(prevAnim))
-					event.getController().forceAnimationReset();
-				event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-				if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-					this.animationprocedure = "empty";
-					event.getController().forceAnimationReset();
-				}
-			} else if (this.animationprocedure.equals("empty")) {
-				prevAnim = "empty";
-				return PlayState.STOP;
+		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+			if (!this.animationprocedure.equals(prevAnim))
+				event.getController().forceAnimationReset();
+			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+				this.animationprocedure = "empty";
+				event.getController().forceAnimationReset();
 			}
+		} else if (this.animationprocedure.equals("empty")) {
+			prevAnim = "empty";
+			return PlayState.STOP;
 		}
 		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;

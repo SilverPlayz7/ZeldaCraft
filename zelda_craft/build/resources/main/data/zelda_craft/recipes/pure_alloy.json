@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "zelda_craft:azurine"
+    },
+    {
+      "item": "zelda_craft:crimsonine"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "zelda_craft:aquanine"
+    },
+    {
+      "item": "minecraft:soul_sand"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:pure_alloy",
+    "count": 1
+  }
+}

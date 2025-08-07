@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "d d"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:feather"
+    },
+    "b": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "item": "minecraft:gold_nugget"
+    },
+    "d": {
+      "item": "zelda_craft:roc_feather"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:roc_cape",
+    "count": 1
+  }
+}

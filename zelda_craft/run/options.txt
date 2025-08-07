@@ -30,7 +30,7 @@ glintSpeed:0.5
 glintStrength:0.75
 damageTiltStrength:1.0
 highContrast:false
-gamma:0.5
+gamma:1.0
 renderDistance:12
 simulationDistance:12
 entityDistanceScaling:1.0
@@ -53,7 +53,7 @@ chatLineSpacing:0.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:true
+advancedItemTooltips:false
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
@@ -122,7 +122,7 @@ key_key.zelda_craft.mask_ability:key.keyboard.m
 key_key.zelda_craft.double_jump_key:key.keyboard.space
 key_key.zelda_craft.open_wallet:key.keyboard.period
 key_key.curios.open.desc:key.keyboard.g
-soundCategory_master:0.7557947019867549
+soundCategory_master:1.0
 soundCategory_music:0.25528169014084506
 soundCategory_record:1.0
 soundCategory_weather:1.0

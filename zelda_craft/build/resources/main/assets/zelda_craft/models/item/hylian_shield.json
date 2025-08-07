@@ -2,5 +2,13 @@
   "parent": "zelda_craft:displaysettings/hylianshield.item",
   "textures": {
     "layer0": "zelda_craft:item/hylianshield"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "zelda_craft:item/hylian_shield_0"
+    }
+  ]
 }

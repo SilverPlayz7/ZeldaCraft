@@ -7,7 +7,7 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "block.chain.step"
+      "value": ""
     },
     "igniteFire": false,
     "power": 1.0,

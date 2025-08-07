@@ -15,8 +15,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
@@ -39,8 +37,6 @@ public class AllNightMaskInsomniaProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(ZeldaCraftModItems.ALL_NIGHT_MASK.get(), lv).isPresent() : false) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 1, 1, false, false));
 			ZeldaCraftMod.queueServerWork(3, () -> {
 				{
 					Entity _ent = entity;

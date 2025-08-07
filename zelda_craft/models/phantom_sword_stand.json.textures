@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "4": "stand_base",
+        "5": "phantomsword",
+        "7": "psemblem2"
+      },
+      "name": "default"
+    }
+  }
+}

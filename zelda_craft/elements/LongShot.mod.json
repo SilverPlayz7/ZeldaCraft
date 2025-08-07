@@ -55,6 +55,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "HookShotRightclicked"
+    },
     "enableRanged": true,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

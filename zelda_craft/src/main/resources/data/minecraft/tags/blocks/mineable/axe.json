@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "zelda_craft:small_dungeon_chest",
     "zelda_craft:treasure_chest",
     "zelda_craft:locked_hylian_chest",
     "zelda_craft:hylian_chest",

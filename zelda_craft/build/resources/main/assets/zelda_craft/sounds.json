@@ -391,5 +391,58 @@
         "stream": true
       }
     ]
+  },
+  "warp_flute": {
+    "subtitle": "subtitles.warp_flute",
+    "sounds": [
+      {
+        "name": "zelda_craft:flute",
+        "stream": true
+      }
+    ]
+  },
+  "hookshot_ready": {
+    "subtitle": "subtitles.hookshot_ready",
+    "sounds": [
+      {
+        "name": "zelda_craft:hookshot_ready",
+        "stream": false
+      }
+    ]
+  },
+  "hookshot_hit": {
+    "subtitle": "subtitles.hookshot_hit",
+    "sounds": [
+      {
+        "name": "zelda_craft:hookshot_hit",
+        "stream": false
+      }
+    ]
+  },
+  "hookshot_miss": {
+    "subtitle": "subtitles.hookshot_miss",
+    "sounds": [
+      {
+        "name": "zelda_craft:hookshot_miss",
+        "stream": false
+      }
+    ]
+  },
+  "hookshot_fire": {
+    "subtitle": "subtitles.hookshot_fire",
+    "sounds": [
+      {
+        "name": "zelda_craft:hookshot_fire",
+        "stream": false
+      }
+    ]
+  },
+  "hookshot_flying": {
+    "sounds": [
+      {
+        "name": "zelda_craft:hookshot_flying_2",
+        "stream": false
+      }
+    ]
   }
 }

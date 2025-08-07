@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "matcha-key"
+        "1": "small_key"
       },
       "name": "default"
     }

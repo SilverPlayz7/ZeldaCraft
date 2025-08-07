@@ -78,10 +78,10 @@ public class TreasureChestBlock extends BaseEntityBlock implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(-3.5, 0, -1, 18.5, 12, 16);
-			case NORTH -> box(-2.5, 0, 0, 19.5, 12, 17);
-			case EAST -> box(-1, 0, -2.5, 16, 12, 19.5);
-			case WEST -> box(0, 0, -3.5, 17, 12, 18.5);
+			default -> box(-2.5, 0, -0.5, 18.5, 12, 16.5);
+			case NORTH -> box(-2.5, 0, -0.5, 18.5, 12, 16.5);
+			case EAST -> box(-0.5, 0, -2.5, 16.5, 12, 18.5);
+			case WEST -> box(-0.5, 0, -2.5, 16.5, 12, 18.5);
 		};
 	}
 

@@ -1,7 +1,7 @@
 {
   "parent": "zelda_craft:custom/key",
   "textures": {
-    "0": "zelda_craft:block/matcha-key",
+    "1": "zelda_craft:block/small_key",
     "particle": "zelda_craft:item/small_key"
   }
 }

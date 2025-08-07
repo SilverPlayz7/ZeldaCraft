@@ -93,7 +93,6 @@ public class ZeldaCraftModVariables {
 			if (!event.isWasDeath()) {
 				clone.jumpvar = original.jumpvar;
 				clone.DungeontoLoad = original.DungeontoLoad;
-				clone.BoomerangOwner = original.BoomerangOwner;
 				clone.HookX = original.HookX;
 				clone.HookY = original.HookY;
 				clone.HookZ = original.HookZ;
@@ -159,7 +158,6 @@ public class ZeldaCraftModVariables {
 		public boolean BeenResed = false;
 		public double jumpvar = 0;
 		public double DungeontoLoad = 0;
-		public String BoomerangOwner = "\"\"";
 		public double HookX = 0;
 		public double HookY = 0;
 		public double HookZ = 0;
@@ -201,7 +199,6 @@ public class ZeldaCraftModVariables {
 			nbt.putBoolean("BeenResed", BeenResed);
 			nbt.putDouble("jumpvar", jumpvar);
 			nbt.putDouble("DungeontoLoad", DungeontoLoad);
-			nbt.putString("BoomerangOwner", BoomerangOwner);
 			nbt.putDouble("HookX", HookX);
 			nbt.putDouble("HookY", HookY);
 			nbt.putDouble("HookZ", HookZ);
@@ -240,7 +237,6 @@ public class ZeldaCraftModVariables {
 			BeenResed = nbt.getBoolean("BeenResed");
 			jumpvar = nbt.getDouble("jumpvar");
 			DungeontoLoad = nbt.getDouble("DungeontoLoad");
-			BoomerangOwner = nbt.getString("BoomerangOwner");
 			HookX = nbt.getDouble("HookX");
 			HookY = nbt.getDouble("HookY");
 			HookZ = nbt.getDouble("HookZ");
@@ -298,7 +294,6 @@ public class ZeldaCraftModVariables {
 					variables.BeenResed = message.data.BeenResed;
 					variables.jumpvar = message.data.jumpvar;
 					variables.DungeontoLoad = message.data.DungeontoLoad;
-					variables.BoomerangOwner = message.data.BoomerangOwner;
 					variables.HookX = message.data.HookX;
 					variables.HookY = message.data.HookY;
 					variables.HookZ = message.data.HookZ;

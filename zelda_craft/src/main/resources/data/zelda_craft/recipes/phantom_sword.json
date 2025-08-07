@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "zelda_craft:phantom_hourglass"
+  },
+  "base": {
+    "item": "zelda_craft:recruit_sword"
+  },
+  "addition": {
+    "item": "zelda_craft:pure_alloy"
+  },
+  "result": {
+    "item": "zelda_craft:phantom_sword"
+  }
+}

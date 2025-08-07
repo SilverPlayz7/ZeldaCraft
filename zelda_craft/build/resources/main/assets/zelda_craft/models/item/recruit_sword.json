@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/recruits_sword",
+  "textures": {
+    "1": "zelda_craft:block/recruitsword",
+    "particle": "zelda_craft:item/recruitsword"
+  }
+}

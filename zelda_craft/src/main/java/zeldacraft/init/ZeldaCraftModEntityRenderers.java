@@ -26,7 +26,6 @@ public class ZeldaCraftModEntityRenderers {
 		event.registerEntityRenderer(ZeldaCraftModEntities.HOOK_SHOT_PROJECTILE.get(), HookShotProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.LONG_SHOT_PROJECTILE.get(), LongShotProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), MasterSwordBeamProjectileProjectileRenderer::new);
-		event.registerEntityRenderer(ZeldaCraftModEntities.FIERCE_DEITY_SWORD_BEAM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.HAPPY_MASK_SALESMAN.get(), HappyMaskSalesmanRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.BOMB_PROJECTILE.get(), BombProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.FAIRY.get(), FairyRenderer::new);

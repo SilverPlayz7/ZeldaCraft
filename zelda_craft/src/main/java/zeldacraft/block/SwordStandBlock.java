@@ -43,7 +43,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class SwordStandBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 14);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 16);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -77,6 +77,10 @@ public class SwordStandBlock extends Block implements SimpleWaterloggedBlock, En
 				if (s.getValue(BLOCKSTATE) == 13)
 					return 0;
 				if (s.getValue(BLOCKSTATE) == 14)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 15)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 16)
 					return 0;
 				return 0;
 			}

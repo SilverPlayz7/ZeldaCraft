@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "4": "milkbottle",
+        "5": "lonlonlable",
+        "6": "lonlonlogo",
+        "7": "lonlonlogo2"
+      },
+      "name": "default"
+    }
+  }
+}

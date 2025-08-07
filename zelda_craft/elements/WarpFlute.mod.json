@@ -16,7 +16,7 @@
     ],
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 20,
+    "useDuration": 60,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -29,7 +29,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "WarpFluteSpecialInformation"
     },
     "glowCondition": {
       "fixedValue": false
@@ -39,8 +40,11 @@
     "onRightClickedOnBlock": {
       "name": "WarpFluteRightclickedOnBlock"
     },
+    "onItemInUseTick": {
+      "name": "WarpFluteItemInHandTick"
+    },
     "onStoppedUsing": {
-      "name": "WarpFlutePlayerFinishesUsingItem"
+      "name": "WarpFluteItemInHandTick"
     },
     "enableRanged": false,
     "shootConstantly": false,

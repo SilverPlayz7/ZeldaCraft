@@ -16,6 +16,9 @@
     "smithingInputAdditionStack": {
       "value": "Items.QUARTZ"
     },
+    "smithingInputTemplateStack": {
+      "value": ""
+    },
     "smithingReturnStack": {
       "value": "CUSTOM:RazorSword"
     },

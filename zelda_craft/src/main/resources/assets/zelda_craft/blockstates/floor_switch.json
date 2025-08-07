@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zelda_craft:block/floor_switch"
+    },
+    "facing=east": {
+      "model": "zelda_craft:block/floor_switch",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zelda_craft:block/floor_switch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zelda_craft:block/floor_switch",
+      "y": 270
+    }
+  }
+}

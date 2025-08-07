@@ -34,9 +34,10 @@ public class BombRangedItemUsedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = ZeldaCraftModEntities.BOMB_PROJECTILE.get().spawn(_level, BlockPos.containing(entity.getX() + entity.getLookAngle().x * 1, y + 1, entity.getZ() + entity.getLookAngle().z * 1), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = ZeldaCraftModEntities.BOMB_PROJECTILE.get().spawn(_level, BlockPos.containing(entity.getX() + entity.getLookAngle().x * 1, y + entity.getEyeHeight(), entity.getZ() + entity.getLookAngle().z * 1),
+						MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
-					entityToSpawn.setDeltaMovement((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z));
+					entityToSpawn.setDeltaMovement((entity.getLookAngle().x * 1.5), (entity.getLookAngle().y * 1.5), (entity.getLookAngle().z * 1.5));
 				}
 			}
 		}

@@ -16,7 +16,7 @@
     "entityModel": "ModelSwordBeam",
     "customModelTexture": "swordbeam2.png",
     "modelWidth": 0.5,
-    "modelHeight": 0.1,
+    "modelHeight": 0.5,
     "onFlyingTick": {
       "name": "MasterSwordBeamProjectileWhileProjectileFlyingTick"
     }

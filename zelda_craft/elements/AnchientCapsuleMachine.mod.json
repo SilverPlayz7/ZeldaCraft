@@ -107,7 +107,7 @@
     "hasInventory": true,
     "guiBoundTo": "Chest",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 0,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,

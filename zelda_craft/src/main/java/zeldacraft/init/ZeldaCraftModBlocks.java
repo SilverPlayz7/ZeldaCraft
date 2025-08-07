@@ -8,6 +8,8 @@ import zeldacraft.block.TreasureChestBlock;
 import zeldacraft.block.TimeshiftOreBlock;
 import zeldacraft.block.SwordStandBlock;
 import zeldacraft.block.SmallDungeonChestBlock;
+import zeldacraft.block.SheikahLinkBlock;
+import zeldacraft.block.PhantomHourglassBlock;
 import zeldacraft.block.OpenChestBlock;
 import zeldacraft.block.MountainRokBlock;
 import zeldacraft.block.MoltenOreBlock;
@@ -15,11 +17,13 @@ import zeldacraft.block.LockedHylianChestBlock;
 import zeldacraft.block.IllusionBlockBlock;
 import zeldacraft.block.HookshotTargetBlock;
 import zeldacraft.block.HiddenIllusionBlockBlock;
+import zeldacraft.block.FloorSwitchBlock;
 import zeldacraft.block.FalseIllusionBlockBlock;
 import zeldacraft.block.Dungeon1PortalBlock;
 import zeldacraft.block.ClosedChestBlock;
 import zeldacraft.block.ClimbableHiddenIllusionBlockBlock;
 import zeldacraft.block.BombableWallBlock;
+import zeldacraft.block.BombableIllusionBlockBlock;
 import zeldacraft.block.AnchientCapsuleMachineBlock;
 
 import zeldacraft.ZeldaCraftMod;
@@ -49,6 +53,10 @@ public class ZeldaCraftModBlocks {
 	public static final RegistryObject<Block> FALSE_ILLUSION_BLOCK = REGISTRY.register("false_illusion_block", () -> new FalseIllusionBlockBlock());
 	public static final RegistryObject<Block> HIDDEN_ILLUSION_BLOCK = REGISTRY.register("hidden_illusion_block", () -> new HiddenIllusionBlockBlock());
 	public static final RegistryObject<Block> CLIMBABLE_HIDDEN_ILLUSION_BLOCK = REGISTRY.register("climbable_hidden_illusion_block", () -> new ClimbableHiddenIllusionBlockBlock());
+	public static final RegistryObject<Block> BOMBABLE_ILLUSION_BLOCK = REGISTRY.register("bombable_illusion_block", () -> new BombableIllusionBlockBlock());
+	public static final RegistryObject<Block> PHANTOM_HOURGLASS = REGISTRY.register("phantom_hourglass", () -> new PhantomHourglassBlock());
+	public static final RegistryObject<Block> FLOOR_SWITCH = REGISTRY.register("floor_switch", () -> new FloorSwitchBlock());
+	public static final RegistryObject<Block> SHEIKAH_LINK = REGISTRY.register("sheikah_link", () -> new SheikahLinkBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

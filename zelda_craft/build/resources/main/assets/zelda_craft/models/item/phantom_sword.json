@@ -1,0 +1,8 @@
+{
+  "parent": "zelda_craft:custom/phantomsword",
+  "textures": {
+    "4": "zelda_craft:block/phantomsword",
+    "5": "zelda_craft:block/psemblem2",
+    "particle": "zelda_craft:item/phantom_sword"
+  }
+}

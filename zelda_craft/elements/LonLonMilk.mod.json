@@ -6,7 +6,22 @@
     "texture": "lonlon_milk",
     "customModelName": "lonlonmilk:default",
     "customProperties": {},
-    "states": [],
+    "states": [
+      {
+        "renderType": 1,
+        "texture": "lonlon_milk",
+        "customModelName": "lonlonmilkhalf:default",
+        "stateMap": [
+          {
+            "property": {
+              "name": "damaged",
+              "type": "logic"
+            },
+            "value": true
+          }
+        ]
+      }
+    ],
     "name": "Lon-Lon Milk",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -18,7 +33,7 @@
     "enchantability": 0,
     "useDuration": 32,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 2,
     "recipeRemainder": {
       "value": ""
     },
@@ -36,6 +51,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onFinishUsingItem": {
+      "name": "LonLonMilkPlayerFinishesUsingItem"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -43,14 +61,14 @@
       "value": "CUSTOM:BoomerangProjectile"
     },
     "projectileDisableAmmoCheck": false,
-    "isFood": true,
+    "isFood": false,
     "nutritionalValue": 4,
     "saturation": 10.0,
     "eatResultItem": {
       "value": "CUSTOM:EmptyBottle"
     },
     "isMeat": false,
-    "isAlwaysEdible": true,
+    "isAlwaysEdible": false,
     "animation": "drink",
     "isMusicDisc": false,
     "musicDiscMusic": {

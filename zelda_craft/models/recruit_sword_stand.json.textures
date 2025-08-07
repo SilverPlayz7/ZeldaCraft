@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "stand_base",
+        "3": "recruitsword"
+      },
+      "name": "default"
+    }
+  }
+}

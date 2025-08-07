@@ -1,7 +1,0 @@
-{
-  "parent": "zelda_craft:custom/fierceswordbeam",
-  "textures": {
-    "0": "zelda_craft:block/fiercedeityswordbeam",
-    "particle": "zelda_craft:item/fiercedeityswordbeamrep"
-  }
-}

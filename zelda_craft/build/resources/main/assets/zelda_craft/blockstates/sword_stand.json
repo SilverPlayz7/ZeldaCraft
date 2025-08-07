@@ -224,6 +224,36 @@
     "facing=west,blockstate=14": {
       "model": "zelda_craft:block/sword_stand_states_blockstate_13",
       "y": 270
+    },
+    "facing=north,blockstate=15": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_14"
+    },
+    "facing=east,blockstate=15": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_14",
+      "y": 90
+    },
+    "facing=south,blockstate=15": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_14",
+      "y": 180
+    },
+    "facing=west,blockstate=15": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_14",
+      "y": 270
+    },
+    "facing=north,blockstate=16": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_15"
+    },
+    "facing=east,blockstate=16": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_15",
+      "y": 90
+    },
+    "facing=south,blockstate=16": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_15",
+      "y": 180
+    },
+    "facing=west,blockstate=16": {
+      "model": "zelda_craft:block/sword_stand_states_blockstate_15",
+      "y": 270
     }
   }
 }

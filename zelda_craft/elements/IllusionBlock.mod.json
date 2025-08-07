@@ -38,11 +38,17 @@
         "name": "CUSTOM:lens",
         "type": "logic",
         "value": false
+      },
+      {
+        "name": "CUSTOM:has_illusion",
+        "type": "logic",
+        "value": false
       }
     ],
     "name": "Illusion Block",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "IllusionBlockDescription"
     },
     "hardness": 22.0,
     "resistance": 10.0,
@@ -67,7 +73,7 @@
     "material": {
       "value": "NONE"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -111,12 +117,13 @@
     "unbreakable": false,
     "vanillaToolTier": "IRON",
     "isBonemealable": false,
-    "hasInventory": false,
+    "hasInventory": true,
+    "guiBoundTo": "Chest",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
-    "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventorySize": 0,
+    "inventoryStackSize": 1,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -132,11 +139,7 @@
     },
     "generateFeature": false,
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
-    ],
+    "blocksToReplace": [],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,

@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "unswordstand"
+        "2": "stand_base",
+        "3": "unmeister"
       },
       "name": "default"
     }

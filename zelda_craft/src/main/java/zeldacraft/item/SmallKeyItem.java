@@ -13,7 +13,7 @@ import java.util.List;
 
 public class SmallKeyItem extends Item {
 	public SmallKeyItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override

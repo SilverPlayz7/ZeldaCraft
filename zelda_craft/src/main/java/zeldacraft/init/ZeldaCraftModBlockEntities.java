@@ -9,6 +9,8 @@ import zeldacraft.block.entity.SwordStandBlockEntity;
 import zeldacraft.block.entity.SmallDungeonChestTileEntity;
 import zeldacraft.block.entity.OpenChestBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
+import zeldacraft.block.entity.IllusionBlockBlockEntity;
+import zeldacraft.block.entity.FloorSwitchBlockEntity;
 import zeldacraft.block.entity.ClosedChestBlockEntity;
 import zeldacraft.block.entity.AnchientCapsuleMachineTileEntity;
 
@@ -33,6 +35,8 @@ public class ZeldaCraftModBlockEntities {
 			() -> BlockEntityType.Builder.of(TreasureChestTileEntity::new, ZeldaCraftModBlocks.TREASURE_CHEST.get()).build(null));
 	public static final RegistryObject<BlockEntityType<SmallDungeonChestTileEntity>> SMALL_DUNGEON_CHEST = REGISTRY.register("small_dungeon_chest",
 			() -> BlockEntityType.Builder.of(SmallDungeonChestTileEntity::new, ZeldaCraftModBlocks.SMALL_DUNGEON_CHEST.get()).build(null));
+	public static final RegistryObject<BlockEntityType<?>> ILLUSION_BLOCK = register("illusion_block", ZeldaCraftModBlocks.ILLUSION_BLOCK, IllusionBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> FLOOR_SWITCH = register("floor_switch", ZeldaCraftModBlocks.FLOOR_SWITCH, FloorSwitchBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

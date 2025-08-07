@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "zelda_craft:recruit_sword"
+  },
+  "addition": {
+    "item": "zelda_craft:spirit_of_the_lokomo"
+  },
+  "result": {
+    "item": "zelda_craft:lokomo_sword"
+  }
+}

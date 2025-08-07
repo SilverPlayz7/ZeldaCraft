@@ -2,6 +2,16 @@ package zeldacraft.client.gui;
 
 import zeldacraft.world.inventory.OcarinaBlankMenu;
 
+import zeldacraft.procedures.Show8YProcedure;
+import zeldacraft.procedures.Show8XProcedure;
+import zeldacraft.procedures.Show8RProcedure;
+import zeldacraft.procedures.Show8LProcedure;
+import zeldacraft.procedures.Show8AProcedure;
+import zeldacraft.procedures.Show7YProcedure;
+import zeldacraft.procedures.Show7XProcedure;
+import zeldacraft.procedures.Show7RProcedure;
+import zeldacraft.procedures.Show7LProcedure;
+import zeldacraft.procedures.Show7AProcedure;
 import zeldacraft.procedures.Show6YProcedure;
 import zeldacraft.procedures.Show6XProcedure;
 import zeldacraft.procedures.Show6RProcedure;
@@ -88,42 +98,54 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/ocarinastaff.png"), this.leftPos + -99, this.topPos + 57, 0, 0, 200, 46, 200, 46);
+		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/ocarinastaff.png"), this.leftPos + -100, this.topPos + 57, 0, 0, 200, 46, 200, 46);
 		if (Show1AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -63, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -63, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show2AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -44, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -44, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show3AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -26, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -26, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show4AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -6, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + -6, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show5AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 14, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 14, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show6AProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 33, this.topPos + 63, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 33, this.topPos + 62, 0, 0, 13, 13, 13, 13);
+		}
+		if (Show7AProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 53, this.topPos + 62, 0, 0, 13, 13, 13, 13);
+		}
+		if (Show8AProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/a.png"), this.leftPos + 71, this.topPos + 62, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show1XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -62, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -63, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show2XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -43, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -44, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show3XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -25, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -26, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show4XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -5, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + -6, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show5XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 15, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 14, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show6XProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 34, this.topPos + 71, 0, 0, 12, 12, 12, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 33, this.topPos + 70, 0, 0, 13, 13, 13, 13);
+		}
+		if (Show7XProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 53, this.topPos + 70, 0, 0, 13, 13, 13, 13);
+		}
+		if (Show8XProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/x.png"), this.leftPos + 71, this.topPos + 70, 0, 0, 13, 13, 13, 13);
 		}
 		if (Show1YProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + -63, this.topPos + 75, 0, 0, 13, 12, 13, 12);
@@ -132,7 +154,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + -44, this.topPos + 75, 0, 0, 13, 12, 13, 12);
 		}
 		if (Show3YProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + -25, this.topPos + 75, 0, 0, 13, 12, 13, 12);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + -26, this.topPos + 75, 0, 0, 13, 12, 13, 12);
 		}
 		if (Show4YProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + -6, this.topPos + 75, 0, 0, 13, 12, 13, 12);
@@ -143,41 +165,59 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 		if (Show6YProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + 33, this.topPos + 75, 0, 0, 13, 12, 13, 12);
 		}
+		if (Show7YProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + 53, this.topPos + 75, 0, 0, 13, 12, 13, 12);
+		}
+		if (Show8YProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/y.png"), this.leftPos + 71, this.topPos + 75, 0, 0, 13, 12, 13, 12);
+		}
 		if (Show1RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -62, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -62, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show2RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -43, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -43, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show3RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -24, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -25, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show4RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -5, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + -5, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show5RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 15, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 15, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show6RProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 34, this.topPos + 84, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 34, this.topPos + 83, 0, 0, 12, 10, 12, 10);
+		}
+		if (Show7RProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 54, this.topPos + 83, 0, 0, 12, 10, 12, 10);
+		}
+		if (Show8RProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/r.png"), this.leftPos + 72, this.topPos + 83, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show1LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -62, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -62, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show2LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -43, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -43, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show3LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -24, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -25, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show4LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -5, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + -5, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show5LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 15, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 15, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		if (Show6LProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 34, this.topPos + 91, 0, 0, 12, 10, 12, 10);
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 34, this.topPos + 90, 0, 0, 12, 10, 12, 10);
+		}
+		if (Show7LProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 54, this.topPos + 90, 0, 0, 12, 10, 12, 10);
+		}
+		if (Show8LProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/l.png"), this.leftPos + 72, this.topPos + 90, 0, 0, 12, 10, 12, 10);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -223,6 +263,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.ocarina_blank.label_lshift_rspace_xw_ya_ad"), -69, 106, -1, false);
 	}
 
 	@Override
@@ -233,7 +274,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(0, x, y, z));
 				OcarinaBlankButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + -16, this.topPos + -81, 30, 20).build();
+		}).bounds(this.leftPos + -16, this.topPos + -78, 30, 20).build();
 		guistate.put("button:button_x", button_x);
 		this.addRenderableWidget(button_x);
 		button_a = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_a"), e -> {
@@ -241,7 +282,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(1, x, y, z));
 				OcarinaBlankButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 13, this.topPos + -62, 30, 20).build();
+		}).bounds(this.leftPos + 23, this.topPos + -55, 30, 20).build();
 		guistate.put("button:button_a", button_a);
 		this.addRenderableWidget(button_a);
 		button_y = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_y"), e -> {
@@ -249,7 +290,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(2, x, y, z));
 				OcarinaBlankButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + -45, this.topPos + -62, 30, 20).build();
+		}).bounds(this.leftPos + -55, this.topPos + -55, 30, 20).build();
 		guistate.put("button:button_y", button_y);
 		this.addRenderableWidget(button_y);
 		button_l = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_l"), e -> {
@@ -257,7 +298,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(3, x, y, z));
 				OcarinaBlankButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}).bounds(this.leftPos + -64, this.topPos + -93, 30, 20).build();
+		}).bounds(this.leftPos + -64, this.topPos + -91, 30, 20).build();
 		guistate.put("button:button_l", button_l);
 		this.addRenderableWidget(button_l);
 		button_r = Button.builder(Component.translatable("gui.zelda_craft.ocarina_blank.button_r"), e -> {
@@ -265,7 +306,7 @@ public class OcarinaBlankScreen extends AbstractContainerScreen<OcarinaBlankMenu
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new OcarinaBlankButtonMessage(4, x, y, z));
 				OcarinaBlankButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		}).bounds(this.leftPos + 29, this.topPos + -93, 30, 20).build();
+		}).bounds(this.leftPos + 32, this.topPos + -91, 30, 20).build();
 		guistate.put("button:button_r", button_r);
 		this.addRenderableWidget(button_r);
 	}

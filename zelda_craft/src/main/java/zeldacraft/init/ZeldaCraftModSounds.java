@@ -60,4 +60,10 @@ public class ZeldaCraftModSounds {
 	public static final RegistryObject<SoundEvent> INVERTED_SONG_OF_TIME = REGISTRY.register("inverted_song_of_time", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "inverted_song_of_time")));
 	public static final RegistryObject<SoundEvent> SONG_OF_SOARING = REGISTRY.register("song_of_soaring", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_soaring")));
 	public static final RegistryObject<SoundEvent> SONG_OF_HEALING = REGISTRY.register("song_of_healing", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "song_of_healing")));
+	public static final RegistryObject<SoundEvent> WARP_FLUTE = REGISTRY.register("warp_flute", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "warp_flute")));
+	public static final RegistryObject<SoundEvent> HOOKSHOT_READY = REGISTRY.register("hookshot_ready", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "hookshot_ready")));
+	public static final RegistryObject<SoundEvent> HOOKSHOT_HIT = REGISTRY.register("hookshot_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "hookshot_hit")));
+	public static final RegistryObject<SoundEvent> HOOKSHOT_MISS = REGISTRY.register("hookshot_miss", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "hookshot_miss")));
+	public static final RegistryObject<SoundEvent> HOOKSHOT_FIRE = REGISTRY.register("hookshot_fire", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "hookshot_fire")));
+	public static final RegistryObject<SoundEvent> HOOKSHOT_FLYING = REGISTRY.register("hookshot_flying", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("zelda_craft", "hookshot_flying")));
 }

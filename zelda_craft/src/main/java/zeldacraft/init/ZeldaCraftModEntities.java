@@ -8,7 +8,6 @@ import zeldacraft.entity.MasterSwordBeamProjectileProjectileEntity;
 import zeldacraft.entity.LongShotProjectileEntity;
 import zeldacraft.entity.HookShotProjectileEntity;
 import zeldacraft.entity.HappyMaskSalesmanEntity;
-import zeldacraft.entity.FierceDeitySwordBeamEntity;
 import zeldacraft.entity.FairyEntity;
 import zeldacraft.entity.BoomerangProjectileEntity;
 import zeldacraft.entity.BombProjectileEntity;
@@ -38,9 +37,7 @@ public class ZeldaCraftModEntities {
 			.setCustomClientFactory(LongShotProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<MasterSwordBeamProjectileProjectileEntity>> MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE = register("master_sword_beam_projectile_projectile",
 			EntityType.Builder.<MasterSwordBeamProjectileProjectileEntity>of(MasterSwordBeamProjectileProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(MasterSwordBeamProjectileProjectileEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.1f));
-	public static final RegistryObject<EntityType<FierceDeitySwordBeamEntity>> FIERCE_DEITY_SWORD_BEAM = register("fierce_deity_sword_beam", EntityType.Builder.<FierceDeitySwordBeamEntity>of(FierceDeitySwordBeamEntity::new, MobCategory.MISC)
-			.setCustomClientFactory(FierceDeitySwordBeamEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HappyMaskSalesmanEntity>> HAPPY_MASK_SALESMAN = register("happy_mask_salesman", EntityType.Builder.<HappyMaskSalesmanEntity>of(HappyMaskSalesmanEntity::new, MobCategory.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HappyMaskSalesmanEntity::new).fireImmune().sized(1f, 2f));
 	public static final RegistryObject<EntityType<BombProjectileEntity>> BOMB_PROJECTILE = register("bomb_projectile", EntityType.Builder.<BombProjectileEntity>of(BombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)

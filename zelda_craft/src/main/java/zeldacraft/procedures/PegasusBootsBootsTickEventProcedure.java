@@ -29,7 +29,7 @@ public class PegasusBootsBootsTickEventProcedure {
 				entity.setMaxUpStep(1);
 			}
 		} else {
-			entity.setMaxUpStep((float) 0.5);
+			entity.setMaxUpStep((float) 0.6);
 		}
 	}
 }

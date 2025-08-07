@@ -161,7 +161,7 @@
         "boundingBoxes": []
       },
       {
-        "texture": "unswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -183,6 +183,32 @@
         "particleTexture": "",
         "renderType": 2,
         "customModelName": "master_sword_stand:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "stand_base",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "recruit_sword_stand:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "stand_base",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "phantom_sword_stand:default",
         "luminance": 0,
         "boundingBoxes": []
       }

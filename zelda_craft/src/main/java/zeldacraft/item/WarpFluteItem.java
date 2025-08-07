@@ -1,20 +1,26 @@
 
 package zeldacraft.item;
 
+import zeldacraft.procedures.WarpFluteSpecialInformationProcedure;
 import zeldacraft.procedures.WarpFluteRightclickedOnBlockProcedure;
-import zeldacraft.procedures.WarpFlutePlayerFinishesUsingItemProcedure;
+import zeldacraft.procedures.WarpFluteItemInHandTickProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class WarpFluteItem extends Item {
 	public WarpFluteItem() {
@@ -28,7 +34,19 @@ public class WarpFluteItem extends Item {
 
 	@Override
 	public int getUseDuration(ItemStack itemstack) {
-		return 20;
+		return 60;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		Entity entity = itemstack.getEntityRepresentation();
+		String hoverText = WarpFluteSpecialInformationProcedure.execute(itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override
@@ -46,7 +64,14 @@ public class WarpFluteItem extends Item {
 	}
 
 	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			WarpFluteItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
+	}
+
+	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-		WarpFlutePlayerFinishesUsingItemProcedure.execute(entity, itemstack);
+		WarpFluteItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
 	}
 }

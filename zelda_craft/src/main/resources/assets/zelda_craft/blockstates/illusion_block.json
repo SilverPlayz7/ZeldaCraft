@@ -1,6 +1,12 @@
 {
   "variants": {
-    "": {
+    "lens=false,has_illusion=false": {
+      "model": "zelda_craft:block/illusion_block"
+    },
+    "lens=false,has_illusion=true": {
+      "model": "zelda_craft:block/hidden"
+    },
+    "lens=true": {
       "model": "zelda_craft:block/illusion_block"
     }
   }
