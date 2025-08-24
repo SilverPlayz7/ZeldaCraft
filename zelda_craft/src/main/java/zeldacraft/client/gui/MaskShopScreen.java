@@ -4,6 +4,7 @@ import zeldacraft.world.inventory.MaskShopMenu;
 
 import zeldacraft.procedures.RupeeCounterProcedure;
 import zeldacraft.procedures.MaskPriceProcedure;
+import zeldacraft.procedures.ContractShowProcedure;
 import zeldacraft.procedures.BunnyHoodSelectedProcedure;
 import zeldacraft.procedures.BlastMaskSelectedProcedure;
 
@@ -17,7 +18,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -29,9 +30,10 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_bm;
-	Button button_buy;
-	Button button_bh;
+	ImageButton imagebutton_bunny_hood_icon;
+	ImageButton imagebutton_blast_mask_icon;
+	ImageButton imagebutton_buy_button;
+	ImageButton imagebutton_contract_button;
 
 	public MaskShopScreen(MaskShopMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,6 +53,10 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 39 && mouseY < topPos + 63)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.zelda_craft.mask_shop.tooltip_bunny_hood"), mouseX, mouseY);
+		if (mouseX > leftPos + 39 && mouseX < leftPos + 63 && mouseY > topPos + 42 && mouseY < topPos + 66)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.zelda_craft.mask_shop.tooltip_blast_mask"), mouseX, mouseY);
 	}
 
 	@Override
@@ -70,6 +76,8 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 		}
 
 		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/rupee_icon.png"), this.leftPos + 69, this.topPos + 126, 0, 0, 8, 8, 8, 8);
+
+		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/contract_button_locked.png"), this.leftPos + 131, this.topPos + 120, 0, 0, 38, 12, 38, 12);
 
 		RenderSystem.disableBlend();
 	}
@@ -96,29 +104,43 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> {
 	@Override
 	public void init() {
 		super.init();
-		button_bm = Button.builder(Component.translatable("gui.zelda_craft.mask_shop.button_bm"), e -> {
+		imagebutton_bunny_hood_icon = new ImageButton(this.leftPos + 3, this.topPos + 19, 32, 48, 0, 0, 48, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_bunny_hood_icon.png"), 32, 96, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new MaskShopButtonMessage(0, x, y, z));
 				MaskShopButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 38, this.topPos + 41, 35, 20).build();
-		guistate.put("button:button_bm", button_bm);
-		this.addRenderableWidget(button_bm);
-		button_buy = Button.builder(Component.translatable("gui.zelda_craft.mask_shop.button_buy"), e -> {
+		});
+		guistate.put("button:imagebutton_bunny_hood_icon", imagebutton_bunny_hood_icon);
+		this.addRenderableWidget(imagebutton_bunny_hood_icon);
+		imagebutton_blast_mask_icon = new ImageButton(this.leftPos + 40, this.topPos + 42, 25, 25, 0, 0, 25, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_blast_mask_icon.png"), 25, 50, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new MaskShopButtonMessage(1, x, y, z));
 				MaskShopButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 130, this.topPos + 101, 40, 20).build();
-		guistate.put("button:button_buy", button_buy);
-		this.addRenderableWidget(button_buy);
-		button_bh = Button.builder(Component.translatable("gui.zelda_craft.mask_shop.button_bh"), e -> {
+		});
+		guistate.put("button:imagebutton_blast_mask_icon", imagebutton_blast_mask_icon);
+		this.addRenderableWidget(imagebutton_blast_mask_icon);
+		imagebutton_buy_button = new ImageButton(this.leftPos + 125, this.topPos + 103, 50, 18, 0, 0, 18, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_buy_button.png"), 50, 36, e -> {
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new MaskShopButtonMessage(2, x, y, z));
 				MaskShopButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 2, this.topPos + 41, 35, 20).build();
-		guistate.put("button:button_bh", button_bh);
-		this.addRenderableWidget(button_bh);
+		});
+		guistate.put("button:imagebutton_buy_button", imagebutton_buy_button);
+		this.addRenderableWidget(imagebutton_buy_button);
+		imagebutton_contract_button = new ImageButton(this.leftPos + 131, this.topPos + 120, 38, 12, 0, 0, 12, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_contract_button.png"), 38, 24, e -> {
+			if (ContractShowProcedure.execute(entity)) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new MaskShopButtonMessage(3, x, y, z));
+				MaskShopButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ContractShowProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_contract_button", imagebutton_contract_button);
+		this.addRenderableWidget(imagebutton_contract_button);
 	}
 }

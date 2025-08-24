@@ -1,0 +1,30 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:FireArrow"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.firecharge.use"
+    },
+    "igniteFire": true,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "ModelFireArrow",
+    "customModelTexture": "firearrow.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "FireArrowProjectileProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "FireArrowProjectileProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "FireArrowProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

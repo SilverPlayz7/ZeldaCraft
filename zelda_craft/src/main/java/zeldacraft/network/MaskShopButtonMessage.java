@@ -3,6 +3,7 @@ package zeldacraft.network;
 
 import zeldacraft.world.inventory.MaskShopMenu;
 
+import zeldacraft.procedures.GetContractButtonProcedure;
 import zeldacraft.procedures.BuyMaskButtonProcedure;
 import zeldacraft.procedures.BunnyHoodButtonProcedure;
 import zeldacraft.procedures.BlastMaskButtonProcedure;
@@ -68,15 +69,19 @@ public class MaskShopButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BlastMaskButtonProcedure.execute(entity);
+			BunnyHoodButtonProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			BuyMaskButtonProcedure.execute(world, entity);
+			BlastMaskButtonProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			BunnyHoodButtonProcedure.execute(entity);
+			BuyMaskButtonProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			GetContractButtonProcedure.execute(entity);
 		}
 	}
 

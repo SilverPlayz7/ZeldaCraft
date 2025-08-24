@@ -18,14 +18,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -251,407 +255,408 @@ public class PowerSelectRenderProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModBlocks.FLOOR_SWITCH.get().asItem()) {
+		if (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState())
+				.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getBoolean("haslocation") == false) {
 				if ((world
 						.getBlockState(new BlockPos(
 								entity.level()
 										.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-												(entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity4.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+												(entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity5.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 												ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 										.getBlockPos().getX(),
 								entity.level()
 										.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-												(entity instanceof LivingEntity _livingEntity6 && _livingEntity6.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity6.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+												(entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity7.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 												ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 										.getBlockPos().getY(),
 								entity.level()
 										.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-												(entity instanceof LivingEntity _livingEntity8 && _livingEntity8.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity8.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+												(entity instanceof LivingEntity _livingEntity9 && _livingEntity9.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity9.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 												ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 										.getBlockPos().getZ())))
 						.getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get()) {
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity12 && _livingEntity12.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity12.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity13 && _livingEntity13.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity13.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity14 && _livingEntity14.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity14.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity15 && _livingEntity15.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity15.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity16 && _livingEntity16.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity16.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity17 && _livingEntity17.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity17.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity18 && _livingEntity18.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity18.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity19 && _livingEntity19.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity19.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity20 && _livingEntity20.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity20.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity21.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity22.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity23 && _livingEntity23.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity23.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity26 && _livingEntity26.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity26.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity27 && _livingEntity27.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity27.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity28 && _livingEntity28.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity28.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity29 && _livingEntity29.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity29.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity30.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity31 && _livingEntity31.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity31.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity32 && _livingEntity32.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity32.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity33 && _livingEntity33.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity33.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity34 && _livingEntity34.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity34.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity35 && _livingEntity35.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity35.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity36 && _livingEntity36.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity36.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ()),
-							255 << 24 | 255 << 16 | 255 << 8 | 255);
-					renderLine(
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity40 && _livingEntity40.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity40.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity42 && _livingEntity42.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity42.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity44 && _livingEntity44.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity44.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity46 && _livingEntity46.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity46.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity48 && _livingEntity48.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity48.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity50 && _livingEntity50.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity50.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity37 && _livingEntity37.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity37.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity54 && _livingEntity54.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity54.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity41 && _livingEntity41.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity41.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
+									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity56 && _livingEntity56.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity56.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity43 && _livingEntity43.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity43.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
+									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity58 && _livingEntity58.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity58.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity45 && _livingEntity45.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity45.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity60 && _livingEntity60.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity60.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity47 && _livingEntity47.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity47.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity62 && _livingEntity62.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity62.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity49 && _livingEntity49.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity49.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity64 && _livingEntity64.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity64.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity51 && _livingEntity51.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity51.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity68 && _livingEntity68.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity68.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity55 && _livingEntity55.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity55.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity70 && _livingEntity70.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity70.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity57 && _livingEntity57.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity57.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
+									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity72 && _livingEntity72.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity72.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity59 && _livingEntity59.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity59.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity74 && _livingEntity74.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity74.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity61 && _livingEntity61.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity61.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
+									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity76 && _livingEntity76.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity76.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity78 && _livingEntity78.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity78.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							255 << 24 | 255 << 16 | 255 << 8 | 255);
-					renderLine(
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity82 && _livingEntity82.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity82.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity84 && _livingEntity84.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity84.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity86 && _livingEntity86.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity86.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity88 && _livingEntity88.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity88.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity90 && _livingEntity90.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity90.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity63 && _livingEntity63.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity63.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity92 && _livingEntity92.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity92.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity65 && _livingEntity65.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity65.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
+									.getBlockPos().getZ()),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity96 && _livingEntity96.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity96.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity69 && _livingEntity69.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity69.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity98 && _livingEntity98.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity98.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity71 && _livingEntity71.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity71.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
+									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity100 && _livingEntity100.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity100.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity73 && _livingEntity73.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity73.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity102 && _livingEntity102.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity102.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity75 && _livingEntity75.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity75.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity104 && _livingEntity104.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity104.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity77 && _livingEntity77.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity77.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
+									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity106 && _livingEntity106.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity106.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity79 && _livingEntity79.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity79.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ() + 1),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity110 && _livingEntity110.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity110.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity83 && _livingEntity83.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity83.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
+									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity112 && _livingEntity112.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity112.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity85 && _livingEntity85.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity85.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity114 && _livingEntity114.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity114.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity87 && _livingEntity87.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity87.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity89 && _livingEntity89.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity89.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity91 && _livingEntity91.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity91.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity93 && _livingEntity93.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity93.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							255 << 24 | 255 << 16 | 255 << 8 | 255);
+					renderLine(
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity97 && _livingEntity97.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity97.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity99 && _livingEntity99.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity99.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity101 && _livingEntity101.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity101.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity116 && _livingEntity116.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity116.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity103 && _livingEntity103.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity103.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
+									.getBlockPos().getX()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity118 && _livingEntity118.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity118.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity105 && _livingEntity105.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity105.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
+									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity120 && _livingEntity120.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity120.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity107 && _livingEntity107.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity107.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ() + 1),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity124 && _livingEntity124.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity124.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity111 && _livingEntity111.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity111.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity126 && _livingEntity126.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity126.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity113 && _livingEntity113.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity113.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity128 && _livingEntity128.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity128.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity130 && _livingEntity130.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity130.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity132 && _livingEntity132.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity132.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity134 && _livingEntity134.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity134.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							255 << 24 | 255 << 16 | 255 << 8 | 255);
-					renderLine(
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity138 && _livingEntity138.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity138.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity140 && _livingEntity140.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity140.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity142 && _livingEntity142.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity142.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity115 && _livingEntity115.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity115.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity144 && _livingEntity144.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity144.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity117 && _livingEntity117.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity117.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity146 && _livingEntity146.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity146.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity119 && _livingEntity119.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity119.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
+									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity148 && _livingEntity148.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity148.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity121 && _livingEntity121.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity121.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ() + 1),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity152 && _livingEntity152.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity152.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity154 && _livingEntity154.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity154.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity156 && _livingEntity156.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity156.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity158 && _livingEntity158.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity158.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity125 && _livingEntity125.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity125.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity160 && _livingEntity160.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity160.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity127 && _livingEntity127.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity127.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY()),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity162 && _livingEntity162.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity162.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity129 && _livingEntity129.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity129.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity131 && _livingEntity131.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity131.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity133 && _livingEntity133.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity133.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity135 && _livingEntity135.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity135.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ() + 1),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
 					renderLine(
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity166 && _livingEntity166.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity166.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getX()),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity168 && _livingEntity168.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity168.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getY() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity170 && _livingEntity170.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity170.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-									.getBlockPos().getZ() + 1),
-							(entity.level()
-									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity172 && _livingEntity172.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity172.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity139 && _livingEntity139.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity139.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity174 && _livingEntity174.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity174.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity141 && _livingEntity141.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity141.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY() + 1),
 							(entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity176 && _livingEntity176.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity176.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity143 && _livingEntity143.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity143.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity145 && _livingEntity145.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity145.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity147 && _livingEntity147.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity147.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity149 && _livingEntity149.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity149.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							255 << 24 | 255 << 16 | 255 << 8 | 255);
+					renderLine(
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity153 && _livingEntity153.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity153.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity155 && _livingEntity155.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity155.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity157 && _livingEntity157.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity157.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity159 && _livingEntity159.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity159.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity161 && _livingEntity161.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity161.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity163 && _livingEntity163.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity163.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							255 << 24 | 255 << 16 | 255 << 8 | 255);
+					renderLine(
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity167 && _livingEntity167.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity167.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX()),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity169 && _livingEntity169.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity169.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity171 && _livingEntity171.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity171.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getZ() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity173 && _livingEntity173.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity173.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getX() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity175 && _livingEntity175.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity175.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									.getBlockPos().getY() + 1),
+							(entity.level()
+									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+											(entity instanceof LivingEntity _livingEntity177 && _livingEntity177.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity177.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ() + 1),
 							255 << 24 | 255 << 16 | 255 << 8 | 255);
@@ -661,258 +666,258 @@ public class PowerSelectRenderProcedure {
 					if ((world.getBlockState(new BlockPos(
 							entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity181 && _livingEntity181.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity181.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity182 && _livingEntity182.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity182.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getX(),
 							entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity183 && _livingEntity183.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity183.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity184 && _livingEntity184.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity184.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getY(),
 							entity.level()
 									.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-											(entity instanceof LivingEntity _livingEntity185 && _livingEntity185.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity185.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+											(entity instanceof LivingEntity _livingEntity186 && _livingEntity186.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity186.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 											ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 									.getBlockPos().getZ())))
 							.getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get()) {
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity189 && _livingEntity189.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity189.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity190 && _livingEntity190.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity190.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity191 && _livingEntity191.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity191.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity192 && _livingEntity192.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity192.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity193 && _livingEntity193.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity193.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity194 && _livingEntity194.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity194.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity195 && _livingEntity195.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity195.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity196 && _livingEntity196.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity196.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity197 && _livingEntity197.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity197.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity198 && _livingEntity198.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity198.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity199 && _livingEntity199.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity199.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity200 && _livingEntity200.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity200.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity203 && _livingEntity203.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity203.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity204 && _livingEntity204.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity204.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity205 && _livingEntity205.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity205.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity206 && _livingEntity206.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity206.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity207 && _livingEntity207.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity207.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity208 && _livingEntity208.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity208.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity209 && _livingEntity209.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity209.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity210 && _livingEntity210.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity210.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity211 && _livingEntity211.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity211.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity212 && _livingEntity212.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity212.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity213 && _livingEntity213.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity213.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
-								255 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderLine(
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity217 && _livingEntity217.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity217.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity219 && _livingEntity219.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity219.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity221 && _livingEntity221.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity221.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity223 && _livingEntity223.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity223.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity225 && _livingEntity225.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity225.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity227 && _livingEntity227.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity227.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity214 && _livingEntity214.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity214.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity231 && _livingEntity231.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity231.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+										(entity instanceof LivingEntity _livingEntity218 && _livingEntity218.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity218.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity233 && _livingEntity233.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity233.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+										(entity instanceof LivingEntity _livingEntity220 && _livingEntity220.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity220.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity235 && _livingEntity235.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity235.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity222 && _livingEntity222.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity222.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity237 && _livingEntity237.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity237.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity224 && _livingEntity224.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity224.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity239 && _livingEntity239.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity239.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity226 && _livingEntity226.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity226.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity241 && _livingEntity241.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity241.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity228 && _livingEntity228.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity228.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity245 && _livingEntity245.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity245.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity232 && _livingEntity232.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity232.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity247 && _livingEntity247.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity247.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+										(entity instanceof LivingEntity _livingEntity234 && _livingEntity234.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity234.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity249 && _livingEntity249.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity249.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity236 && _livingEntity236.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity236.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity251 && _livingEntity251.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity251.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+										(entity instanceof LivingEntity _livingEntity238 && _livingEntity238.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity238.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity253 && _livingEntity253.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity253.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+										(entity instanceof LivingEntity _livingEntity240 && _livingEntity240.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity240.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity255 && _livingEntity255.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity255.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+										(entity instanceof LivingEntity _livingEntity242 && _livingEntity242.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity242.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity259 && _livingEntity259.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity259.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity246 && _livingEntity246.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity246.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity261 && _livingEntity261.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity261.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity248 && _livingEntity248.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity248.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity263 && _livingEntity263.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity263.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity265 && _livingEntity265.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity265.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity267 && _livingEntity267.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity267.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity269 && _livingEntity269.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity269.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								255 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderLine(
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity273 && _livingEntity273.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity273.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity275 && _livingEntity275.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity275.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity277 && _livingEntity277.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity277.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity250 && _livingEntity250.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity250.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity279 && _livingEntity279.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity279.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity252 && _livingEntity252.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity252.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity281 && _livingEntity281.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity281.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+										(entity instanceof LivingEntity _livingEntity254 && _livingEntity254.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity254.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity283 && _livingEntity283.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity283.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity256 && _livingEntity256.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity256.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity287 && _livingEntity287.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity287.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+										(entity instanceof LivingEntity _livingEntity260 && _livingEntity260.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity260.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity289 && _livingEntity289.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity289.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity262 && _livingEntity262.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity262.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity291 && _livingEntity291.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity291.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity264 && _livingEntity264.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity264.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity266 && _livingEntity266.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity266.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity268 && _livingEntity268.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity268.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity270 && _livingEntity270.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity270.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								255 << 24 | 255 << 16 | 255 << 8 | 255);
+						renderLine(
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity274 && _livingEntity274.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity274.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity276 && _livingEntity276.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity276.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity278 && _livingEntity278.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity278.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity293 && _livingEntity293.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity293.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+										(entity instanceof LivingEntity _livingEntity280 && _livingEntity280.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity280.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity295 && _livingEntity295.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity295.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+										(entity instanceof LivingEntity _livingEntity282 && _livingEntity282.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity282.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity297 && _livingEntity297.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity297.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity284 && _livingEntity284.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity284.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity301 && _livingEntity301.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity301.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity288 && _livingEntity288.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity288.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity303 && _livingEntity303.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity303.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity290 && _livingEntity290.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity290.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity305 && _livingEntity305.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity305.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity307 && _livingEntity307.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity307.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity309 && _livingEntity309.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity309.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity311 && _livingEntity311.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity311.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								255 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderLine(
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity315 && _livingEntity315.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity315.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity317 && _livingEntity317.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity317.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity319 && _livingEntity319.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity319.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity292 && _livingEntity292.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity292.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity321 && _livingEntity321.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity321.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity294 && _livingEntity294.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity294.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity323 && _livingEntity323.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity323.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+										(entity instanceof LivingEntity _livingEntity296 && _livingEntity296.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity296.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity325 && _livingEntity325.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity325.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity298 && _livingEntity298.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity298.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity329 && _livingEntity329.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity329.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity331 && _livingEntity331.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity331.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity333 && _livingEntity333.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity333.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity335 && _livingEntity335.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity335.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity302 && _livingEntity302.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity302.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity337 && _livingEntity337.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity337.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity304 && _livingEntity304.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity304.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity339 && _livingEntity339.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity339.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity306 && _livingEntity306.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity306.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity308 && _livingEntity308.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity308.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity310 && _livingEntity310.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity310.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity312 && _livingEntity312.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity312.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderLine(
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity343 && _livingEntity343.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity343.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity345 && _livingEntity345.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity345.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity347 && _livingEntity347.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity347.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
-										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
-								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity349 && _livingEntity349.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity349.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity316 && _livingEntity316.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity316.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity351 && _livingEntity351.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity351.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity318 && _livingEntity318.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity318.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
-										(entity instanceof LivingEntity _livingEntity353 && _livingEntity353.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity353.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										(entity instanceof LivingEntity _livingEntity320 && _livingEntity320.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity320.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity322 && _livingEntity322.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity322.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity324 && _livingEntity324.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity324.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity326 && _livingEntity326.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity326.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								255 << 24 | 255 << 16 | 255 << 8 | 255);
+						renderLine(
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity330 && _livingEntity330.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity330.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity332 && _livingEntity332.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity332.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity334 && _livingEntity334.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity334.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity336 && _livingEntity336.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity336.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity338 && _livingEntity338.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity338.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity340 && _livingEntity340.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity340.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								255 << 24 | 255 << 16 | 255 << 8 | 255);
+						renderLine(
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity344 && _livingEntity344.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity344.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity346 && _livingEntity346.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity346.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity348 && _livingEntity348.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity348.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity350 && _livingEntity350.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity350.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity352 && _livingEntity352.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity352.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
+										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 1),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(
+										(entity instanceof LivingEntity _livingEntity354 && _livingEntity354.getAttributes().hasAttribute(ForgeMod.BLOCK_REACH.get()) ? _livingEntity354.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue() : 0))),
 										ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ() + 1),
 								255 << 24 | 255 << 16 | 255 << 8 | 255);
 					}

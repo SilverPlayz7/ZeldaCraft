@@ -1,4 +1,11 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "zelda_craft:fire_arrow",
+    "zelda_craft:ice_arrow",
+    "zelda_craft:light_arrow",
+    "zelda_craft:silver_arrow",
+    "zelda_craft:bomb_arrow",
+    "zelda_craft:shock_arrow"
+  ]
 }

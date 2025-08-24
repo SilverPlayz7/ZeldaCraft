@@ -21,38 +21,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_bm",
-          "text": "bm",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "BlastMaskButton"
-          },
-          "width": 35,
-          "height": 20,
-          "x": 102,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_buy",
-          "text": "buy",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "BuyMaskButton"
-          },
-          "width": 40,
-          "height": 20,
-          "x": 194,
-          "y": 111,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -81,22 +49,6 @@
           "dropItemsWhenNotBound": true,
           "x": 247,
           "y": 113,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_bh",
-          "text": "bh",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "BunnyHoodButton"
-          },
-          "width": 35,
-          "height": 20,
-          "x": 66,
-          "y": 51,
           "locked": false
         }
       },
@@ -169,8 +121,108 @@
           "y": 136,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_bunny_hood_icon",
+          "image": "bunny_hood_icon.png",
+          "hoveredImage": "bunny_hood_select_icon.png",
+          "onClick": {
+            "name": "BunnyHoodButton"
+          },
+          "x": 67,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_bunny_hood",
+          "text": {
+            "fixedValue": "Bunny Hood"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 71,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blast_mask_icon",
+          "image": "blast_mask_icon.png",
+          "hoveredImage": "blast_mask_select_icon.png",
+          "onClick": {
+            "name": "BlastMaskButton"
+          },
+          "x": 104,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_blast_mask",
+          "text": {
+            "fixedValue": "Blast Mask"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 103,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_buy_button",
+          "image": "buy_button.png",
+          "hoveredImage": "buy_button_select.png",
+          "onClick": {
+            "name": "BuyMaskButton"
+          },
+          "x": 189,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_contract_button",
+          "image": "contract_button.png",
+          "hoveredImage": "contract_button_select.png",
+          "onClick": {
+            "name": "GetContractButton"
+          },
+          "displayCondition": {
+            "name": "ContractShow"
+          },
+          "x": 195,
+          "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "contract_button_locked.png",
+          "use1Xscale": false,
+          "x": 195,
+          "y": 130,
+          "locked": false
+        }
       }
     ],
+    "onClosed": {
+      "name": "MaskShopThisGUIIsClosed"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

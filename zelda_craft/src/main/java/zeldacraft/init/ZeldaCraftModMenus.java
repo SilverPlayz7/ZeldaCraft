@@ -6,6 +6,7 @@ package zeldacraft.init;
 
 import zeldacraft.world.inventory.WalletWithdrawMenu;
 import zeldacraft.world.inventory.WalletDepositMenu;
+import zeldacraft.world.inventory.SwitchTimerSetMenu;
 import zeldacraft.world.inventory.StatueMenuMenu;
 import zeldacraft.world.inventory.OcarinaBlankMenu;
 import zeldacraft.world.inventory.MaskShopMenu;
@@ -28,4 +29,5 @@ public class ZeldaCraftModMenus {
 	public static final RegistryObject<MenuType<WalletDepositMenu>> WALLET_DEPOSIT = REGISTRY.register("wallet_deposit", () -> IForgeMenuType.create(WalletDepositMenu::new));
 	public static final RegistryObject<MenuType<WalletWithdrawMenu>> WALLET_WITHDRAW = REGISTRY.register("wallet_withdraw", () -> IForgeMenuType.create(WalletWithdrawMenu::new));
 	public static final RegistryObject<MenuType<MaskShopMenu>> MASK_SHOP = REGISTRY.register("mask_shop", () -> IForgeMenuType.create(MaskShopMenu::new));
+	public static final RegistryObject<MenuType<SwitchTimerSetMenu>> SWITCH_TIMER_SET = REGISTRY.register("switch_timer_set", () -> IForgeMenuType.create(SwitchTimerSetMenu::new));
 }

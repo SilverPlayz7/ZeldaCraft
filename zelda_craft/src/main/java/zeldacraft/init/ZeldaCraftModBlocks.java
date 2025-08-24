@@ -4,15 +4,20 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.block.WeightedFloorSwitchBlock;
 import zeldacraft.block.TreasureChestBlock;
 import zeldacraft.block.TimeshiftOreBlock;
+import zeldacraft.block.TimedFloorSwitchBlock;
 import zeldacraft.block.SwordStandBlock;
 import zeldacraft.block.SmallDungeonChestBlock;
 import zeldacraft.block.SheikahLinkBlock;
+import zeldacraft.block.RustyFloorSwitchBlock;
 import zeldacraft.block.PhantomHourglassBlock;
+import zeldacraft.block.OwlStatueBlock;
 import zeldacraft.block.OpenChestBlock;
 import zeldacraft.block.MountainRokBlock;
 import zeldacraft.block.MoltenOreBlock;
+import zeldacraft.block.LullabySwitchBlock;
 import zeldacraft.block.LockedHylianChestBlock;
 import zeldacraft.block.IllusionBlockBlock;
 import zeldacraft.block.HookshotTargetBlock;
@@ -57,6 +62,11 @@ public class ZeldaCraftModBlocks {
 	public static final RegistryObject<Block> PHANTOM_HOURGLASS = REGISTRY.register("phantom_hourglass", () -> new PhantomHourglassBlock());
 	public static final RegistryObject<Block> FLOOR_SWITCH = REGISTRY.register("floor_switch", () -> new FloorSwitchBlock());
 	public static final RegistryObject<Block> SHEIKAH_LINK = REGISTRY.register("sheikah_link", () -> new SheikahLinkBlock());
+	public static final RegistryObject<Block> TIMED_FLOOR_SWITCH = REGISTRY.register("timed_floor_switch", () -> new TimedFloorSwitchBlock());
+	public static final RegistryObject<Block> WEIGHTED_FLOOR_SWITCH = REGISTRY.register("weighted_floor_switch", () -> new WeightedFloorSwitchBlock());
+	public static final RegistryObject<Block> RUSTY_FLOOR_SWITCH = REGISTRY.register("rusty_floor_switch", () -> new RustyFloorSwitchBlock());
+	public static final RegistryObject<Block> LULLABY_SWITCH = REGISTRY.register("lullaby_switch", () -> new LullabySwitchBlock());
+	public static final RegistryObject<Block> OWL_STATUE = REGISTRY.register("owl_statue", () -> new OwlStatueBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

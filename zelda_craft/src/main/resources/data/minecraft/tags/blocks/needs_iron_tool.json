@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "zelda_craft:illusion_block",
     "zelda_craft:false_illusion_block"
   ]
 }

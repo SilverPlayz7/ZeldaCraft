@@ -1,0 +1,5 @@
+
+[Visual]
+	#The display type shown when you're looking at a block that can be hookshotted. Available types: OUTLINE, GLOW, OFF
+	"Hookshot Reticle Type" = "OUTLINE"
+

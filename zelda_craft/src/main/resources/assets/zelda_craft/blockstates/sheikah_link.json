@@ -1,95 +1,95 @@
 {
   "variants": {
-    "facing=north,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link1"
-    },
-    "facing=east,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link1",
-      "y": 90
-    },
-    "facing=south,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link1",
-      "y": 180
-    },
-    "facing=west,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link1",
-      "y": 270
-    },
-    "facing=up,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link",
-      "x": 270
-    },
-    "facing=down,paired=true,connected=false,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link1",
-      "x": 90
-    },
-    "facing=north,connected=false,enabled=false": {
+    "facing=north,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link"
     },
-    "facing=east,connected=false,enabled=false": {
+    "facing=east,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link",
       "y": 90
     },
-    "facing=south,connected=false,enabled=false": {
+    "facing=south,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link",
       "y": 180
     },
-    "facing=west,connected=false,enabled=false": {
+    "facing=west,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link",
       "y": 270
     },
-    "facing=up,connected=false,enabled=false": {
+    "facing=up,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link",
       "x": 270
     },
-    "facing=down,connected=false,enabled=false": {
+    "facing=down,blockstate=0": {
       "model": "zelda_craft:block/sheikah_link",
       "x": 90
     },
-    "facing=north,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2"
+    "facing=north,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0"
     },
-    "facing=east,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2",
+    "facing=east,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0",
       "y": 90
     },
-    "facing=south,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2",
+    "facing=south,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0",
       "y": 180
     },
-    "facing=west,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2",
+    "facing=west,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0",
       "y": 270
     },
-    "facing=up,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2",
+    "facing=up,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0",
       "x": 270
     },
-    "facing=down,connected=true,enabled=false": {
-      "model": "zelda_craft:block/sheikah_link2",
+    "facing=down,blockstate=1": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_0",
       "x": 90
     },
-    "facing=north,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3"
+    "facing=north,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1"
     },
-    "facing=east,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3",
+    "facing=east,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1",
       "y": 90
     },
-    "facing=south,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3",
+    "facing=south,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1",
       "y": 180
     },
-    "facing=west,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3",
+    "facing=west,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1",
       "y": 270
     },
-    "facing=up,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3",
+    "facing=up,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1",
       "x": 270
     },
-    "facing=down,connected=true,enabled=true": {
-      "model": "zelda_craft:block/sheikah_link3",
+    "facing=down,blockstate=2": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_1",
+      "x": 90
+    },
+    "facing=north,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2"
+    },
+    "facing=east,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2",
+      "y": 90
+    },
+    "facing=south,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2",
+      "y": 180
+    },
+    "facing=west,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2",
+      "y": 270
+    },
+    "facing=up,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2",
+      "x": 270
+    },
+    "facing=down,blockstate=3": {
+      "model": "zelda_craft:block/sheikah_link_states_blockstate_2",
       "x": 90
     }
   }

@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "floorswitch"
+      },
+      "name": "default"
+    },
+    "weighted": {
+      "map": {
+        "0": "lightfloorswitch"
+      },
+      "name": "weighted"
+    },
+    "timed": {
+      "map": {
+        "0": "timedfloorswitch"
+      },
+      "name": "timed"
+    },
+    "rusty": {
+      "map": {
+        "0": "rustedfloorswitch"
+      },
+      "name": "rusty"
+    }
+  }
+}

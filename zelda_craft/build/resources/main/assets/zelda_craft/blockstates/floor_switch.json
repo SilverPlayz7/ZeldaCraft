@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,triggered=false": {
       "model": "zelda_craft:block/floor_switch"
     },
-    "facing=east": {
+    "facing=east,triggered=false": {
       "model": "zelda_craft:block/floor_switch",
       "y": 90
     },
-    "facing=south": {
+    "facing=south,triggered=false": {
       "model": "zelda_craft:block/floor_switch",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,triggered=false": {
       "model": "zelda_craft:block/floor_switch",
+      "y": 270
+    },
+    "facing=north,triggered=true": {
+      "model": "zelda_craft:block/floor_switch1"
+    },
+    "facing=east,triggered=true": {
+      "model": "zelda_craft:block/floor_switch1",
+      "y": 90
+    },
+    "facing=south,triggered=true": {
+      "model": "zelda_craft:block/floor_switch1",
+      "y": 180
+    },
+    "facing=west,triggered=true": {
+      "model": "zelda_craft:block/floor_switch1",
       "y": 270
     }
   }

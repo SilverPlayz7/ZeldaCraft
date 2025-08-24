@@ -4,13 +4,19 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.entity.SilverArrowProjectileEntity;
+import zeldacraft.entity.ShockArrowProjectileEntity;
 import zeldacraft.entity.MasterSwordBeamProjectileProjectileEntity;
 import zeldacraft.entity.LongShotProjectileEntity;
+import zeldacraft.entity.LightArrowProjectileEntity;
+import zeldacraft.entity.IceArrowProjectileEntity;
 import zeldacraft.entity.HookShotProjectileEntity;
 import zeldacraft.entity.HappyMaskSalesmanEntity;
+import zeldacraft.entity.FireArrowProjectileEntity;
 import zeldacraft.entity.FairyEntity;
 import zeldacraft.entity.BoomerangProjectileEntity;
 import zeldacraft.entity.BombProjectileEntity;
+import zeldacraft.entity.BombArrowProjectileEntity;
 
 import zeldacraft.ZeldaCraftMod;
 
@@ -46,6 +52,18 @@ public class ZeldaCraftModEntities {
 			EntityType.Builder.<FairyEntity>of(FairyEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FairyEntity::new)
 
 					.sized(0.4f, 0.4f));
+	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<IceArrowProjectileEntity>> ICE_ARROW_PROJECTILE = register("ice_arrow_projectile", EntityType.Builder.<IceArrowProjectileEntity>of(IceArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(IceArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<LightArrowProjectileEntity>> LIGHT_ARROW_PROJECTILE = register("light_arrow_projectile", EntityType.Builder.<LightArrowProjectileEntity>of(LightArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(LightArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SilverArrowProjectileEntity>> SILVER_ARROW_PROJECTILE = register("silver_arrow_projectile", EntityType.Builder.<SilverArrowProjectileEntity>of(SilverArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SilverArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BombArrowProjectileEntity>> BOMB_ARROW_PROJECTILE = register("bomb_arrow_projectile", EntityType.Builder.<BombArrowProjectileEntity>of(BombArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(BombArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ShockArrowProjectileEntity>> SHOCK_ARROW_PROJECTILE = register("shock_arrow_projectile", EntityType.Builder.<ShockArrowProjectileEntity>of(ShockArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(ShockArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

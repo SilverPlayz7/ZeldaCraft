@@ -1,8 +1,9 @@
 {
-  "parent": "block/cube_all",
+  "parent": "zelda_craft:custom/floorswitch",
   "textures": {
-    "all": "minecraft:block/brown_stained_glass",
-    "particle": "minecraft:block/brown_stained_glass"
+    "all": "minecraft:block/sandstone_top",
+    "particle": "minecraft:block/sandstone_top",
+    "2": "zelda_craft:block/floorswitch"
   },
   "render_type": "solid"
 }

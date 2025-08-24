@@ -36,9 +36,11 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "OcarinaBlank",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "OccarinaOfTimeRightclicked"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

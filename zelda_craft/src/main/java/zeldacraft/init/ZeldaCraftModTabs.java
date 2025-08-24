@@ -43,6 +43,12 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.BOMB.get());
 				tabData.accept(ZeldaCraftModItems.BOOMERANG.get());
 				tabData.accept(ZeldaCraftModItems.HERO_BOW.get());
+				tabData.accept(ZeldaCraftModItems.FIRE_ARROW.get());
+				tabData.accept(ZeldaCraftModItems.ICE_ARROW.get());
+				tabData.accept(ZeldaCraftModItems.SHOCK_ARROW.get());
+				tabData.accept(ZeldaCraftModItems.BOMB_ARROW.get());
+				tabData.accept(ZeldaCraftModItems.LIGHT_ARROW.get());
+				tabData.accept(ZeldaCraftModItems.SILVER_ARROW.get());
 				tabData.accept(ZeldaCraftModItems.HOOK_SHOT.get());
 				tabData.accept(ZeldaCraftModItems.LONG_SHOT.get());
 				tabData.accept(ZeldaCraftModItems.CHAIN_SPOOL.get());
@@ -111,6 +117,10 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.SMALL_KEY.get());
 				tabData.accept(ZeldaCraftModBlocks.SHEIKAH_LINK.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.FLOOR_SWITCH.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.WEIGHTED_FLOOR_SWITCH.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.TIMED_FLOOR_SWITCH.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.RUSTY_FLOOR_SWITCH.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.LULLABY_SWITCH.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.ILLUSION_BLOCK.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.FALSE_ILLUSION_BLOCK.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.HIDDEN_ILLUSION_BLOCK.get().asItem());
@@ -127,6 +137,12 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModBlocks.TIMESHIFT_ORE.get().asItem());
 				tabData.accept(ZeldaCraftModItems.TIMESHIFT_SHARD.get());
 				tabData.accept(ZeldaCraftModItems.HYRULE_CREST.get());
+				tabData.accept(ZeldaCraftModItems.SPIRIT_OF_THE_LOKOMO.get());
+				tabData.accept(ZeldaCraftModItems.CRIMSONINE.get());
+				tabData.accept(ZeldaCraftModItems.AZURINE.get());
+				tabData.accept(ZeldaCraftModItems.AQUANINE.get());
+				tabData.accept(ZeldaCraftModItems.PURE_ALLOY.get());
+				tabData.accept(ZeldaCraftModBlocks.PHANTOM_HOURGLASS.get().asItem());
 				tabData.accept(ZeldaCraftModItems.SONG_OF_STORMS.get());
 				tabData.accept(ZeldaCraftModItems.SARIAS_SONG.get());
 				tabData.accept(ZeldaCraftModItems.GURUDO_VALLY.get());
@@ -154,12 +170,6 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.GORON_COIN.get());
 				tabData.accept(ZeldaCraftModItems.ZORA_COIN.get());
 				tabData.accept(ZeldaCraftModItems.GERUDO_COIN.get());
-				tabData.accept(ZeldaCraftModItems.SPIRIT_OF_THE_LOKOMO.get());
-				tabData.accept(ZeldaCraftModItems.CRIMSONINE.get());
-				tabData.accept(ZeldaCraftModItems.AZURINE.get());
-				tabData.accept(ZeldaCraftModItems.AQUANINE.get());
-				tabData.accept(ZeldaCraftModItems.PURE_ALLOY.get());
-				tabData.accept(ZeldaCraftModBlocks.PHANTOM_HOURGLASS.get().asItem());
 			}).build());
 
 	@SubscribeEvent

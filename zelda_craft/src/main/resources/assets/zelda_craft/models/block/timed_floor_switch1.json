@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/floorswitch1",
+  "textures": {
+    "all": "minecraft:block/red_concrete",
+    "particle": "minecraft:block/red_concrete",
+    "0": "zelda_craft:block/timedfloorswitch"
+  },
+  "render_type": "solid"
+}

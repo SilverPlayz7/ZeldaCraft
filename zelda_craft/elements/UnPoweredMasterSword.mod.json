@@ -8,7 +8,7 @@
     "texture": "master_sword",
     "customModelName": "unsword:default",
     "blockingModelName": "Normal blocking",
-    "name": "Unpowered Master Sword",
+    "name": "Master Sword",
     "specialInformation": {
       "fixedValue": [
         "The flames of Din have imbued your blade with a sacred white light that demons revile."

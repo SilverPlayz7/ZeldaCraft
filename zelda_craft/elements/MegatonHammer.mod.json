@@ -27,6 +27,9 @@
     "enchantability": 2,
     "damageVsEntity": 35.0,
     "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": true,
     "blockDropsTier": "STONE",

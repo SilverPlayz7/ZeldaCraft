@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/sheikahlink3",
+  "textures": {
+    "all": "minecraft:block/redstone_block",
+    "particle": "minecraft:block/redstone_block",
+    "1": "zelda_craft:block/sheikah_link"
+  },
+  "render_type": "cutout_mipped"
+}

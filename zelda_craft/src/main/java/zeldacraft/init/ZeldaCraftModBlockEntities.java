@@ -4,10 +4,14 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.block.entity.WeightedFloorSwitchBlockEntity;
 import zeldacraft.block.entity.TreasureChestTileEntity;
+import zeldacraft.block.entity.TimedFloorSwitchBlockEntity;
 import zeldacraft.block.entity.SwordStandBlockEntity;
 import zeldacraft.block.entity.SmallDungeonChestTileEntity;
+import zeldacraft.block.entity.RustyFloorSwitchBlockEntity;
 import zeldacraft.block.entity.OpenChestBlockEntity;
+import zeldacraft.block.entity.LullabySwitchBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
 import zeldacraft.block.entity.IllusionBlockBlockEntity;
 import zeldacraft.block.entity.FloorSwitchBlockEntity;
@@ -37,6 +41,10 @@ public class ZeldaCraftModBlockEntities {
 			() -> BlockEntityType.Builder.of(SmallDungeonChestTileEntity::new, ZeldaCraftModBlocks.SMALL_DUNGEON_CHEST.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> ILLUSION_BLOCK = register("illusion_block", ZeldaCraftModBlocks.ILLUSION_BLOCK, IllusionBlockBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> FLOOR_SWITCH = register("floor_switch", ZeldaCraftModBlocks.FLOOR_SWITCH, FloorSwitchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TIMED_FLOOR_SWITCH = register("timed_floor_switch", ZeldaCraftModBlocks.TIMED_FLOOR_SWITCH, TimedFloorSwitchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> WEIGHTED_FLOOR_SWITCH = register("weighted_floor_switch", ZeldaCraftModBlocks.WEIGHTED_FLOOR_SWITCH, WeightedFloorSwitchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> RUSTY_FLOOR_SWITCH = register("rusty_floor_switch", ZeldaCraftModBlocks.RUSTY_FLOOR_SWITCH, RustyFloorSwitchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> LULLABY_SWITCH = register("lullaby_switch", ZeldaCraftModBlocks.LULLABY_SWITCH, LullabySwitchBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

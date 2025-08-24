@@ -33,23 +33,7 @@
         "subtract": false
       }
     ],
-    "customProperties": [
-      {
-        "name": "CUSTOM:connected",
-        "type": "logic",
-        "value": false
-      },
-      {
-        "name": "CUSTOM:enabled",
-        "type": "logic",
-        "value": false
-      },
-      {
-        "name": "CUSTOM:paired",
-        "type": "logic",
-        "value": false
-      }
-    ],
+    "customProperties": [],
     "name": "Sheikah Link",
     "specialInformation": {
       "fixedValue": [
@@ -123,6 +107,9 @@
     "luminance": 0,
     "unbreakable": false,
     "vanillaToolTier": "NONE",
+    "placingCondition": {
+      "name": "LullabySwitchBlockValidPlacementCondition"
+    },
     "isBonemealable": false,
     "hasInventory": false,
     "openGUIOnRightClick": false,

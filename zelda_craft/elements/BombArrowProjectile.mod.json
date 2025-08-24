@@ -1,0 +1,27 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:BombArrow"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.tnt.primed"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "ModelBombArrow",
+    "customModelTexture": "bombarrow.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "BombArrowProjectileProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "BombArrowProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

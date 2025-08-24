@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/lullabyswitch",
+  "textures": {
+    "all": "zelda_craft:block/lullaby_switch",
+    "particle": "zelda_craft:block/lullaby_switch",
+    "1": "zelda_craft:block/lullaby_switch"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zelda_craft:block/owl_statue"
+    },
+    "facing=east": {
+      "model": "zelda_craft:block/owl_statue",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zelda_craft:block/owl_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zelda_craft:block/owl_statue",
+      "y": 270
+    }
+  }
+}

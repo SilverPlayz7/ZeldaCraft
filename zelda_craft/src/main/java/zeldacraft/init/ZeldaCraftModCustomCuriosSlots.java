@@ -14,6 +14,6 @@ public class ZeldaCraftModCustomCuriosSlots {
 	@SubscribeEvent
 	public static void enqueueIMC(final InterModEnqueueEvent event) {
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("masks").icon(new ResourceLocation("curios:slot/maskicon")).size(1).build());
-		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("wallet").icon(new ResourceLocation("curios:slot/maskicon")).size(1).build());
+		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("wallet").icon(new ResourceLocation("curios:slot/walleticon")).size(1).build());
 	}
 }

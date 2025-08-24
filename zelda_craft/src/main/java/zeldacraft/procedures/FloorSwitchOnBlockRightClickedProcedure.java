@@ -2,6 +2,7 @@ package zeldacraft.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -28,6 +29,7 @@ public class FloorSwitchOnBlockRightClickedProcedure {
 					world.setBlock(_pos, _bs.setValue(_booleanProp, false), 3);
 			}
 			{
+				int _value = 2;
 				BlockPos _pos = BlockPos.containing(new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -51,8 +53,8 @@ public class FloorSwitchOnBlockRightClickedProcedure {
 					}
 				}.getValue(world, BlockPos.containing(x, y, z), "OutputZ"));
 				BlockState _bs = world.getBlockState(_pos);
-				if (_bs.getBlock().getStateDefinition().getProperty("enabled") instanceof BooleanProperty _booleanProp)
-					world.setBlock(_pos, _bs.setValue(_booleanProp, false), 3);
+				if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 			}
 		}
 	}

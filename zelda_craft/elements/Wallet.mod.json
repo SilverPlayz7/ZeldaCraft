@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "curiosslot",
   "definition": {
-    "texture": "maskicon.png",
+    "texture": "walleticon.png",
     "name": "Wallet",
     "amount": 1
   }
