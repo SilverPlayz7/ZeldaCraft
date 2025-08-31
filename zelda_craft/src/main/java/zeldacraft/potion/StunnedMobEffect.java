@@ -1,4 +1,3 @@
-
 package zeldacraft.potion;
 
 import zeldacraft.procedures.StunnedOnEffectActiveTickProcedure;

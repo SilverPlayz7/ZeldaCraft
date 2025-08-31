@@ -57,10 +57,10 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 				}.getValue(world, BlockPos.containing(x, y, z), "OutputZ")))).getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get())) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
 									(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 						}
 					}
 				} else if (((world.getBlockState(BlockPos.containing(new Object() {
@@ -136,9 +136,9 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 				}
@@ -175,10 +175,10 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 				}.getValue(world, BlockPos.containing(x, y, z), "OutputZ")))).getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get())) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
 									(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 						}
 					}
 				} else if (((world.getBlockState(BlockPos.containing(new Object() {
@@ -254,9 +254,9 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 				}
@@ -293,10 +293,10 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 				}.getValue(world, BlockPos.containing(x, y, z), "OutputZ")))).getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get())) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
 									(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 						}
 					}
 				} else if (((world.getBlockState(BlockPos.containing(new Object() {
@@ -372,9 +372,9 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 				}
@@ -412,10 +412,10 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 					}.getValue(world, BlockPos.containing(x, y, z), "OutputZ")))).getBlock() == ZeldaCraftModBlocks.SHEIKAH_LINK.get())) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2,
 										(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.land")), SoundSource.BLOCKS, (float) 0.2, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 							}
 						}
 					} else if (((world.getBlockState(BlockPos.containing(new Object() {
@@ -491,9 +491,9 @@ public class FloorSwitchEntityWalksOnTheBlockProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone_pressure_plate.click_on")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 					}

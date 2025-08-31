@@ -41,7 +41,7 @@ public class RupeeCollectProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.is(ItemTags.create(new ResourceLocation("zelda_craft:rupee")))) {
+		if (itemstack.is(ItemTags.create(ResourceLocation.parse("zelda_craft:rupee")))) {
 			if (entity instanceof Player) {
 				if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(ZeldaCraftModItems.CHILD_WALLET.get(), lv).isPresent() : false) {
 					if (entity instanceof LivingEntity lv) {

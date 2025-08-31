@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import net.minecraft.world.level.Level;
@@ -22,5 +21,7 @@ public class CostumeCoinItem extends Item {
 		list.add(Component.translatable("item.zelda_craft.costume_coin.description_1"));
 		list.add(Component.translatable("item.zelda_craft.costume_coin.description_2"));
 		list.add(Component.translatable("item.zelda_craft.costume_coin.description_3"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_4"));
+		list.add(Component.translatable("item.zelda_craft.costume_coin.description_5"));
 	}
 }

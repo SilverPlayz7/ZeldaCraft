@@ -97,9 +97,9 @@ public class LullabySwitchOnTickUpdateProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1, false);
 						}
 					}
 				}
@@ -186,9 +186,9 @@ public class LullabySwitchOnTickUpdateProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.5, 1, false);
 						}
 					}
 				}

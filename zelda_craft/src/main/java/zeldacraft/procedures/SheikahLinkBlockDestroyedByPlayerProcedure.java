@@ -27,7 +27,7 @@ public class SheikahLinkBlockDestroyedByPlayerProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate) {
-		if (blockstate.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+		if (blockstate.is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 			{
 				int _value = 0;
 				BlockPos _pos = BlockPos.containing(new Object() {

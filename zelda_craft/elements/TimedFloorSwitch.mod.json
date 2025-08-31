@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "minecraft:red_concrete",
@@ -14,8 +14,10 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -59,6 +61,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:ZeldaCraft"
@@ -75,9 +81,6 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "NONE"
-    },
     "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -86,11 +89,13 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "harp",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "OPEN",
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -125,6 +130,8 @@
       "name": "FloorSwitchBlockValidPlacementCondition"
     },
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": true,
     "guiBoundTo": "Chest",
     "openGUIOnRightClick": false,

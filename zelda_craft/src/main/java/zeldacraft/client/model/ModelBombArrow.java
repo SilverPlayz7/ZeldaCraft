@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ModelBombArrow<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("zelda_craft", "model_bomb_arrow"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("zelda_craft", "model_bomb_arrow"), "main");
 	public final ModelPart arrow;
 
 	public ModelBombArrow(ModelPart root) {

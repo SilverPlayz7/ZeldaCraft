@@ -2,18 +2,15 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
+import zeldacraft.init.ZeldaCraftModMenus;
 import zeldacraft.init.ZeldaCraftModItems;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 public class GetContractButtonProcedure {
 	public static void execute(Entity entity) {
@@ -21,8 +18,8 @@ public class GetContractButtonProcedure {
 			return;
 		if (new Object() {
 			public int getAmount(int sltid) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+				if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+					ItemStack stack = _menu.getSlots().get(sltid).getItem();
 					if (stack != null)
 						return stack.getCount();
 				}
@@ -31,21 +28,21 @@ public class GetContractButtonProcedure {
 		}.getAmount(1) == 0) {
 			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 1) {
 				if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(ZeldaCraftModItems.BUNNY_HOOD_CONTRACT.get())) : false)) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BUNNY_HOOD_CONTRACT.get()).copy();
 						_setstack.setCount(1);
-						((Slot) _slots.get(1)).set(_setstack);
+						_menu.getSlots().get(1).set(_setstack);
 						_player.containerMenu.broadcastChanges();
 					}
 				}
 			}
 			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 2) {
 				if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(ZeldaCraftModItems.BLAST_MASK_CONTRACT.get())) : false) || !(entity instanceof ServerPlayer _plr4
-						&& _plr4.level() instanceof ServerLevel && _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_4"))).isDone())) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+						&& _plr4.level() instanceof ServerLevel && _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"))).isDone())) {
+					if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 						ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLAST_MASK_CONTRACT.get()).copy();
 						_setstack.setCount(1);
-						((Slot) _slots.get(1)).set(_setstack);
+						_menu.getSlots().get(1).set(_setstack);
 						_player.containerMenu.broadcastChanges();
 					}
 				}

@@ -30,7 +30,7 @@ glintSpeed:0.5
 glintStrength:0.75
 damageTiltStrength:1.0
 highContrast:false
-gamma:1.0
+gamma:0.5017605633802817
 renderDistance:12
 simulationDistance:12
 entityDistanceScaling:1.0
@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"false"
-resourcePacks:["vanilla","mod_resources","file/BackWeaponFix"]
+resourcePacks:["vanilla","mod_resources"]
 incompatibleResourcePacks:[]
 lastServer:localhost:25463
 lang:en_us
@@ -123,7 +123,7 @@ key_key.zelda_craft.double_jump_key:key.keyboard.space
 key_key.zelda_craft.open_wallet:key.keyboard.period
 key_key.curios.open.desc:key.keyboard.g
 soundCategory_master:1.0
-soundCategory_music:0.25528169014084506
+soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
@@ -133,9 +133,9 @@ soundCategory_player:1.0
 soundCategory_ambient:1.0
 soundCategory_voice:1.0
 modelPart_cape:true
-modelPart_jacket:false
-modelPart_left_sleeve:false
-modelPart_right_sleeve:false
-modelPart_left_pants_leg:false
-modelPart_right_pants_leg:false
-modelPart_hat:false
+modelPart_jacket:true
+modelPart_left_sleeve:true
+modelPart_right_sleeve:true
+modelPart_left_pants_leg:true
+modelPart_right_pants_leg:true
+modelPart_hat:true

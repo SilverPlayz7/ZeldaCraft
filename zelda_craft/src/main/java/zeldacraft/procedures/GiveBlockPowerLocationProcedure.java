@@ -49,9 +49,9 @@ public class GiveBlockPowerLocationProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
 		if (entity == null)
 			return;
-		if (blockstate.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+		if (blockstate.is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState())
-					.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+					.is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 				{
 					int _value = 2;
 					BlockPos _pos = BlockPos.containing((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("OutputX"),
@@ -105,7 +105,7 @@ public class GiveBlockPowerLocationProcedure {
 					}
 				}
 			} else if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState())
-					.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+					.is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 				{
 					int _value = 2;
 					BlockPos _pos = BlockPos.containing((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("OutputX"),

@@ -47,7 +47,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 0, 255, false, false));
 					if (world instanceof Level _level && !_level.isClientSide())
-						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:bomb_mask")))), null, x, y,
+						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), null, x, y,
 								z, 3, false, Level.ExplosionInteraction.NONE);
 					ZeldaCraftMod.queueServerWork(1, () -> {
 						if (new Object() {
@@ -71,7 +71,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 								return false;
 							}
 						}.checkGamemode(entity)) {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:bomb_mask")))), 5);
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), 5);
 						}
 					});
 					if (entity instanceof Player _player)
@@ -96,9 +96,9 @@ public class MaskAbilityOnKeyPressedProcedure {
 					if (found == true) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel _level)
@@ -112,7 +112,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 0, 255, false, false));
 					if (world instanceof Level _level && !_level.isClientSide())
-						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:bomb_mask")))), null, x, y,
+						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), null, x, y,
 								z, 3, false, Level.ExplosionInteraction.TNT);
 					ZeldaCraftMod.queueServerWork(1, () -> {
 						if (new Object() {
@@ -136,7 +136,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 								return false;
 							}
 						}.checkGamemode(entity)) {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:bomb_mask")))), 5);
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), 5);
 						}
 					});
 					if (entity instanceof Player _player)

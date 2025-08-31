@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -7,6 +6,7 @@ package zeldacraft.init;
 import zeldacraft.client.gui.WalletWithdrawScreen;
 import zeldacraft.client.gui.WalletDepositScreen;
 import zeldacraft.client.gui.SwitchTimerSetScreen;
+import zeldacraft.client.gui.StatueNameSetScreen;
 import zeldacraft.client.gui.StatueMenuScreen;
 import zeldacraft.client.gui.OcarinaBlankScreen;
 import zeldacraft.client.gui.MaskShopScreen;
@@ -31,6 +31,11 @@ public class ZeldaCraftModScreens {
 			MenuScreens.register(ZeldaCraftModMenus.WALLET_WITHDRAW.get(), WalletWithdrawScreen::new);
 			MenuScreens.register(ZeldaCraftModMenus.MASK_SHOP.get(), MaskShopScreen::new);
 			MenuScreens.register(ZeldaCraftModMenus.SWITCH_TIMER_SET.get(), SwitchTimerSetScreen::new);
+			MenuScreens.register(ZeldaCraftModMenus.STATUE_NAME_SET.get(), StatueNameSetScreen::new);
 		});
+	}
+
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
 	}
 }

@@ -32,9 +32,9 @@ public class HookShotRangedItemUsedProcedure {
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_fire")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_fire")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_fire")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_fire")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			ZeldaCraftMod.queueServerWork(8, () -> {

@@ -2,6 +2,8 @@ package zeldacraft.client.gui;
 
 import zeldacraft.world.inventory.ChestMenu;
 
+import zeldacraft.init.ZeldaCraftModScreens;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -10,15 +12,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ChestScreen extends AbstractContainerScreen<ChestMenu> {
-	private final static HashMap<String, Object> guistate = ChestMenu.guistate;
+public class ChestScreen extends AbstractContainerScreen<ChestMenu> implements ZeldaCraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public ChestScreen(ChestMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -32,11 +32,17 @@ public class ChestScreen extends AbstractContainerScreen<ChestMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public boolean isPauseScreen() {
 		return true;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("zelda_craft:textures/screens/chest.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("zelda_craft:textures/screens/chest.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -46,7 +52,7 @@ public class ChestScreen extends AbstractContainerScreen<ChestMenu> {
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();

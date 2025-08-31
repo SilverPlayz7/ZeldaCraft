@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -52,6 +51,10 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.HOOK_SHOT.get());
 				tabData.accept(ZeldaCraftModItems.LONG_SHOT.get());
 				tabData.accept(ZeldaCraftModItems.CHAIN_SPOOL.get());
+				tabData.accept(ZeldaCraftModItems.WARP_FLUTE.get());
+				tabData.accept(ZeldaCraftModItems.FAIRY_OCARINA.get());
+				tabData.accept(ZeldaCraftModItems.OCCARINA_OF_TIME.get());
+				tabData.accept(ZeldaCraftModItems.SPIRIT_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.MAGIC_MIRROR.get());
 				tabData.accept(ZeldaCraftModItems.LENS_OF_TRUTH.get());
 				tabData.accept(ZeldaCraftModItems.ROC_FEATHER.get());
@@ -115,6 +118,7 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.SILVER_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.GOLD_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.SMALL_KEY.get());
+				tabData.accept(ZeldaCraftModBlocks.OWL_STATUE.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.SHEIKAH_LINK.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.FLOOR_SWITCH.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.WEIGHTED_FLOOR_SWITCH.get().asItem());
@@ -150,10 +154,6 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.MIDNAS_LAMENT.get());
 				tabData.accept(ZeldaCraftModItems.MAIN_THEME.get());
 				tabData.accept(ZeldaCraftModItems.CLOCK_TOWN.get());
-				tabData.accept(ZeldaCraftModItems.WARP_FLUTE.get());
-				tabData.accept(ZeldaCraftModItems.FAIRY_OCARINA.get());
-				tabData.accept(ZeldaCraftModItems.OCCARINA_OF_TIME.get());
-				tabData.accept(ZeldaCraftModItems.SPIRIT_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.EMPTY_BOTTLE.get());
 				tabData.accept(ZeldaCraftModItems.RED_POTION.get());
 				tabData.accept(ZeldaCraftModItems.FAIRY_BOTTLE.get());

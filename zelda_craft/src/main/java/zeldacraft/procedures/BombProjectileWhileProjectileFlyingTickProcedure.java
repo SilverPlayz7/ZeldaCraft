@@ -39,9 +39,9 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 		if (entity.isInWaterRainOrBubble()) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
 			if (!entity.level().isClientSide())
@@ -51,9 +51,9 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 			if (entity.getPersistentData().getDouble("SoundClock") == 0) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
 			}
@@ -61,9 +61,9 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 		} else {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
 			entity.getPersistentData().putDouble("SoundClock", 1);
@@ -106,9 +106,9 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 				if (found == true) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
 						}
 					}
 					if (world instanceof ServerLevel _level)

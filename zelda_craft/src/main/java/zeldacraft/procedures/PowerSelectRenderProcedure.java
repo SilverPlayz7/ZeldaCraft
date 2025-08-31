@@ -256,7 +256,7 @@ public class PowerSelectRenderProcedure {
 		if (entity == null)
 			return;
 		if (((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState())
-				.is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+				.is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getBoolean("haslocation") == false) {
 				if ((world
 						.getBlockState(new BlockPos(

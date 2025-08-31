@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -32,8 +32,10 @@
       "fixedValue": [
         "This coin allows you roll the Anchient Capsule Machine's costume pool",
         "Drops:",
-        "   Armor of Time - 50%",
-        "   Armor of Twilight - 50%"
+        "   Armor of Time - 25%",
+        "   Armor of Twilight - 25%",
+        "   Armor of the Winds - 25%",
+        "   Salvager's Armor - 25%"
       ]
     },
     "glowCondition": {
@@ -58,7 +60,12 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": []
   }
 }

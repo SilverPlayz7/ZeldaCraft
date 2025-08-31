@@ -2876,41 +2876,6 @@
       "path": "~/GUI/Ocarina/NoteShowConditions/ShowL"
     },
     {
-      "name": "OcarinaOfTimeSongCheck",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ocarina_of_time_song_check",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/OcarinaOfTimeSongCheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Ocarina"
-    },
-    {
       "name": "OcarinaBlankThisGUIIsClosed",
       "type": "procedure",
       "compiles": true,
@@ -2958,6 +2923,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2989,10 +2958,14 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
     },
     {
       "name": "Warp1Clear",
@@ -3008,6 +2981,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3055,6 +3032,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3813,82 +3794,6 @@
       "path": "~/Achievements"
     },
     {
-      "name": "Warp2Teleport",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_2_teleport",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/Warp2TeleportProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/SongOfSoaring/Teleports"
-    },
-    {
-      "name": "Warp3Teleport",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_3_teleport",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/Warp3TeleportProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/SongOfSoaring/Teleports"
-    },
-    {
-      "name": "Warp4Teleport",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_4_teleport",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/Warp4TeleportProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/SongOfSoaring/Teleports"
-    },
-    {
-      "name": "Warp5Teleport",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_5_teleport",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/Warp5TeleportProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/SongOfSoaring/Teleports"
-    },
-    {
       "name": "Warp2Clear",
       "type": "procedure",
       "compiles": true,
@@ -3902,6 +3807,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3921,6 +3830,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3940,6 +3853,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3959,6 +3876,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3979,6 +3900,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3999,6 +3924,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4019,6 +3948,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4039,6 +3972,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4635,38 +4572,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "Storms",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storms",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/StormsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Ocarina/SongFunctions"
+      "path": "~/Procedures/RupeeStuff"
     },
     {
       "name": "HappyMaskSalesman",
@@ -5593,7 +5499,7 @@
           }
         ]
       },
-      "path": "~/Achievements/AdvancementProcedures"
+      "path": "~/Achievements/AdvancementProcedures/Blast"
     },
     {
       "name": "BlastMaskContractTooltip",
@@ -5716,7 +5622,7 @@
           }
         ]
       },
-      "path": "~/Achievements/AdvancementProcedures"
+      "path": "~/Achievements/AdvancementProcedures/Blast"
     },
     {
       "name": "BlastMask3",
@@ -5752,7 +5658,7 @@
           }
         ]
       },
-      "path": "~/Achievements/AdvancementProcedures"
+      "path": "~/Achievements/AdvancementProcedures/Blast"
     },
     {
       "name": "LensOfTruthOnPlayerStoppedUsing",
@@ -6508,37 +6414,6 @@
           "src/main/resources/data/zelda_craft/loot_tables/blocks/climbable_hidden_illusion_block.json"
         ]
       }
-    },
-    {
-      "name": "SunSong",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sun_song",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/SunSongProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Ocarina/SongFunctions"
     },
     {
       "name": "LonLonMilk",
@@ -7969,10 +7844,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -8102,37 +7973,6 @@
           "src/main/resources/assets/zelda_craft/models/block/lullaby_switch.json"
         ]
       }
-    },
-    {
-      "name": "ZeldasLullaby",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zeldas_lullaby",
-      "metadata": {
-        "files": [
-          "src/main/java/zeldacraft/procedures/ZeldasLullabyProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Ocarina/SongFunctions"
     },
     {
       "name": "LullabySwitchOnTickUpdate",
@@ -8401,7 +8241,7 @@
         ],
         "dependencies": [
           {
-            "name": "sourceentity",
+            "name": "entity",
             "type": "entity"
           },
           {
@@ -8662,6 +8502,7 @@
       "metadata": {
         "files": [
           "src/main/java/zeldacraft/block/OwlStatueBlock.java",
+          "src/main/java/zeldacraft/block/entity/OwlStatueBlockEntity.java",
           "src/main/resources/data/zelda_craft/loot_tables/blocks/owl_statue.json",
           "src/main/resources/assets/zelda_craft/blockstates/owl_statue.json",
           "src/main/resources/assets/zelda_craft/models/block/owl_statue.json",
@@ -8789,27 +8630,521 @@
         ]
       },
       "path": "~/GUI/HappyMaskSalesman"
+    },
+    {
+      "name": "OcarinaOfTimeSongCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocarina_of_time_song_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/OcarinaOfTimeSongCheckProcedure.java"
+        ]
+      },
+      "path": "~/GUI/Ocarina"
+    },
+    {
+      "name": "BuyButtonShow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_button_show",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/BuyButtonShowProcedure.java"
+        ]
+      },
+      "path": "~/GUI/HappyMaskSalesman"
+    },
+    {
+      "name": "Storms",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "storms",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/StormsProcedure.java"
+        ]
+      },
+      "path": "~/GUI/Ocarina/SongFunctions"
+    },
+    {
+      "name": "SunsSong",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "suns_song",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/SunsSongProcedure.java"
+        ]
+      },
+      "path": "~/GUI/Ocarina/SongFunctions"
+    },
+    {
+      "name": "ZeldasLullaby",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "zeldas_lullaby",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/ZeldasLullabyProcedure.java"
+        ]
+      },
+      "path": "~/GUI/Ocarina/SongFunctions"
+    },
+    {
+      "name": "StatueNameSet",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "statue_name_set",
+      "metadata": {
+        "files": [
+          "src/main/java/zeldacraft/network/StatueNameSetButtonMessage.java",
+          "src/main/java/zeldacraft/world/inventory/StatueNameSetMenu.java",
+          "src/main/java/zeldacraft/client/gui/StatueNameSetScreen.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
+    },
+    {
+      "name": "OwlStatueBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owl_statue_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/OwlStatueBlockAddedProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
+    },
+    {
+      "name": "OwlstatueCancel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlstatue_cancel",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/OwlstatueCancelProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
+    },
+    {
+      "name": "OwlstatueConfirm",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlstatue_confirm",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/OwlstatueConfirmProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
+    },
+    {
+      "name": "Name1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Name1Procedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Names"
+    },
+    {
+      "name": "BunnyHood0",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bunny_hood_0",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/zelda_craft/advancements/bunny_hood_0.json"
+        ]
+      },
+      "path": "~/Achievements/MaskContracts/Bunny"
+    },
+    {
+      "name": "Name2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Name2Procedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Names"
+    },
+    {
+      "name": "Name3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Name3Procedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Names"
+    },
+    {
+      "name": "Name4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Name4Procedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Names"
+    },
+    {
+      "name": "Name5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/zeldacraft/procedures/Name5Procedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Names"
+    },
+    {
+      "name": "OwlStatueBreakClear",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owl_statue_break_clear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/OwlStatueBreakClearProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/OwlStatue"
+    },
+    {
+      "name": "Warp2Teleport",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_2_teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp2TeleportProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Teleports"
+    },
+    {
+      "name": "Warp3Teleport",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_3_teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp3TeleportProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Teleports"
+    },
+    {
+      "name": "Warp4Teleport",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_4_teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp4TeleportProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Teleports"
+    },
+    {
+      "name": "Warp5Teleport",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warp_5_teleport",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/zeldacraft/procedures/Warp5TeleportProcedure.java"
+        ]
+      },
+      "path": "~/GUI/SongOfSoaring/Teleports"
     }
   ],
   "variable_elements": [
-    {
-      "name": "Warp1X",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Warp1Y",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Warp1Z",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
     {
       "name": "HasWarp1",
       "type": "logic",
@@ -8986,6 +9321,12 @@
     },
     {
       "name": "UsingLens",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "pageNum",
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
@@ -9402,13 +9743,13 @@
     }
   ],
   "tag_elements": {
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:FalseIllusionBlock"
-    ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:TimeshiftOre",
       "~CUSTOM:MountainRok",
       "~CUSTOM:MoltenOre"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:FalseIllusionBlock"
     ],
     "DAMAGE_TYPES:minecraft:is_explosion": [
       "CUSTOM:BombMask"
@@ -9493,10 +9834,6 @@
       "CUSTOM:HookshotTarget"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:RustyFloorSwitch",
-      "~CUSTOM:WeightedFloorSwitch",
-      "~CUSTOM:TimedFloorSwitch",
-      "~CUSTOM:FloorSwitch",
       "~CUSTOM:PhantomHourglass",
       "~CUSTOM:FalseIllusionBlock",
       "~CUSTOM:HookshotTarget",
@@ -9600,6 +9937,10 @@
       "HookShot",
       "LongShot",
       "ChainSpool",
+      "WarpFlute",
+      "FairyOcarina",
+      "OccarinaOfTime",
+      "SpriritFlute",
       "MagicMirror",
       "LensOfTruth",
       "RocFeather",
@@ -9640,6 +9981,7 @@
       "SilverRupee",
       "GoldRupee",
       "SmallKey",
+      "OwlStatue",
       "SheikahLink",
       "FloorSwitch",
       "WeightedFloorSwitch",
@@ -9675,10 +10017,6 @@
       "MidnasLament",
       "MainTheme",
       "ClockTown",
-      "WarpFlute",
-      "FairyOcarina",
-      "OccarinaOfTime",
-      "SpriritFlute",
       "EmptyBottle",
       "RedPotion",
       "FairyBottle",
@@ -9777,13 +10115,15 @@
       "advancements.do_not_tell_the_treasure_box_lady.descr": "Meet the Happy Mask Salesman",
       "item.zelda_craft.goron_coin": "Goron Coin",
       "gui.zelda_craft.wallet_deposit.label_ruppes": "Rupees:",
-      "item.zelda_craft.costume_coin.description_3": "   Armor of Twilight - 50%",
+      "item.zelda_craft.costume_coin.description_5": "   Salvager\u0027s Armor - 25%",
+      "item.zelda_craft.costume_coin.description_4": "   Armor of the Winds - 25%",
+      "item.zelda_craft.costume_coin.description_3": "   Armor of Twilight - 25%",
       "advancements.the_blade_of_evils_bane.title": "The Blade Of Evil\u0027s Bane",
-      "item.zelda_craft.costume_coin.description_2": "   Armor of Time - 50%",
+      "item.zelda_craft.costume_coin.description_2": "   Armor of Time - 25%",
       "item.zelda_craft.costume_coin.description_1": "Drops:",
       "item.zelda_craft.costume_coin.description_0": "This coin allows you roll the Anchient Capsule Machine\u0027s costume pool",
       "subtitles.fairyidle": "Fairy floating",
-      "gui.zelda_craft.statue_menu.tooltip_delete": "Delete?",
+      "gui.zelda_craft.statue_menu.tooltip_delete": "Hold SHIFT to delete",
       "item.zelda_craft.fairy_item.description_0": "Here\u0027s a little trophy for your cheating.",
       "advancements.gotta_go_fast.title": "Gotta Go Fast!",
       "item.zelda_craft.gold_time_armor_chestplate": "Tunic of Time (Gold)",
@@ -10044,10 +10384,10 @@
       "item.zelda_craft.hylian_shield": "Hylian Shield",
       "subtitles.inverted_song_of_time": "Playing the Inverted Song of Time",
       "subtitles.gerudo_valley": "",
-      "gui.zelda_craft.statue_menu.tooltip_delete3": "Delete?",
-      "gui.zelda_craft.statue_menu.tooltip_delete4": "Delete",
-      "gui.zelda_craft.statue_menu.tooltip_delete1": "Delete?",
-      "gui.zelda_craft.statue_menu.tooltip_delete2": "Delete?",
+      "gui.zelda_craft.statue_menu.tooltip_delete3": "Hold SHIFT to delete",
+      "gui.zelda_craft.statue_menu.tooltip_delete4": "Hold SHIFT to delete",
+      "gui.zelda_craft.statue_menu.tooltip_delete1": "Hold SHIFT to delete",
+      "gui.zelda_craft.statue_menu.tooltip_delete2": "Hold SHIFT to delete",
       "item.zelda_craft.time_armor_bundle": "Time Armor Bundle",
       "block.zelda_craft.rusty_floor_switch": "Weighted Floor Switch",
       "subtitles.sariassong": "",
@@ -10098,8 +10438,56 @@
       "item.zelda_craft.song_of_storms": "Music Disc",
       "advancements.zelda_craft_advancement_page.title": "Zelda Craft",
       "item.zelda_craft.un_powered_master_sword": "Master Sword",
-      "subtitles.ballad_of_the_goddess": ""
+      "subtitles.ballad_of_the_goddess": "",
+      "gui.zelda_craft.mask_shop.button_empty": "",
+      "gui.zelda_craft.statue_name_set.label_close_to_confirm": "Close to confirm.",
+      "gui.zelda_craft.statue_name_set.label_set_timer_to_turn_off_in_ticks": "Set the name of the Owl Statue",
+      "gui.zelda_craft.statue_name_set.timer_length": "0",
+      "gui.zelda_craft.statue_name_set.button_confirm": "Confirm",
+      "gui.zelda_craft.statue_name_set.button_cancel": "Cancel",
+      "gui.zelda_craft.statue_name_set.name": "",
+      "advancements.bunny_hood_0.descr": "Started the Bunny Hood contract",
+      "advancements.bunny_hood_0.title": "Contract Signed"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/zeldacraft/init/ZeldaCraftModTabs.java",
+      "src/main/java/zeldacraft/ZeldaCraftMod.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModSounds.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/zeldacraft/init/ZeldaCraftModModels.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/java/zeldacraft/network/ZeldaCraftModVariables.java",
+      "src/main/resources/assets/zelda_craft/sounds.json",
+      "src/main/java/zeldacraft/init/ArmorAnimationFactory.java",
+      "src/main/java/zeldacraft/block/listener/ClientListener.java",
+      "src/main/java/zeldacraft/init/EntityAnimationFactory.java",
+      "src/main/java/zeldacraft/init/ItemAnimationFactory.java",
+      "src/main/java/zeldacraft/utils/AnimUtils.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModConfigs.java",
+      "src/main/resources/data/curios/tags/items/back.json",
+      "src/main/java/zeldacraft/init/ZeldaCraftModCuriosProperties.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModLayerDefinitions.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModCuriosSlots.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModCuriosRenderers.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModCustomCuriosSlots.java",
+      "src/main/java/zeldacraft/world/features/StructureFeature.java",
+      "src/main/java/zeldacraft/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModMenus.java",
+      "src/main/java/zeldacraft/network/MenuStateUpdateMessage.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModScreens.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModGameRules.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModKeyMappings.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModMobEffects.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModTrades.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModBlocks.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModBlockEntities.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModItems.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModEntityRenderers.java",
+      "src/main/java/zeldacraft/init/ZeldaCraftModEntities.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -10266,6 +10654,14 @@
               {
                 "name": "Clears",
                 "children": []
+              },
+              {
+                "name": "Names",
+                "children": []
+              },
+              {
+                "name": "OwlStatue",
+                "children": []
               }
             ]
           },
@@ -10293,7 +10689,16 @@
         "children": [
           {
             "name": "AdvancementProcedures",
-            "children": []
+            "children": [
+              {
+                "name": "Blast",
+                "children": []
+              },
+              {
+                "name": "Bunny",
+                "children": []
+              }
+            ]
           },
           {
             "name": "MaskContracts",
@@ -10359,5 +10764,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "zeldacraft"
   },
-  "mcreatorVersion": 202400452410
+  "mcreatorVersion": 202500228610
 }

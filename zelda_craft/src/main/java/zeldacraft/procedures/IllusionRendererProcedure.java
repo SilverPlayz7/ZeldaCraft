@@ -269,7 +269,7 @@ public class IllusionRendererProcedure {
 							if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.ILLUSION_BLOCK.get()) {
 								if ((blockstateiterator.getBlock().getStateDefinition().getProperty("lens") instanceof BooleanProperty _getbp3 && blockstateiterator.getValue(_getbp3)) == false
 										&& (blockstateiterator.getBlock().getStateDefinition().getProperty("has_illusion") instanceof BooleanProperty _getbp5 && blockstateiterator.getValue(_getbp5)) == true) {
-									renderBlock(ForgeRegistries.BLOCKS.getValue(new ResourceLocation(((new Object() {
+									renderBlock(ForgeRegistries.BLOCKS.getValue(ResourceLocation.parse(((new Object() {
 										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 											BlockEntity blockEntity = world.getBlockEntity(pos);
 											if (blockEntity != null)

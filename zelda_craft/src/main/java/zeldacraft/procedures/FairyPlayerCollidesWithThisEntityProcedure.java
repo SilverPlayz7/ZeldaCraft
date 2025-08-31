@@ -27,9 +27,9 @@ public class FairyPlayerCollidesWithThisEntityProcedure {
 					_entity.setHealth(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:fairy_heal")), SoundSource.AMBIENT, (float) 0.8, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:fairy_heal")), SoundSource.AMBIENT, (float) 0.8, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:fairy_heal")), SoundSource.AMBIENT, (float) 0.8, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:fairy_heal")), SoundSource.AMBIENT, (float) 0.8, 1, false);
 					}
 				}
 				if (!entity.level().isClientSide())

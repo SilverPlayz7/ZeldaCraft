@@ -1,9 +1,10 @@
-
 package zeldacraft.item;
 
 import zeldacraft.client.model.ModelGaro_Mask;
 
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
@@ -38,7 +39,7 @@ public abstract class GaroMaskItem extends ArmorItem {
 
 			@Override
 			public int getEnchantmentValue() {
-				return 0;
+				return 1;
 			}
 
 			@Override
@@ -77,6 +78,7 @@ public abstract class GaroMaskItem extends ArmorItem {
 		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
 			consumer.accept(new IClientItemExtensions() {
 				@Override
+				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
 							Map.of("head", new ModelGaro_Mask(Minecraft.getInstance().getEntityModels().bakeLayer(ModelGaro_Mask.LAYER_LOCATION)).Mask, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",

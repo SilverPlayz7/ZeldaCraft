@@ -48,9 +48,9 @@ public class FairyBottleItemInInventoryTickProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(ZeldaCraftModItems.FAIRY_ITEM.get()));
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:fairy_heal")), SoundSource.NEUTRAL, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:fairy_heal")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:fairy_heal")), SoundSource.NEUTRAL, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:fairy_heal")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
 			if (entity instanceof LivingEntity _entity)

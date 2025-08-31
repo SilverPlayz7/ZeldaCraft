@@ -26,7 +26,7 @@ public class HookShotProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("zelda_craft:hookshot_target")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("zelda_craft:hookshot_target")))) {
 			{
 				double _setval = immediatesourceentity.getX() - entity.getX();
 				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -57,9 +57,9 @@ public class HookShotProjectileHitsBlockProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_hit")), SoundSource.PLAYERS, (float) 1.2, 1);
+					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_hit")), SoundSource.PLAYERS, (float) 1.2, 1);
 				} else {
-					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_hit")), SoundSource.PLAYERS, (float) 1.2, 1, false);
+					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_hit")), SoundSource.PLAYERS, (float) 1.2, 1, false);
 				}
 			}
 		} else {
@@ -74,10 +74,10 @@ public class HookShotProjectileHitsBlockProcedure {
 				immediatesourceentity.discard();
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_miss")), SoundSource.PLAYERS, (float) 1.2,
+					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_miss")), SoundSource.PLAYERS, (float) 1.2,
 							(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 				} else {
-					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:hookshot_miss")), SoundSource.PLAYERS, (float) 1.2,
+					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_miss")), SoundSource.PLAYERS, (float) 1.2,
 							(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 				}
 			}

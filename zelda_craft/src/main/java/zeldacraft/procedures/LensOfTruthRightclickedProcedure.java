@@ -32,9 +32,9 @@ public class LensOfTruthRightclickedProcedure {
 			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).UsingLens == 0.75) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:lense_of_truth_on")), SoundSource.PLAYERS, (float) 0.8, 1, false);
 					}
 				}
 				{

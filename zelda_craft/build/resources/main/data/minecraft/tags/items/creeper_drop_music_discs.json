@@ -1,24 +1,24 @@
 {
   "replace": false,
   "values": [
+    "minecraft:music_disc_stal",
     "zelda_craft:song_of_storms",
-    "zelda_craft:sarias_song",
-    "zelda_craft:gurudo_vally",
+    "minecraft:music_disc_strad",
+    "minecraft:music_disc_11",
     "zelda_craft:ballad_of_the_goddess",
+    "minecraft:music_disc_13",
+    "minecraft:music_disc_far",
+    "minecraft:music_disc_mellohi",
+    "minecraft:music_disc_cat",
     "zelda_craft:midnas_lament",
     "zelda_craft:main_theme",
-    "zelda_craft:clock_town",
-    "minecraft:music_disc_13",
-    "minecraft:music_disc_cat",
-    "minecraft:music_disc_blocks",
     "minecraft:music_disc_chirp",
-    "minecraft:music_disc_far",
-    "minecraft:music_disc_mall",
-    "minecraft:music_disc_mellohi",
-    "minecraft:music_disc_stal",
-    "minecraft:music_disc_strad",
     "minecraft:music_disc_ward",
-    "minecraft:music_disc_11",
-    "minecraft:music_disc_wait"
+    "zelda_craft:clock_town",
+    "zelda_craft:gurudo_vally",
+    "zelda_craft:sarias_song",
+    "minecraft:music_disc_wait",
+    "minecraft:music_disc_blocks",
+    "minecraft:music_disc_mall"
   ]
 }

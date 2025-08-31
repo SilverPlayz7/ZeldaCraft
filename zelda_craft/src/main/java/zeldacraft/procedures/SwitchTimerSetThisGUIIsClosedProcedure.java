@@ -1,5 +1,7 @@
 package zeldacraft.procedures;
 
+import zeldacraft.init.ZeldaCraftModMenus;
+
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,13 +12,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 public class SwitchTimerSetThisGUIIsClosedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
@@ -31,7 +30,7 @@ public class SwitchTimerSetThisGUIIsClosedProcedure {
 						}
 						return 0;
 					}
-				}.convert(guistate.containsKey("text:timer_length") ? ((EditBox) guistate.get("text:timer_length")).getValue() : "") * 20));
+				}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "timer_length", "") : "") * 20));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

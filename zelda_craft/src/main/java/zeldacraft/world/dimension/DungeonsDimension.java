@@ -1,4 +1,3 @@
-
 package zeldacraft.world.dimension;
 
 import zeldacraft.procedures.DungeonsPlayerLeavesDimensionProcedure;
@@ -37,7 +36,7 @@ public class DungeonsDimension {
 					return false;
 				}
 			};
-			event.register(new ResourceLocation("zelda_craft:dungeons"), customEffect);
+			event.register(ResourceLocation.parse("zelda_craft:dungeons"), customEffect);
 		}
 	}
 
@@ -48,10 +47,10 @@ public class DungeonsDimension {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		if (event.getFrom() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("zelda_craft:dungeons"))) {
+		if (event.getFrom() == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("zelda_craft:dungeons"))) {
 			DungeonsPlayerLeavesDimensionProcedure.execute(entity);
 		}
-		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("zelda_craft:dungeons"))) {
+		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("zelda_craft:dungeons"))) {
 			DungeonsPlayerEntersDimensionProcedure.execute(world, x, y, z, entity);
 		}
 	}

@@ -1,19 +1,20 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Stunned",
-    "icon": "stunned.png",
+    "icon": "stunned",
     "color": {
       "value": -1,
       "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
     },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
     "isCuredbyHoney": false,
     "modifiers": [],
     "onActiveTick": {

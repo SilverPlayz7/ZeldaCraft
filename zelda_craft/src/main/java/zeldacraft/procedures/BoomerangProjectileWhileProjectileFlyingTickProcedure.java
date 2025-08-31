@@ -56,9 +56,9 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 			if (immediatesourceentity.getPersistentData().getDouble("SoundClock") == 0) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 					}
 				}
 			}
@@ -66,9 +66,9 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 		} else {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 				}
 			}
 			immediatesourceentity.getPersistentData().putDouble("SoundClock", 1);
@@ -85,7 +85,7 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 						}.compareDistOf((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
 								(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())))
 						.findFirst().orElse(null))
-						.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:boomerang_damage")))), 5);
+						.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:boomerang_damage")))), 5);
 				if (((Entity) world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
 						(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())), 1.5, 1.5, 1.5), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -105,14 +105,14 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 			}
 			if (!((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ()))).getBlock() == Blocks.AIR)) {
 				if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_breakable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_breakable")))) {
 					{
 						BlockPos _pos = BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ());
 						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ()), null);
 						world.destroyBlock(_pos, false);
 					}
 				} else if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_interactable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_interactable")))) {
 					if (entity instanceof Player _player) {
 						BlockPos _bp = BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ());
 						_player.level().getBlockState(_bp).use(_player.level(), _player, InteractionHand.MAIN_HAND, BlockHitResult.miss(new Vec3(_bp.getX(), _bp.getY(), _bp.getZ()), Direction.UP, _bp));
@@ -124,14 +124,14 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 			}
 			if (!((world.getBlockState(BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY(), immediatesourceentity.getZ()))).getBlock() == Blocks.AIR)) {
 				if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY(), immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_breakable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_breakable")))) {
 					{
 						BlockPos _pos = BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY(), immediatesourceentity.getZ());
 						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY(), immediatesourceentity.getZ()), null);
 						world.destroyBlock(_pos, false);
 					}
 				} else if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_interactable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_interactable")))) {
 					if (entity instanceof Player _player) {
 						BlockPos _bp = BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ());
 						_player.level().getBlockState(_bp).use(_player.level(), _player, InteractionHand.MAIN_HAND, BlockHitResult.miss(new Vec3(_bp.getX(), _bp.getY(), _bp.getZ()), Direction.UP, _bp));
@@ -143,14 +143,14 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 			}
 			if (!((world.getBlockState(BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ()))).getBlock() == Blocks.AIR)) {
 				if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_breakable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_breakable")))) {
 					{
 						BlockPos _pos = BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ());
 						Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ()), null);
 						world.destroyBlock(_pos, false);
 					}
 				} else if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ())))
-						.is(BlockTags.create(new ResourceLocation("zelda_craft:boomerang_interactable")))) {
+						.is(BlockTags.create(ResourceLocation.parse("zelda_craft:boomerang_interactable")))) {
 					if (entity instanceof Player _player) {
 						BlockPos _bp = BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ());
 						_player.level().getBlockState(_bp).use(_player.level(), _player, InteractionHand.MAIN_HAND, BlockHitResult.miss(new Vec3(_bp.getX(), _bp.getY(), _bp.getZ()), Direction.UP, _bp));
@@ -160,8 +160,8 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 					immediatesourceentity.setDeltaMovement(new Vec3((immediatesourceentity.getDeltaMovement().x()), (immediatesourceentity.getDeltaMovement().y()), (immediatesourceentity.getDeltaMovement().z() * (-1))));
 					{
 						Entity _ent = immediatesourceentity;
-						_ent.setYRot((float) (immediatesourceentity.getYRot() + 180));
-						_ent.setXRot((float) (immediatesourceentity.getXRot() * (-1)));
+						_ent.setYRot(immediatesourceentity.getYRot() + 180);
+						_ent.setXRot(immediatesourceentity.getXRot() * (-1));
 						_ent.setYBodyRot(_ent.getYRot());
 						_ent.setYHeadRot(_ent.getYRot());
 						_ent.yRotO = _ent.getYRot();

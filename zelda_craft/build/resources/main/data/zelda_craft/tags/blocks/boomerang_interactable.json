@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:buttons",
+    {
+      "id": "#minecraft:buttons",
+      "required": false
+    },
     "minecraft:lever"
   ]
 }

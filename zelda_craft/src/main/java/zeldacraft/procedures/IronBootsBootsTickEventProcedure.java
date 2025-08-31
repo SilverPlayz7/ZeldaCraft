@@ -23,7 +23,7 @@ public class IronBootsBootsTickEventProcedure {
 			entity.setSprinting(false);
 			entity.setDeltaMovement(new Vec3(0, (-1), 0));
 			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:shouldnt_have_skipped_leg_day"));
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:shouldnt_have_skipped_leg_day"));
 				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {
 					for (String criteria : _ap.getRemainingCriteria())

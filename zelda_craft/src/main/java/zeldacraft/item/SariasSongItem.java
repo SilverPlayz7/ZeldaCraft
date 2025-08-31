@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -10,6 +9,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class SariasSongItem extends RecordItem {
 	public SariasSongItem() {
-		super(15, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:sarias_song")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 1400);
+		super(15, () -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:sarias_song")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 1400);
 	}
 }

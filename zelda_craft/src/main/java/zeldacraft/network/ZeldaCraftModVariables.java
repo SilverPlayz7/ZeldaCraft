@@ -66,9 +66,6 @@ public class ZeldaCraftModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.Warp1X = original.Warp1X;
-			clone.Warp1Y = original.Warp1Y;
-			clone.Warp1Z = original.Warp1Z;
 			clone.HasWarp1 = original.HasWarp1;
 			clone.Warp2X = original.Warp2X;
 			clone.Warp2Y = original.Warp2Y;
@@ -100,6 +97,7 @@ public class ZeldaCraftModVariables {
 				clone.selectedmask = original.selectedmask;
 				clone.MaskPrice = original.MaskPrice;
 				clone.UsingLens = original.UsingLens;
+				clone.pageNum = original.pageNum;
 			}
 		}
 	}
@@ -112,7 +110,7 @@ public class ZeldaCraftModVariables {
 		@SubscribeEvent
 		public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
 			if (event.getObject() instanceof Player && !(event.getObject() instanceof FakePlayer))
-				event.addCapability(new ResourceLocation("zelda_craft", "player_variables"), new PlayerVariablesProvider());
+				event.addCapability(ResourceLocation.fromNamespaceAndPath("zelda_craft", "player_variables"), new PlayerVariablesProvider());
 		}
 
 		private final PlayerVariables playerVariables = new PlayerVariables();
@@ -135,9 +133,6 @@ public class ZeldaCraftModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double Warp1X = 0;
-		public double Warp1Y = 0;
-		public double Warp1Z = 0;
 		public boolean HasWarp1 = false;
 		public double Warp2X = 0;
 		public double Warp2Y = 0;
@@ -168,6 +163,7 @@ public class ZeldaCraftModVariables {
 		public double selectedmask = 0;
 		public double MaskPrice = 0;
 		public double UsingLens = 0;
+		public double pageNum = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -176,9 +172,6 @@ public class ZeldaCraftModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("Warp1X", Warp1X);
-			nbt.putDouble("Warp1Y", Warp1Y);
-			nbt.putDouble("Warp1Z", Warp1Z);
 			nbt.putBoolean("HasWarp1", HasWarp1);
 			nbt.putDouble("Warp2X", Warp2X);
 			nbt.putDouble("Warp2Y", Warp2Y);
@@ -209,14 +202,12 @@ public class ZeldaCraftModVariables {
 			nbt.putDouble("selectedmask", selectedmask);
 			nbt.putDouble("MaskPrice", MaskPrice);
 			nbt.putDouble("UsingLens", UsingLens);
+			nbt.putDouble("pageNum", pageNum);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
-			Warp1X = nbt.getDouble("Warp1X");
-			Warp1Y = nbt.getDouble("Warp1Y");
-			Warp1Z = nbt.getDouble("Warp1Z");
 			HasWarp1 = nbt.getBoolean("HasWarp1");
 			Warp2X = nbt.getDouble("Warp2X");
 			Warp2Y = nbt.getDouble("Warp2Y");
@@ -247,6 +238,7 @@ public class ZeldaCraftModVariables {
 			selectedmask = nbt.getDouble("selectedmask");
 			MaskPrice = nbt.getDouble("MaskPrice");
 			UsingLens = nbt.getDouble("UsingLens");
+			pageNum = nbt.getDouble("pageNum");
 		}
 	}
 
@@ -271,9 +263,6 @@ public class ZeldaCraftModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.Warp1X = message.data.Warp1X;
-					variables.Warp1Y = message.data.Warp1Y;
-					variables.Warp1Z = message.data.Warp1Z;
 					variables.HasWarp1 = message.data.HasWarp1;
 					variables.Warp2X = message.data.Warp2X;
 					variables.Warp2Y = message.data.Warp2Y;
@@ -304,6 +293,7 @@ public class ZeldaCraftModVariables {
 					variables.selectedmask = message.data.selectedmask;
 					variables.MaskPrice = message.data.MaskPrice;
 					variables.UsingLens = message.data.UsingLens;
+					variables.pageNum = message.data.pageNum;
 				}
 			});
 			context.setPacketHandled(true);

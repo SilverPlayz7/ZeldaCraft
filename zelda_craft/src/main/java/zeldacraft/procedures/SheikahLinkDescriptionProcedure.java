@@ -72,7 +72,7 @@ public class SheikahLinkDescriptionProcedure {
 				tooltip.add(Component.literal("\u00A71Play Zelda's Lullaby to activate/deactivate it"));
 			}
 		}
-		if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("zelda_craft:switch")))) {
+		if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("zelda_craft:switch")))) {
 			tooltip.add(Component.literal("\u00A74Ctrl to see output"));
 			if (Screen.hasControlDown()) {
 				tooltip.add(Component.literal(((new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("OutputX")) + "X:") + ""

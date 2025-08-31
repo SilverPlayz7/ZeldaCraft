@@ -29,10 +29,10 @@ public class BombProjectileRightClickedOnEntityProcedure {
 		}
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.item.pickup")), SoundSource.PLAYERS, (float) 0.5,
+				_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("entity.item.pickup")), SoundSource.PLAYERS, (float) 0.5,
 						(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 			} else {
-				_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.item.pickup")), SoundSource.PLAYERS, (float) 0.5,
+				_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("entity.item.pickup")), SoundSource.PLAYERS, (float) 0.5,
 						(float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 			}
 		}

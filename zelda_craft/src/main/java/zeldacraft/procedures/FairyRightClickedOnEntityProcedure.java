@@ -24,9 +24,9 @@ public class FairyRightClickedOnEntityProcedure {
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.EMPTY_BOTTLE.get()) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("intentionally_empty")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("intentionally_empty")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 				}
 			}
 			if (!entity.level().isClientSide())

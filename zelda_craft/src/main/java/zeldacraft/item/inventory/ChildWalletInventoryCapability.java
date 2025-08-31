@@ -1,4 +1,3 @@
-
 package zeldacraft.item.inventory;
 
 import zeldacraft.init.ZeldaCraftModItems;

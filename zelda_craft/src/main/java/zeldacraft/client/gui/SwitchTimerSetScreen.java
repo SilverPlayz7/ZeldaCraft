@@ -2,6 +2,8 @@ package zeldacraft.client.gui;
 
 import zeldacraft.world.inventory.SwitchTimerSetMenu;
 
+import zeldacraft.init.ZeldaCraftModScreens;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,15 +14,13 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSetMenu> {
-	private final static HashMap<String, Object> guistate = SwitchTimerSetMenu.guistate;
+public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSetMenu> implements ZeldaCraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox timer_length;
 
 	public SwitchTimerSetScreen(SwitchTimerSetMenu container, Inventory inventory, Component text) {
@@ -34,7 +34,13 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 		this.imageHeight = 66;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("zelda_craft:textures/screens/switch_timer_set.png");
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	private static final ResourceLocation texture = ResourceLocation.parse("zelda_craft:textures/screens/switch_timer_set.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -45,7 +51,7 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -65,7 +71,7 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	}
 
 	@Override
-	public void containerTick() {
+	protected void containerTick() {
 		super.containerTick();
 		timer_length.tick();
 	}
@@ -86,28 +92,13 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	@Override
 	public void init() {
 		super.init();
-		timer_length = new EditBox(this.font, this.leftPos + 28, this.topPos + 35, 118, 18, Component.translatable("gui.zelda_craft.switch_timer_set.timer_length")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		timer_length.setSuggestion(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length").getString());
-		timer_length.setMaxLength(32767);
-		guistate.put("text:timer_length", timer_length);
+		timer_length = new EditBox(this.font, this.leftPos + 28, this.topPos + 35, 118, 18, Component.translatable("gui.zelda_craft.switch_timer_set.timer_length"));
+		timer_length.setHint(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length"));
+		timer_length.setMaxLength(8192);
+		timer_length.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "timer_length", content, false);
+		});
 		this.addWidget(this.timer_length);
 	}
 }

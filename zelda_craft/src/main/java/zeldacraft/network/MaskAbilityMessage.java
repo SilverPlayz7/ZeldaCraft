@@ -1,4 +1,3 @@
-
 package zeldacraft.network;
 
 import zeldacraft.procedures.MaskAbilityOnKeyPressedProcedure;

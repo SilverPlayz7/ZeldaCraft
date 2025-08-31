@@ -24,9 +24,9 @@ public class BombRangedItemUsedProcedure {
 		if (ZeldaCraftModItems.BOMB.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_thrown")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_thrown")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:bomb_thrown")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_thrown")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			if (entity instanceof Player _player) {

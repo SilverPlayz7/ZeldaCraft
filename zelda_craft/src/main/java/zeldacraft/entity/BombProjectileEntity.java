@@ -1,4 +1,3 @@
-
 package zeldacraft.entity;
 
 import zeldacraft.procedures.BombProjectileWhileProjectileFlyingTickProcedure;

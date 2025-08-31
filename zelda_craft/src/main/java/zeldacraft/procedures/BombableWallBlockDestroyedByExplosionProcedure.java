@@ -12,9 +12,9 @@ public class BombableWallBlockDestroyedByExplosionProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.NEUTRAL, (float) 0.8, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.NEUTRAL, (float) 0.8, 1);
 			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:secret_found")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 			}
 		}
 	}

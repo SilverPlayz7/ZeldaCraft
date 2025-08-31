@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.LullabySwitchOnTickUpdateProcedure;

@@ -33,10 +33,10 @@ public class WarpFlutePlayerFinishesUsingItemProcedure {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(itemstack.getOrCreateTag().getDouble("TPX"), itemstack.getOrCreateTag().getDouble("TPY"), itemstack.getOrCreateTag().getDouble("TPZ")),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.fall")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
+								ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.wool.fall")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2));
 					} else {
 						_level.playLocalSound((itemstack.getOrCreateTag().getDouble("TPX")), (itemstack.getOrCreateTag().getDouble("TPY")), (itemstack.getOrCreateTag().getDouble("TPZ")),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.fall")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
+								ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.wool.fall")), SoundSource.NEUTRAL, (float) 0.8, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 					}
 				}
 			} else {

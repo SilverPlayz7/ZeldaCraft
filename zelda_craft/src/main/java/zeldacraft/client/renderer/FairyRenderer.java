@@ -1,4 +1,3 @@
-
 package zeldacraft.client.renderer;
 
 import zeldacraft.entity.model.FairyModel;

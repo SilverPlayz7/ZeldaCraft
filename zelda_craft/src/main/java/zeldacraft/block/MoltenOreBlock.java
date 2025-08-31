@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class MoltenOreBlock extends Block {
 	public MoltenOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.NETHER_BRICKS).strength(50f, 25f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.NETHER_BRICKS).strength(50f, 25f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

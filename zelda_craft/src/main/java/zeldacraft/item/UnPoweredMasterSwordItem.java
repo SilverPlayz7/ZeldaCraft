@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import net.minecraft.world.level.Level;
@@ -32,7 +31,7 @@ public class UnPoweredMasterSwordItem extends SwordItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 0;
+				return 1;
 			}
 
 			public Ingredient getRepairIngredient() {

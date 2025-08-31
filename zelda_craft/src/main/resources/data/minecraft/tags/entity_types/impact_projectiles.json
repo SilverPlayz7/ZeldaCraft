@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "zelda_craft:bomb_arrow_projectile",
-    "zelda_craft:fire_arrow_projectile",
-    "zelda_craft:ice_arrow_projectile",
     "zelda_craft:light_arrow_projectile",
     "zelda_craft:shock_arrow_projectile",
-    "zelda_craft:silver_arrow_projectile"
+    "zelda_craft:fire_arrow_projectile",
+    "zelda_craft:bomb_arrow_projectile",
+    "zelda_craft:silver_arrow_projectile",
+    "zelda_craft:ice_arrow_projectile"
   ]
 }

@@ -1,0 +1,82 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 174,
+    "height": 75,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "name",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_set_timer_to_turn_off_in_ticks",
+          "text": {
+            "fixedValue": "Set the name of the Owl Statue"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_confirm",
+          "text": "Confirm",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OwlstatueConfirm"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 213,
+          "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cancel",
+          "text": "Cancel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OwlstatueCancel"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 154,
+          "y": 130,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

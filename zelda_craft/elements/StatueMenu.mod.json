@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -23,54 +23,6 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "Warp 1",
-          "name": "Warp1",
-          "width": 120,
-          "height": 20,
-          "x": 154,
-          "y": 53,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Warp 2",
-          "name": "Warp2",
-          "width": 120,
-          "height": 20,
-          "x": 154,
-          "y": 84,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Warp 3",
-          "name": "Warp3",
-          "width": 120,
-          "height": 20,
-          "x": 154,
-          "y": 114,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Warp 4",
-          "name": "Warp4",
-          "width": 120,
-          "height": 20,
-          "x": 155,
-          "y": 144,
-          "locked": false
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
           "placeholder": "Warp 5",
           "name": "Warp5",
           "width": 120,
@@ -85,7 +37,7 @@
         "data": {
           "name": "tooltip_delete",
           "text": {
-            "fixedValue": "Delete?"
+            "fixedValue": "Hold SHIFT to delete"
           },
           "displayCondition": {
             "name": "Warp1Show"
@@ -102,7 +54,7 @@
         "data": {
           "name": "tooltip_delete1",
           "text": {
-            "fixedValue": "Delete?"
+            "fixedValue": "Hold SHIFT to delete"
           },
           "displayCondition": {
             "name": "Warp2Show"
@@ -119,7 +71,7 @@
         "data": {
           "name": "tooltip_delete2",
           "text": {
-            "fixedValue": "Delete?"
+            "fixedValue": "Hold SHIFT to delete"
           },
           "displayCondition": {
             "name": "Warp3Show"
@@ -136,7 +88,7 @@
         "data": {
           "name": "tooltip_delete3",
           "text": {
-            "fixedValue": "Delete?"
+            "fixedValue": "Hold SHIFT to delete"
           },
           "displayCondition": {
             "name": "Warp4Show"
@@ -153,7 +105,7 @@
         "data": {
           "name": "tooltip_delete4",
           "text": {
-            "fixedValue": "Delete"
+            "fixedValue": "Hold SHIFT to delete"
           },
           "displayCondition": {
             "name": "Warp5Show"
@@ -332,6 +284,74 @@
           },
           "x": 280,
           "y": 171,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_1",
+          "text": {
+            "fixedValue": "",
+            "name": "Name1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 60,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_2",
+          "text": {
+            "fixedValue": "Name2",
+            "name": "Name2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_3",
+          "text": {
+            "fixedValue": "",
+            "name": "Name3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_4",
+          "text": {
+            "fixedValue": "",
+            "name": "Name4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 150,
           "locked": false
         }
       }

@@ -43,7 +43,8 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.0'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -51,4 +52,3 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 apply from: 'mcreator.gradle'
-

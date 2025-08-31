@@ -38,10 +38,10 @@ public class LonLonMilkPlayerFinishesUsingItemProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 10));
+				_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 10);
 		} else if (itemstack.getDamageValue() == 1) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 10));
+				_entity.setHealth((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 10);
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(ZeldaCraftModItems.EMPTY_BOTTLE.get()).copy();

@@ -30,12 +30,13 @@ public class HappyMaskSalesmanRightClickedOnEntityProcedure {
 		if (sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.BLAST_MASK_CONTRACT.get()) {
-			if (sourceentity instanceof ServerPlayer _plr2 && _plr2.level() instanceof ServerLevel && _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_1"))).isDone()
-					&& sourceentity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel
-					&& _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_2"))).isDone() && sourceentity instanceof ServerPlayer _plr4
-					&& _plr4.level() instanceof ServerLevel && _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_3"))).isDone()) {
+			if (sourceentity instanceof ServerPlayer _plr2 && _plr2.level() instanceof ServerLevel
+					&& _plr2.getAdvancements().getOrStartProgress(_plr2.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_1"))).isDone() && sourceentity instanceof ServerPlayer _plr3
+					&& _plr3.level() instanceof ServerLevel && _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_2"))).isDone()
+					&& sourceentity instanceof ServerPlayer _plr4 && _plr4.level() instanceof ServerLevel
+					&& _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_3"))).isDone()) {
 				if (sourceentity instanceof ServerPlayer _player) {
-					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_4"));
+					Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
 						for (String criteria : _ap.getRemainingCriteria())

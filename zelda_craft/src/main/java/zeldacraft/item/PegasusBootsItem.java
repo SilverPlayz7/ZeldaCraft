@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import zeldacraft.procedures.PegasusBootsBootsTickEventProcedure;
@@ -56,7 +55,7 @@ public abstract class PegasusBootsItem extends ArmorItem {
 
 			@Override
 			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_leather"));
+				return ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("item.armor.equip_leather"));
 			}
 
 			@Override

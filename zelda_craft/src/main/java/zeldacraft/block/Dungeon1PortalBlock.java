@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.Dungeon1PortalEntityCollidesInTheBlockProcedure;
@@ -18,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class Dungeon1PortalBlock extends Block {
 	public Dungeon1PortalBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(-1, 3600000).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(-1, 3600000).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

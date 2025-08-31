@@ -17,7 +17,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class MasterSwordBeamProjectileProjectileRenderer extends EntityRenderer<MasterSwordBeamProjectileProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("zelda_craft:textures/entities/swordbeam2.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("zelda_craft:textures/entities/swordbeam2.png");
 	private final ModelSwordBeam model;
 
 	public MasterSwordBeamProjectileProjectileRenderer(EntityRendererProvider.Context context) {

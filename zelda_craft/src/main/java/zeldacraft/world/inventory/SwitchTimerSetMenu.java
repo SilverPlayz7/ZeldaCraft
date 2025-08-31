@@ -1,4 +1,3 @@
-
 package zeldacraft.world.inventory;
 
 import zeldacraft.procedures.SwitchTimerSetThisGUIIsClosedProcedure;
@@ -23,9 +22,17 @@ import net.minecraft.core.BlockPos;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-public class SwitchTimerSetMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+public class SwitchTimerSetMenu extends AbstractContainerMenu implements ZeldaCraftModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 3)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -73,10 +80,16 @@ public class SwitchTimerSetMenu extends AbstractContainerMenu implements Supplie
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		SwitchTimerSetThisGUIIsClosedProcedure.execute(world, x, y, z, entity, guistate);
+		SwitchTimerSetThisGUIIsClosedProcedure.execute(world, x, y, z, entity);
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 }

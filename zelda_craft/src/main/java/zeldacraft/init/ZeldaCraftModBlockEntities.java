@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -10,6 +9,7 @@ import zeldacraft.block.entity.TimedFloorSwitchBlockEntity;
 import zeldacraft.block.entity.SwordStandBlockEntity;
 import zeldacraft.block.entity.SmallDungeonChestTileEntity;
 import zeldacraft.block.entity.RustyFloorSwitchBlockEntity;
+import zeldacraft.block.entity.OwlStatueBlockEntity;
 import zeldacraft.block.entity.OpenChestBlockEntity;
 import zeldacraft.block.entity.LullabySwitchBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
@@ -45,6 +45,7 @@ public class ZeldaCraftModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> WEIGHTED_FLOOR_SWITCH = register("weighted_floor_switch", ZeldaCraftModBlocks.WEIGHTED_FLOOR_SWITCH, WeightedFloorSwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> RUSTY_FLOOR_SWITCH = register("rusty_floor_switch", ZeldaCraftModBlocks.RUSTY_FLOOR_SWITCH, RustyFloorSwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> LULLABY_SWITCH = register("lullaby_switch", ZeldaCraftModBlocks.LULLABY_SWITCH, LullabySwitchBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> OWL_STATUE = register("owl_statue", ZeldaCraftModBlocks.OWL_STATUE, OwlStatueBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

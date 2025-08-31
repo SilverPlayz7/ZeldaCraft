@@ -1,7 +1,4 @@
-
 package zeldacraft.network;
-
-import zeldacraft.world.inventory.StatueMenuMenu;
 
 import zeldacraft.procedures.Warp5TeleportProcedure;
 import zeldacraft.procedures.Warp5ClearProcedure;
@@ -27,7 +24,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Supplier;
-import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class StatueMenuButtonMessage {
@@ -69,49 +65,48 @@ public class StatueMenuButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = StatueMenuMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			Warp1TeleportProcedure.execute(entity);
+			Warp1TeleportProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 
-			Warp2TeleportProcedure.execute(entity);
+			Warp2TeleportProcedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
 
-			Warp3TeleportProcedure.execute(entity);
+			Warp3TeleportProcedure.execute(world, entity);
 		}
 		if (buttonID == 3) {
 
-			Warp4TeleportProcedure.execute(entity);
+			Warp4TeleportProcedure.execute(world, entity);
 		}
 		if (buttonID == 4) {
 
-			Warp5TeleportProcedure.execute(entity);
+			Warp5TeleportProcedure.execute(world, entity);
 		}
 		if (buttonID == 5) {
 
-			Warp1ClearProcedure.execute(entity);
+			Warp1ClearProcedure.execute(world, entity);
 		}
 		if (buttonID == 6) {
 
-			Warp2ClearProcedure.execute(entity);
+			Warp2ClearProcedure.execute(world, entity);
 		}
 		if (buttonID == 7) {
 
-			Warp3ClearProcedure.execute(entity);
+			Warp3ClearProcedure.execute(world, entity);
 		}
 		if (buttonID == 8) {
 
-			Warp4ClearProcedure.execute(entity);
+			Warp4ClearProcedure.execute(world, entity);
 		}
 		if (buttonID == 9) {
 
-			Warp5ClearProcedure.execute(entity);
+			Warp5ClearProcedure.execute(world, entity);
 		}
 	}
 

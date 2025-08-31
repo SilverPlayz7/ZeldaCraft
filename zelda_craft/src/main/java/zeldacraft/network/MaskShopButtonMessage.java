@@ -1,7 +1,4 @@
-
 package zeldacraft.network;
-
-import zeldacraft.world.inventory.MaskShopMenu;
 
 import zeldacraft.procedures.GetContractButtonProcedure;
 import zeldacraft.procedures.BuyMaskButtonProcedure;
@@ -21,7 +18,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Supplier;
-import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MaskShopButtonMessage {
@@ -63,23 +59,22 @@ public class MaskShopButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = MaskShopMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 1) {
 
 			BunnyHoodButtonProcedure.execute(entity);
 		}
-		if (buttonID == 1) {
+		if (buttonID == 2) {
 
 			BlastMaskButtonProcedure.execute(entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 3) {
 
 			BuyMaskButtonProcedure.execute(world, entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 4) {
 
 			GetContractButtonProcedure.execute(entity);
 		}

@@ -38,11 +38,11 @@ public class ExplosiveKillsProcedure {
 		if (damagesource == null || sourceentity == null)
 			return;
 		if (!(sourceentity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel
-				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_3"))).isDone())) {
+				&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_3"))).isDone())) {
 			if (sourceentity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel
-					&& _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_0"))).isDone()) {
+					&& _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_0"))).isDone()) {
 				if (sourceentity instanceof Player) {
-					if (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("zelda_craft:bomb_mask"))) || damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION)) {
+					if (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask"))) || damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION)) {
 						{
 							double _setval = (sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).ExplosiveKills + 1;
 							sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -52,7 +52,7 @@ public class ExplosiveKillsProcedure {
 						}
 						if ((sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).ExplosiveKills == 25) {
 							if (sourceentity instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:blast_mask_3"));
+								Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_3"));
 								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 								if (!_ap.isDone()) {
 									for (String criteria : _ap.getRemainingCriteria())

@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import top.theillusivec4.curios.api.type.capability.ICurioItem;

@@ -1,4 +1,3 @@
-
 package zeldacraft.client.screens;
 
 import zeldacraft.procedures.RupeeCounterProcedure;
@@ -45,7 +44,7 @@ public class RupeeOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (RupeeCountOverlayDisplayOverlayIngameProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(new ResourceLocation("zelda_craft:textures/screens/rupee_icon.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
+			event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

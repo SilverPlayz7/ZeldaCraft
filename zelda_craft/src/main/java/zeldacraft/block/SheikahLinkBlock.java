@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.SheikahLinkEmittedRedstonePowerProcedure;
@@ -48,7 +47,7 @@ public class SheikahLinkBlock extends Block {
 					return 7;
 				return 0;
 			}
-		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		}.getLightLevel())).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

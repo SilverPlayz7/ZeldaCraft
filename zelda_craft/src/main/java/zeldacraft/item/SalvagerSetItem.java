@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import zeldacraft.client.renderer.SalvagerSetArmorRenderer;

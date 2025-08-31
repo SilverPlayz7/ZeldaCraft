@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
+    "zelda_craft:song_of_storms",
     "zelda_craft:clock_town",
-    "zelda_craft:main_theme",
-    "zelda_craft:midnas_lament",
-    "zelda_craft:ballad_of_the_goddess",
     "zelda_craft:gurudo_vally",
+    "zelda_craft:ballad_of_the_goddess",
     "zelda_craft:sarias_song",
-    "zelda_craft:song_of_storms"
+    "zelda_craft:midnas_lament",
+    "zelda_craft:main_theme"
   ]
 }

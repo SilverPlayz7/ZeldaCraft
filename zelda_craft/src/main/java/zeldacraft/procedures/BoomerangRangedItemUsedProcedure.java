@@ -54,9 +54,9 @@ public class BoomerangRangedItemUsedProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 				}
 			}
 		} else if (ZeldaCraftModItems.BOOMERANG.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()) {
@@ -88,9 +88,9 @@ public class BoomerangRangedItemUsedProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_throw")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 				}
 			}
 		}

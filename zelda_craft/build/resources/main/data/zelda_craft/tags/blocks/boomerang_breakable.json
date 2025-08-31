@@ -1,18 +1,24 @@
 {
   "replace": false,
   "values": [
-    "minecraft:sugar_cane",
-    "minecraft:grass",
-    "minecraft:fern",
-    "minecraft:dead_bush",
-    "minecraft:tall_grass",
-    "minecraft:kelp_plant",
-    "minecraft:weeping_vines",
-    "minecraft:twisting_vines",
     "minecraft:seagrass",
-    "minecraft:tall_seagrass",
+    "minecraft:fern",
+    "minecraft:weeping_vines",
     "minecraft:vine",
-    "#minecraft:small_flowers",
-    "#minecraft:tall_flowers"
+    "minecraft:twisting_vines",
+    {
+      "id": "#minecraft:small_flowers",
+      "required": false
+    },
+    "minecraft:grass",
+    "minecraft:dead_bush",
+    "minecraft:tall_seagrass",
+    {
+      "id": "#minecraft:tall_flowers",
+      "required": false
+    },
+    "minecraft:sugar_cane",
+    "minecraft:tall_grass",
+    "minecraft:kelp_plant"
   ]
 }

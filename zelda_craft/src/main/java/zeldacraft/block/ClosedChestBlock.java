@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.ClosedChestOnBlockRightClickedProcedure;
@@ -41,7 +40,7 @@ public class ClosedChestBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public ClosedChestBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2.5f, 12.25f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2.5f, 12.25f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -49,7 +48,7 @@ public class ClosedChestBlock extends Block implements EntityBlock {
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

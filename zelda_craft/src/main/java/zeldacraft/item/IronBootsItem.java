@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import zeldacraft.procedures.IronBootsBootsTickEventProcedure;
@@ -55,7 +54,7 @@ public abstract class IronBootsItem extends ArmorItem {
 
 			@Override
 			public SoundEvent getEquipSound() {
-				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.place"));
+				return ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.anvil.place"));
 			}
 
 			@Override

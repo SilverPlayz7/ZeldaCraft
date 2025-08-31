@@ -1,19 +1,16 @@
 package zeldacraft.procedures;
 
+import zeldacraft.init.ZeldaCraftModMenus;
 import zeldacraft.init.ZeldaCraftModItems;
 
 import top.theillusivec4.curios.api.CuriosApi;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.client.gui.screens.Screen;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 public class Withdraw5Procedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -28,35 +25,35 @@ public class Withdraw5Procedure {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") - dividen * 5 >= 0) {
 							if (new Object() {
 								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+									if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+										ItemStack stack = _menu.getSlots().get(sltid).getItem();
 										if (stack != null)
 											return stack.getCount();
 									}
 									return 0;
 								}
-							}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+							}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu11 ? _menu11.getSlots().get(0).getItem() : ItemStack.EMPTY)
 									.getItem() == ZeldaCraftModItems.BLUE_RUPEE.get()) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+								if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 									ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()).copy();
 									_setstack.setCount((int) (new Object() {
 										public int getAmount(int sltid) {
-											if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-												ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+											if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+												ItemStack stack = _menu.getSlots().get(sltid).getItem();
 												if (stack != null)
 													return stack.getCount();
 											}
 											return 0;
 										}
 									}.getAmount(0) + dividen));
-									((Slot) _slots.get(0)).set(_setstack);
+									_menu.getSlots().get(0).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
 								(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
 										((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") - new Object() {
 											public int getAmount(int sltid) {
-												if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-													ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+												if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+													ItemStack stack = _menu.getSlots().get(sltid).getItem();
 													if (stack != null)
 														return stack.getCount();
 												}
@@ -70,30 +67,30 @@ public class Withdraw5Procedure {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") >= 5) {
 						if (new Object() {
 							public int getAmount(int sltid) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+								if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+									ItemStack stack = _menu.getSlots().get(sltid).getItem();
 									if (stack != null)
 										return stack.getCount();
 								}
 								return 0;
 							}
-						}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+						}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get(0).getItem() : ItemStack.EMPTY)
 								.getItem() == ZeldaCraftModItems.BLUE_RUPEE.get()) {
 							(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
 									((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") - 5));
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+							if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 								ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()).copy();
-								_setstack.setCount((int) (new Object() {
+								_setstack.setCount(new Object() {
 									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+										if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+											ItemStack stack = _menu.getSlots().get(sltid).getItem();
 											if (stack != null)
 												return stack.getCount();
 										}
 										return 0;
 									}
-								}.getAmount(0) + 1));
-								((Slot) _slots.get(0)).set(_setstack);
+								}.getAmount(0) + 1);
+								_menu.getSlots().get(0).set(_setstack);
 								_player.containerMenu.broadcastChanges();
 							}
 						}
@@ -110,34 +107,34 @@ public class Withdraw5Procedure {
 							if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") >= entity.getPersistentData().getDouble("dividen")) {
 								if (new Object() {
 									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+										if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+											ItemStack stack = _menu.getSlots().get(sltid).getItem();
 											if (stack != null)
 												return stack.getCount();
 										}
 										return 0;
 									}
-								}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+								}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu41 ? _menu41.getSlots().get(0).getItem() : ItemStack.EMPTY)
 										.getItem() == ZeldaCraftModItems.BLUE_RUPEE.get()) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+									if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 										ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()).copy();
 										_setstack.setCount((int) (new Object() {
 											public int getAmount(int sltid) {
-												if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-													ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+												if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+													ItemStack stack = _menu.getSlots().get(sltid).getItem();
 													if (stack != null)
 														return stack.getCount();
 												}
 												return 0;
 											}
 										}.getAmount(0) + entity.getPersistentData().getDouble("dividen")));
-										((Slot) _slots.get(0)).set(_setstack);
+										_menu.getSlots().get(0).set(_setstack);
 										_player.containerMenu.broadcastChanges();
 									}
 									itemstackiterator.getOrCreateTag().putDouble("RupeeCount", (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") - new Object() {
 										public int getAmount(int sltid) {
-											if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-												ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+											if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+												ItemStack stack = _menu.getSlots().get(sltid).getItem();
 												if (stack != null)
 													return stack.getCount();
 											}
@@ -150,29 +147,29 @@ public class Withdraw5Procedure {
 							if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") >= 5) {
 								if (new Object() {
 									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+										if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+											ItemStack stack = _menu.getSlots().get(sltid).getItem();
 											if (stack != null)
 												return stack.getCount();
 										}
 										return 0;
 									}
-								}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+								}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu54 ? _menu54.getSlots().get(0).getItem() : ItemStack.EMPTY)
 										.getItem() == ZeldaCraftModItems.BLUE_RUPEE.get()) {
 									itemstackiterator.getOrCreateTag().putDouble("RupeeCount", (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") - 5));
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+									if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 										ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()).copy();
-										_setstack.setCount((int) (new Object() {
+										_setstack.setCount(new Object() {
 											public int getAmount(int sltid) {
-												if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-													ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+												if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+													ItemStack stack = _menu.getSlots().get(sltid).getItem();
 													if (stack != null)
 														return stack.getCount();
 												}
 												return 0;
 											}
-										}.getAmount(0) + 1));
-										((Slot) _slots.get(0)).set(_setstack);
+										}.getAmount(0) + 1);
+										_menu.getSlots().get(0).set(_setstack);
 										_player.containerMenu.broadcastChanges();
 									}
 								}

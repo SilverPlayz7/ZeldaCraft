@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -187,6 +187,9 @@
           "onClick": {
             "name": "BuyMaskButton"
           },
+          "displayCondition": {
+            "name": "BuyButtonShow"
+          },
           "x": 189,
           "y": 113,
           "locked": false
@@ -216,6 +219,32 @@
           "use1Xscale": false,
           "x": 195,
           "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "buy_button_locked.png",
+          "use1Xscale": false,
+          "x": 189,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "",
+          "isUndecorated": false,
+          "displayCondition": {
+            "name": "BlastMaskSelected"
+          },
+          "width": 25,
+          "height": 20,
+          "x": 155,
+          "y": 81,
           "locked": false
         }
       }

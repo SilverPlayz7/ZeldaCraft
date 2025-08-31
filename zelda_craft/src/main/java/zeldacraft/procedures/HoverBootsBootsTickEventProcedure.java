@@ -25,7 +25,7 @@ public class HoverBootsBootsTickEventProcedure {
 					entity.getPersistentData().putDouble("htimer", (entity.getPersistentData().getDouble("htimer") + 1));
 				} else {
 					if (entity instanceof ServerPlayer _player) {
-						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("zelda_craft:cartoon_gravity_joke"));
+						Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:cartoon_gravity_joke"));
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
 							for (String criteria : _ap.getRemainingCriteria())

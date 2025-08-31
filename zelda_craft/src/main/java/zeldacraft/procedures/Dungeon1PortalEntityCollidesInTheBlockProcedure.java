@@ -31,7 +31,7 @@ public class Dungeon1PortalEntityCollidesInTheBlockProcedure {
 				});
 			}
 			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("zelda_craft:dungeons"));
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("zelda_craft:dungeons"));
 				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);

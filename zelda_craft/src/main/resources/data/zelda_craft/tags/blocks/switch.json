@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "zelda_craft:floor_switch",
+    "zelda_craft:lullaby_switch",
     "zelda_craft:timed_floor_switch",
+    "zelda_craft:floor_switch",
     "zelda_craft:weighted_floor_switch",
-    "zelda_craft:rusty_floor_switch",
-    "zelda_craft:lullaby_switch"
+    "zelda_craft:rusty_floor_switch"
   ]
 }

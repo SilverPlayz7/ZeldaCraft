@@ -6,6 +6,8 @@ import zeldacraft.procedures.RupeeCounterProcedure;
 
 import zeldacraft.network.WalletDepositButtonMessage;
 
+import zeldacraft.init.ZeldaCraftModScreens;
+
 import zeldacraft.ZeldaCraftMod;
 
 import net.minecraft.world.level.Level;
@@ -17,15 +19,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMenu> {
-	private final static HashMap<String, Object> guistate = WalletDepositMenu.guistate;
+public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMenu> implements ZeldaCraftModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_withdrawbutton;
 	ImageButton imagebutton_depositbutton;
 
@@ -41,6 +41,12 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -48,13 +54,11 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
-		guiGraphics.blit(new ResourceLocation("zelda_craft:textures/screens/rupeewithdrawmenu.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 208, 166, 208, 166);
-
+		guiGraphics.blit(ResourceLocation.parse("zelda_craft:textures/screens/rupeewithdrawmenu.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 208, 166, 208, 166);
 		RenderSystem.disableBlend();
 	}
 
@@ -70,29 +74,29 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_deposit.label_ruppes"), 141, 7, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
+		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_withdrawbutton = new ImageButton(this.leftPos + 128, this.topPos + 61, 77, 22, 0, 0, 22, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_withdrawbutton.png"), 77, 44, e -> {
+		imagebutton_withdrawbutton = new ImageButton(this.leftPos + 128, this.topPos + 61, 77, 22, 0, 0, 22, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_withdrawbutton.png"), 77, 44, e -> {
+			int x = WalletDepositScreen.this.x;
+			int y = WalletDepositScreen.this.y;
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletDepositButtonMessage(0, x, y, z));
 				WalletDepositButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_withdrawbutton", imagebutton_withdrawbutton);
 		this.addRenderableWidget(imagebutton_withdrawbutton);
-		imagebutton_depositbutton = new ImageButton(this.leftPos + 43, this.topPos + 23, 88, 27, 0, 0, 27, new ResourceLocation("zelda_craft:textures/screens/atlas/imagebutton_depositbutton.png"), 88, 54, e -> {
+		imagebutton_depositbutton = new ImageButton(this.leftPos + 43, this.topPos + 23, 88, 27, 0, 0, 27, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_depositbutton.png"), 88, 54, e -> {
+			int x = WalletDepositScreen.this.x;
+			int y = WalletDepositScreen.this.y;
 			if (true) {
 				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletDepositButtonMessage(1, x, y, z));
 				WalletDepositButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_depositbutton", imagebutton_depositbutton);
 		this.addRenderableWidget(imagebutton_depositbutton);
 	}
 }

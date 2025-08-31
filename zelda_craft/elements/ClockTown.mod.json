@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -49,6 +49,7 @@
     },
     "musicDiscDescription": "Clock Town",
     "musicDiscLengthInTicks": 1760,
-    "musicDiscAnalogOutput": 15
+    "musicDiscAnalogOutput": 15,
+    "providedBannerPatterns": []
   }
 }

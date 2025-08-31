@@ -1,4 +1,4 @@
-// Made with Blockbench 4.12.5
+// Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -7,25 +7,21 @@ public class ModelSwordBeam<T extends Entity> extends EntityModel<T> {
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
 			new ResourceLocation("modid", "swordbeam"), "main");
-	private final ModelPart Swordbeam;
+	private final ModelPart bb_main;
 
 	public ModelSwordBeam(ModelPart root) {
-		this.Swordbeam = root.getChild("Swordbeam");
+		this.bb_main = root.getChild("bb_main");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition Swordbeam = partdefinition.addOrReplaceChild("Swordbeam", CubeListBuilder.create(),
+		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(-16, 0)
+				.addBox(-8.0F, 0.0F, -8.0F, 16.0F, 0.0F, 16.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition cube_r1 = Swordbeam.addOrReplaceChild("cube_r1",
-				CubeListBuilder.create().texOffs(-32, 0).addBox(-16.0F, 0.0F, -16.0F, 32.0F, 0.0F, 32.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, -1.5708F));
-
-		return LayerDefinition.create(meshdefinition, 32, 32);
+		return LayerDefinition.create(meshdefinition, 16, 16);
 	}
 
 	@Override
@@ -37,6 +33,6 @@ public class ModelSwordBeam<T extends Entity> extends EntityModel<T> {
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
 			float red, float green, float blue, float alpha) {
-		Swordbeam.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }

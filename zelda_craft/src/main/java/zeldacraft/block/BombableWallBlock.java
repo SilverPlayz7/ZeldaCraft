@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.BombableWallBlockDestroyedByExplosionProcedure;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class BombableWallBlock extends Block {
 	public BombableWallBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(12f, 1f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(12f, 1f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

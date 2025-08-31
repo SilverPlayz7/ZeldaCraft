@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;

@@ -1,18 +1,54 @@
 {
   "replace": false,
   "values": [
+    {
+      "id": "#forge:barrels/wooden",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_buttons",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_pressure_plates",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_trapdoors",
+      "required": false
+    },
     "zelda_craft:hookshot_target",
-    "#forge:barrels/wooden",
-    "#forge:chests/wooden",
-    "#forge:fence_gates/wooden",
-    "#forge:fences/wooden",
-    "#minecraft:logs",
-    "#minecraft:planks",
-    "#minecraft:wooden_buttons",
-    "#minecraft:wooden_doors",
-    "#minecraft:wooden_pressure_plates",
-    "#minecraft:wooden_slabs",
-    "#minecraft:wooden_stairs",
-    "#minecraft:wooden_trapdoors"
+    {
+      "id": "#minecraft:planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_slabs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_doors",
+      "required": false
+    },
+    {
+      "id": "#forge:fence_gates/wooden",
+      "required": false
+    },
+    {
+      "id": "#forge:fences/wooden",
+      "required": false
+    },
+    {
+      "id": "#minecraft:logs",
+      "required": false
+    },
+    {
+      "id": "#forge:chests/wooden",
+      "required": false
+    },
+    {
+      "id": "#minecraft:wooden_stairs",
+      "required": false
+    }
   ]
 }

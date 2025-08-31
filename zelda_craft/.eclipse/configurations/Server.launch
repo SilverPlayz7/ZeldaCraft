@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="zelda_craft"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.neoforged.devlaunch.Main"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value=" @C:\\Users\\Colin\\Documents\\GitHub\\ZeldaCraft\\zelda_craft\\build\\moddev\\serverRunProgramArgs.txt"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" @C:\\Users\\Colin\\Documents\\GitHub\\ZeldaCraft\\zelda_craft\\build\\moddev\\serverRunVmArgs.txt -Dfml.modFolders=mcreator%%C:\\Users\\Colin\\Documents\\GitHub\\ZeldaCraft\\zelda_craft\\bin\\main"></stringAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="MOD_CLASSES" value="mcreator%%C:\Users\Colin\Documents\GitHub\ZeldaCraft\zelda_craft\bin\main"></mapEntry>
+    </mapAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\Users\Colin\Documents\GitHub\ZeldaCraft\zelda_craft\run"></stringAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="false"></booleanAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"></booleanAttribute>
+</launchConfiguration>

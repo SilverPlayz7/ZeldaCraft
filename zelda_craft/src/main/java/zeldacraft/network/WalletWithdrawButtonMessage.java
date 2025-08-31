@@ -1,7 +1,4 @@
-
 package zeldacraft.network;
-
-import zeldacraft.world.inventory.WalletWithdrawMenu;
 
 import zeldacraft.procedures.Withdraw5Procedure;
 import zeldacraft.procedures.Withdraw50Procedure;
@@ -23,7 +20,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Supplier;
-import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WalletWithdrawButtonMessage {
@@ -65,7 +61,6 @@ public class WalletWithdrawButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = WalletWithdrawMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

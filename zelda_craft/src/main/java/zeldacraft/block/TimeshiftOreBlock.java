@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,11 +13,11 @@ import net.minecraft.core.BlockPos;
 
 public class TimeshiftOreBlock extends Block {
 	public TimeshiftOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM)
-				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.break")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.step")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.place")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.hit")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.fall"))))
-				.strength(3f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of()
+				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.amethyst_block.break")), () -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.amethyst_block.step")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone.place")), () -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone.hit")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.stone.fall"))))
+				.strength(3f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

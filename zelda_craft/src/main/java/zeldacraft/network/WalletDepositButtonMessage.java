@@ -1,7 +1,4 @@
-
 package zeldacraft.network;
-
-import zeldacraft.world.inventory.WalletDepositMenu;
 
 import zeldacraft.procedures.OpenWithdrawMenuProcedure;
 import zeldacraft.procedures.DepositRupeesProcedure;
@@ -19,7 +16,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Supplier;
-import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WalletDepositButtonMessage {
@@ -61,7 +57,6 @@ public class WalletDepositButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = WalletDepositMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

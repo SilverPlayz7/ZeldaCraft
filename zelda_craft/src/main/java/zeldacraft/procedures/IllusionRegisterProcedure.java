@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 public class IllusionRegisterProcedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-		if (event.getHand() != event.getEntity().getUsedItemHand())
+		if (event.getHand() != InteractionHand.MAIN_HAND)
 			return;
 		execute(event, event.getLevel().getBlockState(event.getPos()), event.getEntity());
 	}

@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ModelHoodOfTwilight<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("zelda_craft", "model_hood_of_twilight"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("zelda_craft", "model_hood_of_twilight"), "main");
 	public final ModelPart HoodOfTwilight;
 
 	public ModelHoodOfTwilight(ModelPart root) {

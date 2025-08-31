@@ -1,4 +1,3 @@
-
 package zeldacraft.block;
 
 import zeldacraft.procedures.SwordStandOnBlockRightClickedProcedure;
@@ -48,7 +47,7 @@ public class SwordStandBlock extends Block implements SimpleWaterloggedBlock, En
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public SwordStandBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -84,7 +83,7 @@ public class SwordStandBlock extends Block implements SimpleWaterloggedBlock, En
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
 	}
 
