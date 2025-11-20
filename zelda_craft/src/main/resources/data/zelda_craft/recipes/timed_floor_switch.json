@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:copper_ingot"
+    },
+    "b": {
+      "item": "minecraft:clock"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:timed_floor_switch",
+    "count": 1
+  }
+}

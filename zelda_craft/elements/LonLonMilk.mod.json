@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "lonlon_milk",
     "customModelName": "lonlonmilk:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [
       {

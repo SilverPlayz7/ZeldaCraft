@@ -1,4 +1,3 @@
-
 package zeldacraft.entity;
 
 import zeldacraft.procedures.LongShotWhileProjectileFlyingTickProcedure;
@@ -31,18 +30,22 @@ public class LongShotProjectileEntity extends AbstractArrow implements ItemSuppl
 
 	public LongShotProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(ZeldaCraftModEntities.LONG_SHOT_PROJECTILE.get(), world);
+		setNoGravity(true);
 	}
 
 	public LongShotProjectileEntity(EntityType<? extends LongShotProjectileEntity> type, Level world) {
 		super(type, world);
+		setNoGravity(true);
 	}
 
 	public LongShotProjectileEntity(EntityType<? extends LongShotProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
+		setNoGravity(true);
 	}
 
 	public LongShotProjectileEntity(EntityType<? extends LongShotProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
+		setNoGravity(true);
 	}
 
 	@Override

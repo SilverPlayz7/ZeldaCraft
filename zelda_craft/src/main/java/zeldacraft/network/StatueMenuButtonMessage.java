@@ -10,6 +10,8 @@ import zeldacraft.procedures.Warp2TeleportProcedure;
 import zeldacraft.procedures.Warp2ClearProcedure;
 import zeldacraft.procedures.Warp1TeleportProcedure;
 import zeldacraft.procedures.Warp1ClearProcedure;
+import zeldacraft.procedures.SoaringNextPageProcedure;
+import zeldacraft.procedures.SoaringBackPageProcedure;
 
 import zeldacraft.ZeldaCraftMod;
 
@@ -107,6 +109,14 @@ public class StatueMenuButtonMessage {
 		if (buttonID == 9) {
 
 			Warp5ClearProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			SoaringNextPageProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
+
+			SoaringBackPageProcedure.execute(entity);
 		}
 	}
 

@@ -53,7 +53,7 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.CHAIN_SPOOL.get());
 				tabData.accept(ZeldaCraftModItems.WARP_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.FAIRY_OCARINA.get());
-				tabData.accept(ZeldaCraftModItems.OCCARINA_OF_TIME.get());
+				tabData.accept(ZeldaCraftModItems.OCARINA_OF_TIME.get());
 				tabData.accept(ZeldaCraftModItems.SPIRIT_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.MAGIC_MIRROR.get());
 				tabData.accept(ZeldaCraftModItems.LENS_OF_TRUTH.get());

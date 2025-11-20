@@ -8,9 +8,13 @@
     "texture": "giantknife",
     "customModelName": "giantknife:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Giant's Knife",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "A really cool and totally high quality sword, carefully designed and forged by the great Medigoron over the past 7 years.",
+        "- Medigoron Smithing Co."
+      ]
     },
     "creativeTabs": [
       {

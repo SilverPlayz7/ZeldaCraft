@@ -39,45 +39,51 @@ public class BuyMaskButtonProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag()
 									.getDouble("RupeeCount") >= (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice) {
 						if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 1) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BUNNY_HOOD.get()).copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get(1).set(_setstack);
-								_player.containerMenu.broadcastChanges();
+							if (entity instanceof ServerPlayer _plr5 && _plr5.level() instanceof ServerLevel
+									&& _plr5.getAdvancements().getOrStartProgress(_plr5.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:bunny_hood_4"))).isDone()) {
+								if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+									ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BUNNY_HOOD.get()).copy();
+									_setstack.setCount(1);
+									_menu.getSlots().get(1).set(_setstack);
+									_player.containerMenu.broadcastChanges();
+								}
+								(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu9 ? _menu9.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
+										((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu7 ? _menu7.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag()
+												.getDouble("RupeeCount") - (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice));
 							}
-							(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu8 ? _menu8.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
-									((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu6 ? _menu6.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag()
-											.getDouble("RupeeCount") - (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice));
 						}
 						if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 2) {
-							if (entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
-									&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"))).isDone()) {
+							if (entity instanceof ServerPlayer _plr11 && _plr11.level() instanceof ServerLevel
+									&& _plr11.getAdvancements().getOrStartProgress(_plr11.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"))).isDone()) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 									ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLAST_MASK.get()).copy();
 									_setstack.setCount(1);
 									_menu.getSlots().get(1).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
-								(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu14 ? _menu14.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
-										((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu12 ? _menu12.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag()
+								(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu15 ? _menu15.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
+										((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu13 ? _menu13.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrCreateTag()
 												.getDouble("RupeeCount") - (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice));
 							}
 						}
 					} else if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("zelda_craft:wallet")))
 							&& itemstackiterator.getOrCreateTag().getDouble("RupeeCount") >= (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice) {
 						if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 1) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-								ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BUNNY_HOOD.get()).copy();
-								_setstack.setCount(1);
-								_menu.getSlots().get(1).set(_setstack);
-								_player.containerMenu.broadcastChanges();
+							if (entity instanceof ServerPlayer _plr21 && _plr21.level() instanceof ServerLevel
+									&& _plr21.getAdvancements().getOrStartProgress(_plr21.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:bunny_hood_4"))).isDone()) {
+								if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
+									ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BUNNY_HOOD.get()).copy();
+									_setstack.setCount(1);
+									_menu.getSlots().get(1).set(_setstack);
+									_player.containerMenu.broadcastChanges();
+								}
+								itemstackiterator.getOrCreateTag().putDouble("RupeeCount",
+										(itemstackiterator.getOrCreateTag().getDouble("RupeeCount") - (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice));
 							}
-							itemstackiterator.getOrCreateTag().putDouble("RupeeCount",
-									(itemstackiterator.getOrCreateTag().getDouble("RupeeCount") - (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).MaskPrice));
 						}
 						if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).selectedmask == 2) {
-							if (entity instanceof ServerPlayer _plr25 && _plr25.level() instanceof ServerLevel
-									&& _plr25.getAdvancements().getOrStartProgress(_plr25.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"))).isDone()) {
+							if (entity instanceof ServerPlayer _plr27 && _plr27.level() instanceof ServerLevel
+									&& _plr27.getAdvancements().getOrStartProgress(_plr27.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_4"))).isDone()) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 									ItemStack _setstack = new ItemStack(ZeldaCraftModItems.BLAST_MASK.get()).copy();
 									_setstack.setCount(1);

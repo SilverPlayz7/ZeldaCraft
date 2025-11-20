@@ -1,5 +1,7 @@
 package zeldacraft.item;
 
+import zeldacraft.init.ZeldaCraftModItems;
+
 import zeldacraft.client.renderer.SalvagerSetArmorRenderer;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
@@ -33,7 +35,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.model.HumanoidModel;
 
 import java.util.function.Consumer;
+import java.util.Set;
 import java.util.List;
+
+import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 
 public class SalvagerSetItem extends ArmorItem implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -105,12 +111,20 @@ public class SalvagerSetItem extends ArmorItem implements GeoItem {
 
 	private PlayState predicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			event.getController().setAnimation(RawAnimation.begin().thenLoop("animation.TPChest.new"));
+			event.getController().setAnimation(RawAnimation.begin().thenLoop("idle"));
 			Entity entity = (Entity) event.getData(DataTickets.ENTITY);
 			if (entity instanceof ArmorStand) {
 				return PlayState.CONTINUE;
 			}
-			return PlayState.CONTINUE;
+			Set<Item> wornArmor = new ObjectOpenHashSet<>();
+			for (ItemStack stack : entity.getArmorSlots()) {
+				if (stack.isEmpty())
+					return PlayState.STOP;
+				wornArmor.add(stack.getItem());
+			}
+			boolean isWearingAll = wornArmor
+					.containsAll(ObjectArrayList.of(ZeldaCraftModItems.SALVAGER_ARMOR_BOOTS.get(), ZeldaCraftModItems.SALVAGER_ARMOR_LEGGINGS.get(), ZeldaCraftModItems.SALVAGER_ARMOR_CHESTPLATE.get(), ZeldaCraftModItems.SALVAGER_ARMOR_HELMET.get()));
+			return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
 		}
 		return PlayState.STOP;
 	}
@@ -130,7 +144,15 @@ public class SalvagerSetItem extends ArmorItem implements GeoItem {
 			if (entity instanceof ArmorStand) {
 				return PlayState.CONTINUE;
 			}
-			return PlayState.CONTINUE;
+			Set<Item> wornArmor = new ObjectOpenHashSet<>();
+			for (ItemStack stack : entity.getArmorSlots()) {
+				if (stack.isEmpty())
+					return PlayState.STOP;
+				wornArmor.add(stack.getItem());
+			}
+			boolean isWearingAll = wornArmor
+					.containsAll(ObjectArrayList.of(ZeldaCraftModItems.SALVAGER_ARMOR_BOOTS.get(), ZeldaCraftModItems.SALVAGER_ARMOR_LEGGINGS.get(), ZeldaCraftModItems.SALVAGER_ARMOR_CHESTPLATE.get(), ZeldaCraftModItems.SALVAGER_ARMOR_HELMET.get()));
+			return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
 		} else if (animationprocedure.equals("empty")) {
 			prevAnim = "empty";
 			return PlayState.STOP;

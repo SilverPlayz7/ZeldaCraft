@@ -159,7 +159,7 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> HYLIAN_CHEST = block(ZeldaCraftModBlocks.HYLIAN_CHEST);
 	public static final RegistryObject<Item> SWORD_STAND = block(ZeldaCraftModBlocks.SWORD_STAND);
 	public static final RegistryObject<Item> CHAIN_SPOOL = REGISTRY.register("chain_spool", () -> new ChainSpoolItem());
-	public static final RegistryObject<Item> OCCARINA_OF_TIME = REGISTRY.register("occarina_of_time", () -> new OccarinaOfTimeItem());
+	public static final RegistryObject<Item> OCARINA_OF_TIME = REGISTRY.register("ocarina_of_time", () -> new OccarinaOfTimeItem());
 	public static final RegistryObject<Item> EMPTY_BOTTLE = REGISTRY.register("empty_bottle", () -> new EmptyBottleItem());
 	public static final RegistryObject<Item> FAIRY_BOTTLE = REGISTRY.register("fairy_bottle", () -> new FairyBottleItem());
 	public static final RegistryObject<Item> FAIRY_ITEM = REGISTRY.register("fairy_item", () -> new FairyItemItem());
@@ -296,6 +296,7 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> BOMB_ARROW = REGISTRY.register("bomb_arrow", () -> new BombArrowItem());
 	public static final RegistryObject<Item> SHOCK_ARROW = REGISTRY.register("shock_arrow", () -> new ShockArrowItem());
 	public static final RegistryObject<Item> OWL_STATUE = block(ZeldaCraftModBlocks.OWL_STATUE);
+	public static final RegistryObject<Item> FROZEN_ICE_SPAWN_EGG = REGISTRY.register("frozen_ice_spawn_egg", () -> new ForgeSpawnEggItem(ZeldaCraftModEntities.FROZEN_ICE, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

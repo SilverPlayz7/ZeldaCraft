@@ -5,6 +5,7 @@ package zeldacraft.init;
 
 import zeldacraft.client.model.Modelroccape;
 import zeldacraft.client.model.Modelnorender;
+import zeldacraft.client.model.Modelice;
 import zeldacraft.client.model.Modelfiredhook;
 import zeldacraft.client.model.ModelTPChest;
 import zeldacraft.client.model.ModelSwordBeam;
@@ -23,6 +24,7 @@ import zeldacraft.client.model.ModelFierceMask;
 import zeldacraft.client.model.ModelDekuMask;
 import zeldacraft.client.model.ModelBunnyHood;
 import zeldacraft.client.model.ModelBootsofTwilight;
+import zeldacraft.client.model.ModelBoomerangProjectile;
 import zeldacraft.client.model.ModelBombEntity;
 import zeldacraft.client.model.ModelBombArrow;
 import zeldacraft.client.model.ModelBlastMask;
@@ -45,8 +47,10 @@ public class ZeldaCraftModModels {
 		event.registerLayerDefinition(ModelFierceMask.LAYER_LOCATION, ModelFierceMask::createBodyLayer);
 		event.registerLayerDefinition(ModelSilverArrow.LAYER_LOCATION, ModelSilverArrow::createBodyLayer);
 		event.registerLayerDefinition(Modelfiredhook.LAYER_LOCATION, Modelfiredhook::createBodyLayer);
+		event.registerLayerDefinition(Modelice.LAYER_LOCATION, Modelice::createBodyLayer);
 		event.registerLayerDefinition(ModelGreavesofTwilight.LAYER_LOCATION, ModelGreavesofTwilight::createBodyLayer);
 		event.registerLayerDefinition(ModelHoodOfTwilight.LAYER_LOCATION, ModelHoodOfTwilight::createBodyLayer);
+		event.registerLayerDefinition(ModelBoomerangProjectile.LAYER_LOCATION, ModelBoomerangProjectile::createBodyLayer);
 		event.registerLayerDefinition(ModelHoverBoots.LAYER_LOCATION, ModelHoverBoots::createBodyLayer);
 		event.registerLayerDefinition(ModelBombArrow.LAYER_LOCATION, ModelBombArrow::createBodyLayer);
 		event.registerLayerDefinition(ModelPegasusBoots.LAYER_LOCATION, ModelPegasusBoots::createBodyLayer);

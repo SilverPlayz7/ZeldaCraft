@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "2": "biggoronswordstand"
+        "0": "biggoronsword",
+        "1": "stand_base"
       },
       "name": "default"
     }

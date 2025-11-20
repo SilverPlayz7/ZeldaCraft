@@ -4,7 +4,8 @@
   "definition": {
     "renderType": 1,
     "texture": "red_rupee",
-    "customModelName": "redrupee:default",
+    "customModelName": "rupee:red",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Red Rupee",
@@ -55,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

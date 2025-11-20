@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "zelda_craft:hidden_illusion_block"
+    },
+    {
+      "item": "minecraft:ladder"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:climbable_hidden_illusion_block",
+    "count": 1
+  }
+}

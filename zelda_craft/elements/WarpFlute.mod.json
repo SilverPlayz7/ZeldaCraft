@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "warpflute",
     "customModelName": "warpflute:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Flute",

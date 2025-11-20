@@ -66,27 +66,15 @@ public class ZeldaCraftModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.HasWarp1 = original.HasWarp1;
-			clone.Warp2X = original.Warp2X;
-			clone.Warp2Y = original.Warp2Y;
-			clone.Warp2Z = original.Warp2Z;
-			clone.HasWarp2 = original.HasWarp2;
-			clone.Warp3X = original.Warp3X;
-			clone.Warp3Y = original.Warp3Y;
-			clone.Warp3Z = original.Warp3Z;
-			clone.HasWarp3 = original.HasWarp3;
-			clone.Warp4X = original.Warp4X;
-			clone.Warp4Y = original.Warp4Y;
-			clone.Warp4Z = original.Warp4Z;
-			clone.HasWarp4 = original.HasWarp4;
-			clone.Warp5X = original.Warp5X;
-			clone.Warp5Y = original.Warp5Y;
-			clone.Warp5Z = original.Warp5Z;
-			clone.HasWarp5 = original.HasWarp5;
 			clone.BeenResed = original.BeenResed;
 			clone.BombsCrafted = original.BombsCrafted;
 			clone.CreepersDetonated = original.CreepersDetonated;
 			clone.ExplosiveKills = original.ExplosiveKills;
+			clone.StepsRun = original.StepsRun;
+			clone.TimedJumped = original.TimedJumped;
+			clone.Fell50 = original.Fell50;
+			clone.hasBunny = original.hasBunny;
+			clone.hasBlast = original.hasBlast;
 			if (!event.isWasDeath()) {
 				clone.jumpvar = original.jumpvar;
 				clone.DungeontoLoad = original.DungeontoLoad;
@@ -98,6 +86,8 @@ public class ZeldaCraftModVariables {
 				clone.MaskPrice = original.MaskPrice;
 				clone.UsingLens = original.UsingLens;
 				clone.pageNum = original.pageNum;
+				clone.xPlayer = original.xPlayer;
+				clone.zPlayer = original.zPlayer;
 			}
 		}
 	}
@@ -133,23 +123,6 @@ public class ZeldaCraftModVariables {
 	}
 
 	public static class PlayerVariables {
-		public boolean HasWarp1 = false;
-		public double Warp2X = 0;
-		public double Warp2Y = 0;
-		public double Warp2Z = 0;
-		public boolean HasWarp2 = false;
-		public double Warp3X = 0;
-		public double Warp3Y = 0;
-		public double Warp3Z = 0;
-		public boolean HasWarp3 = false;
-		public double Warp4X = 0;
-		public double Warp4Y = 0;
-		public double Warp4Z = 0;
-		public boolean HasWarp4 = false;
-		public double Warp5X = 0;
-		public double Warp5Y = 0;
-		public double Warp5Z = 0;
-		public boolean HasWarp5 = false;
 		public boolean BeenResed = false;
 		public double jumpvar = 0;
 		public double DungeontoLoad = 0;
@@ -164,6 +137,13 @@ public class ZeldaCraftModVariables {
 		public double MaskPrice = 0;
 		public double UsingLens = 0;
 		public double pageNum = 0;
+		public double StepsRun = 0;
+		public double TimedJumped = 0;
+		public boolean Fell50 = false;
+		public double xPlayer = 0;
+		public double zPlayer = 0;
+		public boolean hasBunny = false;
+		public boolean hasBlast = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -172,23 +152,6 @@ public class ZeldaCraftModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("HasWarp1", HasWarp1);
-			nbt.putDouble("Warp2X", Warp2X);
-			nbt.putDouble("Warp2Y", Warp2Y);
-			nbt.putDouble("Warp2Z", Warp2Z);
-			nbt.putBoolean("HasWarp2", HasWarp2);
-			nbt.putDouble("Warp3X", Warp3X);
-			nbt.putDouble("Warp3Y", Warp3Y);
-			nbt.putDouble("Warp3Z", Warp3Z);
-			nbt.putBoolean("HasWarp3", HasWarp3);
-			nbt.putDouble("Warp4X", Warp4X);
-			nbt.putDouble("Warp4Y", Warp4Y);
-			nbt.putDouble("Warp4Z", Warp4Z);
-			nbt.putBoolean("HasWarp4", HasWarp4);
-			nbt.putDouble("Warp5X", Warp5X);
-			nbt.putDouble("Warp5Y", Warp5Y);
-			nbt.putDouble("Warp5Z", Warp5Z);
-			nbt.putBoolean("HasWarp5", HasWarp5);
 			nbt.putBoolean("BeenResed", BeenResed);
 			nbt.putDouble("jumpvar", jumpvar);
 			nbt.putDouble("DungeontoLoad", DungeontoLoad);
@@ -203,28 +166,18 @@ public class ZeldaCraftModVariables {
 			nbt.putDouble("MaskPrice", MaskPrice);
 			nbt.putDouble("UsingLens", UsingLens);
 			nbt.putDouble("pageNum", pageNum);
+			nbt.putDouble("StepsRun", StepsRun);
+			nbt.putDouble("TimedJumped", TimedJumped);
+			nbt.putBoolean("Fell50", Fell50);
+			nbt.putDouble("xPlayer", xPlayer);
+			nbt.putDouble("zPlayer", zPlayer);
+			nbt.putBoolean("hasBunny", hasBunny);
+			nbt.putBoolean("hasBlast", hasBlast);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
-			HasWarp1 = nbt.getBoolean("HasWarp1");
-			Warp2X = nbt.getDouble("Warp2X");
-			Warp2Y = nbt.getDouble("Warp2Y");
-			Warp2Z = nbt.getDouble("Warp2Z");
-			HasWarp2 = nbt.getBoolean("HasWarp2");
-			Warp3X = nbt.getDouble("Warp3X");
-			Warp3Y = nbt.getDouble("Warp3Y");
-			Warp3Z = nbt.getDouble("Warp3Z");
-			HasWarp3 = nbt.getBoolean("HasWarp3");
-			Warp4X = nbt.getDouble("Warp4X");
-			Warp4Y = nbt.getDouble("Warp4Y");
-			Warp4Z = nbt.getDouble("Warp4Z");
-			HasWarp4 = nbt.getBoolean("HasWarp4");
-			Warp5X = nbt.getDouble("Warp5X");
-			Warp5Y = nbt.getDouble("Warp5Y");
-			Warp5Z = nbt.getDouble("Warp5Z");
-			HasWarp5 = nbt.getBoolean("HasWarp5");
 			BeenResed = nbt.getBoolean("BeenResed");
 			jumpvar = nbt.getDouble("jumpvar");
 			DungeontoLoad = nbt.getDouble("DungeontoLoad");
@@ -239,6 +192,13 @@ public class ZeldaCraftModVariables {
 			MaskPrice = nbt.getDouble("MaskPrice");
 			UsingLens = nbt.getDouble("UsingLens");
 			pageNum = nbt.getDouble("pageNum");
+			StepsRun = nbt.getDouble("StepsRun");
+			TimedJumped = nbt.getDouble("TimedJumped");
+			Fell50 = nbt.getBoolean("Fell50");
+			xPlayer = nbt.getDouble("xPlayer");
+			zPlayer = nbt.getDouble("zPlayer");
+			hasBunny = nbt.getBoolean("hasBunny");
+			hasBlast = nbt.getBoolean("hasBlast");
 		}
 	}
 
@@ -263,23 +223,6 @@ public class ZeldaCraftModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.HasWarp1 = message.data.HasWarp1;
-					variables.Warp2X = message.data.Warp2X;
-					variables.Warp2Y = message.data.Warp2Y;
-					variables.Warp2Z = message.data.Warp2Z;
-					variables.HasWarp2 = message.data.HasWarp2;
-					variables.Warp3X = message.data.Warp3X;
-					variables.Warp3Y = message.data.Warp3Y;
-					variables.Warp3Z = message.data.Warp3Z;
-					variables.HasWarp3 = message.data.HasWarp3;
-					variables.Warp4X = message.data.Warp4X;
-					variables.Warp4Y = message.data.Warp4Y;
-					variables.Warp4Z = message.data.Warp4Z;
-					variables.HasWarp4 = message.data.HasWarp4;
-					variables.Warp5X = message.data.Warp5X;
-					variables.Warp5Y = message.data.Warp5Y;
-					variables.Warp5Z = message.data.Warp5Z;
-					variables.HasWarp5 = message.data.HasWarp5;
 					variables.BeenResed = message.data.BeenResed;
 					variables.jumpvar = message.data.jumpvar;
 					variables.DungeontoLoad = message.data.DungeontoLoad;
@@ -294,6 +237,13 @@ public class ZeldaCraftModVariables {
 					variables.MaskPrice = message.data.MaskPrice;
 					variables.UsingLens = message.data.UsingLens;
 					variables.pageNum = message.data.pageNum;
+					variables.StepsRun = message.data.StepsRun;
+					variables.TimedJumped = message.data.TimedJumped;
+					variables.Fell50 = message.data.Fell50;
+					variables.xPlayer = message.data.xPlayer;
+					variables.zPlayer = message.data.zPlayer;
+					variables.hasBunny = message.data.hasBunny;
+					variables.hasBlast = message.data.hasBlast;
 				}
 			});
 			context.setPacketHandled(true);

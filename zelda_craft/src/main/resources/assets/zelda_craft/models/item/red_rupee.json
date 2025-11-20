@@ -1,7 +1,7 @@
 {
-  "parent": "zelda_craft:custom/redrupee",
+  "parent": "zelda_craft:custom/rupee",
   "textures": {
-    "2": "zelda_craft:block/redrupee",
+    "1": "zelda_craft:block/redrupee",
     "particle": "zelda_craft:item/red_rupee"
   }
 }

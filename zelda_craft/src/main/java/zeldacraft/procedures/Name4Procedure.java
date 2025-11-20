@@ -40,7 +40,7 @@ public class Name4Procedure {
 					bufferedReader.close();
 					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					statueArray = mainObj.get("statues").getAsJsonArray();
-					if (!(statueArray.size() < 15)) {
+					if (!(statueArray.size() < 15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
 						name = new Object() {
 							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -49,9 +49,9 @@ public class Name4Procedure {
 								return "";
 							}
 						}.getValue(world,
-								BlockPos.containing((int) (statueArray.get((int) 13).getAsDouble() + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum),
-										(int) (statueArray.get((int) 14).getAsDouble() + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum),
-										(int) (statueArray.get((int) 15).getAsDouble() + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)),
+								BlockPos.containing((int) statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
+										(int) statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
+										(int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()),
 								"statueName");
 					}
 				} catch (IOException e) {

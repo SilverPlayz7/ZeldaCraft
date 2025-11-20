@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "lenseoftruth",
     "customModelName": "lense_of_truth:default",
+    "guiTexture": "",
     "customProperties": {
       "using_lens": {
         "name": "LensOfTruthPropertyValueProvider"
@@ -45,7 +46,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
+    "stayInGridWhenCrafting": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,

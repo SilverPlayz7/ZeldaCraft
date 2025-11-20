@@ -7,10 +7,12 @@ import zeldacraft.procedures.Warp4ShowProcedure;
 import zeldacraft.procedures.Warp3ShowProcedure;
 import zeldacraft.procedures.Warp2ShowProcedure;
 import zeldacraft.procedures.Warp1ShowProcedure;
+import zeldacraft.procedures.NextPageShowProcedure;
 import zeldacraft.procedures.Name4Procedure;
 import zeldacraft.procedures.Name3Procedure;
 import zeldacraft.procedures.Name2Procedure;
 import zeldacraft.procedures.Name1Procedure;
+import zeldacraft.procedures.BackPageShowProcedure;
 
 import zeldacraft.network.StatueMenuButtonMessage;
 
@@ -47,6 +49,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 	ImageButton imagebutton_deletewarp2;
 	ImageButton imagebutton_deletewarp3;
 	ImageButton imagebutton_deletewarp4;
+	ImageButton imagebutton_nextpageactive;
+	ImageButton imagebutton_backpageactive;
 
 	public StatueMenuScreen(StatueMenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -106,6 +110,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("zelda_craft:textures/screens/songofsoaringgui.png"), this.leftPos + -21, this.topPos + -34, 0, 0, 240, 216, 240, 216);
+		guiGraphics.blit(ResourceLocation.parse("zelda_craft:textures/screens/nextpage.png"), this.leftPos + 193, this.topPos + 150, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("zelda_craft:textures/screens/backpage.png"), this.leftPos + -7, this.topPos + 150, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -133,6 +139,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 		this.imagebutton_deletewarp2.visible = Warp3ShowProcedure.execute(world, entity);
 		this.imagebutton_deletewarp3.visible = Warp4ShowProcedure.execute(world, entity);
 		this.imagebutton_deletewarp4.visible = Warp5ShowProcedure.execute(world, entity);
+		this.imagebutton_nextpageactive.visible = NextPageShowProcedure.execute(world, entity);
+		this.imagebutton_backpageactive.visible = BackPageShowProcedure.execute(entity);
 		Warp5.tick();
 	}
 
@@ -252,5 +260,23 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp4);
+		imagebutton_nextpageactive = new ImageButton(this.leftPos + 193, this.topPos + 150, 16, 16, 0, 0, 16, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_nextpageactive.png"), 16, 32, e -> {
+			int x = StatueMenuScreen.this.x;
+			int y = StatueMenuScreen.this.y;
+			if (NextPageShowProcedure.execute(world, entity)) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(10, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		});
+		this.addRenderableWidget(imagebutton_nextpageactive);
+		imagebutton_backpageactive = new ImageButton(this.leftPos + -7, this.topPos + 150, 16, 16, 0, 0, 16, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_backpageactive.png"), 16, 32, e -> {
+			int x = StatueMenuScreen.this.x;
+			int y = StatueMenuScreen.this.y;
+			if (BackPageShowProcedure.execute(entity)) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(11, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		});
+		this.addRenderableWidget(imagebutton_backpageactive);
 	}
 }

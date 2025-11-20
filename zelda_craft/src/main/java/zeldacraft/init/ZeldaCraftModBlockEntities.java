@@ -14,8 +14,10 @@ import zeldacraft.block.entity.OpenChestBlockEntity;
 import zeldacraft.block.entity.LullabySwitchBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
 import zeldacraft.block.entity.IllusionBlockBlockEntity;
+import zeldacraft.block.entity.HiddenIllusionBlockBlockEntity;
 import zeldacraft.block.entity.FloorSwitchBlockEntity;
 import zeldacraft.block.entity.ClosedChestBlockEntity;
+import zeldacraft.block.entity.ClimbableHiddenIllusionBlockBlockEntity;
 import zeldacraft.block.entity.AnchientCapsuleMachineTileEntity;
 
 import zeldacraft.ZeldaCraftMod;
@@ -40,6 +42,8 @@ public class ZeldaCraftModBlockEntities {
 	public static final RegistryObject<BlockEntityType<SmallDungeonChestTileEntity>> SMALL_DUNGEON_CHEST = REGISTRY.register("small_dungeon_chest",
 			() -> BlockEntityType.Builder.of(SmallDungeonChestTileEntity::new, ZeldaCraftModBlocks.SMALL_DUNGEON_CHEST.get()).build(null));
 	public static final RegistryObject<BlockEntityType<?>> ILLUSION_BLOCK = register("illusion_block", ZeldaCraftModBlocks.ILLUSION_BLOCK, IllusionBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> HIDDEN_ILLUSION_BLOCK = register("hidden_illusion_block", ZeldaCraftModBlocks.HIDDEN_ILLUSION_BLOCK, HiddenIllusionBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CLIMBABLE_HIDDEN_ILLUSION_BLOCK = register("climbable_hidden_illusion_block", ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK, ClimbableHiddenIllusionBlockBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> FLOOR_SWITCH = register("floor_switch", ZeldaCraftModBlocks.FLOOR_SWITCH, FloorSwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TIMED_FLOOR_SWITCH = register("timed_floor_switch", ZeldaCraftModBlocks.TIMED_FLOOR_SWITCH, TimedFloorSwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> WEIGHTED_FLOOR_SWITCH = register("weighted_floor_switch", ZeldaCraftModBlocks.WEIGHTED_FLOOR_SWITCH, WeightedFloorSwitchBlockEntity::new);

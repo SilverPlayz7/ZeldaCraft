@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "kokiriswordstand"
+        "1": "kokirisword",
+        "2": "stand_base"
       },
       "name": "default"
     }

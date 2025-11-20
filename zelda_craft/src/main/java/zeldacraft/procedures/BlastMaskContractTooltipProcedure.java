@@ -57,5 +57,26 @@ public class BlastMaskContractTooltipProcedure {
 						+ new java.text.DecimalFormat("##.##").format((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).ExplosiveKills) + "/25")));
 			}
 		}
+		if (itemstack.getItem() == ZeldaCraftModItems.BUNNY_HOOD_CONTRACT.get()) {
+			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).StepsRun == 1000) {
+				tooltip.add(Component.literal(("\u00A7a" + "\u00A7m" + "Steps Taken: "
+						+ new java.text.DecimalFormat("##.##").format((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).StepsRun) + "/1,000")));
+			} else {
+				tooltip.add(Component.literal(("\u00A74" + "Steps Taken: "
+						+ new java.text.DecimalFormat("##.##").format((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).StepsRun) + "/1,000")));
+			}
+			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).TimedJumped == 100) {
+				tooltip.add(Component.literal(("\u00A7a" + "\u00A7m" + "Times Jumped: "
+						+ new java.text.DecimalFormat("##.##").format((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).TimedJumped) + "/100")));
+			} else {
+				tooltip.add(Component.literal(("\u00A74" + "Times Jumped: "
+						+ new java.text.DecimalFormat("##.##").format((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).TimedJumped) + "/100")));
+			}
+			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).Fell50 == true) {
+				tooltip.add(Component.literal(("\u00A7a" + "\u00A7m" + "Fall 50 Blocks Unstopped: " + "Complete")));
+			} else {
+				tooltip.add(Component.literal(("\u00A74" + "Fall 50 Blocks Unstopped: " + "Incomplete")));
+			}
+		}
 	}
 }

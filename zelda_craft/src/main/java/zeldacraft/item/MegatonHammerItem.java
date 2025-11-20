@@ -64,9 +64,6 @@ public class MegatonHammerItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_0"));
-		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_1"));
-		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_2"));
-		list.add(Component.translatable("item.zelda_craft.megaton_hammer.description_3"));
 	}
 
 	@Override

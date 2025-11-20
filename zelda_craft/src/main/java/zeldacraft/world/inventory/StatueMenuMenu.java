@@ -1,5 +1,7 @@
 package zeldacraft.world.inventory;
 
+import zeldacraft.procedures.StatueMenuThisGUIIsClosedProcedure;
+
 import zeldacraft.init.ZeldaCraftModMenus;
 
 import net.minecraftforge.items.ItemStackHandler;
@@ -26,7 +28,7 @@ public class StatueMenuMenu extends AbstractContainerMenu implements ZeldaCraftM
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 21)
+			if (!this.containsKey(key) && this.size() >= 25)
 				return null;
 			return super.put(key, value);
 		}
@@ -55,6 +57,7 @@ public class StatueMenuMenu extends AbstractContainerMenu implements ZeldaCraftM
 			this.z = pos.getZ();
 			access = ContainerLevelAccess.create(world, pos);
 		}
+		StatueMenuThisGUIIsClosedProcedure.execute(entity);
 	}
 
 	@Override
@@ -73,6 +76,12 @@ public class StatueMenuMenu extends AbstractContainerMenu implements ZeldaCraftM
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
+	}
+
+	@Override
+	public void removed(Player playerIn) {
+		super.removed(playerIn);
+		StatueMenuThisGUIIsClosedProcedure.execute(entity);
 	}
 
 	@Override

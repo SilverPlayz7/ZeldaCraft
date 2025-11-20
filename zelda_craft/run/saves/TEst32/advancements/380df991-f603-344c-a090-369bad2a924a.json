@@ -1605,5 +1605,29 @@
     },
     "done": true
   },
+  "zelda_craft:bunny_hood_0": {
+    "criteria": {
+      "bunny_hood_0_0": "2025-09-28 14:49:18 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:bunny_hood_1": {
+    "criteria": {
+      "bunny_hood_1_0": "2025-09-28 15:16:34 -0400"
+    },
+    "done": true
+  },
+  "zelda_craft:do_not_tell_the_treasure_box_lady": {
+    "criteria": {
+      "do_not_tell_the_treasure_box_lady_0": "2025-11-15 16:17:41 -0500"
+    },
+    "done": true
+  },
+  "zelda_craft:blast_mask_0": {
+    "criteria": {
+      "blast_mask_0_0": "2025-11-15 17:17:09 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

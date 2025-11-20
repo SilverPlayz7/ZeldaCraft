@@ -1,0 +1,46 @@
+{
+  "mappings": {
+    "red": {
+      "map": {
+        "1": "redrupee"
+      },
+      "name": "red"
+    },
+    "gold": {
+      "map": {
+        "1": "goldrupee"
+      },
+      "name": "gold"
+    },
+    "default": {
+      "map": {
+        "1": "greenrupee"
+      },
+      "name": "default"
+    },
+    "green": {
+      "map": {
+        "1": "greenrupee"
+      },
+      "name": "green"
+    },
+    "blue": {
+      "map": {
+        "1": "bluerupee"
+      },
+      "name": "blue"
+    },
+    "purple": {
+      "map": {
+        "1": "purplerupee"
+      },
+      "name": "purple"
+    },
+    "silver": {
+      "map": {
+        "1": "silverrupee"
+      },
+      "name": "silver"
+    }
+  }
+}

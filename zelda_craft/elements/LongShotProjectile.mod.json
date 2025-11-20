@@ -10,7 +10,7 @@
       "value": ""
     },
     "igniteFire": false,
-    "disableGravity": false,
+    "disableGravity": true,
     "power": 1.0,
     "damage": 5.0,
     "knockback": 0,

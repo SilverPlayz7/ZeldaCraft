@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "magicmirror",
     "customModelName": "magicmirror:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Magic Mirror",
@@ -18,7 +19,7 @@
     "enchantability": 0,
     "useDuration": 72000,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 60,
     "recipeRemainder": {
       "value": ""
     },
@@ -29,7 +30,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "A special mirror that, once gazed into, will warp them back to their spawnpoint."
+      ]
     },
     "glowCondition": {
       "fixedValue": false

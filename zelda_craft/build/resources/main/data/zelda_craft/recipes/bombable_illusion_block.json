@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "forge:stone"
+    },
+    {
+      "item": "zelda_craft:lens_of_truth"
+    },
+    {
+      "item": "zelda_craft:bombable_wall"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:bombable_illusion_block",
+    "count": 1
+  }
+}

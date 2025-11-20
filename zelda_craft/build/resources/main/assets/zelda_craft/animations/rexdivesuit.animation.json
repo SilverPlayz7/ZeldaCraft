@@ -1,8 +1,18 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.TPChest.new": {
-			"loop": true
+		"animation.rexsuit.closed": {
+			"loop": "hold_on_last_frame"
+		},
+		"idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"bone13": {
+					"rotation": {
+						"vector": [-165, 0, 0]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2

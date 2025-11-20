@@ -8,6 +8,7 @@
     "texture": "lokomo_sword",
     "customModelName": "lokomo_sword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Lokomo Sword",
     "specialInformation": {
       "fixedValue": [

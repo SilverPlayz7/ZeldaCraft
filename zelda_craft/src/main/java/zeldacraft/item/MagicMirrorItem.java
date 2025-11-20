@@ -4,6 +4,7 @@ import zeldacraft.procedures.MagicMirrorItemInHandTickProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -12,10 +13,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
+
+import java.util.List;
 
 public class MagicMirrorItem extends Item {
 	public MagicMirrorItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(60).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -26,6 +30,12 @@ public class MagicMirrorItem extends Item {
 	@Override
 	public int getUseDuration(ItemStack itemstack) {
 		return 72000;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		list.add(Component.translatable("item.zelda_craft.magic_mirror.description_0"));
 	}
 
 	@Override

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "stand_base",
+        "2": "meister_e"
+      },
+      "name": "default"
+    }
+  }
+}

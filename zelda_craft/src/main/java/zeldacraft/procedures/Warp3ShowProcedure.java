@@ -38,7 +38,7 @@ public class Warp3ShowProcedure {
 					bufferedReader.close();
 					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					statueArray = mainObj.get("statues").getAsJsonArray();
-					if (!(statueArray.size() < 9)) {
+					if (!(statueArray.size() < 9 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
 						if (!(statueArray.get((int) ((int) (8 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))).getAsString()).isEmpty()) {
 							hasWarp = true;
 						}

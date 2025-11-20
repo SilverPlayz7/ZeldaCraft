@@ -5,9 +5,10 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "master_sword",
+    "texture": "unmaster_sword",
     "customModelName": "unsword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Master Sword",
     "specialInformation": {
       "fixedValue": [

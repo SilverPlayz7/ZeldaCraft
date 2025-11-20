@@ -10,12 +10,13 @@
     "textureLeggings": "greavesofdarktimecon",
     "enableBoots": true,
     "textureBoots": "bootsofdarktimeicon",
-    "creativeTab": {
-      "value": "CUSTOM:ZeldaCraft"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
     "armorTextureFile": "armorofshadow.png",
-    "model": "darkarmoroftime.geo.json",
+    "model": "armoroftime.geo.json",
     "idle": "animation.TPChest.new",
     "head": "armorHead",
     "chest": "armorBody",

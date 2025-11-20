@@ -22,7 +22,7 @@ public class OccarinaOfTimeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.translatable("item.zelda_craft.occarina_of_time.description_0"));
+		list.add(Component.translatable("item.zelda_craft.ocarina_of_time.description_0"));
 	}
 
 	@Override

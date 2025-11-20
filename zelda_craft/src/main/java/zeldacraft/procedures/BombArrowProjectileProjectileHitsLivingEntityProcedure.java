@@ -9,7 +9,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.TraceableEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -32,8 +31,7 @@ public class BombArrowProjectileProjectileHitsLivingEntityProcedure {
 		double sz = 0;
 		if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.BOMB_GREIFING) == false) {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null), new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION)),
-						null, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
+				_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION)), null, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
 			sx = -1.6;
 			found = false;
 			for (int index0 = 0; index0 < 4; index0++) {

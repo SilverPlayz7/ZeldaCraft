@@ -42,7 +42,7 @@
         "value": false
       }
     ],
-    "name": "Illusion Crumblestone",
+    "name": "Illusion Crumblestone (WIP)",
     "specialInformation": {
       "fixedValue": []
     },
@@ -118,6 +118,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

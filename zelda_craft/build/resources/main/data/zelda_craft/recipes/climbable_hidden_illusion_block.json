@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "forge:stone"
+    },
+    {
+      "item": "zelda_craft:lens_of_truth"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "minecraft:ladder"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:climbable_hidden_illusion_block",
+    "count": 1
+  }
+}

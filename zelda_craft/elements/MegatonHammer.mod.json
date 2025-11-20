@@ -8,13 +8,11 @@
     "texture": "oot3d_megaton_hammer_icon",
     "customModelName": "megatonhammer:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Megaton Hammer",
     "specialInformation": {
       "fixedValue": [
-        "An extremely heavy hammer. Learning to use it effectively could take some time",
-        "as its reach is somewhat short for a weapon. Its power and toughness",
-        "however",
-        "far exceed that of any normal sword. It's guaranteed to inspire awe."
+        "An extremely heavy hammer. Learning to use it effectively could take some time as its reach is somewhat short for a weapon. Its power and toughness however far exceed that of any normal sword. It's guaranteed to inspire awe."
       ]
     },
     "creativeTabs": [

@@ -11,6 +11,7 @@ import zeldacraft.entity.LightArrowProjectileEntity;
 import zeldacraft.entity.IceArrowProjectileEntity;
 import zeldacraft.entity.HookShotProjectileEntity;
 import zeldacraft.entity.HappyMaskSalesmanEntity;
+import zeldacraft.entity.FrozenIceEntity;
 import zeldacraft.entity.FireArrowProjectileEntity;
 import zeldacraft.entity.FairyEntity;
 import zeldacraft.entity.BoomerangProjectileEntity;
@@ -63,6 +64,10 @@ public class ZeldaCraftModEntities {
 			.setCustomClientFactory(BombArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ShockArrowProjectileEntity>> SHOCK_ARROW_PROJECTILE = register("shock_arrow_projectile", EntityType.Builder.<ShockArrowProjectileEntity>of(ShockArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(ShockArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FrozenIceEntity>> FROZEN_ICE = register("frozen_ice",
+			EntityType.Builder.<FrozenIceEntity>of(FrozenIceEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FrozenIceEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -76,6 +81,7 @@ public class ZeldaCraftModEntities {
 			HappyMaskSalesmanEntity.init();
 			BombProjectileEntity.init();
 			FairyEntity.init();
+			FrozenIceEntity.init();
 		});
 	}
 
@@ -84,5 +90,6 @@ public class ZeldaCraftModEntities {
 		event.put(HAPPY_MASK_SALESMAN.get(), HappyMaskSalesmanEntity.createAttributes().build());
 		event.put(BOMB_PROJECTILE.get(), BombProjectileEntity.createAttributes().build());
 		event.put(FAIRY.get(), FairyEntity.createAttributes().build());
+		event.put(FROZEN_ICE.get(), FrozenIceEntity.createAttributes().build());
 	}
 }

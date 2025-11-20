@@ -44,7 +44,9 @@
     ],
     "name": "Hidden Illusion Ladder",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "This is a ladder that is unperceivable to those unable to see the truth"
+      ]
     },
     "hardness": 22.0,
     "resistance": 10.0,
@@ -118,12 +120,16 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
-    "hasInventory": false,
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
+    "hasInventory": true,
+    "guiBoundTo": "Chest",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,

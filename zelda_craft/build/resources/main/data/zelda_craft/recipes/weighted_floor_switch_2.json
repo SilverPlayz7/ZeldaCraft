@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "zelda_craft:floor_switch"
+    },
+    {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:weighted_floor_switch",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc"
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:illusion_block"
+    },
+    "b": {
+      "item": "minecraft:glass"
+    },
+    "c": {
+      "item": "minecraft:ladder"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:climbable_hidden_illusion_block",
+    "count": 1
+  }
+}

@@ -2,19 +2,25 @@ package zeldacraft.procedures;
 
 import zeldacraft.world.inventory.StatueNameSetMenu;
 
+import zeldacraft.init.ZeldaCraftModBlocks;
+
 import net.minecraftforge.server.ServerLifecycleHooks;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.particles.ParticleTypes;
@@ -30,18 +36,21 @@ import java.io.BufferedReader;
 import io.netty.buffer.Unpooled;
 
 public class OwlStatueOnBlockRightClickedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
 		if (entity == null)
 			return;
 		File file = new File("");
 		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
 		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
 		boolean success = false;
+		double xRadius = 0;
+		double loop = 0;
+		double zRadius = 0;
+		double particleAmount = 0;
 		file = new File(
 				(FMLPaths.GAMEDIR.get().toString() + ""
 						+ ("/saves/" + ((world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "/data"))),
 				File.separator + "owlstatue.json");
-		success = true;
 		if (!file.exists()) {
 			try {
 				file.getParentFile().mkdirs();
@@ -88,9 +97,8 @@ public class OwlStatueOnBlockRightClickedProcedure {
 							}
 						}, _bpos);
 					}
-					success = false;
 				} else {
-					if (!(mainObj.toString().contains(new Object() {
+					if (mainObj.toString().contains(new Object() {
 						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -98,7 +106,13 @@ public class OwlStatueOnBlockRightClickedProcedure {
 							return "";
 						}
 					}.getValue(world, BlockPos.containing(x, y, z), "statueName")) && mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(x)) && mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(y))
-							&& mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(z)))) {
+							&& mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(z))) {
+						if (world instanceof Level _level) {
+							if (_level.isClientSide()) {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.hit")), SoundSource.BLOCKS, (float) 0.1, 1, false);
+							}
+						}
+					} else {
 						statueArray.add((new Object() {
 							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -121,8 +135,21 @@ public class OwlStatueOnBlockRightClickedProcedure {
 								exception.printStackTrace();
 							}
 						}
-					} else {
-						success = false;
+						if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
+							if (world instanceof Level)
+								((Level) world).playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")), SoundSource.BLOCKS, (float) 0.5, 1, false);
+							loop = 0;
+							particleAmount = 16;
+							xRadius = 1;
+							zRadius = 1;
+							while (loop < particleAmount) {
+								world.addParticle(ParticleTypes.SOUL_FIRE_FLAME, (x + 0.5 + Math.cos(((Math.PI * 2) / particleAmount) * loop) * xRadius), y, (z + 0.5 + Math.sin(((Math.PI * 2) / particleAmount) * loop) * zRadius),
+										((Math.cos(((Math.PI * 2) / particleAmount) * loop) * xRadius) / 10), 0.75, ((Math.sin(((Math.PI * 2) / particleAmount) * loop) * zRadius) / 10));
+								loop = loop + 1;
+							}
+						}
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal("Statue activated"), true);
 					}
 				}
 			} else {
@@ -140,13 +167,6 @@ public class OwlStatueOnBlockRightClickedProcedure {
 						}
 					}, _bpos);
 				}
-				success = false;
-			}
-			if (success == true) {
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, x, y, z, 5, 1, 1, 1, 1);
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Statue Activated"), false);
 			}
 		}
 	}

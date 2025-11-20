@@ -8,6 +8,7 @@
     "texture": "demontribesword",
     "customModelName": "demontribesword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Demon Tribe Sword",
     "specialInformation": {
       "fixedValue": []

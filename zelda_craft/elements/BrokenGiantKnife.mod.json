@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "giantknife",
     "customModelName": "brokengiantknife:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Broken Giant's Knife",
@@ -25,7 +26,9 @@
     "enableMeleeDamage": true,
     "damageVsEntity": 4.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "I have no clue what you were expecting. Did you really believe that ad? I know they look almost the same, but as you can see you've been scammed."
+      ]
     },
     "glowCondition": {
       "fixedValue": false
@@ -49,6 +52,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

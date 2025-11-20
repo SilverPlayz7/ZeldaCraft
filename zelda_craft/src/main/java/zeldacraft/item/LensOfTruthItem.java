@@ -29,6 +29,16 @@ public class LensOfTruthItem extends Item {
 	}
 
 	@Override
+	public boolean hasCraftingRemainingItem() {
+		return true;
+	}
+
+	@Override
+	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
+		return new ItemStack(this);
+	}
+
+	@Override
 	public int getUseDuration(ItemStack itemstack) {
 		return 72000;
 	}

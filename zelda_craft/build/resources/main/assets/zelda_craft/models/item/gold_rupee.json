@@ -1,5 +1,5 @@
 {
-  "parent": "zelda_craft:custom/goldrupee",
+  "parent": "zelda_craft:custom/rupee",
   "textures": {
     "1": "zelda_craft:block/goldrupee",
     "particle": "zelda_craft:item/gold_rupee"

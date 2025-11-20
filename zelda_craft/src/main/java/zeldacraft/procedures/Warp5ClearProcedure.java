@@ -42,7 +42,7 @@ public class Warp5ClearProcedure {
 						bufferedReader.close();
 						mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						statueArray = mainObj.get("statues").getAsJsonArray();
-						if (!(statueArray.size() < 16)) {
+						if (!(statueArray.size() < 16 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
 							for (int index0 = 0; index0 < 4; index0++) {
 								statueArray.remove(((int) (16 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)));
 							}

@@ -4,7 +4,8 @@
   "definition": {
     "renderType": 1,
     "texture": "gold_rupee",
-    "customModelName": "goldrupee:default",
+    "customModelName": "rupee:gold",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Gold Rupee",
@@ -55,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

@@ -4,7 +4,8 @@
   "definition": {
     "renderType": 1,
     "texture": "silver_rupee",
-    "customModelName": "silverrupee:default",
+    "customModelName": "rupee:silver",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Silver Rupee",
@@ -55,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

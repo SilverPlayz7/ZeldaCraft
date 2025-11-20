@@ -1,4 +1,3 @@
-
 package zeldacraft.entity;
 
 import zeldacraft.procedures.HookShotWhileProjectileFlyingTickProcedure;
@@ -31,18 +30,22 @@ public class HookShotProjectileEntity extends AbstractArrow implements ItemSuppl
 
 	public HookShotProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(ZeldaCraftModEntities.HOOK_SHOT_PROJECTILE.get(), world);
+		setNoGravity(true);
 	}
 
 	public HookShotProjectileEntity(EntityType<? extends HookShotProjectileEntity> type, Level world) {
 		super(type, world);
+		setNoGravity(true);
 	}
 
 	public HookShotProjectileEntity(EntityType<? extends HookShotProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
+		setNoGravity(true);
 	}
 
 	public HookShotProjectileEntity(EntityType<? extends HookShotProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
+		setNoGravity(true);
 	}
 
 	@Override

@@ -1,0 +1,9 @@
+{
+  "type": "zelda_craft:structure_feature",
+  "config": {
+    "structure": "zelda_craft:anchient_capsule_station",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_void"
+  }
+}

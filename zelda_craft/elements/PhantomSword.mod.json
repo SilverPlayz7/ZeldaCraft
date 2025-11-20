@@ -8,6 +8,7 @@
     "texture": "phantom_sword",
     "customModelName": "phantomsword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Phantom Sword",
     "specialInformation": {
       "fixedValue": []

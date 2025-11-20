@@ -9,12 +9,12 @@ import net.minecraft.resources.ResourceLocation;
 public class DarkTimeArmorModel extends GeoModel<DarkTimeArmorItem> {
 	@Override
 	public ResourceLocation getAnimationResource(DarkTimeArmorItem object) {
-		return new ResourceLocation("zelda_craft", "animations/darkarmoroftime.animation.json");
+		return new ResourceLocation("zelda_craft", "animations/armoroftime.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(DarkTimeArmorItem object) {
-		return new ResourceLocation("zelda_craft", "geo/darkarmoroftime.geo.json");
+		return new ResourceLocation("zelda_craft", "geo/armoroftime.geo.json");
 	}
 
 	@Override

@@ -2,7 +2,7 @@
   "display": {
     "background": "zelda_craft:textures/screens/illusionblock.png",
     "icon": {
-      "item": "zelda_craft:occarina_of_time"
+      "item": "zelda_craft:ocarina_of_time"
     },
     "title": {
       "translate": "advancements.zelda_craft_advancement_page.title"

@@ -7,7 +7,7 @@
     "height": 220,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 28,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -49,32 +49,6 @@
           "dropItemsWhenNotBound": true,
           "x": 247,
           "y": 113,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "withdraw1.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BunnyHoodSelected"
-          },
-          "x": 198,
-          "y": 55,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "deposit2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BlastMaskSelected"
-          },
-          "x": 198,
-          "y": 55,
           "locked": false
         }
       },
@@ -233,18 +207,153 @@
         }
       },
       {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_shop_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 31,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_line_2",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 41,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_line_3",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_line_4",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 61,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mask_line_5",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "",
+            "name": "MaskLine6"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
         "type": "button",
         "data": {
           "name": "button_empty",
-          "text": "",
-          "isUndecorated": false,
+          "text": ".",
+          "isUndecorated": true,
+          "onClick": {
+            "name": "ResetMaskShop"
+          },
           "displayCondition": {
-            "name": "BlastMaskSelected"
+            "name": "BuyButtonShow"
           },
           "width": 25,
           "height": 20,
-          "x": 155,
-          "y": 81,
+          "x": 422,
+          "y": 235,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reset",
+          "text": {
+            "fixedValue": "Reset?"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 416,
+          "y": 232,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "",
+          "isUndecorated": true,
+          "displayCondition": {
+            "name": "ContractShow"
+          },
+          "width": 25,
+          "height": 20,
+          "x": 0,
+          "y": 220,
           "locked": false
         }
       }
@@ -254,7 +363,7 @@
     },
     "gridSettings": {
       "sx": 18,
-      "sy": 18,
+      "sy": 16,
       "ox": 11,
       "oy": 15,
       "snapOnGrid": false

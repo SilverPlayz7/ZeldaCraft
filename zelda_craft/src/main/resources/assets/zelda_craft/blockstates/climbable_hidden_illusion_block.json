@@ -1,33 +1,33 @@
 {
   "variants": {
-    "facing=north,lens=true": {
-      "model": "zelda_craft:block/hidden_ladder"
-    },
-    "facing=east,lens=true": {
-      "model": "zelda_craft:block/hidden_ladder",
-      "y": 90
-    },
-    "facing=south,lens=true": {
-      "model": "zelda_craft:block/hidden_ladder",
-      "y": 180
-    },
-    "facing=west,lens=true": {
-      "model": "zelda_craft:block/hidden_ladder",
-      "y": 270
-    },
-    "facing=north,lens=false": {
+    "facing=north,blockstate=0": {
       "model": "zelda_craft:block/hidden"
     },
-    "facing=east,lens=false": {
+    "facing=east,blockstate=0": {
       "model": "zelda_craft:block/hidden",
       "y": 90
     },
-    "facing=south,lens=false": {
+    "facing=south,blockstate=0": {
       "model": "zelda_craft:block/hidden",
       "y": 180
     },
-    "facing=west,lens=false": {
+    "facing=west,blockstate=0": {
       "model": "zelda_craft:block/hidden",
+      "y": 270
+    },
+    "facing=north,blockstate=1": {
+      "model": "zelda_craft:block/climbable_hidden_illusion_block_state_blockstate_0"
+    },
+    "facing=east,blockstate=1": {
+      "model": "zelda_craft:block/climbable_hidden_illusion_block_state_blockstate_0",
+      "y": 90
+    },
+    "facing=south,blockstate=1": {
+      "model": "zelda_craft:block/climbable_hidden_illusion_block_state_blockstate_0",
+      "y": 180
+    },
+    "facing=west,blockstate=1": {
+      "model": "zelda_craft:block/climbable_hidden_illusion_block_state_blockstate_0",
       "y": 270
     }
   }

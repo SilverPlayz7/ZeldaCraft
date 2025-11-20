@@ -8,6 +8,7 @@
     "texture": "master_sword",
     "customModelName": "sword3:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "True Master Sword",
     "specialInformation": {
       "fixedValue": [

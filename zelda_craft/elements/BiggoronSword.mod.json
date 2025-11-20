@@ -8,6 +8,7 @@
     "texture": "biggoron_sword",
     "customModelName": "biggoron_sword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Biggoron Sword",
     "specialInformation": {
       "fixedValue": [

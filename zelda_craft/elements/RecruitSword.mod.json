@@ -8,9 +8,12 @@
     "texture": "recruitsword",
     "customModelName": "recruits_sword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Recruit Sword",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "The standard issue sword used by the New Hyrule Gaurd. Some people say they got the design from some old guy's shed."
+      ]
     },
     "creativeTabs": [
       {

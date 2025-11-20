@@ -1,9 +1,10 @@
 {
-  "parent": "zelda_craft:custom/stoneswordstand",
+  "parent": "zelda_craft:custom/vannilaswordstand",
   "textures": {
-    "all": "zelda_craft:block/stoneswordstand",
+    "all": "zelda_craft:block/stand_base",
     "particle": "zelda_craft:block/stand_base",
-    "3": "zelda_craft:block/stoneswordstand"
+    "1": "zelda_craft:block/stand_base",
+    "2": "zelda_craft:block/meister_e"
   },
   "render_type": "cutout_mipped"
 }

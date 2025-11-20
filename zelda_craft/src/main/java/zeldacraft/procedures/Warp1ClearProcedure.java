@@ -40,7 +40,7 @@ public class Warp1ClearProcedure {
 						bufferedReader.close();
 						mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						statueArray = mainObj.get("statues").getAsJsonArray();
-						if (!statueArray.isEmpty()) {
+						if (!(statueArray.size() < 0 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
 							for (int index0 = 0; index0 < 4; index0++) {
 								statueArray.remove(((int) (0 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)));
 							}
@@ -58,6 +58,15 @@ public class Warp1ClearProcedure {
 						}
 					} catch (IOException e) {
 						e.printStackTrace();
+					}
+				}
+				if (statueArray.size() < 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum) {
+					{
+						double _setval = (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum - 1;
+						entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.pageNum = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 				}
 			}

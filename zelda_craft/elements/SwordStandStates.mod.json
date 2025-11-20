@@ -5,7 +5,7 @@
     "block": "SwordStand",
     "blockstateList": [
       {
-        "texture": "woodenswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -13,12 +13,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "woodenswordstand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "stoneswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -26,12 +26,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "stoneswordstand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "ironswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -39,12 +39,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "ironswordstand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "goldswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -52,12 +52,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "goldswordstand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "diamondswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -65,12 +65,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "diamond_sword_stand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "netheriteswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -78,12 +78,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "netheriteswordstand:default",
+        "customModelName": "vannilaswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "kokiriswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -122,7 +122,7 @@
         "boundingBoxes": []
       },
       {
-        "texture": "demonswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -135,7 +135,7 @@
         "boundingBoxes": []
       },
       {
-        "texture": "biggoronswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -148,7 +148,7 @@
         "boundingBoxes": []
       },
       {
-        "texture": "goddesssword1stand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",

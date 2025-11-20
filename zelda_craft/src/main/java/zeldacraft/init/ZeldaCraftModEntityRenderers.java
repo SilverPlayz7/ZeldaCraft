@@ -11,6 +11,7 @@ import zeldacraft.client.renderer.LightArrowProjectileRenderer;
 import zeldacraft.client.renderer.IceArrowProjectileRenderer;
 import zeldacraft.client.renderer.HookShotProjectileRenderer;
 import zeldacraft.client.renderer.HappyMaskSalesmanRenderer;
+import zeldacraft.client.renderer.FrozenIceRenderer;
 import zeldacraft.client.renderer.FireArrowProjectileRenderer;
 import zeldacraft.client.renderer.FairyRenderer;
 import zeldacraft.client.renderer.BombProjectileRenderer;
@@ -40,5 +41,6 @@ public class ZeldaCraftModEntityRenderers {
 		event.registerEntityRenderer(ZeldaCraftModEntities.SILVER_ARROW_PROJECTILE.get(), SilverArrowProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.BOMB_ARROW_PROJECTILE.get(), BombArrowProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.SHOCK_ARROW_PROJECTILE.get(), ShockArrowProjectileRenderer::new);
+		event.registerEntityRenderer(ZeldaCraftModEntities.FROZEN_ICE.get(), FrozenIceRenderer::new);
 	}
 }

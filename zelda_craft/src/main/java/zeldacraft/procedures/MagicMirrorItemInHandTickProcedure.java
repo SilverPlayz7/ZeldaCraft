@@ -14,11 +14,19 @@ public class MagicMirrorItemInHandTickProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entUseItem0 ? _entUseItem0.getUseItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.MAGIC_MIRROR.get()) {
-			if ((entity instanceof LivingEntity _entUseTicks2 ? _entUseTicks2.getTicksUsingItem() : 0) == 60) {
+			if ((entity instanceof LivingEntity _entUseTicks2 ? _entUseTicks2.getTicksUsingItem() : 0) == 1) {
+				itemstack.setDamageValue(60);
+			}
+			if ((entity instanceof LivingEntity _entUseTicks5 ? _entUseTicks5.getTicksUsingItem() : 0) == 60) {
 				MagicMirrorRightclickedProcedure.execute(world, entity, itemstack);
 			}
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.PORTAL, x, y, z, 5, 1, 0.5, 1, 1);
+			itemstack.setDamageValue(itemstack.getDamageValue() - 1);
+		} else {
+			if (itemstack.getDamageValue() > 0) {
+				itemstack.setDamageValue(0);
+			}
 		}
 	}
 }

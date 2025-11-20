@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "goddesssword1stand"
+        "1": "stand_base",
+        "2": "goddesssword"
       },
       "name": "default"
     }

@@ -1,0 +1,22 @@
+{
+  "zelda_craft:zelda_craft_advancement_page": {
+    "criteria": {
+      "zelda_craft_advancement_page_0": "2025-11-19 18:01:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-11-19 18:01:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:old_growth_pine_taiga": "2025-11-19 18:01:41 -0500",
+      "minecraft:plains": "2025-11-19 18:01:35 -0500"
+    },
+    "done": false
+  },
+  "DataVersion": 3465
+}

@@ -8,6 +8,7 @@
     "texture": "unnamed",
     "customModelName": "goddess_sword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Goddess Sword",
     "specialInformation": {
       "fixedValue": [

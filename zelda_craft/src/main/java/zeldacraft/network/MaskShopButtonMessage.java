@@ -1,5 +1,6 @@
 package zeldacraft.network;
 
+import zeldacraft.procedures.ResetMaskShopProcedure;
 import zeldacraft.procedures.GetContractButtonProcedure;
 import zeldacraft.procedures.BuyMaskButtonProcedure;
 import zeldacraft.procedures.BunnyHoodButtonProcedure;
@@ -62,19 +63,23 @@ public class MaskShopButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 1) {
+		if (buttonID == 0) {
 
-			BunnyHoodButtonProcedure.execute(entity);
+			ResetMaskShopProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			BlastMaskButtonProcedure.execute(entity);
+			BunnyHoodButtonProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			BuyMaskButtonProcedure.execute(world, entity);
+			BlastMaskButtonProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
+
+			BuyMaskButtonProcedure.execute(world, entity);
+		}
+		if (buttonID == 5) {
 
 			GetContractButtonProcedure.execute(entity);
 		}

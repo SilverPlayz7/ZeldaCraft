@@ -46,7 +46,7 @@ public class SunsSongProcedure {
 							}
 						});
 					}
-				}.timedLoop(0, (int) ((13000 - world.dayTime()) / 500), 2);
+				}.timedLoop(0, (int) (((13000 - world.dayTime()) / 500) + 1), 2);
 			} else {
 				new Object() {
 					void timedLoop(int timedloopiterator, int timedlooptotal, int ticks) {
@@ -65,7 +65,7 @@ public class SunsSongProcedure {
 							}
 						});
 					}
-				}.timedLoop(0, (int) (Math.abs(24000 - world.dayTime()) / 500), 2);
+				}.timedLoop(0, (int) (Math.abs((24000 - world.dayTime()) / 500) + 1), 2);
 			}
 		}
 	}
