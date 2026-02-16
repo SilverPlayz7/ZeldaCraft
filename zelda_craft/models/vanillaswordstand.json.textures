@@ -1,0 +1,53 @@
+{
+  "mappings": {
+    "gold": {
+      "map": {
+        "1": "stand_base",
+        "2": "meister_e"
+      },
+      "name": "gold"
+    },
+    "default": {
+      "map": {
+        "1": "stand_base",
+        "2": "hidden"
+      },
+      "name": "default"
+    },
+    "diamond": {
+      "map": {
+        "1": "stand_base",
+        "2": "diamond_sword"
+      },
+      "name": "diamond"
+    },
+    "wooden": {
+      "map": {
+        "1": "stand_base",
+        "2": "minecraft:item/wooden_sword"
+      },
+      "name": "wooden"
+    },
+    "iron": {
+      "map": {
+        "1": "stand_base",
+        "2": "meister_e"
+      },
+      "name": "iron"
+    },
+    "stone": {
+      "map": {
+        "1": "stand_base",
+        "2": "meister_e"
+      },
+      "name": "stone"
+    },
+    "netherite": {
+      "map": {
+        "1": "stand_base",
+        "2": "meister_e"
+      },
+      "name": "netherite"
+    }
+  }
+}

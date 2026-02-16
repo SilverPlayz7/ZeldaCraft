@@ -1,5 +1,7 @@
 package zeldacraft.procedures;
 
+import zeldacraft.configuration.ZeldaCraftConfigConfiguration;
+
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -11,7 +13,9 @@ public class IceArrowProjectileWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
 		if (immediatesourceentity == null)
 			return;
-		world.addParticle(ParticleTypes.SNOWFLAKE, x, y, z, 0, 0, 0);
+		if (ZeldaCraftConfigConfiguration.PARTICLE_TRAIL.get() == true) {
+			world.addParticle(ParticleTypes.SNOWFLAKE, x, y, z, 0, 0, 0);
+		}
 		if (immediatesourceentity.isInWater()) {
 			int horizontalRadiusHemiBot = (int) 4 - 1;
 			int verticalRadiusHemiBot = (int) 4;

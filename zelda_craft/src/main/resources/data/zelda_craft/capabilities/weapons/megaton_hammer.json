@@ -1,10 +1,16 @@
- {
-    "type": "epicfight:axe",
-    "attributes": {
-        "common": {
-            "armor_negation": 50.0,
-                "impact": 2.25,
-            "max_strikes": 6,
-        }
-    }
- }
+{
+  "collider": {
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.5
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  "type": "epicfight:axe"
+}

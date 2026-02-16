@@ -1,9 +1,14 @@
 {
   "type": "zelda_craft:structure_feature",
   "config": {
-    "structure": "zelda_craft:anchient_capsule_station",
+    "structure": "zelda_craft:tomb_marker",
     "random_rotation": true,
     "random_mirror": true,
-    "ignored_blocks": "minecraft:structure_void"
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      0,
+      -1,
+      0
+    ]
   }
 }

@@ -3,6 +3,7 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.client.renderer.SpinnerVehicleRenderer;
 import zeldacraft.client.renderer.SilverArrowProjectileRenderer;
 import zeldacraft.client.renderer.ShockArrowProjectileRenderer;
 import zeldacraft.client.renderer.MasterSwordBeamProjectileProjectileRenderer;
@@ -42,5 +43,6 @@ public class ZeldaCraftModEntityRenderers {
 		event.registerEntityRenderer(ZeldaCraftModEntities.BOMB_ARROW_PROJECTILE.get(), BombArrowProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.SHOCK_ARROW_PROJECTILE.get(), ShockArrowProjectileRenderer::new);
 		event.registerEntityRenderer(ZeldaCraftModEntities.FROZEN_ICE.get(), FrozenIceRenderer::new);
+		event.registerEntityRenderer(ZeldaCraftModEntities.SPINNER_VEHICLE.get(), SpinnerVehicleRenderer::new);
 	}
 }

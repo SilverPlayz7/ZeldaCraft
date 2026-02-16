@@ -1,0 +1,49 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.BLUE_ICE"
+      },
+      {
+        "value": "Blocks.SPONGE#0"
+      },
+      {
+        "value": "Blocks.SKULL#1"
+      },
+      {
+        "value": "Blocks.PITCHER_PLANT"
+      },
+      {
+        "value": "Blocks.SOUL_SAND"
+      },
+      {
+        "value": "Blocks.SANDSTONE"
+      },
+      {
+        "value": "Blocks.RAIL"
+      },
+      {
+        "value": "Blocks.ACTIVATOR_RAIL"
+      },
+      {
+        "value": "Blocks.RAIL"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SpiritOfTheLokomo"
+    },
+    "name": "spirit_of_the_lokomo",
+    "namespace": "mod"
+  }
+}

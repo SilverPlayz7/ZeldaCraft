@@ -7,15 +7,16 @@ import zeldacraft.init.ZeldaCraftModBlocks;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -29,10 +30,10 @@ public class Warp5TeleportProcedure {
 		File file = new File("");
 		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
 		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
-		file = new File(
-				(FMLPaths.GAMEDIR.get().toString() + ""
-						+ ("/saves/" + ((world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "/data"))),
-				File.separator + "owlstatue.json");
+		String worldName = "";
+		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
+		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
 		if (file.exists()) {
 			{
 				try {

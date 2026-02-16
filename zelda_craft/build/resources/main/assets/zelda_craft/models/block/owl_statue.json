@@ -1,8 +1,9 @@
 {
-  "parent": "block/cube_all",
+  "parent": "zelda_craft:custom/owlstatue",
   "textures": {
-    "all": "zelda_craft:block/lonlonlable",
-    "particle": "zelda_craft:block/lonlonlable"
+    "all": "zelda_craft:block/owlstatue",
+    "particle": "zelda_craft:block/owlstatue",
+    "1": "zelda_craft:block/owlstatue"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }

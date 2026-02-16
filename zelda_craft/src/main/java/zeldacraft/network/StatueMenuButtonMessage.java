@@ -92,23 +92,23 @@ public class StatueMenuButtonMessage {
 		}
 		if (buttonID == 5) {
 
-			Warp1ClearProcedure.execute(world, entity);
+			Warp1ClearProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
-			Warp2ClearProcedure.execute(world, entity);
+			Warp2ClearProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Warp3ClearProcedure.execute(world, entity);
+			Warp3ClearProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Warp4ClearProcedure.execute(world, entity);
+			Warp4ClearProcedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			Warp5ClearProcedure.execute(world, entity);
+			Warp5ClearProcedure.execute(entity);
 		}
 		if (buttonID == 10) {
 

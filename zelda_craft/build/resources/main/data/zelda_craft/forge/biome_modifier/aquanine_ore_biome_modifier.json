@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "desert",
+  "features": "zelda_craft:aquanine_ore",
+  "step": "underground_ores"
+}

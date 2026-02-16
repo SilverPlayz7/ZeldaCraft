@@ -66,4 +66,5 @@ public class ZeldaCraftModSounds {
 	public static final RegistryObject<SoundEvent> HOOKSHOT_MISS = REGISTRY.register("hookshot_miss", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("zelda_craft", "hookshot_miss")));
 	public static final RegistryObject<SoundEvent> HOOKSHOT_FIRE = REGISTRY.register("hookshot_fire", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("zelda_craft", "hookshot_fire")));
 	public static final RegistryObject<SoundEvent> HOOKSHOT_FLYING = REGISTRY.register("hookshot_flying", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("zelda_craft", "hookshot_flying")));
+	public static final RegistryObject<SoundEvent> SARIAS_SONG_OCARINA = REGISTRY.register("sarias_song_ocarina", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("zelda_craft", "sarias_song_ocarina")));
 }

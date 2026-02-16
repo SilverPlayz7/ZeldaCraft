@@ -9,10 +9,12 @@ import zeldacraft.block.entity.TimedFloorSwitchBlockEntity;
 import zeldacraft.block.entity.SwordStandBlockEntity;
 import zeldacraft.block.entity.SmallDungeonChestTileEntity;
 import zeldacraft.block.entity.RustyFloorSwitchBlockEntity;
+import zeldacraft.block.entity.RoyalSarcophagusTileEntity;
 import zeldacraft.block.entity.OwlStatueBlockEntity;
 import zeldacraft.block.entity.OpenChestBlockEntity;
 import zeldacraft.block.entity.LullabySwitchBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
+import zeldacraft.block.entity.LockedDungeonDoorTileEntity;
 import zeldacraft.block.entity.IllusionBlockBlockEntity;
 import zeldacraft.block.entity.HiddenIllusionBlockBlockEntity;
 import zeldacraft.block.entity.FloorSwitchBlockEntity;
@@ -50,6 +52,10 @@ public class ZeldaCraftModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> RUSTY_FLOOR_SWITCH = register("rusty_floor_switch", ZeldaCraftModBlocks.RUSTY_FLOOR_SWITCH, RustyFloorSwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> LULLABY_SWITCH = register("lullaby_switch", ZeldaCraftModBlocks.LULLABY_SWITCH, LullabySwitchBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> OWL_STATUE = register("owl_statue", ZeldaCraftModBlocks.OWL_STATUE, OwlStatueBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<RoyalSarcophagusTileEntity>> ROYAL_SARCOPHAGUS = REGISTRY.register("royal_sarcophagus",
+			() -> BlockEntityType.Builder.of(RoyalSarcophagusTileEntity::new, ZeldaCraftModBlocks.ROYAL_SARCOPHAGUS.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LockedDungeonDoorTileEntity>> LOCKED_DUNGEON_DOOR = REGISTRY.register("locked_dungeon_door",
+			() -> BlockEntityType.Builder.of(LockedDungeonDoorTileEntity::new, ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get()).build(null));
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

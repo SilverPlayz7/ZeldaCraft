@@ -8,6 +8,7 @@
     "texture": "razorsword",
     "customModelName": "razor_sword:default",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Razor Sword",
     "specialInformation": {
       "fixedValue": [

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zelda_craft:block/aquanine_ore",
+    "particle": "zelda_craft:block/aquanine_ore"
+  },
+  "render_type": "solid"
+}

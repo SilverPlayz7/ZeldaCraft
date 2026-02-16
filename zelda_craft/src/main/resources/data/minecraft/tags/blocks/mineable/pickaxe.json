@@ -1,11 +1,15 @@
 {
   "replace": false,
   "values": [
+    "zelda_craft:crimsonine_ore",
     "zelda_craft:hookshot_target",
     "zelda_craft:false_illusion_block",
     "zelda_craft:phantom_hourglass",
+    "zelda_craft:dungeon_door",
     "zelda_craft:timeshift_ore",
+    "zelda_craft:azurine_ore",
     "zelda_craft:molten_ore",
-    "zelda_craft:mountain_rok"
+    "zelda_craft:mountain_rok",
+    "zelda_craft:aquanine_ore"
   ]
 }

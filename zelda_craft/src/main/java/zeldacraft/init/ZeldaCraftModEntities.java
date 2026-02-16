@@ -3,6 +3,7 @@
  */
 package zeldacraft.init;
 
+import zeldacraft.entity.SpinnerVehicleEntity;
 import zeldacraft.entity.SilverArrowProjectileEntity;
 import zeldacraft.entity.ShockArrowProjectileEntity;
 import zeldacraft.entity.MasterSwordBeamProjectileProjectileEntity;
@@ -68,6 +69,8 @@ public class ZeldaCraftModEntities {
 			EntityType.Builder.<FrozenIceEntity>of(FrozenIceEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FrozenIceEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SpinnerVehicleEntity>> SPINNER_VEHICLE = register("spinner_vehicle", EntityType.Builder.<SpinnerVehicleEntity>of(SpinnerVehicleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpinnerVehicleEntity::new).fireImmune().sized(1f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -82,6 +85,7 @@ public class ZeldaCraftModEntities {
 			BombProjectileEntity.init();
 			FairyEntity.init();
 			FrozenIceEntity.init();
+			SpinnerVehicleEntity.init();
 		});
 	}
 
@@ -91,5 +95,6 @@ public class ZeldaCraftModEntities {
 		event.put(BOMB_PROJECTILE.get(), BombProjectileEntity.createAttributes().build());
 		event.put(FAIRY.get(), FairyEntity.createAttributes().build());
 		event.put(FROZEN_ICE.get(), FrozenIceEntity.createAttributes().build());
+		event.put(SPINNER_VEHICLE.get(), SpinnerVehicleEntity.createAttributes().build());
 	}
 }

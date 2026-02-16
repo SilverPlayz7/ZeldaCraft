@@ -2,4 +2,10 @@
 [Visual]
 	#The display type shown when you're looking at a block that can be hookshotted. Available types: OUTLINE, GLOW, OFF
 	"Hookshot Reticle Type" = "OUTLINE"
+	#Changes whether this mod's arrows will spawn trail particles
+	"Show Arrow Particle Trail" = true
+
+[Hookshot]
+	#If enabled, the hookshot/longshot will only be able to attach to the 'hookshot target' block
+	"Only Hit Targets" = true
 

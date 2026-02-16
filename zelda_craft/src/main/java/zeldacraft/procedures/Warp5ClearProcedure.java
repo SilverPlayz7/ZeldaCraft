@@ -5,12 +5,12 @@ import zeldacraft.network.ZeldaCraftModVariables;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
 
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -19,17 +19,17 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class Warp5ClearProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		File file = new File("");
 		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
 		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
+		String worldName = "";
 		if (Screen.hasShiftDown()) {
-			file = new File(
-					(FMLPaths.GAMEDIR.get().toString() + ""
-							+ ("/saves/" + ((world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "/data"))),
-					File.separator + "owlstatue.json");
+			MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+			worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
+			file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
 			if (file.exists()) {
 				{
 					try {

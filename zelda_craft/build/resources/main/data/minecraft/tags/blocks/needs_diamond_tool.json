@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
+    "zelda_craft:crimsonine_ore",
     "zelda_craft:timeshift_ore",
+    "zelda_craft:azurine_ore",
     "zelda_craft:molten_ore",
-    "zelda_craft:mountain_rok"
+    "zelda_craft:mountain_rok",
+    "zelda_craft:aquanine_ore"
   ]
 }

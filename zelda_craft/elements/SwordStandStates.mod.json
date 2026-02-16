@@ -13,7 +13,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "sword_stand:default",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -26,7 +26,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "vanillaswordstand:stone",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -39,7 +39,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "vanillaswordstand:iron",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -52,7 +52,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "vanillaswordstand:gold",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -65,7 +65,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "vanillaswordstand:diamond",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -78,7 +78,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "vannilaswordstand:default",
+        "customModelName": "vanillaswordstand:netherite",
         "luminance": 0,
         "boundingBoxes": []
       },
@@ -96,7 +96,7 @@
         "boundingBoxes": []
       },
       {
-        "texture": "razorswordstand",
+        "texture": "stand_base",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -104,7 +104,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "razor_sword_stand:default",
+        "customModelName": "razorswordstand:default",
         "luminance": 0,
         "boundingBoxes": []
       },

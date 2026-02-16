@@ -6992,27 +6992,9 @@
     },
     "done": true
   },
-  "zelda_craft:hammer_down": {
+  "zelda_craft:zelda_craft_advancement_page": {
     "criteria": {
-      "hammer_down": "2024-01-15 20:57:48 -0500"
-    },
-    "done": true
-  },
-  "zelda_craft:the_power_of_the_gods_in_the_palm_of_your_hand": {
-    "criteria": {
-      "the_power_of_the_gods_in_the_palm_of_your_hand": "2024-01-15 20:58:05 -0500"
-    },
-    "done": true
-  },
-  "zelda_craft:the_blade_of_evils_bane": {
-    "criteria": {
-      "the_blade_of_evils_bane": "2024-01-15 20:58:07 -0500"
-    },
-    "done": true
-  },
-  "zelda_craft:grave_robber": {
-    "criteria": {
-      "grave_robber": "2024-01-15 20:58:11 -0500"
+      "zelda_craft_advancement_page_0": "2025-12-22 13:02:14 -0500"
     },
     "done": true
   },

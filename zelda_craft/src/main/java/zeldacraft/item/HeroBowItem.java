@@ -40,7 +40,6 @@ public class HeroBowItem extends BowItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		if (selected)
-			HeroBowItemInInventoryTickProcedure.execute(entity, itemstack);
+		HeroBowItemInInventoryTickProcedure.execute(entity, itemstack);
 	}
 }

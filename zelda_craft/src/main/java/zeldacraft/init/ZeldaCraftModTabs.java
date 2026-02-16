@@ -109,7 +109,6 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.BUNNY_HOOD.get());
 				tabData.accept(ZeldaCraftModItems.DEKU_MASK.get());
 				tabData.accept(ZeldaCraftModItems.ALL_NIGHT_MASK.get());
-				tabData.accept(ZeldaCraftModItems.GARO_MASK_HELMET.get());
 				tabData.accept(ZeldaCraftModItems.CHILD_WALLET.get());
 				tabData.accept(ZeldaCraftModItems.GREEN_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.BLUE_RUPEE.get());
@@ -142,6 +141,9 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.TIMESHIFT_SHARD.get());
 				tabData.accept(ZeldaCraftModItems.HYRULE_CREST.get());
 				tabData.accept(ZeldaCraftModItems.SPIRIT_OF_THE_LOKOMO.get());
+				tabData.accept(ZeldaCraftModBlocks.CRIMSONINE_ORE.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.AZURINE_ORE.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.AQUANINE_ORE.get().asItem());
 				tabData.accept(ZeldaCraftModItems.CRIMSONINE.get());
 				tabData.accept(ZeldaCraftModItems.AZURINE.get());
 				tabData.accept(ZeldaCraftModItems.AQUANINE.get());
@@ -170,6 +172,10 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.GORON_COIN.get());
 				tabData.accept(ZeldaCraftModItems.ZORA_COIN.get());
 				tabData.accept(ZeldaCraftModItems.GERUDO_COIN.get());
+				tabData.accept(ZeldaCraftModItems.SPINNER.get());
+				tabData.accept(ZeldaCraftModBlocks.DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.SPINNER_RAIL.get().asItem());
 			}).build());
 
 	@SubscribeEvent
@@ -177,6 +183,7 @@ public class ZeldaCraftModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(ZeldaCraftModItems.HAPPY_MASK_SALESMAN_SPAWN_EGG.get());
 			tabData.accept(ZeldaCraftModItems.FAIRY_SPAWN_EGG.get());
+			tabData.accept(ZeldaCraftModItems.SPINNER_VEHICLE_SPAWN_EGG.get());
 		}
 	}
 }

@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
@@ -20,12 +21,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -47,10 +48,10 @@ public class OwlStatueOnBlockRightClickedProcedure {
 		double loop = 0;
 		double zRadius = 0;
 		double particleAmount = 0;
-		file = new File(
-				(FMLPaths.GAMEDIR.get().toString() + ""
-						+ ("/saves/" + ((world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "/data"))),
-				File.separator + "owlstatue.json");
+		String worldName = "";
+		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
+		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
 		if (!file.exists()) {
 			try {
 				file.getParentFile().mkdirs();

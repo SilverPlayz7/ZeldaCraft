@@ -10,13 +10,10 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -31,7 +28,7 @@ public class BombArrowProjectileProjectileHitsLivingEntityProcedure {
 		double sz = 0;
 		if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.BOMB_GREIFING) == false) {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION)), null, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
+				_level.explode(entity, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
 			sx = -1.6;
 			found = false;
 			for (int index0 = 0; index0 < 4; index0++) {
@@ -66,7 +63,7 @@ public class BombArrowProjectileProjectileHitsLivingEntityProcedure {
 			}
 		} else {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.TNT);
+				_level.explode(entity, x, y, z, 3, false, Level.ExplosionInteraction.TNT);
 		}
 	}
 }

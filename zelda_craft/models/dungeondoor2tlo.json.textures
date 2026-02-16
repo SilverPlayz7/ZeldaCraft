@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "dungeondoor2"
+      },
+      "name": "default"
+    }
+  }
+}

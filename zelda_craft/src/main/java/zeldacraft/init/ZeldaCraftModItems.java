@@ -19,6 +19,7 @@ import zeldacraft.item.TimeArmorItem;
 import zeldacraft.item.TimeArmorBundleItem;
 import zeldacraft.item.SpriritFluteItem;
 import zeldacraft.item.SpiritOfTheLokomoItem;
+import zeldacraft.item.SpinnerItem;
 import zeldacraft.item.SongOfStormsItem;
 import zeldacraft.item.SmallKeyItem;
 import zeldacraft.item.SilverRupeeItem;
@@ -114,6 +115,8 @@ import zeldacraft.item.AllNightMaskItem;
 
 import zeldacraft.block.display.TreasureChestDisplayItem;
 import zeldacraft.block.display.SmallDungeonChestDisplayItem;
+import zeldacraft.block.display.RoyalSarcophagusDisplayItem;
+import zeldacraft.block.display.LockedDungeonDoorDisplayItem;
 import zeldacraft.block.display.AnchientCapsuleMachineDisplayItem;
 
 import zeldacraft.ZeldaCraftMod;
@@ -297,6 +300,16 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> SHOCK_ARROW = REGISTRY.register("shock_arrow", () -> new ShockArrowItem());
 	public static final RegistryObject<Item> OWL_STATUE = block(ZeldaCraftModBlocks.OWL_STATUE);
 	public static final RegistryObject<Item> FROZEN_ICE_SPAWN_EGG = REGISTRY.register("frozen_ice_spawn_egg", () -> new ForgeSpawnEggItem(ZeldaCraftModEntities.FROZEN_ICE, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> ROYAL_SARCOPHAGUS = REGISTRY.register(ZeldaCraftModBlocks.ROYAL_SARCOPHAGUS.getId().getPath(), () -> new RoyalSarcophagusDisplayItem(ZeldaCraftModBlocks.ROYAL_SARCOPHAGUS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> AZURINE_ORE = block(ZeldaCraftModBlocks.AZURINE_ORE);
+	public static final RegistryObject<Item> CRIMSONINE_ORE = block(ZeldaCraftModBlocks.CRIMSONINE_ORE);
+	public static final RegistryObject<Item> AQUANINE_ORE = block(ZeldaCraftModBlocks.AQUANINE_ORE);
+	public static final RegistryObject<Item> SPINNER = REGISTRY.register("spinner", () -> new SpinnerItem());
+	public static final RegistryObject<Item> SPINNER_VEHICLE_SPAWN_EGG = REGISTRY.register("spinner_vehicle_spawn_egg", () -> new ForgeSpawnEggItem(ZeldaCraftModEntities.SPINNER_VEHICLE, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> DUNGEON_DOOR = block(ZeldaCraftModBlocks.DUNGEON_DOOR);
+	public static final RegistryObject<Item> LOCKED_DUNGEON_DOOR = REGISTRY.register(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.getId().getPath(),
+			() -> new LockedDungeonDoorDisplayItem(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get(), new Item.Properties()));
+	public static final RegistryObject<Item> SPINNER_RAIL = block(ZeldaCraftModBlocks.SPINNER_RAIL);
 
 	// Start of user code block custom items
 	// End of user code block custom items

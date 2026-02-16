@@ -3,8 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "wip",
+    "texture": "armorofwindicon",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Wind Armor Bundle",
@@ -56,6 +57,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

@@ -4,6 +4,20 @@
   "workspacePanelSortAscending": true,
   "projectBrowserSplitPos": 0,
   "projectBrowserState": {
-    "expandedPaths": []
+    "expandedPaths": [
+      "[, External libraries]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, data]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, data, tags]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, data, worldgen]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, data, worldgen, placement]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, tags]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, world]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, world, level]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, world, level, levelgen]",
+      "[, External libraries, Gradle: forge-1.20.1-47.4.0_mapped_official_1.20.1, net, minecraft, world, level, levelgen, presets]"
+    ]
   }
 }

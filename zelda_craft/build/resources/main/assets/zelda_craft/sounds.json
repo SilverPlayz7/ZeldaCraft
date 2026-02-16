@@ -444,5 +444,14 @@
         "stream": false
       }
     ]
+  },
+  "sarias_song_ocarina": {
+    "subtitle": "subtitles.sarias_song_ocarina",
+    "sounds": [
+      {
+        "name": "zelda_craft:sarias_song",
+        "stream": true
+      }
+    ]
   }
 }

@@ -5,15 +5,15 @@
     "block": "OwlStatue",
     "blockstateList": [
       {
-        "texture": "lonlonlogo",
+        "texture": "owlstatue",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
         "textureRight": "",
         "textureBack": "",
         "particleTexture": "",
-        "renderType": 4,
-        "customModelName": "Single texture",
+        "renderType": 2,
+        "customModelName": "owlstatueactivated:default",
         "luminance": 0,
         "boundingBoxes": []
       }

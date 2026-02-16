@@ -1,9 +1,10 @@
 {
-  "parent": "zelda_craft:custom/razor_sword_stand",
+  "parent": "zelda_craft:custom/razorswordstand",
   "textures": {
-    "all": "zelda_craft:block/razorswordstand",
+    "all": "zelda_craft:block/stand_base",
     "particle": "zelda_craft:block/stand_base",
-    "3": "zelda_craft:block/kokiriswordstand"
+    "2": "zelda_craft:block/stand_base",
+    "3": "zelda_craft:block/razorsword"
   },
   "render_type": "cutout_mipped"
 }

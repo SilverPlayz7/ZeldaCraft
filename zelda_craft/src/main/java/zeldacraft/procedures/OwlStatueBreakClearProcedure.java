@@ -9,11 +9,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.level.BlockEvent;
 
+import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -40,13 +41,13 @@ public class OwlStatueBreakClearProcedure {
 		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
 		double removeIndex = 0;
 		double checkIndex = 0;
+		String worldName = "";
 		if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
 			checkIndex = 0;
 			removeIndex = 0;
-			file = new File(
-					(FMLPaths.GAMEDIR.get().toString() + ""
-							+ ("/saves/" + ((world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "/data"))),
-					File.separator + "owlstatue.json");
+			MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+			worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
+			file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
 			if (file.exists()) {
 				{
 					try {

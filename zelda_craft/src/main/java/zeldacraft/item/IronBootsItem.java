@@ -92,7 +92,7 @@ public abstract class IronBootsItem extends ArmorItem {
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
 							Map.of("left_leg", new ModelIronBoots(Minecraft.getInstance().getEntityModels().bakeLayer(ModelIronBoots.LAYER_LOCATION)).Left, "right_leg",
-									new ModelIronBoots(Minecraft.getInstance().getEntityModels().bakeLayer(ModelIronBoots.LAYER_LOCATION)).Left, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+									new ModelIronBoots(Minecraft.getInstance().getEntityModels().bakeLayer(ModelIronBoots.LAYER_LOCATION)).Right, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();

@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "herobowthing",
     "customModelName": "herobow:default",
+    "guiTexture": "",
     "customProperties": {
       "pulling": {
         "name": "HeroBowPropertyValueProvider"
@@ -92,7 +93,7 @@
     "onRightClickedInAir": {
       "name": "HeroBowRightclicked"
     },
-    "onItemInUseTick": {
+    "onItemInInventoryTick": {
       "name": "HeroBowItemInInventoryTick"
     },
     "enableRanged": false,
@@ -112,6 +113,10 @@
     "isAlwaysEdible": false,
     "animation": "bow",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zelda_craft:block/spinner_rail"
+    },
+    "facing=east": {
+      "model": "zelda_craft:block/spinner_rail",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zelda_craft:block/spinner_rail",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zelda_craft:block/spinner_rail",
+      "y": 270
+    }
+  }
+}

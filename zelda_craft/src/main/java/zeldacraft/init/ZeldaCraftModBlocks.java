@@ -8,9 +8,11 @@ import zeldacraft.block.TreasureChestBlock;
 import zeldacraft.block.TimeshiftOreBlock;
 import zeldacraft.block.TimedFloorSwitchBlock;
 import zeldacraft.block.SwordStandBlock;
+import zeldacraft.block.SpinnerRailBlock;
 import zeldacraft.block.SmallDungeonChestBlock;
 import zeldacraft.block.SheikahLinkBlock;
 import zeldacraft.block.RustyFloorSwitchBlock;
+import zeldacraft.block.RoyalSarcophagusBlock;
 import zeldacraft.block.PhantomHourglassBlock;
 import zeldacraft.block.OwlStatueBlock;
 import zeldacraft.block.OpenChestBlock;
@@ -18,16 +20,21 @@ import zeldacraft.block.MountainRokBlock;
 import zeldacraft.block.MoltenOreBlock;
 import zeldacraft.block.LullabySwitchBlock;
 import zeldacraft.block.LockedHylianChestBlock;
+import zeldacraft.block.LockedDungeonDoorBlock;
 import zeldacraft.block.IllusionBlockBlock;
 import zeldacraft.block.HookshotTargetBlock;
 import zeldacraft.block.HiddenIllusionBlockBlock;
 import zeldacraft.block.FloorSwitchBlock;
 import zeldacraft.block.FalseIllusionBlockBlock;
+import zeldacraft.block.DungeonDoorBlock;
 import zeldacraft.block.Dungeon1PortalBlock;
+import zeldacraft.block.CrimsonineOreBlock;
 import zeldacraft.block.ClosedChestBlock;
 import zeldacraft.block.ClimbableHiddenIllusionBlockBlock;
 import zeldacraft.block.BombableWallBlock;
 import zeldacraft.block.BombableIllusionBlockBlock;
+import zeldacraft.block.AzurineOreBlock;
+import zeldacraft.block.AquanineOreBlock;
 import zeldacraft.block.AnchientCapsuleMachineBlock;
 
 import zeldacraft.ZeldaCraftMod;
@@ -66,6 +73,13 @@ public class ZeldaCraftModBlocks {
 	public static final RegistryObject<Block> RUSTY_FLOOR_SWITCH = REGISTRY.register("rusty_floor_switch", () -> new RustyFloorSwitchBlock());
 	public static final RegistryObject<Block> LULLABY_SWITCH = REGISTRY.register("lullaby_switch", () -> new LullabySwitchBlock());
 	public static final RegistryObject<Block> OWL_STATUE = REGISTRY.register("owl_statue", () -> new OwlStatueBlock());
+	public static final RegistryObject<Block> ROYAL_SARCOPHAGUS = REGISTRY.register("royal_sarcophagus", () -> new RoyalSarcophagusBlock());
+	public static final RegistryObject<Block> AZURINE_ORE = REGISTRY.register("azurine_ore", () -> new AzurineOreBlock());
+	public static final RegistryObject<Block> CRIMSONINE_ORE = REGISTRY.register("crimsonine_ore", () -> new CrimsonineOreBlock());
+	public static final RegistryObject<Block> AQUANINE_ORE = REGISTRY.register("aquanine_ore", () -> new AquanineOreBlock());
+	public static final RegistryObject<Block> DUNGEON_DOOR = REGISTRY.register("dungeon_door", () -> new DungeonDoorBlock());
+	public static final RegistryObject<Block> LOCKED_DUNGEON_DOOR = REGISTRY.register("locked_dungeon_door", () -> new LockedDungeonDoorBlock());
+	public static final RegistryObject<Block> SPINNER_RAIL = REGISTRY.register("spinner_rail", () -> new SpinnerRailBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

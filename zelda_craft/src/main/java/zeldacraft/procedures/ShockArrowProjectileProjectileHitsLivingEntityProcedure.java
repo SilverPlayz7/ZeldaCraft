@@ -1,16 +1,19 @@
 package zeldacraft.procedures;
 
 import zeldacraft.init.ZeldaCraftModMobEffects;
+import zeldacraft.init.ZeldaCraftModGameRules;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
@@ -40,5 +43,21 @@ public class ShockArrowProjectileProjectileHitsLivingEntityProcedure {
 		entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW), immediatesourceentity, sourceentity), (float) damage);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(ZeldaCraftModMobEffects.STUNNED.get(), 60, 1, false, true));
+		if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.SHOCK_DROP) == true) {
+			if (entity instanceof Player _player_) {
+				if (!_player_.getMainHandItem().isEmpty()) {
+					_player_.drop(_player_.getMainHandItem(), true);
+					_player_.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+				}
+				_player_.getInventory().setChanged();
+			}
+			if (entity instanceof Player _player_) {
+				if (!_player_.getOffhandItem().isEmpty()) {
+					_player_.drop(_player_.getOffhandItem(), true);
+					_player_.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
+					_player_.getInventory().setChanged();
+				}
+			}
+		}
 	}
 }

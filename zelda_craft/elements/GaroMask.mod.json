@@ -10,11 +10,7 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:ZeldaCraft"
-      }
-    ],
+    "creativeTabs": [],
     "armorTextureFile": "link_",
     "helmetName": "Garo Mask",
     "bodyName": "Garo Mask Chestplate",

@@ -20,6 +20,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -47,8 +48,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 0, 255, false, false));
 					if (world instanceof Level _level && !_level.isClientSide())
-						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), null, x, y,
-								z, 3, false, Level.ExplosionInteraction.NONE);
+						_level.explode(entity, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
 					ZeldaCraftMod.queueServerWork(1, () -> {
 						if (new Object() {
 							public boolean checkGamemode(Entity _ent) {
@@ -112,8 +112,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 0, 255, false, false));
 					if (world instanceof Level _level && !_level.isClientSide())
-						_level.explode(entity, new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), null, x, y,
-								z, 3, false, Level.ExplosionInteraction.TNT);
+						_level.explode(entity, x, y, z, 3, false, Level.ExplosionInteraction.TNT);
 					ZeldaCraftMod.queueServerWork(1, () -> {
 						if (new Object() {
 							public boolean checkGamemode(Entity _ent) {
@@ -136,7 +135,7 @@ public class MaskAbilityOnKeyPressedProcedure {
 								return false;
 							}
 						}.checkGamemode(entity)) {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:bomb_mask")))), 5);
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION)), 5);
 						}
 					});
 					if (entity instanceof Player _player)

@@ -18,6 +18,9 @@
     "customModelTexture": "shockarrow.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "ShockArrowProjectileProjectileHitsBlock"
+    },
     "onHitsEntity": {
       "name": "ShockArrowProjectileProjectileHitsLivingEntity"
     },

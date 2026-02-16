@@ -1,0 +1,6 @@
+{
+  "parent": "zelda_craft:displaysettings/hylianshield.item",
+  "textures": {
+    "particle": "zelda_craft:block/wip"
+  }
+}

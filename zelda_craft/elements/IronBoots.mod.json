@@ -53,7 +53,7 @@
     "leggingsModelTexture": "From armor",
     "bootsModelName": "ModelIronBoots",
     "bootsModelPartL": "Left",
-    "bootsModelPartR": "Left",
+    "bootsModelPartR": "Right",
     "bootsModelTexture": "ironboots.png",
     "helmetItemRenderType": 0,
     "helmetItemCustomModelName": "Normal",

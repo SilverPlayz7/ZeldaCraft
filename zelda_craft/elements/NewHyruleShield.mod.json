@@ -8,6 +8,7 @@
     "texture": "wip",
     "customModelName": "newhryuleshield:default",
     "blockingModelName": "newhyruleshieldblocking:default",
+    "guiTexture": "",
     "name": "New Hyrule Shield",
     "specialInformation": {
       "fixedValue": [

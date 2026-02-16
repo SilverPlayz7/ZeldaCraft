@@ -14,6 +14,10 @@ import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
@@ -24,6 +28,8 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
+import net.minecraft.core.SectionPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -234,7 +240,7 @@ public class RenderWeaponStandProcedure {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
 			Vec3 pos = entity.getPosition(provider.getPartialTick());
-			execute(provider, level, pos.x(), pos.y(), pos.z());
+			execute(provider, level);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
 			RenderSystem.enableCull();
@@ -243,29 +249,122 @@ public class RenderWeaponStandProcedure {
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		execute(null, world, x, y, z);
+	public static void execute(LevelAccessor world) {
+		execute(null, world);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == ZeldaCraftModBlocks.SWORD_STAND.get()) {
-			if ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "renderWeapon")) == true) {
-				renderItem((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
+	private static void execute(@Nullable Event event, LevelAccessor world) {
+		if (world instanceof ClientLevel _blockEntityContext) {
+			int _scanRange = Minecraft.getInstance().options.getEffectiveRenderDistance();
+			BlockPos _scanCenter = Minecraft.getInstance().player.blockPosition();
+			LevelChunk _levelChunk;
+			BlockState blockstateiterator;
+			int positionx, positiony, positionz;
+			for (int _chunkZ = -_scanRange; _chunkZ <= _scanRange; ++_chunkZ) {
+				for (int _chunkX = -_scanRange; _chunkX <= _scanRange; ++_chunkX) {
+					_levelChunk = _blockEntityContext.getChunk(SectionPos.blockToSectionCoord(_scanCenter.getX() + (_chunkX << 4)), SectionPos.blockToSectionCoord(_scanCenter.getZ() + (_chunkZ << 4)));
+					if (_levelChunk != null) {
+						for (Map.Entry<BlockPos, BlockEntity> _blockEntityEntry : _levelChunk.getBlockEntities().entrySet()) {
+							blockstateiterator = _blockEntityEntry.getValue().getBlockState();
+							positionx = _blockEntityEntry.getKey().getX();
+							positiony = _blockEntityEntry.getKey().getY();
+							positionz = _blockEntityEntry.getKey().getZ();
+							if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.SWORD_STAND.get()) {
+								if ((blockstateiterator.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip3 ? blockstateiterator.getValue(_getip3) : -1) == 1) {
+									if ((new Object() {
+										public Direction getDirection(BlockPos pos) {
+											BlockState _bs = world.getBlockState(pos);
+											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+											if (property != null && _bs.getValue(property) instanceof Direction _dir)
+												return _dir;
+											else if (_bs.hasProperty(BlockStateProperties.AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+											return Direction.NORTH;
+										}
+									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 225, (float) 0.85, false, false);
+									} else if ((new Object() {
+										public Direction getDirection(BlockPos pos) {
+											BlockState _bs = world.getBlockState(pos);
+											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+											if (property != null && _bs.getValue(property) instanceof Direction _dir)
+												return _dir;
+											else if (_bs.hasProperty(BlockStateProperties.AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+											return Direction.NORTH;
+										}
+									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 225, (float) 0.85, false, false);
+									} else if ((new Object() {
+										public Direction getDirection(BlockPos pos) {
+											BlockState _bs = world.getBlockState(pos);
+											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+											if (property != null && _bs.getValue(property) instanceof Direction _dir)
+												return _dir;
+											else if (_bs.hasProperty(BlockStateProperties.AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+											return Direction.NORTH;
+										}
+									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 225, (float) 0.85, false, false);
+									} else if ((new Object() {
+										public Direction getDirection(BlockPos pos) {
+											BlockState _bs = world.getBlockState(pos);
+											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+											if (property != null && _bs.getValue(property) instanceof Direction _dir)
+												return _dir;
+											else if (_bs.hasProperty(BlockStateProperties.AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+											return Direction.NORTH;
+										}
+									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 270, 0, 225, (float) 0.85, false, false);
+									}
+								}
+							}
+						}
 					}
-				}.getItemStack(world, BlockPos.containing(x, y, z), 0)), x, y, z, 0, 0, 0, 2, false, false);
+				}
 			}
 		}
 	}

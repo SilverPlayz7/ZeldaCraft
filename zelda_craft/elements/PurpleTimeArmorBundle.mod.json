@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "purpletimeset",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Purple Time Armor Bundle",

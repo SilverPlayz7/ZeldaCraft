@@ -21,18 +21,6 @@
         }
       },
       {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Warp 5",
-          "name": "Warp5",
-          "width": 120,
-          "height": 20,
-          "x": 155,
-          "y": 174,
-          "locked": false
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_delete",
@@ -352,6 +340,23 @@
           },
           "x": 159,
           "y": 150,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_5",
+          "text": {
+            "fixedValue": "",
+            "name": "Name5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 180,
           "locked": false
         }
       },

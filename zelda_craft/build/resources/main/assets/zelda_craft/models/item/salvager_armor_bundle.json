@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "zelda_craft:item/wip"
+    "layer0": "zelda_craft:item/salvagerseticon"
   }
 }

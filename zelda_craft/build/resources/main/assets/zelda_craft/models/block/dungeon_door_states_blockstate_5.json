@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/dungeondoor2bro",
+  "textures": {
+    "all": "zelda_craft:block/dungeondoor2",
+    "particle": "zelda_craft:block/dungeondoor2",
+    "2": "zelda_craft:block/dungeondoor2"
+  },
+  "render_type": "cutout"
+}

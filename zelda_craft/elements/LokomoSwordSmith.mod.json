@@ -15,10 +15,10 @@
       "value": "CUSTOM:RecruitSword"
     },
     "smithingInputAdditionStack": {
-      "value": "CUSTOM:SpiritOfTheLokomo"
+      "value": "CUSTOM:PureAlloy"
     },
     "smithingInputTemplateStack": {
-      "value": ""
+      "value": "CUSTOM:SpiritOfTheLokomo"
     },
     "smithingReturnStack": {
       "value": "CUSTOM:LokomoSword"

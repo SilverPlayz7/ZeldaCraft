@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "def",
+    "ghg"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_ice"
+    },
+    "b": {
+      "item": "minecraft:sponge"
+    },
+    "c": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "d": {
+      "item": "minecraft:pitcher_plant"
+    },
+    "e": {
+      "item": "minecraft:soul_sand"
+    },
+    "f": {
+      "tag": "forge:sandstone"
+    },
+    "g": {
+      "item": "minecraft:rail"
+    },
+    "h": {
+      "item": "minecraft:activator_rail"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:spirit_of_the_lokomo",
+    "count": 1
+  }
+}

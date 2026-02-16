@@ -10,4 +10,5 @@ import net.minecraft.world.level.GameRules;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ZeldaCraftModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> BOMB_GREIFING = GameRules.register("bombGreifing", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
+	public static final GameRules.Key<GameRules.BooleanValue> SHOCK_DROP = GameRules.register("shockDrop", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 }

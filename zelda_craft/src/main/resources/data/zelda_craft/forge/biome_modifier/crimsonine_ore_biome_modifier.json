@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "badlands",
+    "eroded_badlands",
+    "wooded_badlands"
+  ],
+  "features": "zelda_craft:crimsonine_ore",
+  "step": "underground_ores"
+}
