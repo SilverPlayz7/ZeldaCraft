@@ -78,8 +78,8 @@ public class WalletWithdrawScreen extends AbstractContainerScreen<WalletWithdraw
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_withdraw.label_rupees"), 141, 7, -12829636, false);
-		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_withdraw.label_rupees"), 135, 7, -12829636, false);
+		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 174, 7, -12829636, false);
 	}
 
 	@Override
@@ -122,6 +122,12 @@ public class WalletWithdrawScreen extends AbstractContainerScreen<WalletWithdraw
 		});
 		this.addRenderableWidget(imagebutton_deposit50);
 		imagebutton_deposit100 = new ImageButton(this.leftPos + 137, this.topPos + 35, 34, 22, 0, 0, 22, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_deposit100.png"), 34, 44, e -> {
+			int x = WalletWithdrawScreen.this.x;
+			int y = WalletWithdrawScreen.this.y;
+			if (true) {
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new WalletWithdrawButtonMessage(4, x, y, z));
+				WalletWithdrawButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		});
 		this.addRenderableWidget(imagebutton_deposit100);
 		imagebutton_deposit300 = new ImageButton(this.leftPos + 170, this.topPos + 35, 34, 22, 0, 0, 22, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_deposit300.png"), 34, 44, e -> {

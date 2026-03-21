@@ -1,5 +1,9 @@
 package zeldacraft.client.screens;
 
+import zeldacraft.procedures.RupeeTypeShownProcedure;
+import zeldacraft.procedures.RupeeTypeShown4Procedure;
+import zeldacraft.procedures.RupeeTypeShown3Procedure;
+import zeldacraft.procedures.RupeeTypeShown2Procedure;
 import zeldacraft.procedures.RupeeCounterProcedure;
 import zeldacraft.procedures.RupeeCountOverlayDisplayOverlayIngameProcedure;
 
@@ -46,6 +50,18 @@ public class RupeeOverlayOverlay {
 		if (RupeeCountOverlayDisplayOverlayIngameProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
 
+			if (RupeeTypeShownProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon_adult2.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
+			}
+			if (RupeeTypeShown2Procedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon_big2.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
+			}
+			if (RupeeTypeShown3Procedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon_giant2.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
+			}
+			if (RupeeTypeShown4Procedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("zelda_craft:textures/screens/rupee_icon_tycoon2.png"), 6, h - 25, 0, 0, 16, 16, 16, 16);
+			}
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					RupeeCounterProcedure.execute(world, entity), 24, h - 18, -1, false);

@@ -70,51 +70,51 @@ public class StatueMenuButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 1) {
 
 			Warp1TeleportProcedure.execute(world, entity);
 		}
-		if (buttonID == 1) {
+		if (buttonID == 2) {
 
 			Warp2TeleportProcedure.execute(world, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 3) {
 
 			Warp3TeleportProcedure.execute(world, entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 4) {
 
 			Warp4TeleportProcedure.execute(world, entity);
 		}
-		if (buttonID == 4) {
+		if (buttonID == 5) {
 
 			Warp5TeleportProcedure.execute(world, entity);
 		}
-		if (buttonID == 5) {
+		if (buttonID == 6) {
 
 			Warp1ClearProcedure.execute(entity);
 		}
-		if (buttonID == 6) {
+		if (buttonID == 7) {
 
 			Warp2ClearProcedure.execute(entity);
 		}
-		if (buttonID == 7) {
+		if (buttonID == 8) {
 
 			Warp3ClearProcedure.execute(entity);
 		}
-		if (buttonID == 8) {
+		if (buttonID == 9) {
 
 			Warp4ClearProcedure.execute(entity);
 		}
-		if (buttonID == 9) {
+		if (buttonID == 10) {
 
 			Warp5ClearProcedure.execute(entity);
 		}
-		if (buttonID == 10) {
+		if (buttonID == 11) {
 
 			SoaringNextPageProcedure.execute(entity);
 		}
-		if (buttonID == 11) {
+		if (buttonID == 12) {
 
 			SoaringBackPageProcedure.execute(entity);
 		}

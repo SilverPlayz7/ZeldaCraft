@@ -21,6 +21,7 @@ import zeldacraft.block.MoltenOreBlock;
 import zeldacraft.block.LullabySwitchBlock;
 import zeldacraft.block.LockedHylianChestBlock;
 import zeldacraft.block.LockedDungeonDoorBlock;
+import zeldacraft.block.LockedBigDungeonDoorBlock;
 import zeldacraft.block.IllusionBlockBlock;
 import zeldacraft.block.HookshotTargetBlock;
 import zeldacraft.block.HiddenIllusionBlockBlock;
@@ -33,6 +34,7 @@ import zeldacraft.block.ClosedChestBlock;
 import zeldacraft.block.ClimbableHiddenIllusionBlockBlock;
 import zeldacraft.block.BombableWallBlock;
 import zeldacraft.block.BombableIllusionBlockBlock;
+import zeldacraft.block.BigDungeonDoorBlock;
 import zeldacraft.block.AzurineOreBlock;
 import zeldacraft.block.AquanineOreBlock;
 import zeldacraft.block.AnchientCapsuleMachineBlock;
@@ -80,6 +82,8 @@ public class ZeldaCraftModBlocks {
 	public static final RegistryObject<Block> DUNGEON_DOOR = REGISTRY.register("dungeon_door", () -> new DungeonDoorBlock());
 	public static final RegistryObject<Block> LOCKED_DUNGEON_DOOR = REGISTRY.register("locked_dungeon_door", () -> new LockedDungeonDoorBlock());
 	public static final RegistryObject<Block> SPINNER_RAIL = REGISTRY.register("spinner_rail", () -> new SpinnerRailBlock());
+	public static final RegistryObject<Block> LOCKED_BIG_DUNGEON_DOOR = REGISTRY.register("locked_big_dungeon_door", () -> new LockedBigDungeonDoorBlock());
+	public static final RegistryObject<Block> BIG_DUNGEON_DOOR = REGISTRY.register("big_dungeon_door", () -> new BigDungeonDoorBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,0 +1,149 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.DungeonBigDoor",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Door",
+					"pivot": [-11.58179, -9.38885, -7.8514]
+				},
+				{
+					"name": "group2",
+					"parent": "Door",
+					"pivot": [-6, -16, -7],
+					"cubes": [
+						{
+							"origin": [-8, 13.975, -8],
+							"size": [16, 2, 4],
+							"uv": {
+								"north": {"uv": [20, 46], "uv_size": [16, 2]},
+								"east": {"uv": [60, 26], "uv_size": [4, 2]},
+								"south": {"uv": [4, 46], "uv_size": [16, 2]},
+								"west": {"uv": [8, 61], "uv_size": [4, 2]},
+								"up": {"uv": [52, 0], "uv_size": [16, 4]},
+								"down": {"uv": [52, 8], "uv_size": [16, -4]}
+							}
+						},
+						{
+							"origin": [6, 0, -8],
+							"size": [2, 14, 4],
+							"uv": {
+								"north": {"uv": [2, 46], "uv_size": [-2, 14]},
+								"east": {"uv": [36, 0], "uv_size": [-4, 14]},
+								"south": {"uv": [0, 46], "uv_size": [2, 14]},
+								"west": {"uv": [32, 0], "uv_size": [-4, 14]},
+								"up": {"uv": [54, 22], "uv_size": [-2, 4]},
+								"down": {"uv": [63, 12], "uv_size": [-2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "LeftDoor",
+					"parent": "group2",
+					"pivot": [-6, -16, -7]
+				},
+				{
+					"name": "RightDoor",
+					"parent": "group2",
+					"pivot": [-8, -16, -7],
+					"cubes": [
+						{
+							"origin": [-7, 0.05, -7],
+							"size": [14, 14, 2],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [-14, 14]},
+								"east": {"uv": [46, 28], "uv_size": [-2, 14]},
+								"south": {"uv": [28, 0], "uv_size": [-14, 14]},
+								"west": {"uv": [44, 28], "uv_size": [-2, 14]},
+								"up": {"uv": [64, 30], "uv_size": [-14, 2]},
+								"down": {"uv": [64, 34], "uv_size": [-14, -2]}
+							}
+						},
+						{
+							"origin": [-8, 0, -7.25],
+							"size": [1, 14, 2.5],
+							"uv": {
+								"north": {"uv": [13, 48], "uv_size": [-1, 14]},
+								"east": {"uv": [41.5, 8], "uv_size": [-2.5, 14]},
+								"south": {"uv": [12, 48], "uv_size": [1, 14]},
+								"west": {"uv": [38.5, 8], "uv_size": [-2.5, 14]},
+								"up": {"uv": [32, 67], "uv_size": [-1, 2.5]},
+								"down": {"uv": [33, 69.5], "uv_size": [-1, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group10",
+					"parent": "Door",
+					"pivot": [-7, -4, -7.75]
+				},
+				{
+					"name": "group3",
+					"parent": "group10",
+					"pivot": [-21.75, -4, -7.75]
+				},
+				{
+					"name": "group4",
+					"parent": "group10",
+					"pivot": [7.75, -4, -7.75],
+					"rotation": [0, -180, 0],
+					"cubes": [
+						{
+							"origin": [7, 12.25, -9.5],
+							"size": [3.75, 3.75, 2.5],
+							"uv": {
+								"north": {"uv": [34, 56], "uv_size": [-4, 4]},
+								"east": {"uv": [22.5, 59], "uv_size": [-2.5, 4]},
+								"south": {"uv": [59, 50], "uv_size": [-4, 4]},
+								"west": {"uv": [25.5, 59], "uv_size": [-2.5, 4]},
+								"up": {"uv": [26, 61.5], "uv_size": [4, -2.5]},
+								"down": {"uv": [59, 34], "uv_size": [4, 2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group11",
+					"parent": "Door",
+					"pivot": [-7, -4, -4.25],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "group16",
+					"parent": "group11",
+					"pivot": [-21.75, -4, -4.25],
+					"cubes": [
+						{
+							"origin": [-22.5, 12.25, -5],
+							"size": [3.75, 3.75, 2.5],
+							"uv": {
+								"north": {"uv": [55, 50], "uv_size": [4, 4]},
+								"east": {"uv": [20, 59], "uv_size": [2.5, 4]},
+								"south": {"uv": [30, 56], "uv_size": [4, 4]},
+								"west": {"uv": [23, 59], "uv_size": [2.5, 4]},
+								"up": {"uv": [26, 59], "uv_size": [4, 2.5]},
+								"down": {"uv": [59, 36.5], "uv_size": [4, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group17",
+					"parent": "group11",
+					"pivot": [7.75, -4, -4.25],
+					"rotation": [0, -180, 0]
+				}
+			]
+		}
+	]
+}

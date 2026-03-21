@@ -1,12 +1,12 @@
 package zeldacraft.procedures;
 
+import zeldacraft.network.ZeldaCraftModVariables;
+
 import zeldacraft.init.ZeldaCraftModBlocks;
 
 import org.joml.Vector3f;
 import org.joml.Matrix4f;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -15,7 +15,6 @@ import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -30,7 +29,6 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -54,12 +52,7 @@ import javax.annotation.Nullable;
 
 import java.util.Map;
 import java.util.HashMap;
-
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.File;
-import java.io.BufferedReader;
+import java.util.ArrayList;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -262,158 +255,121 @@ public class OwlStatueRenderProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		File file = new File("");
-		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
-		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
-		String worldName = "";
-		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
-		if (!file.exists()) {
-			try {
-				file.getParentFile().mkdirs();
-				file.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			mainObj.add("statues", statueArray);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(file);
-					fileWriter.write(mainGSONBuilderVariable.toJson(mainObj));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		} else {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					statueArray = mainObj.get("statues").getAsJsonArray();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-			if (!(mainObj.size() == 0)) {
-				if (world instanceof ClientLevel _blockEntityContext) {
-					int _scanRange = Minecraft.getInstance().options.getEffectiveRenderDistance();
-					BlockPos _scanCenter = Minecraft.getInstance().player.blockPosition();
-					LevelChunk _levelChunk;
-					BlockState blockstateiterator;
-					int positionx, positiony, positionz;
-					for (int _chunkZ = -_scanRange; _chunkZ <= _scanRange; ++_chunkZ) {
-						for (int _chunkX = -_scanRange; _chunkX <= _scanRange; ++_chunkX) {
-							_levelChunk = _blockEntityContext.getChunk(SectionPos.blockToSectionCoord(_scanCenter.getX() + (_chunkX << 4)), SectionPos.blockToSectionCoord(_scanCenter.getZ() + (_chunkZ << 4)));
-							if (_levelChunk != null) {
-								for (Map.Entry<BlockPos, BlockEntity> _blockEntityEntry : _levelChunk.getBlockEntities().entrySet()) {
-									blockstateiterator = _blockEntityEntry.getValue().getBlockState();
-									positionx = _blockEntityEntry.getKey().getX();
-									positiony = _blockEntityEntry.getKey().getY();
-									positionz = _blockEntityEntry.getKey().getZ();
-									if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
-										if ((new Object() {
-											public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+		for (Entity entityiterator : new ArrayList<>(world.players())) {
+			if (world instanceof ClientLevel _blockEntityContext) {
+				int _scanRange = Minecraft.getInstance().options.getEffectiveRenderDistance();
+				BlockPos _scanCenter = Minecraft.getInstance().player.blockPosition();
+				LevelChunk _levelChunk;
+				BlockState blockstateiterator;
+				int positionx, positiony, positionz;
+				for (int _chunkZ = -_scanRange; _chunkZ <= _scanRange; ++_chunkZ) {
+					for (int _chunkX = -_scanRange; _chunkX <= _scanRange; ++_chunkX) {
+						_levelChunk = _blockEntityContext.getChunk(SectionPos.blockToSectionCoord(_scanCenter.getX() + (_chunkX << 4)), SectionPos.blockToSectionCoord(_scanCenter.getZ() + (_chunkZ << 4)));
+						if (_levelChunk != null) {
+							for (Map.Entry<BlockPos, BlockEntity> _blockEntityEntry : _levelChunk.getBlockEntities().entrySet()) {
+								blockstateiterator = _blockEntityEntry.getValue().getBlockState();
+								positionx = _blockEntityEntry.getKey().getX();
+								positiony = _blockEntityEntry.getKey().getY();
+								positionz = _blockEntityEntry.getKey().getZ();
+								if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
+									if ((new Object() {
+										public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+											BlockEntity blockEntity = world.getBlockEntity(pos);
+											if (blockEntity != null)
+												return blockEntity.getPersistentData().getBoolean(tag);
+											return false;
+										}
+									}.getValue(world, new BlockPos(positionx, positiony, positionz), "hasName")) == true) {
+										if (((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new Object() {
+											public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 												BlockEntity blockEntity = world.getBlockEntity(pos);
 												if (blockEntity != null)
-													return blockEntity.getPersistentData().getBoolean(tag);
-												return false;
+													return blockEntity.getPersistentData().getString(tag);
+												return "";
 											}
-										}.getValue(world, new BlockPos(positionx, positiony, positionz), "hasName")) == true) {
-											if (mainObj.toString().contains(new Object() {
-												public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-													BlockEntity blockEntity = world.getBlockEntity(pos);
-													if (blockEntity != null)
-														return blockEntity.getPersistentData().getString(tag);
-													return "";
+										}.getValue(world, new BlockPos(positionx, positiony, positionz), "statueName"))
+												&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue)
+														.contains(new java.text.DecimalFormat("##.##").format(positionx))
+												&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue)
+														.contains(new java.text.DecimalFormat("##.##").format(positiony))
+												&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue)
+														.contains(new java.text.DecimalFormat("##.##").format(positionz))) {
+											if ((new Object() {
+												public Direction getDirection(BlockPos pos) {
+													BlockState _bs = world.getBlockState(pos);
+													Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+													if (property != null && _bs.getValue(property) instanceof Direction _dir)
+														return _dir;
+													else if (_bs.hasProperty(BlockStateProperties.AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+													else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+													return Direction.NORTH;
 												}
-											}.getValue(world, new BlockPos(positionx, positiony, positionz), "statueName")) && mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(positionx))
-													&& mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(positiony)) && mainObj.toString().contains(new java.text.DecimalFormat("##.##").format(positionz))) {
-												if ((new Object() {
-													public Direction getDirection(BlockPos pos) {
-														BlockState _bs = world.getBlockState(pos);
-														Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-														if (property != null && _bs.getValue(property) instanceof Direction _dir)
-															return _dir;
-														else if (_bs.hasProperty(BlockStateProperties.AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-														else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-														return Direction.NORTH;
+											}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
+												renderBlock((new Object() {
+													public BlockState with(BlockState _bs, String _property, int _newValue) {
+														Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
+														return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
 													}
-												}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
-													renderBlock((new Object() {
-														public BlockState with(BlockState _bs, String _property, int _newValue) {
-															Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
-															return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
-														}
-													}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, (float) 1.015, false);
-												} else if ((new Object() {
-													public Direction getDirection(BlockPos pos) {
-														BlockState _bs = world.getBlockState(pos);
-														Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-														if (property != null && _bs.getValue(property) instanceof Direction _dir)
-															return _dir;
-														else if (_bs.hasProperty(BlockStateProperties.AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-														else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-														return Direction.NORTH;
-													}
-												}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
-													renderBlock((new Object() {
-														public BlockState with(BlockState _bs, String _property, int _newValue) {
-															Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
-															return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
-														}
-													}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 0, (float) 1.015, false);
-												} else if ((new Object() {
-													public Direction getDirection(BlockPos pos) {
-														BlockState _bs = world.getBlockState(pos);
-														Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-														if (property != null && _bs.getValue(property) instanceof Direction _dir)
-															return _dir;
-														else if (_bs.hasProperty(BlockStateProperties.AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-														else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-														return Direction.NORTH;
-													}
-												}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
-													renderBlock((new Object() {
-														public BlockState with(BlockState _bs, String _property, int _newValue) {
-															Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
-															return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
-														}
-													}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 270, 0, 0, (float) 1.015, false);
-												} else if ((new Object() {
-													public Direction getDirection(BlockPos pos) {
-														BlockState _bs = world.getBlockState(pos);
-														Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-														if (property != null && _bs.getValue(property) instanceof Direction _dir)
-															return _dir;
-														else if (_bs.hasProperty(BlockStateProperties.AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-														else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-															return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-														return Direction.NORTH;
-													}
-												}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
-													renderBlock((new Object() {
-														public BlockState with(BlockState _bs, String _property, int _newValue) {
-															Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
-															return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
-														}
-													}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 0, (float) 1.015, false);
+												}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, (float) 1.016, false);
+											} else if ((new Object() {
+												public Direction getDirection(BlockPos pos) {
+													BlockState _bs = world.getBlockState(pos);
+													Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+													if (property != null && _bs.getValue(property) instanceof Direction _dir)
+														return _dir;
+													else if (_bs.hasProperty(BlockStateProperties.AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+													else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+													return Direction.NORTH;
 												}
+											}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
+												renderBlock((new Object() {
+													public BlockState with(BlockState _bs, String _property, int _newValue) {
+														Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
+														return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
+													}
+												}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 0, (float) 1.016, false);
+											} else if ((new Object() {
+												public Direction getDirection(BlockPos pos) {
+													BlockState _bs = world.getBlockState(pos);
+													Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+													if (property != null && _bs.getValue(property) instanceof Direction _dir)
+														return _dir;
+													else if (_bs.hasProperty(BlockStateProperties.AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+													else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+													return Direction.NORTH;
+												}
+											}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
+												renderBlock((new Object() {
+													public BlockState with(BlockState _bs, String _property, int _newValue) {
+														Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
+														return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
+													}
+												}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 270, 0, 0, (float) 1.016, false);
+											} else if ((new Object() {
+												public Direction getDirection(BlockPos pos) {
+													BlockState _bs = world.getBlockState(pos);
+													Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+													if (property != null && _bs.getValue(property) instanceof Direction _dir)
+														return _dir;
+													else if (_bs.hasProperty(BlockStateProperties.AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+													else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+														return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+													return Direction.NORTH;
+												}
+											}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
+												renderBlock((new Object() {
+													public BlockState with(BlockState _bs, String _property, int _newValue) {
+														Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
+														return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
+													}
+												}.with(ZeldaCraftModBlocks.OWL_STATUE.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 0, (float) 1.016, false);
 											}
 										}
 									}

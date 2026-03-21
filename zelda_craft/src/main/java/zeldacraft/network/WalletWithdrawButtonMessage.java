@@ -5,6 +5,7 @@ import zeldacraft.procedures.Withdraw50Procedure;
 import zeldacraft.procedures.Withdraw300Procedure;
 import zeldacraft.procedures.Withdraw20Procedure;
 import zeldacraft.procedures.Withdraw1Procedure;
+import zeldacraft.procedures.Withdraw100Procedure;
 import zeldacraft.procedures.OpenDepositMenuProcedure;
 
 import zeldacraft.ZeldaCraftMod;
@@ -79,6 +80,10 @@ public class WalletWithdrawButtonMessage {
 		if (buttonID == 3) {
 
 			Withdraw50Procedure.execute(world, entity);
+		}
+		if (buttonID == 4) {
+
+			Withdraw100Procedure.execute(world, entity);
 		}
 		if (buttonID == 5) {
 

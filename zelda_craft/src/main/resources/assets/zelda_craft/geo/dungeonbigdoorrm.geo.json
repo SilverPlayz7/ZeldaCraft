@@ -1,0 +1,137 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.DungeonBigDoor",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Door",
+					"pivot": [-12.58179, 6.61115, -7.8514]
+				},
+				{
+					"name": "group2",
+					"parent": "Door",
+					"pivot": [-7, 0, -7],
+					"cubes": [
+						{
+							"origin": [6, 0, -8],
+							"size": [2, 16, 4],
+							"uv": {
+								"north": {"uv": [2, 60], "uv_size": [-2, 16]},
+								"east": {"uv": [36, 14], "uv_size": [-4, 16]},
+								"south": {"uv": [0, 60], "uv_size": [2, 16]},
+								"west": {"uv": [32, 14], "uv_size": [-4, 16]},
+								"up": {"uv": [54, 22], "uv_size": [-2, 4]},
+								"down": {"uv": [63, 12], "uv_size": [-2, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "LeftDoor",
+					"parent": "group2",
+					"pivot": [-7, 0, -7]
+				},
+				{
+					"name": "RightDoor",
+					"parent": "group2",
+					"pivot": [-9, 0, -7],
+					"cubes": [
+						{
+							"origin": [-7, 0.05, -7],
+							"size": [14, 16, 2],
+							"uv": {
+								"north": {"uv": [14, 14], "uv_size": [-14, 16]},
+								"east": {"uv": [46, 42], "uv_size": [-2, 16]},
+								"south": {"uv": [28, 14], "uv_size": [-14, 16]},
+								"west": {"uv": [44, 42], "uv_size": [-2, 16]},
+								"up": {"uv": [64, 30], "uv_size": [-14, 2]},
+								"down": {"uv": [64, 34], "uv_size": [-14, -2]}
+							}
+						},
+						{
+							"origin": [-8, 0, -7.25],
+							"size": [1, 16, 2.5],
+							"uv": {
+								"north": {"uv": [13, 62], "uv_size": [-1, 16]},
+								"east": {"uv": [41.5, 22], "uv_size": [-2.5, 16]},
+								"south": {"uv": [12, 62], "uv_size": [1, 16]},
+								"west": {"uv": [38.5, 22], "uv_size": [-2.5, 16]},
+								"up": {"uv": [32, 67], "uv_size": [-1, 2.5]},
+								"down": {"uv": [33, 69.5], "uv_size": [-1, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group10",
+					"parent": "Door",
+					"pivot": [-8, 12, -7.75]
+				},
+				{
+					"name": "group3",
+					"parent": "group10",
+					"pivot": [-22.75, 12, -7.75]
+				},
+				{
+					"name": "group4",
+					"parent": "group10",
+					"pivot": [6.75, 12, -7.75],
+					"rotation": [0, -180, 0],
+					"cubes": [
+						{
+							"origin": [5, 7, -9.5],
+							"size": [3.25, 8, 2.5],
+							"uv": {
+								"north": {"uv": [53.5, 34], "uv_size": [-3.5, 8]},
+								"east": {"uv": [56.5, 12], "uv_size": [-2.5, 8]},
+								"south": {"uv": [33.5, 48], "uv_size": [-3.5, 8]},
+								"west": {"uv": [56.5, 20], "uv_size": [-2.5, 8]},
+								"up": {"uv": [60, 49.5], "uv_size": [3.5, -2.5]},
+								"down": {"uv": [4, 61], "uv_size": [3.5, 2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group11",
+					"parent": "Door",
+					"pivot": [-8, 12, -4.25],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "group16",
+					"parent": "group11",
+					"pivot": [-22.75, 12, -4.25],
+					"cubes": [
+						{
+							"origin": [-24.5, 7, -5],
+							"size": [3.25, 8, 2.5],
+							"uv": {
+								"north": {"uv": [30, 48], "uv_size": [3.5, 8]},
+								"east": {"uv": [54, 12], "uv_size": [2.5, 8]},
+								"south": {"uv": [50, 34], "uv_size": [3.5, 8]},
+								"west": {"uv": [54, 20], "uv_size": [2.5, 8]},
+								"up": {"uv": [60, 47], "uv_size": [3.5, 2.5]},
+								"down": {"uv": [4, 63.5], "uv_size": [3.5, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group17",
+					"parent": "group11",
+					"pivot": [6.75, 12, -4.25],
+					"rotation": [0, -180, 0]
+				}
+			]
+		}
+	]
+}

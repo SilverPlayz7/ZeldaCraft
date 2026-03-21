@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "zelda_craft:child_wallet"
+    "zelda_craft:giant_wallet",
+    "zelda_craft:tycoon_wallet",
+    "zelda_craft:child_wallet",
+    "zelda_craft:adult_wallet",
+    "zelda_craft:big_wallet"
   ]
 }

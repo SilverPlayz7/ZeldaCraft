@@ -75,6 +75,7 @@ public class ZeldaCraftModVariables {
 			clone.Fell50 = original.Fell50;
 			clone.hasBunny = original.hasBunny;
 			clone.hasBlast = original.hasBlast;
+			clone.owlStatue = original.owlStatue;
 			if (!event.isWasDeath()) {
 				clone.jumpvar = original.jumpvar;
 				clone.DungeontoLoad = original.DungeontoLoad;
@@ -144,6 +145,7 @@ public class ZeldaCraftModVariables {
 		public double zPlayer = 0;
 		public boolean hasBunny = false;
 		public boolean hasBlast = false;
+		public String owlStatue = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -173,6 +175,7 @@ public class ZeldaCraftModVariables {
 			nbt.putDouble("zPlayer", zPlayer);
 			nbt.putBoolean("hasBunny", hasBunny);
 			nbt.putBoolean("hasBlast", hasBlast);
+			nbt.putString("owlStatue", owlStatue);
 			return nbt;
 		}
 
@@ -199,6 +202,7 @@ public class ZeldaCraftModVariables {
 			zPlayer = nbt.getDouble("zPlayer");
 			hasBunny = nbt.getBoolean("hasBunny");
 			hasBlast = nbt.getBoolean("hasBlast");
+			owlStatue = nbt.getString("owlStatue");
 		}
 	}
 
@@ -244,6 +248,7 @@ public class ZeldaCraftModVariables {
 					variables.zPlayer = message.data.zPlayer;
 					variables.hasBunny = message.data.hasBunny;
 					variables.hasBlast = message.data.hasBlast;
+					variables.owlStatue = message.data.owlStatue;
 				}
 			});
 			context.setPacketHandled(true);

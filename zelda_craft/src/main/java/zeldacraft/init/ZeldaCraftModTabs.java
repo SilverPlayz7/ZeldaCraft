@@ -110,6 +110,10 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.DEKU_MASK.get());
 				tabData.accept(ZeldaCraftModItems.ALL_NIGHT_MASK.get());
 				tabData.accept(ZeldaCraftModItems.CHILD_WALLET.get());
+				tabData.accept(ZeldaCraftModItems.ADULT_WALLET.get());
+				tabData.accept(ZeldaCraftModItems.BIG_WALLET.get());
+				tabData.accept(ZeldaCraftModItems.GIANT_WALLET.get());
+				tabData.accept(ZeldaCraftModItems.TYCOON_WALLET.get());
 				tabData.accept(ZeldaCraftModItems.GREEN_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.BLUE_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.RED_RUPEE.get());
@@ -117,6 +121,9 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.SILVER_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.GOLD_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.SMALL_KEY.get());
+				tabData.accept(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.LOCKED_BIG_DUNGEON_DOOR.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.OWL_STATUE.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.SHEIKAH_LINK.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.FLOOR_SWITCH.get().asItem());
@@ -139,6 +146,7 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.MYSTIC_STEEL.get());
 				tabData.accept(ZeldaCraftModBlocks.TIMESHIFT_ORE.get().asItem());
 				tabData.accept(ZeldaCraftModItems.TIMESHIFT_SHARD.get());
+				tabData.accept(ZeldaCraftModItems.SONG_CORE.get());
 				tabData.accept(ZeldaCraftModItems.HYRULE_CREST.get());
 				tabData.accept(ZeldaCraftModItems.SPIRIT_OF_THE_LOKOMO.get());
 				tabData.accept(ZeldaCraftModBlocks.CRIMSONINE_ORE.get().asItem());
@@ -173,17 +181,19 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.ZORA_COIN.get());
 				tabData.accept(ZeldaCraftModItems.GERUDO_COIN.get());
 				tabData.accept(ZeldaCraftModItems.SPINNER.get());
-				tabData.accept(ZeldaCraftModBlocks.DUNGEON_DOOR.get().asItem());
-				tabData.accept(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.SPINNER_RAIL.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.BIG_DUNGEON_DOOR.get().asItem());
 			}).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+		if (tabData.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+			if (tabData.hasPermissions()) {
+				tabData.accept(ZeldaCraftModItems.BROKEN_GIANT_KNIFE.get());
+			}
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(ZeldaCraftModItems.HAPPY_MASK_SALESMAN_SPAWN_EGG.get());
 			tabData.accept(ZeldaCraftModItems.FAIRY_SPAWN_EGG.get());
-			tabData.accept(ZeldaCraftModItems.SPINNER_VEHICLE_SPAWN_EGG.get());
 		}
 	}
 }

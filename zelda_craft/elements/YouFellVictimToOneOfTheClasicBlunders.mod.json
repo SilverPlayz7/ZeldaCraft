@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "achievement",
   "definition": {
-    "achievementName": "You Fell Victim to One of the Classic Blunders",
+    "achievementName": "One of the Classic Blunders",
     "achievementDescription": "Break a Goron Knife",
     "achievementIcon": {
       "value": "CUSTOM:BrokenGiantKnife"

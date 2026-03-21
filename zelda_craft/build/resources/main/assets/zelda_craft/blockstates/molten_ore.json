@@ -1,7 +1,22 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "zelda_craft:block/molten_ore"
+    },
+    "blockstate=1": {
+      "model": "zelda_craft:block/big_dungeon_door_states_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "zelda_craft:block/big_dungeon_door_states_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "zelda_craft:block/big_dungeon_door_states_blockstate_2"
+    },
+    "blockstate=4": {
+      "model": "zelda_craft:block/big_dungeon_door_states_blockstate_3"
+    },
+    "blockstate=5": {
+      "model": "zelda_craft:block/big_dungeon_door_states_blockstate_4"
     }
   }
 }

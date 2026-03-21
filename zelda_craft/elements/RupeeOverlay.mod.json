@@ -32,6 +32,62 @@
           "y": 215,
           "locked": false
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupee_icon_adult2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RupeeTypeShown"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 215,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupee_icon_big2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RupeeTypeShown2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 215,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupee_icon_giant2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RupeeTypeShown3"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 215,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rupee_icon_tycoon2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RupeeTypeShown4"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 6,
+          "y": 215,
+          "locked": false
+        }
       }
     ],
     "baseTexture": "",

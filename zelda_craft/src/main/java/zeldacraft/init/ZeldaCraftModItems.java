@@ -11,6 +11,7 @@ import zeldacraft.item.WindArmorItem;
 import zeldacraft.item.WindArmorBundleItem;
 import zeldacraft.item.WarpFluteItem;
 import zeldacraft.item.UnPoweredMasterSwordItem;
+import zeldacraft.item.TycoonWalletItem;
 import zeldacraft.item.TwilightArmorItem;
 import zeldacraft.item.TwilightArmorBundleItem;
 import zeldacraft.item.TriforceItem;
@@ -21,6 +22,7 @@ import zeldacraft.item.SpriritFluteItem;
 import zeldacraft.item.SpiritOfTheLokomoItem;
 import zeldacraft.item.SpinnerItem;
 import zeldacraft.item.SongOfStormsItem;
+import zeldacraft.item.SongCoreItem;
 import zeldacraft.item.SmallKeyItem;
 import zeldacraft.item.SilverRupeeItem;
 import zeldacraft.item.SilverArrowItem;
@@ -76,6 +78,7 @@ import zeldacraft.item.GoldTimeArmorItem;
 import zeldacraft.item.GoldTimeArmorBundleItem;
 import zeldacraft.item.GoldRupeeItem;
 import zeldacraft.item.GoddessSwordItem;
+import zeldacraft.item.GiantWalletItem;
 import zeldacraft.item.GiantKnifeItem;
 import zeldacraft.item.GerudoCoinItem;
 import zeldacraft.item.GaroMaskItem;
@@ -108,15 +111,19 @@ import zeldacraft.item.BlueRupeeItem;
 import zeldacraft.item.BlastMaskContractItem;
 import zeldacraft.item.BlastMaskBaubleItem;
 import zeldacraft.item.BiggoronSwordItem;
+import zeldacraft.item.BigWalletItem;
+import zeldacraft.item.BigKeyItem;
 import zeldacraft.item.BalladOfTheGoddessItem;
 import zeldacraft.item.AzurineItem;
 import zeldacraft.item.AquanineItem;
 import zeldacraft.item.AllNightMaskItem;
+import zeldacraft.item.AdultWalletItem;
 
 import zeldacraft.block.display.TreasureChestDisplayItem;
 import zeldacraft.block.display.SmallDungeonChestDisplayItem;
 import zeldacraft.block.display.RoyalSarcophagusDisplayItem;
 import zeldacraft.block.display.LockedDungeonDoorDisplayItem;
+import zeldacraft.block.display.LockedBigDungeonDoorDisplayItem;
 import zeldacraft.block.display.AnchientCapsuleMachineDisplayItem;
 
 import zeldacraft.ZeldaCraftMod;
@@ -305,11 +312,19 @@ public class ZeldaCraftModItems {
 	public static final RegistryObject<Item> CRIMSONINE_ORE = block(ZeldaCraftModBlocks.CRIMSONINE_ORE);
 	public static final RegistryObject<Item> AQUANINE_ORE = block(ZeldaCraftModBlocks.AQUANINE_ORE);
 	public static final RegistryObject<Item> SPINNER = REGISTRY.register("spinner", () -> new SpinnerItem());
-	public static final RegistryObject<Item> SPINNER_VEHICLE_SPAWN_EGG = REGISTRY.register("spinner_vehicle_spawn_egg", () -> new ForgeSpawnEggItem(ZeldaCraftModEntities.SPINNER_VEHICLE, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> DUNGEON_DOOR = block(ZeldaCraftModBlocks.DUNGEON_DOOR);
 	public static final RegistryObject<Item> LOCKED_DUNGEON_DOOR = REGISTRY.register(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.getId().getPath(),
 			() -> new LockedDungeonDoorDisplayItem(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get(), new Item.Properties()));
 	public static final RegistryObject<Item> SPINNER_RAIL = block(ZeldaCraftModBlocks.SPINNER_RAIL);
+	public static final RegistryObject<Item> SONG_CORE = REGISTRY.register("song_core", () -> new SongCoreItem());
+	public static final RegistryObject<Item> ADULT_WALLET = REGISTRY.register("adult_wallet", () -> new AdultWalletItem());
+	public static final RegistryObject<Item> BIG_WALLET = REGISTRY.register("big_wallet", () -> new BigWalletItem());
+	public static final RegistryObject<Item> GIANT_WALLET = REGISTRY.register("giant_wallet", () -> new GiantWalletItem());
+	public static final RegistryObject<Item> TYCOON_WALLET = REGISTRY.register("tycoon_wallet", () -> new TycoonWalletItem());
+	public static final RegistryObject<Item> LOCKED_BIG_DUNGEON_DOOR = REGISTRY.register(ZeldaCraftModBlocks.LOCKED_BIG_DUNGEON_DOOR.getId().getPath(),
+			() -> new LockedBigDungeonDoorDisplayItem(ZeldaCraftModBlocks.LOCKED_BIG_DUNGEON_DOOR.get(), new Item.Properties()));
+	public static final RegistryObject<Item> BIG_DUNGEON_DOOR = block(ZeldaCraftModBlocks.BIG_DUNGEON_DOOR);
+	public static final RegistryObject<Item> BIG_KEY = REGISTRY.register("big_key", () -> new BigKeyItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

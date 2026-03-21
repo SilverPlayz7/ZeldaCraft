@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "bcb",
+    "ada"
+  ],
+  "key": {
+    "a": {
+      "item": "zelda_craft:gold_rupee"
+    },
+    "b": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "c": {
+      "item": "zelda_craft:giant_wallet"
+    },
+    "d": {
+      "item": "minecraft:ender_chest"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:tycoon_wallet",
+    "count": 1
+  }
+}

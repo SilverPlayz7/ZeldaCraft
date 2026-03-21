@@ -1,0 +1,74 @@
+{
+  "_fv": 79,
+  "_type": "blockstates",
+  "definition": {
+    "block": "BigDungeonDoor",
+    "blockstateList": [
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "dungeonbigdoorlm:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "dungeonbigdoorlt:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "dungeonbigdoorrb:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "dungeonbigdoorrm:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "dungeonbigdoorrt:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

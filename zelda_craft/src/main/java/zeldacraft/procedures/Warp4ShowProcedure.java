@@ -2,17 +2,12 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
-
-import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.MinecraftServer;
 
-import java.io.IOException;
-import java.io.FileReader;
+import java.util.Arrays;
+import java.util.ArrayList;
+
 import java.io.File;
-import java.io.BufferedReader;
 
 public class Warp4ShowProcedure {
 	public static boolean execute(Entity entity) {
@@ -20,35 +15,29 @@ public class Warp4ShowProcedure {
 			return false;
 		File file = new File("");
 		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
-		boolean hasWarp = false;
 		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
+		boolean hasWarp = false;
 		String worldName = "";
-		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
-		if (file.exists()) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					statueArray = mainObj.get("statues").getAsJsonArray();
-					if (!(statueArray.size() < 13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
-						if (!(statueArray.get((int) ((int) (12 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))).getAsString()).isEmpty()) {
-							hasWarp = true;
-						}
-					}
-				} catch (IOException e) {
-					e.printStackTrace();
+		ArrayList<Object> statueList = new ArrayList<>();
+		{
+			statueList.addAll((new Object() {
+				public ArrayList<Object> convert(String text, String separator) {
+					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}
-			return hasWarp;
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
 		}
-		return false;
+		if (!(statueList.size() < 16 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
+			if (!(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (int) (15 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))).isEmpty()) {
+				hasWarp = true;
+			}
+		}
+		return hasWarp;
 	}
 }

@@ -35,10 +35,13 @@
     "hasGlow": false,
     "customProperties": {},
     "states": [],
-    "guiBoundTo": "WalletDeposit",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 1,
     "inventoryStackSize": 64,
     "slotAmount": 1,
+    "onRightClickedInAir": {
+      "name": "RupeeWalletRightclicked"
+    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

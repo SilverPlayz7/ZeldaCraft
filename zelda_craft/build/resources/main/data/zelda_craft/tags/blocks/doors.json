@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zelda_craft:big_dungeon_door",
+    "zelda_craft:dungeon_door",
+    "zelda_craft:locked_big_dungeon_door",
+    "zelda_craft:locked_dungeon_door"
+  ]
+}

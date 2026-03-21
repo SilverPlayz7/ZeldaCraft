@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:GiantWallet"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:GoldRupee"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:GoldRupee"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:GiantWallet"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:GoldRupee"
+      },
+      {
+        "value": "Blocks.ENDER_CHEST"
+      },
+      {
+        "value": "CUSTOM:GoldRupee"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TycoonWallet"
+    },
+    "name": "tycoon_wallet",
+    "namespace": "mod"
+  }
+}

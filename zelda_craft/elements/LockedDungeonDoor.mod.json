@@ -101,6 +101,9 @@
     "luminance": 0,
     "unbreakable": true,
     "breakHarvestLevel": 0,
+    "placingCondition": {
+      "name": "DungeonDoorBlockValidPlacementCondition"
+    },
     "hasInventory": true,
     "guiBoundTo": "Chest",
     "openGUIOnRightClick": false,

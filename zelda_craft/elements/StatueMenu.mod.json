@@ -413,6 +413,22 @@
           "y": 187,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "",
+          "isUndecorated": true,
+          "displayCondition": {
+            "name": "Warp1Show"
+          },
+          "width": 25,
+          "height": 20,
+          "x": 1002,
+          "y": 557,
+          "locked": false
+        }
       }
     ],
     "onOpen": {

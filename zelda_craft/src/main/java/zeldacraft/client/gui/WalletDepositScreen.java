@@ -73,8 +73,8 @@ public class WalletDepositScreen extends AbstractContainerScreen<WalletDepositMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_deposit.label_ruppes"), 141, 7, -12829636, false);
-		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 180, 7, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.zelda_craft.wallet_deposit.label_ruppes"), 135, 7, -12829636, false);
+		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 174, 7, -12829636, false);
 	}
 
 	@Override

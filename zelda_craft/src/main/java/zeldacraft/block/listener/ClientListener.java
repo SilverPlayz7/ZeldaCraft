@@ -6,6 +6,7 @@ import zeldacraft.block.renderer.TreasureChestTileRenderer;
 import zeldacraft.block.renderer.SmallDungeonChestTileRenderer;
 import zeldacraft.block.renderer.RoyalSarcophagusTileRenderer;
 import zeldacraft.block.renderer.LockedDungeonDoorTileRenderer;
+import zeldacraft.block.renderer.LockedBigDungeonDoorTileRenderer;
 import zeldacraft.block.renderer.AnchientCapsuleMachineTileRenderer;
 
 import zeldacraft.ZeldaCraftMod;
@@ -26,5 +27,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(ZeldaCraftModBlockEntities.SMALL_DUNGEON_CHEST.get(), context -> new SmallDungeonChestTileRenderer());
 		event.registerBlockEntityRenderer(ZeldaCraftModBlockEntities.ROYAL_SARCOPHAGUS.get(), context -> new RoyalSarcophagusTileRenderer());
 		event.registerBlockEntityRenderer(ZeldaCraftModBlockEntities.LOCKED_DUNGEON_DOOR.get(), context -> new LockedDungeonDoorTileRenderer());
+		event.registerBlockEntityRenderer(ZeldaCraftModBlockEntities.LOCKED_BIG_DUNGEON_DOOR.get(), context -> new LockedBigDungeonDoorTileRenderer());
 	}
 }

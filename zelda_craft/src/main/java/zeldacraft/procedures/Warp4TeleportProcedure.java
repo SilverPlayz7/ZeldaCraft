@@ -4,10 +4,10 @@ import zeldacraft.network.ZeldaCraftModVariables;
 
 import zeldacraft.init.ZeldaCraftModBlocks;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
+import org.checkerframework.checker.units.qual.s;
 
-import net.minecraft.world.level.storage.LevelResource;
+import net.minecraftforge.server.ServerLifecycleHooks;
+
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,158 +18,1007 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.File;
-import java.io.BufferedReader;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Warp4TeleportProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		File file = new File("");
-		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
-		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
-		String worldName = "";
+		double index = 0;
+		ArrayList<Object> statueList = new ArrayList<>();
 		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
-		if (file.exists()) {
+		if (server != null) {
 			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
+				statueList.addAll((new Object() {
+					public ArrayList<Object> convert(String text, String separator) {
+						return new ArrayList<>(Arrays.asList(text.split(separator)));
 					}
-					bufferedReader.close();
-					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					statueArray = mainObj.get("statues").getAsJsonArray();
-					if ((world.getBlockState(
-							BlockPos.containing(statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-									statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-									statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble())))
-							.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
-						if ((new Object() {
-							public Direction getDirection(BlockPos pos) {
-								BlockState _bs = world.getBlockState(pos);
-								Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-								if (property != null && _bs.getValue(property) instanceof Direction _dir)
-									return _dir;
-								else if (_bs.hasProperty(BlockStateProperties.AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-								else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-								return Direction.NORTH;
-							}
-						}.getDirection(BlockPos.containing(
-								(int) statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-								(int) statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(), (int) statueArray
-										.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()))) == Direction.NORTH) {
-							{
-								Entity _ent = entity;
-								_ent.teleportTo((statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-										statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() - 0.5));
-								if (_ent instanceof ServerPlayer _serverPlayer)
-									_serverPlayer.connection.teleport(
-											(statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-											statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-											((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() - 0.5),
-											_ent.getYRot(), _ent.getXRot());
-							}
-						}
-						if ((new Object() {
-							public Direction getDirection(BlockPos pos) {
-								BlockState _bs = world.getBlockState(pos);
-								Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-								if (property != null && _bs.getValue(property) instanceof Direction _dir)
-									return _dir;
-								else if (_bs.hasProperty(BlockStateProperties.AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-								else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-								return Direction.NORTH;
-							}
-						}.getDirection(BlockPos.containing(
-								(int) statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-								(int) statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(), (int) statueArray
-										.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()))) == Direction.SOUTH) {
-							{
-								Entity _ent = entity;
-								_ent.teleportTo((statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-										statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 1.5));
-								if (_ent instanceof ServerPlayer _serverPlayer)
-									_serverPlayer.connection.teleport(
-											(statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-											statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-											((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 1.5),
-											_ent.getYRot(), _ent.getXRot());
-							}
-						}
-						if ((new Object() {
-							public Direction getDirection(BlockPos pos) {
-								BlockState _bs = world.getBlockState(pos);
-								Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-								if (property != null && _bs.getValue(property) instanceof Direction _dir)
-									return _dir;
-								else if (_bs.hasProperty(BlockStateProperties.AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-								else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-								return Direction.NORTH;
-							}
-						}.getDirection(BlockPos.containing(
-								(int) statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-								(int) statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(), (int) statueArray
-										.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()))) == Direction.WEST) {
-							{
-								Entity _ent = entity;
-								_ent.teleportTo((statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() - 0.5),
-										statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5));
-								if (_ent instanceof ServerPlayer _serverPlayer)
-									_serverPlayer.connection.teleport(
-											(statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() - 0.5),
-											statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-											((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-											_ent.getYRot(), _ent.getXRot());
-							}
-						}
-						if ((new Object() {
-							public Direction getDirection(BlockPos pos) {
-								BlockState _bs = world.getBlockState(pos);
-								Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-								if (property != null && _bs.getValue(property) instanceof Direction _dir)
-									return _dir;
-								else if (_bs.hasProperty(BlockStateProperties.AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-								else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-									return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-								return Direction.NORTH;
-							}
-						}.getDirection(BlockPos.containing(
-								(int) statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-								(int) statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(), (int) statueArray
-										.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()))) == Direction.EAST) {
-							{
-								Entity _ent = entity;
-								_ent.teleportTo((statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 1.5),
-										statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5));
-								if (_ent instanceof ServerPlayer _serverPlayer)
-									_serverPlayer.connection.teleport(
-											(statueArray.get((int) (13 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 1.5),
-											statueArray.get((int) (14 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-											((int) statueArray.get((int) (15 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble() + 0.5),
-											_ent.getYRot(), _ent.getXRot());
-							}
-						}
+				}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+			}
+			index = 15;
+			if ((world.getBlockState(BlockPos.containing(new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
 					}
-				} catch (IOException e) {
-					e.printStackTrace();
+					return 0;
+				}
+			}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))).getBlock() == ZeldaCraftModBlocks.OWL_STATUE
+					.get()) {
+				if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing((int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.NORTH) {
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), _ent.getYRot(),
+									_ent.getXRot());
+					}
+				}
+				if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing((int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.SOUTH) {
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), _ent.getYRot(),
+									_ent.getXRot());
+					}
+				}
+				if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing((int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.WEST) {
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), _ent.getYRot(),
+									_ent.getXRot());
+					}
+				}
+				if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing((int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
+						return "";
+					}
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.EAST) {
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+							double convert(String s) {
+								try {
+									return Double.parseDouble(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(new Object() {
+							public String get(ArrayList<?> list, int index) {
+								if (list.get(index) instanceof String text) {
+									return text;
+								}
+								return "";
+							}
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new java.text.DecimalFormat("##.##").format(new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), _ent.getYRot(),
+									_ent.getXRot());
+					}
 				}
 			}
 		}

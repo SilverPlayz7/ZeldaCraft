@@ -2,65 +2,84 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
+import org.checkerframework.checker.units.qual.s;
 
-import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.BlockPos;
 
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.File;
-import java.io.BufferedReader;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Name3Procedure {
 	public static String execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return "";
-		File file = new File("");
-		com.google.gson.JsonArray statueArray = new com.google.gson.JsonArray();
-		com.google.gson.JsonObject mainObj = new com.google.gson.JsonObject();
+		ArrayList<Object> statueList = new ArrayList<>();
 		String name = "";
-		String worldName = "";
-		MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-		worldName = server.getWorldPath(LevelResource.ROOT).getParent().getFileName().toString();
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "" + ("/saves/" + (worldName + "/data"))), File.separator + "owlstatue.json");
-		if (file.exists()) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					mainObj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					statueArray = mainObj.get("statues").getAsJsonArray();
-					if (!(statueArray.size() < 11 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
-						name = new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world,
-								BlockPos.containing((int) statueArray.get((int) (9 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										(int) statueArray.get((int) (10 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble(),
-										(int) statueArray.get((int) (11 + 20 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)).getAsDouble()),
-								"statueName");
-					}
-				} catch (IOException e) {
-					e.printStackTrace();
+		{
+			statueList.addAll((new Object() {
+				public ArrayList<Object> convert(String text, String separator) {
+					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}
-			return name;
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
 		}
-		return "";
+		if (!(statueList.size() < 14 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
+			name = new Object() {
+				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getString(tag);
+					return "";
+				}
+			}.getValue(world, BlockPos.containing((int) new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (12 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))), (int) new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (13 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))), (int) new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
+					}
+					return 0;
+				}
+			}.convert(new Object() {
+				public String get(ArrayList<?> list, int index) {
+					if (list.get(index) instanceof String text) {
+						return text;
+					}
+					return "";
+				}
+			}.get(statueList, (int) (14 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))), "statueName");
+		}
+		return name;
 	}
 }

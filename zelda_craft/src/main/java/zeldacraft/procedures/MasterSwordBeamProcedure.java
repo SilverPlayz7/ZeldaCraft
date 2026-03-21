@@ -75,37 +75,39 @@ public class MasterSwordBeamProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.MASTER_SWORD.get()) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) == (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) {
-				if (!(entity instanceof Player _plrCldCheck5 && _plrCldCheck5.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()))) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new MasterSwordBeamProjectileProjectileEntity(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 7, 1);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.2, 0);
-							projectileLevel.addFreshEntity(_entityToSpawn);
+		if (!world.isClientSide()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.MASTER_SWORD.get()) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) == (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) {
+					if (!(entity instanceof Player _plrCldCheck6 && _plrCldCheck6.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()))) {
+						{
+							Entity _shootFrom = entity;
+							Level projectileLevel = _shootFrom.level();
+							if (!projectileLevel.isClientSide()) {
+								Projectile _entityToSpawn = new Object() {
+									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+										AbstractArrow entityToSpawn = new MasterSwordBeamProjectileProjectileEntity(ZeldaCraftModEntities.MASTER_SWORD_BEAM_PROJECTILE_PROJECTILE.get(), level);
+										entityToSpawn.setOwner(shooter);
+										entityToSpawn.setBaseDamage(damage);
+										entityToSpawn.setKnockback(knockback);
+										entityToSpawn.setSilent(true);
+										return entityToSpawn;
+									}
+								}.getArrow(projectileLevel, entity, 7, 1);
+								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.2, 0);
+								projectileLevel.addFreshEntity(_entityToSpawn);
+							}
 						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:masterswordbeam")), SoundSource.PLAYERS, (float) 0.7, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:masterswordbeam")), SoundSource.PLAYERS, (float) 0.7, 1, false);
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:masterswordbeam")), SoundSource.PLAYERS, (float) 0.7, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:masterswordbeam")), SoundSource.PLAYERS, (float) 0.7, 1, false);
+							}
 						}
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 30);
 					}
-					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 30);
 				}
 			}
 		}

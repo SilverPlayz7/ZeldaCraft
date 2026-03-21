@@ -4,6 +4,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class SmallRupeeCounterProcedure {
 	public static String execute(ItemStack itemstack) {
-		return "You can use this to store your hard earned rupees, although it's only big enough to hold 99! " + ("\n" + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("RupeeCount")) + "/99");
+		return "You can use this to store your hard earned rupees, although it's only big enough to hold 99! "
+				+ ("\n" + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("RupeeCount")) + "/" + new java.text.DecimalFormat("##.##").format(MaxRupeesProcedure.execute(itemstack)));
 	}
 }

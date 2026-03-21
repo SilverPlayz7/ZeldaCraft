@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:light_gray_terracotta"
+    },
+    "b": {
+      "item": "minecraft:ender_pearl"
+    },
+    "c": {
+      "item": "zelda_craft:song_core"
+    }
+  },
+  "result": {
+    "item": "zelda_craft:owl_statue",
+    "count": 1
+  }
+}

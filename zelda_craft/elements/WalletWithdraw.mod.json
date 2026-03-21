@@ -34,7 +34,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 251,
+          "x": 245,
           "y": 44,
           "locked": false
         }
@@ -51,7 +51,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 290,
+          "x": 284,
           "y": 44,
           "locked": false
         }
@@ -128,6 +128,9 @@
           "name": "imagebutton_deposit100",
           "image": "deposit100.png",
           "hoveredImage": "deposit100h.png",
+          "onClick": {
+            "name": "Withdraw100"
+          },
           "x": 247,
           "y": 72,
           "locked": false

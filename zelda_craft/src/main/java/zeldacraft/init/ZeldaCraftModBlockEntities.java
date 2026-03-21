@@ -15,6 +15,7 @@ import zeldacraft.block.entity.OpenChestBlockEntity;
 import zeldacraft.block.entity.LullabySwitchBlockEntity;
 import zeldacraft.block.entity.LockedHylianChestBlockEntity;
 import zeldacraft.block.entity.LockedDungeonDoorTileEntity;
+import zeldacraft.block.entity.LockedBigDungeonDoorTileEntity;
 import zeldacraft.block.entity.IllusionBlockBlockEntity;
 import zeldacraft.block.entity.HiddenIllusionBlockBlockEntity;
 import zeldacraft.block.entity.FloorSwitchBlockEntity;
@@ -56,6 +57,8 @@ public class ZeldaCraftModBlockEntities {
 			() -> BlockEntityType.Builder.of(RoyalSarcophagusTileEntity::new, ZeldaCraftModBlocks.ROYAL_SARCOPHAGUS.get()).build(null));
 	public static final RegistryObject<BlockEntityType<LockedDungeonDoorTileEntity>> LOCKED_DUNGEON_DOOR = REGISTRY.register("locked_dungeon_door",
 			() -> BlockEntityType.Builder.of(LockedDungeonDoorTileEntity::new, ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get()).build(null));
+	public static final RegistryObject<BlockEntityType<LockedBigDungeonDoorTileEntity>> LOCKED_BIG_DUNGEON_DOOR = REGISTRY.register("locked_big_dungeon_door",
+			() -> BlockEntityType.Builder.of(LockedBigDungeonDoorTileEntity::new, ZeldaCraftModBlocks.LOCKED_BIG_DUNGEON_DOOR.get()).build(null));
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

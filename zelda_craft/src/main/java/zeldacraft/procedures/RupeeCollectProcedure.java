@@ -43,12 +43,12 @@ public class RupeeCollectProcedure {
 			return;
 		if (itemstack.is(ItemTags.create(ResourceLocation.parse("zelda_craft:rupee")))) {
 			if (entity instanceof Player) {
-				if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(ZeldaCraftModItems.CHILD_WALLET.get(), lv).isPresent() : false) {
+				if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(EquipedWalletProcedure.execute(entity).getItem(), lv).isPresent() : false) {
 					if (entity instanceof LivingEntity lv) {
-						CuriosApi.getCuriosHelper().findCurios(lv, ZeldaCraftModItems.CHILD_WALLET.get()).forEach(item -> {
+						CuriosApi.getCuriosHelper().findCurios(lv, EquipedWalletProcedure.execute(entity).getItem()).forEach(item -> {
 							ItemStack itemstackiterator = item.stack();
 							if (itemstack.getItem() == ZeldaCraftModItems.GREEN_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -67,7 +67,7 @@ public class RupeeCollectProcedure {
 										_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 								}
 							} else if (itemstack.getItem() == ZeldaCraftModItems.BLUE_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 5 <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 5 <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -82,7 +82,7 @@ public class RupeeCollectProcedure {
 													"/kill @e[sort=nearest,type=minecraft:item,nbt={Item:{id:\"zelda_craft:blue_rupee\"}},limit=1]");
 									});
 								} else {
-									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == 99) {
+									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == MaxRupeesProcedure.execute(itemstackiterator)) {
 										if (entity instanceof Player _player && !_player.level().isClientSide())
 											_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 									} else {
@@ -91,7 +91,7 @@ public class RupeeCollectProcedure {
 									}
 								}
 							} else if (itemstack.getItem() == ZeldaCraftModItems.RED_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 20 <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 20 <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -106,7 +106,7 @@ public class RupeeCollectProcedure {
 													"/kill @e[sort=nearest,type=minecraft:item,nbt={Item:{id:\"zelda_craft:red_rupee\"}},limit=1]");
 									});
 								} else {
-									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == 99) {
+									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == MaxRupeesProcedure.execute(itemstackiterator)) {
 										if (entity instanceof Player _player && !_player.level().isClientSide())
 											_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 									} else {
@@ -115,7 +115,7 @@ public class RupeeCollectProcedure {
 									}
 								}
 							} else if (itemstack.getItem() == ZeldaCraftModItems.PURPLE_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 50 <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 50 <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -130,7 +130,7 @@ public class RupeeCollectProcedure {
 													"/kill @e[sort=nearest,type=minecraft:item,nbt={Item:{id:\"zelda_craft:purple_rupee\"}},limit=1]");
 									});
 								} else {
-									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == 99) {
+									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == MaxRupeesProcedure.execute(itemstackiterator)) {
 										if (entity instanceof Player _player && !_player.level().isClientSide())
 											_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 									} else {
@@ -139,7 +139,7 @@ public class RupeeCollectProcedure {
 									}
 								}
 							} else if (itemstack.getItem() == ZeldaCraftModItems.SILVER_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 100 <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 100 <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -154,7 +154,7 @@ public class RupeeCollectProcedure {
 													"/kill @e[sort=nearest,type=minecraft:item,nbt={Item:{id:\"zelda_craft:silver_rupee\"}},limit=1]");
 									});
 								} else {
-									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == 99) {
+									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == MaxRupeesProcedure.execute(itemstackiterator)) {
 										if (entity instanceof Player _player && !_player.level().isClientSide())
 											_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 									} else {
@@ -163,7 +163,7 @@ public class RupeeCollectProcedure {
 									}
 								}
 							} else if (itemstack.getItem() == ZeldaCraftModItems.GOLD_RUPEE.get()) {
-								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 300 <= 99) {
+								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") + itemstack.getCount() * 300 <= MaxRupeesProcedure.execute(itemstackiterator)) {
 									if (event != null && event.hasResult()) {
 										event.setResult(Event.Result.ALLOW);
 									}
@@ -178,7 +178,7 @@ public class RupeeCollectProcedure {
 													"/kill @e[sort=nearest,type=minecraft:item,nbt={Item:{id:\"zelda_craft:gold_rupee\"}},limit=1]");
 									});
 								} else {
-									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == 99) {
+									if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") == MaxRupeesProcedure.execute(itemstackiterator)) {
 										if (entity instanceof Player _player && !_player.level().isClientSide())
 											_player.displayClientMessage(Component.literal("Your wallet is full"), true);
 									} else {

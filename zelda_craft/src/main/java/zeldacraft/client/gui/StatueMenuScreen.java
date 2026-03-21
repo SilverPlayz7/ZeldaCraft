@@ -27,7 +27,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.PlainTextButton;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -37,6 +39,7 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	Button button_empty;
 	ImageButton imagebutton_owlstatueactive;
 	ImageButton imagebutton_owlstatueactive1;
 	ImageButton imagebutton_owlstatueactive2;
@@ -122,6 +125,24 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 	}
 
 	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_empty.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive1.visible = Warp2ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive2.visible = Warp3ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive3.visible = Warp4ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive4.visible = Warp5ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp1.visible = Warp2ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp2.visible = Warp3ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp3.visible = Warp4ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp4.visible = Warp5ShowProcedure.execute(entity);
+		this.imagebutton_nextpageactive.visible = NextPageShowProcedure.execute(entity);
+		this.imagebutton_backpageactive.visible = BackPageShowProcedure.execute(entity);
+	}
+
+	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Name1Procedure.execute(world, entity), 45, 23, -12829636, false);
 		guiGraphics.drawString(this.font, Name2Procedure.execute(world, entity), 45, 53, -12829636, false);
@@ -133,12 +154,15 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 	@Override
 	public void init() {
 		super.init();
+		button_empty = new PlainTextButton(this.leftPos + 888, this.topPos + 520, 25, 20, Component.translatable("gui.zelda_craft.statue_menu.button_empty"), e -> {
+		}, this.font);
+		this.addRenderableWidget(button_empty);
 		imagebutton_owlstatueactive = new ImageButton(this.leftPos + 11, this.topPos + 14, 27, 26, 0, 0, 26, ResourceLocation.parse("zelda_craft:textures/screens/atlas/imagebutton_owlstatueactive.png"), 27, 52, e -> {
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp1ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(0, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(1, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_owlstatueactive);
@@ -146,8 +170,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp2ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(1, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(2, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_owlstatueactive1);
@@ -155,8 +179,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp3ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(2, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(3, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_owlstatueactive2);
@@ -164,8 +188,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp4ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(3, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(4, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_owlstatueactive3);
@@ -173,8 +197,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp5ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(4, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(5, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_owlstatueactive4);
@@ -182,8 +206,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp1ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(5, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(6, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp);
@@ -191,8 +215,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp2ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(6, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 6, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(7, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp1);
@@ -200,8 +224,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp3ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(7, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 7, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(8, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp2);
@@ -209,8 +233,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp4ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(8, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 8, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(9, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp3);
@@ -218,8 +242,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (Warp5ShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(9, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 9, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(10, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_deletewarp4);
@@ -227,8 +251,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (NextPageShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(10, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 10, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(11, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_nextpageactive);
@@ -236,8 +260,8 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			int x = StatueMenuScreen.this.x;
 			int y = StatueMenuScreen.this.y;
 			if (BackPageShowProcedure.execute(entity)) {
-				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(11, x, y, z));
-				StatueMenuButtonMessage.handleButtonAction(entity, 11, x, y, z);
+				ZeldaCraftMod.PACKET_HANDLER.sendToServer(new StatueMenuButtonMessage(12, x, y, z));
+				StatueMenuButtonMessage.handleButtonAction(entity, 12, x, y, z);
 			}
 		});
 		this.addRenderableWidget(imagebutton_backpageactive);

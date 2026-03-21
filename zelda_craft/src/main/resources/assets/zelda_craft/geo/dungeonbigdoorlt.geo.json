@@ -1,0 +1,149 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.DungeonBigDoor",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "Door",
+					"pivot": [3.41821, -9.38885, -7.8514]
+				},
+				{
+					"name": "group2",
+					"parent": "Door",
+					"pivot": [9, -16, -7],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [2, 14, 4],
+							"uv": {
+								"north": {"uv": [0, 46], "uv_size": [2, 14]},
+								"east": {"uv": [28, 0], "uv_size": [4, 14]},
+								"south": {"uv": [2, 46], "uv_size": [-2, 14]},
+								"west": {"uv": [32, 0], "uv_size": [4, 14]},
+								"up": {"uv": [52, 22], "uv_size": [2, 4]},
+								"down": {"uv": [61, 12], "uv_size": [2, -4]}
+							}
+						},
+						{
+							"origin": [-8, 13.975, -8],
+							"size": [16, 2, 4],
+							"uv": {
+								"north": {"uv": [4, 46], "uv_size": [16, 2]},
+								"east": {"uv": [60, 26], "uv_size": [4, 2]},
+								"south": {"uv": [20, 46], "uv_size": [16, 2]},
+								"west": {"uv": [8, 61], "uv_size": [4, 2]},
+								"up": {"uv": [36, 0], "uv_size": [16, 4]},
+								"down": {"uv": [36, 8], "uv_size": [16, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "LeftDoor",
+					"parent": "group2",
+					"pivot": [9, -16, -7],
+					"cubes": [
+						{
+							"origin": [-7, 0.05, -7],
+							"size": [14, 14, 2],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [14, 14]},
+								"east": {"uv": [42, 28], "uv_size": [2, 14]},
+								"south": {"uv": [14, 0], "uv_size": [14, 14]},
+								"west": {"uv": [44, 28], "uv_size": [2, 14]},
+								"up": {"uv": [50, 30], "uv_size": [14, 2]},
+								"down": {"uv": [50, 34], "uv_size": [14, -2]}
+							}
+						},
+						{
+							"origin": [7, 0, -7.25],
+							"size": [1, 14, 2.5],
+							"uv": {
+								"north": {"uv": [12, 48], "uv_size": [1, 14]},
+								"east": {"uv": [36, 8], "uv_size": [2.5, 14]},
+								"south": {"uv": [13, 48], "uv_size": [-1, 14]},
+								"west": {"uv": [39, 8], "uv_size": [2.5, 14]},
+								"up": {"uv": [31, 67], "uv_size": [1, 2.5]},
+								"down": {"uv": [32, 69.5], "uv_size": [1, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "RightDoor",
+					"parent": "group2",
+					"pivot": [7, -16, -7]
+				},
+				{
+					"name": "group10",
+					"parent": "Door",
+					"pivot": [8, -4, -7.75]
+				},
+				{
+					"name": "group3",
+					"parent": "group10",
+					"pivot": [-6.75, -4, -7.75],
+					"cubes": [
+						{
+							"origin": [-8.5, 12.25, -8.5],
+							"size": [3.75, 3.75, 2.5],
+							"uv": {
+								"north": {"uv": [55, 50], "uv_size": [4, 4]},
+								"east": {"uv": [20, 59], "uv_size": [2.5, 4]},
+								"south": {"uv": [30, 56], "uv_size": [4, 4]},
+								"west": {"uv": [23, 59], "uv_size": [2.5, 4]},
+								"up": {"uv": [26, 59], "uv_size": [4, 2.5]},
+								"down": {"uv": [59, 36.5], "uv_size": [4, -2.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "group4",
+					"parent": "group10",
+					"pivot": [22.75, -4, -7.75],
+					"rotation": [0, -180, 0]
+				},
+				{
+					"name": "group11",
+					"parent": "Door",
+					"pivot": [8, -4, -4.25],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "group16",
+					"parent": "group11",
+					"pivot": [-6.75, -4, -4.25]
+				},
+				{
+					"name": "group17",
+					"parent": "group11",
+					"pivot": [22.75, -4, -4.25],
+					"rotation": [0, -180, 0],
+					"cubes": [
+						{
+							"origin": [21, 12.25, -6],
+							"size": [3.75, 3.75, 2.5],
+							"uv": {
+								"north": {"uv": [34, 56], "uv_size": [-4, 4]},
+								"east": {"uv": [22.5, 59], "uv_size": [-2.5, 4]},
+								"south": {"uv": [59, 50], "uv_size": [-4, 4]},
+								"west": {"uv": [25.5, 59], "uv_size": [-2.5, 4]},
+								"up": {"uv": [26, 61.5], "uv_size": [4, -2.5]},
+								"down": {"uv": [59, 34], "uv_size": [4, 2.5]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

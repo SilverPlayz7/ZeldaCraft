@@ -1,6 +1,7 @@
 package zeldacraft.block;
 
 import zeldacraft.procedures.LockedDungeonDoorOnBlockRightClickedProcedure;
+import zeldacraft.procedures.DungeonDoorBlockValidPlacementConditionProcedure;
 import zeldacraft.procedures.DungeonDoorBlockAddedProcedure;
 
 import zeldacraft.init.ZeldaCraftModBlockEntities;
@@ -28,8 +29,10 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -116,6 +119,17 @@ public class LockedDungeonDoorBlock extends BaseEntityBlock implements SimpleWat
 	}
 
 	@Override
+	public boolean canSurvive(BlockState blockstate, LevelReader worldIn, BlockPos pos) {
+		if (worldIn instanceof LevelAccessor world) {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return DungeonDoorBlockValidPlacementConditionProcedure.execute(world, x, y, z, blockstate);
+		}
+		return super.canSurvive(blockstate, worldIn, pos);
+	}
+
+	@Override
 	public FluidState getFluidState(BlockState state) {
 		return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
 	}
@@ -125,7 +139,7 @@ public class LockedDungeonDoorBlock extends BaseEntityBlock implements SimpleWat
 		if (state.getValue(WATERLOGGED)) {
 			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
-		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
+		return !state.canSurvive(world, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
 
 	@Override

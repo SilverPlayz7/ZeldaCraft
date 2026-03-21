@@ -22,7 +22,7 @@ public class BuyMaskButtonProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity lv) {
-			CuriosApi.getCuriosHelper().findCurios(lv, ZeldaCraftModItems.CHILD_WALLET.get()).forEach(item -> {
+			CuriosApi.getCuriosHelper().findCurios(lv, EquipedWalletProcedure.execute(entity).getItem()).forEach(item -> {
 				ItemStack itemstackiterator = item.stack();
 				if (new Object() {
 					public int getAmount(int sltid) {
