@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ChainSpoolItem extends Item {
 	public ChainSpoolItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
+		super(new Item.Properties().rarity(Rarity.RARE));
 	}
 
 	@Override

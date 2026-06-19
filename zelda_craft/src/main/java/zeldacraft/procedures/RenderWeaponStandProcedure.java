@@ -271,94 +271,14 @@ public class RenderWeaponStandProcedure {
 							positionz = _blockEntityEntry.getKey().getZ();
 							if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.SWORD_STAND.get()) {
 								if ((blockstateiterator.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip3 ? blockstateiterator.getValue(_getip3) : -1) == 1) {
-									if ((new Object() {
-										public Direction getDirection(BlockPos pos) {
-											BlockState _bs = world.getBlockState(pos);
-											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (property != null && _bs.getValue(property) instanceof Direction _dir)
-												return _dir;
-											else if (_bs.hasProperty(BlockStateProperties.AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-											return Direction.NORTH;
-										}
-									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 225, (float) 0.85, false, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockPos pos) {
-											BlockState _bs = world.getBlockState(pos);
-											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (property != null && _bs.getValue(property) instanceof Direction _dir)
-												return _dir;
-											else if (_bs.hasProperty(BlockStateProperties.AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-											return Direction.NORTH;
-										}
-									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 225, (float) 0.85, false, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockPos pos) {
-											BlockState _bs = world.getBlockState(pos);
-											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (property != null && _bs.getValue(property) instanceof Direction _dir)
-												return _dir;
-											else if (_bs.hasProperty(BlockStateProperties.AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-											return Direction.NORTH;
-										}
-									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 225, (float) 0.85, false, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockPos pos) {
-											BlockState _bs = world.getBlockState(pos);
-											Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (property != null && _bs.getValue(property) instanceof Direction _dir)
-												return _dir;
-											else if (_bs.hasProperty(BlockStateProperties.AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-											else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-												return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-											return Direction.NORTH;
-										}
-									}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 270, 0, 225, (float) 0.85, false, false);
+									if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 225, (float) 0.85, false, false);
+									} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 225, (float) 0.85, false, false);
+									} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 225, (float) 0.85, false, false);
+									} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 270, 0, 225, (float) 0.85, false, false);
 									}
 								}
 							}
@@ -367,5 +287,25 @@ public class RenderWeaponStandProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getBlockDirection(LevelAccessor world, BlockPos pos) {
+		BlockState blockState = world.getBlockState(pos);
+		Property<?> property = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (property != null && blockState.getValue(property) instanceof Direction direction)
+			return direction;
+		else if (blockState.hasProperty(BlockStateProperties.AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+		else if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+		return Direction.NORTH;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor level, BlockPos pos, int slot) {
+		AtomicReference<ItemStack> result = new AtomicReference<>(ItemStack.EMPTY);
+		BlockEntity entity = level.getBlockEntity(pos);
+		if (entity != null)
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> result.set(capability.getStackInSlot(slot)));
+		return result.get();
 	}
 }

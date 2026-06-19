@@ -10,8 +10,8 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "lullabyswitch:default",
-    "rotationMode": 4,
-    "enablePitch": false,
+    "rotationMode": 3,
+    "enablePitch": true,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "animations": [],
@@ -28,9 +28,9 @@
       {
         "mx": 0.0,
         "my": 0.0,
-        "mz": 15.5,
+        "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 0.5,
         "Mz": 16.0,
         "subtract": false
       }

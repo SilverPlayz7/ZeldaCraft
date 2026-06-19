@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -38,7 +39,7 @@ public class HookShotProjectileRenderer extends EntityRenderer<HookShotProjectil
 	@Override
 	public void render(HookShotProjectileEntity hookshotEntity, float yaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
 		Player player = Minecraft.getInstance().player;
-		if (player != null && !player.getMainHandItem().isEmpty()) { // Replace with your condition for hook presence
+		if (player != null && player.getMainHandItem().is(ItemTags.create(ResourceLocation.parse("zelda_craft:render_chain"))) || player.getOffhandItem().is(ItemTags.create(ResourceLocation.parse("zelda_craft:render_chain")))) { // Replace with your condition for hook presence
 			HumanoidArm mainArm = Minecraft.getInstance().options.mainHand().get();
 			ItemStack activeItem = player.getUseItem();
 			poseStack.pushPose();

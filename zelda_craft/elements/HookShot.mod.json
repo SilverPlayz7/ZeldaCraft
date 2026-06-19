@@ -5,11 +5,12 @@
     "renderType": 1,
     "texture": "hookshot",
     "customModelName": "hook_shot:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [
       {
         "renderType": 1,
-        "texture": "hookshot",
+        "texture": "hookshot_fired",
         "customModelName": "firedhook_shot:default",
         "stateMap": [
           {

@@ -42,10 +42,10 @@ public class CreeperDetonationCheckProcedure {
 			if (sourceentity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel
 					&& _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_0"))).isDone()) {
 				if (!(entity instanceof Creeper _creeper ? _creeper.isIgnited() : true)) {
-					if ((sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).CreepersDetonated < 5) {
+					if ((sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).CreepersDetonated < 5) {
 						if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.FLINT_AND_STEEL) {
 							{
-								double _setval = (sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).CreepersDetonated + 1;
+								double _setval = (sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).CreepersDetonated + 1;
 								sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.CreepersDetonated = _setval;
 									capability.syncPlayerVariables(sourceentity);
@@ -53,7 +53,7 @@ public class CreeperDetonationCheckProcedure {
 							}
 						}
 					}
-					if ((sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).CreepersDetonated == 5) {
+					if ((sourceentity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).CreepersDetonated == 5) {
 						if (sourceentity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.parse("zelda_craft:blast_mask_2"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

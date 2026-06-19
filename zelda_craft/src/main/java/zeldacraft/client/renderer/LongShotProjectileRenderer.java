@@ -11,6 +11,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -38,7 +39,7 @@ public class LongShotProjectileRenderer extends EntityRenderer<LongShotProjectil
 	@Override
 	public void render(LongShotProjectileEntity longshotEntity, float yaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
 		LocalPlayer player = Minecraft.getInstance().player;
-		if (player != null && !player.getMainHandItem().isEmpty()) {
+		if (player != null && player.getMainHandItem().is(ItemTags.create(ResourceLocation.parse("zelda_craft:render_chain"))) || player.getOffhandItem().is(ItemTags.create(ResourceLocation.parse("zelda_craft:render_chain")))) {
 			HumanoidArm mainArm = Minecraft.getInstance().options.mainHand().get();
 			InteractionHand activeHand = player.getUsedItemHand();
 			poseStack.pushPose();

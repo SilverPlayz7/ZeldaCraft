@@ -30,16 +30,8 @@ public class BoomerangRangedItemUsedProcedure {
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new BoomerangProjectileEntity(ZeldaCraftModEntities.BOOMERANG_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, 5, 1);
+					Projectile _entityToSpawn = initArrowProjectile(createArrowWeaponItemStack(new BoomerangProjectileEntity(ZeldaCraftModEntities.BOOMERANG_PROJECTILE.get(), 0, 0, 0, projectileLevel), 1, (byte) 0), entity, 5, true, false, false,
+							AbstractArrow.Pickup.DISALLOWED);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -64,16 +56,8 @@ public class BoomerangRangedItemUsedProcedure {
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new BoomerangProjectileEntity(ZeldaCraftModEntities.BOOMERANG_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, 5, 1);
+					Projectile _entityToSpawn = initArrowProjectile(createArrowWeaponItemStack(new BoomerangProjectileEntity(ZeldaCraftModEntities.BOOMERANG_PROJECTILE.get(), 0, 0, 0, projectileLevel), 1, (byte) 0), entity, 5, true, false, false,
+							AbstractArrow.Pickup.DISALLOWED);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -94,5 +78,26 @@ public class BoomerangRangedItemUsedProcedure {
 				}
 			}
 		}
+	}
+
+	private static AbstractArrow initArrowProjectile(AbstractArrow entityToSpawn, Entity shooter, float damage, boolean silent, boolean fire, boolean particles, AbstractArrow.Pickup pickup) {
+		entityToSpawn.setOwner(shooter);
+		entityToSpawn.setBaseDamage(damage);
+		if (silent)
+			entityToSpawn.setSilent(true);
+		if (fire)
+			entityToSpawn.setSecondsOnFire(100);
+		if (particles)
+			entityToSpawn.setCritArrow(true);
+		entityToSpawn.pickup = pickup;
+		return entityToSpawn;
+	}
+
+	private static AbstractArrow createArrowWeaponItemStack(AbstractArrow entityToSpawn, int knockback, byte piercing) {
+		if (knockback > 0)
+			entityToSpawn.setKnockback(knockback);
+		if (piercing > 0)
+			entityToSpawn.setPierceLevel(piercing);
+		return entityToSpawn;
 	}
 }

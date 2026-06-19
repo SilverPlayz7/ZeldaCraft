@@ -34,19 +34,31 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 		double sy = 0;
 		double sz = 0;
 		Entity owner = null;
-		if (entity.isInWaterRainOrBubble()) {
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1);
-				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1, false);
+		if (!world.isClientSide()) {
+			if (entity.isInWaterRainOrBubble()) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_defuse")), SoundSource.NEUTRAL, 1, 1, false);
+					}
 				}
+				if (!entity.level().isClientSide())
+					entity.discard();
 			}
-			if (!entity.level().isClientSide())
-				entity.discard();
-		}
-		if (entity.getPersistentData().getDouble("SoundClock") < 20) {
-			if (entity.getPersistentData().getDouble("SoundClock") == 0) {
+			if (entity.getPersistentData().getDouble("SoundClock") < 20) {
+				if (entity.getPersistentData().getDouble("SoundClock") == 0) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
+					owner = findEntityInWorldRange(world, Player.class, x, y, z, 3);
+				}
+				entity.getPersistentData().putDouble("SoundClock", (entity.getPersistentData().getDouble("SoundClock") + 1));
+			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
@@ -54,73 +66,64 @@ public class BombProjectileWhileProjectileFlyingTickProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
-				owner = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null);
+				entity.getPersistentData().putDouble("SoundClock", 1);
 			}
-			entity.getPersistentData().putDouble("SoundClock", (entity.getPersistentData().getDouble("SoundClock") + 1));
-		} else {
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1);
-				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:bomb_fuse")), SoundSource.NEUTRAL, 1, 1, false);
+			if (!entity.onGround()) {
+				if (!world.getEntitiesOfClass(Monster.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(1 / 2d), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(Animal.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(1 / 2d), e -> true).isEmpty()) {
+					entity.getPersistentData().putDouble("FuseTime", 80);
 				}
 			}
-			entity.getPersistentData().putDouble("SoundClock", 1);
-		}
-		if (!entity.onGround()) {
-			if (!world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty() || !world.getEntitiesOfClass(Animal.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty()) {
-				entity.getPersistentData().putDouble("FuseTime", 80);
-			}
-		}
-		if (entity.getPersistentData().getDouble("FuseTime") < 80) {
-			entity.getPersistentData().putDouble("FuseTime", (entity.getPersistentData().getDouble("FuseTime") + 1));
-		} else {
-			if (!entity.level().isClientSide())
-				entity.discard();
-			if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.BOMB_GREIFING) == false) {
-				if (world instanceof Level _level && !_level.isClientSide())
-					_level.explode(owner, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
-				sx = -1.6;
-				found = false;
-				for (int index0 = 0; index0 < 4; index0++) {
-					sy = -1.6;
-					for (int index1 = 0; index1 < 4; index1++) {
-						sz = -1.6;
-						for (int index2 = 0; index2 < 4; index2++) {
-							if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ZeldaCraftModBlocks.BOMBABLE_WALL.get()
-									|| (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ZeldaCraftModBlocks.BOMBABLE_ILLUSION_BLOCK.get()) {
-								found = true;
-							}
-							sz = sz + 1;
-						}
-						sy = sy + 1;
-					}
-					sx = sx + 1;
-				}
-				if (found == true) {
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
-						}
-					}
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								"fill ~3.2 ~3.2 ~3.2 ~-3.2 ~-3.2 ~-3.2 air replace zelda_craft:bombable_wall");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								"fill ~3.2 ~3.2 ~3.2 ~-3.2 ~-3.2 ~-3.2 air replace zelda_craft:bombable_illusion_block");
-				}
+			if (entity.getPersistentData().getDouble("FuseTime") < 80) {
+				entity.getPersistentData().putDouble("FuseTime", (entity.getPersistentData().getDouble("FuseTime") + 1));
 			} else {
-				if (world instanceof Level _level && !_level.isClientSide())
-					_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.TNT);
+				if (!entity.level().isClientSide())
+					entity.discard();
+				if (world.getLevelData().getGameRules().getBoolean(ZeldaCraftModGameRules.BOMB_GREIFING) == false) {
+					if (world instanceof Level _level && !_level.isClientSide())
+						_level.explode(owner, x, y, z, 3, false, Level.ExplosionInteraction.NONE);
+					sx = -1.6;
+					found = false;
+					for (int index0 = 0; index0 < 4; index0++) {
+						sy = -1.6;
+						for (int index1 = 0; index1 < 4; index1++) {
+							sz = -1.6;
+							for (int index2 = 0; index2 < 4; index2++) {
+								if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ZeldaCraftModBlocks.BOMBABLE_WALL.get()
+										|| (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == ZeldaCraftModBlocks.BOMBABLE_ILLUSION_BLOCK.get()) {
+									found = true;
+								}
+								sz = sz + 1;
+							}
+							sy = sy + 1;
+						}
+						sx = sx + 1;
+					}
+					if (found == true) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:secret_found")), SoundSource.BLOCKS, (float) 0.8, 1, false);
+							}
+						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"fill ~3.2 ~3.2 ~3.2 ~-3.2 ~-3.2 ~-3.2 air replace zelda_craft:bombable_wall");
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"fill ~3.2 ~3.2 ~3.2 ~-3.2 ~-3.2 ~-3.2 air replace zelda_craft:bombable_illusion_block");
+					}
+				} else {
+					if (world instanceof Level _level && !_level.isClientSide())
+						_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.TNT);
+				}
 			}
 		}
 		world.addParticle(ParticleTypes.SMALL_FLAME, x, (y + 0.5), z, 0, 0.1, 0);
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

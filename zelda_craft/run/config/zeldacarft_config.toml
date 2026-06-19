@@ -5,7 +5,11 @@
 	#Changes whether this mod's arrows will spawn trail particles
 	"Show Arrow Particle Trail" = true
 
-[Hookshot]
-	#If enabled, the hookshot/longshot will only be able to attach to the 'hookshot target' block
-	"Only Hit Targets" = true
+[Gameplay]
+	#Toggles whether mobs drop rupees upon death
+	"Rupee Drop" = true
+
+	[Gameplay.Hookshot]
+		#If enabled, the hookshot/longshot will only be able to attach to the 'hookshot target' block
+		"Only Hit Targets" = false
 

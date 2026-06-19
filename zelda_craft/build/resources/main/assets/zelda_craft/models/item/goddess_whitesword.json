@@ -1,0 +1,7 @@
+{
+  "parent": "zelda_craft:custom/goddess_whitesword",
+  "textures": {
+    "2": "zelda_craft:block/goddess_whitesword",
+    "particle": "zelda_craft:item/goddess_sword3"
+  }
+}

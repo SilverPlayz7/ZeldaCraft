@@ -12,7 +12,7 @@ import java.util.List;
 
 public class PurpleRupeeItem extends Item {
 	public PurpleRupeeItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().rarity(Rarity.EPIC));
 	}
 
 	@Override

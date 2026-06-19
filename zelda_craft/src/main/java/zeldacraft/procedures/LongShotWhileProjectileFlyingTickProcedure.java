@@ -2,6 +2,8 @@ package zeldacraft.procedures;
 
 import zeldacraft.network.ZeldaCraftModVariables;
 
+import zeldacraft.init.ZeldaCraftModItems;
+
 import zeldacraft.ZeldaCraftMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -9,6 +11,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
@@ -30,53 +35,76 @@ public class LongShotWhileProjectileFlyingTickProcedure {
 		double NDVY = 0;
 		double MVX = 0;
 		double NDVZ = 0;
-		{
-			Entity _ent = immediatesourceentity;
-			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "data merge entity @s {NoGravity:1b}");
-			}
-		}
-		if (immediatesourceentity.getPersistentData().getDouble("SoundClock") < 8) {
-			immediatesourceentity.getPersistentData().putDouble("SoundClock", (immediatesourceentity.getPersistentData().getDouble("SoundClock") + 1));
-		} else {
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_flying")), SoundSource.PLAYERS, 1, 1);
-				} else {
-					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_flying")), SoundSource.PLAYERS, 1, 1, false);
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.LONG_SHOT.get() && entity instanceof Player _plrCldCheck3
+				&& _plrCldCheck3.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem())
+				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.LONG_SHOT.get() && entity instanceof Player _plrCldCheck7
+						&& _plrCldCheck7.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem())) {
+			{
+				Entity _ent = immediatesourceentity;
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "data merge entity @s {NoGravity:1b}");
 				}
 			}
-			immediatesourceentity.getPersistentData().putDouble("SoundClock", 0);
-		}
-		if (immediatesourceentity.getPersistentData().getDouble("DistanceTime") < 20) {
-			immediatesourceentity.getPersistentData().putDouble("DistanceTime", (immediatesourceentity.getPersistentData().getDouble("DistanceTime") + 1));
-		} else {
-			if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).Hooked == false) {
-				DVX = entity.getX() - immediatesourceentity.getX();
-				NDVX = DVX;
-				MVX = NDVX * 0.15;
-				DVY = (entity.getY() + 1) - immediatesourceentity.getY();
-				NDVY = DVY;
-				MVY = NDVY * 0.15;
-				DVZ = entity.getZ() - immediatesourceentity.getZ();
-				NDVZ = DVZ;
-				MVZ = NDVZ * 0.15;
-				immediatesourceentity.setDeltaMovement(new Vec3(MVX, MVY, MVZ));
+			if (immediatesourceentity.getPersistentData().getDouble("SoundClock") < 8) {
+				immediatesourceentity.getPersistentData().putDouble("SoundClock", (immediatesourceentity.getPersistentData().getDouble("SoundClock") + 1));
 			} else {
-				ZeldaCraftMod.queueServerWork((int) Math.sqrt(Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookX, 2)
-						+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookY, 2)
-						+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).HookZ, 2)), () -> {
-							if (!immediatesourceentity.level().isClientSide())
-								immediatesourceentity.discard();
-							{
-								Entity _ent = entity;
-								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "stopsound @s * zelda_craft:hookshot_flying");
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_flying")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_flying")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+				immediatesourceentity.getPersistentData().putDouble("SoundClock", 0);
+			}
+			if (immediatesourceentity.getPersistentData().getDouble("DistanceTime") < 20) {
+				immediatesourceentity.getPersistentData().putDouble("DistanceTime", (immediatesourceentity.getPersistentData().getDouble("DistanceTime") + 1));
+			} else {
+				if ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).Hooked == false) {
+					DVX = entity.getX() - immediatesourceentity.getX();
+					NDVX = DVX;
+					MVX = NDVX * 0.15;
+					DVY = (entity.getY() + 1) - immediatesourceentity.getY();
+					NDVY = DVY;
+					MVY = NDVY * 0.15;
+					DVZ = entity.getZ() - immediatesourceentity.getZ();
+					NDVZ = DVZ;
+					MVZ = NDVZ * 0.15;
+					immediatesourceentity.setDeltaMovement(new Vec3(MVX, MVY, MVZ));
+				} else {
+					ZeldaCraftMod.queueServerWork((int) Math.sqrt(Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).HookX, 2)
+							+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).HookY, 2)
+							+ Math.pow((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).HookZ, 2)), () -> {
+								if (!immediatesourceentity.level().isClientSide())
+									immediatesourceentity.discard();
+								{
+									Entity _ent = entity;
+									if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+										_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+												_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+												"stopsound @s * zelda_craft:hookshot_flying");
+									}
 								}
-							}
-						});
+							});
+				}
+			}
+		} else {
+			if (!immediatesourceentity.level().isClientSide())
+				immediatesourceentity.discard();
+			{
+				boolean _setval = false;
+				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Hooked = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "stopsound @s * zelda_craft:hookshot_flying");
+				}
 			}
 		}
 	}

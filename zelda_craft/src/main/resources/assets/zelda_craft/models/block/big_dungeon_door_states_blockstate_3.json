@@ -1,9 +1,9 @@
 {
   "parent": "zelda_craft:custom/dungeonbigdoorrm",
   "textures": {
-    "all": ":block/",
+    "all": "zelda_craft:block/",
     "particle": "zelda_craft:block/lockedbigkeydoor",
     "1": "zelda_craft:block/lockedbigkeydoor"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

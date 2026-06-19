@@ -13,6 +13,7 @@
     "minecraft:grass",
     "minecraft:dead_bush",
     "minecraft:tall_seagrass",
+    "minecraft:air",
     {
       "id": "#minecraft:tall_flowers",
       "required": false

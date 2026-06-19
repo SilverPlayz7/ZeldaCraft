@@ -9,9 +9,13 @@
     "customProperties": {},
     "states": [],
     "name": "Big Key",
-    "rarity": "COMMON",
-    "creativeTabs": [],
-    "stackSize": 64,
+    "rarity": "UNCOMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ZeldaCraft"
+      }
+    ],
+    "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,

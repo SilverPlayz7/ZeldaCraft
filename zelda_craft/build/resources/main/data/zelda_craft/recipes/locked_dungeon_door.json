@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "zelda_craft:dungeon_door"
+    },
+    {
+      "item": "zelda_craft:small_key"
+    }
+  ],
+  "result": {
+    "item": "zelda_craft:locked_dungeon_door",
+    "count": 1
+  }
+}

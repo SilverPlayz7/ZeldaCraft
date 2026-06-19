@@ -1,4 +1,3 @@
-
 package zeldacraft.item;
 
 import zeldacraft.item.renderer.ReplicaHylianShieldItemRenderer;
@@ -51,7 +50,7 @@ public class ReplicaHylianShieldItem extends ShieldItem implements GeoItem {
 
 	private PlayState idlePredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			event.getController().setAnimation(RawAnimation.begin().thenLoop("animation.example.idle"));
+			event.getController().setAnimation(RawAnimation.begin().thenLoop("animation.TPChest.new"));
 			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;

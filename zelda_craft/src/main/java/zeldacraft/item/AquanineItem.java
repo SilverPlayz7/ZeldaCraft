@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class AquanineItem extends Item {
 	public AquanineItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
 	}
 }

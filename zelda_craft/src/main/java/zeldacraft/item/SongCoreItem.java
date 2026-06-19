@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SongCoreItem extends Item {
 	public SongCoreItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
 	}
 
 	@Override

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class GoldRupeeItem extends Item {
 	public GoldRupeeItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
 	}
 
 	@Override

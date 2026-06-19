@@ -1,10 +1,11 @@
 {
-  "parent": "zelda_craft:custom/lokomo_sword_stand",
+  "parent": "zelda_craft:custom/master_sword_stand",
   "textures": {
     "all": "zelda_craft:block/stand_base",
     "particle": "zelda_craft:block/stand_base",
-    "0": "zelda_craft:block/lokomosword",
-    "2": "zelda_craft:block/stand_base"
+    "3": "zelda_craft:block/stand_base",
+    "4": "zelda_craft:block/meister",
+    "5": "zelda_craft:block/meister2"
   },
   "render_type": "cutout_mipped"
 }

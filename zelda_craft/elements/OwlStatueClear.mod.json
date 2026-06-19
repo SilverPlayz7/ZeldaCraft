@@ -1,0 +1,10 @@
+{
+  "_fv": 79,
+  "_type": "command",
+  "definition": {
+    "commandName": "owlstatue",
+    "type": "STANDARD",
+    "permissionLevel": "1",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">get</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OwlStatueShowProcedure</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">clear</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OwlStatueClearProcedure</field></block></statement></block></statement></block></next></block></next></block></xml>"
+  }
+}

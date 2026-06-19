@@ -6,6 +6,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -24,24 +26,17 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Comparator;
 
 public class SmallChestOnRightClickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 0) == 0) {
+		if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() == 0) {
 			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 				{
 					int _value = 2;
@@ -58,6 +53,8 @@ public class SmallChestOnRightClickProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("intentionally_empty")), SoundSource.BLOCKS, (float) 0.5, (float) Mth.nextDouble(RandomSource.create(), 0.8, 1.2), false);
 					}
 				}
+				if (world instanceof ServerLevel)
+					((ServerLevel) world).sendParticles((ParticleTypes.CLOUD), (x + 0.5), y, (z + 0.5), 5, 0.1, 0.5, 0.1, 0.25);
 				{
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
@@ -81,14 +78,7 @@ public class SmallChestOnRightClickProcedure {
 					_player.displayClientMessage(Component.literal("Item has been added"), true);
 			}
 		} else {
-			if ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "opening")) == false) {
+			if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "opening") == false) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -107,18 +97,11 @@ public class SmallChestOnRightClickProcedure {
 				}
 				ZeldaCraftMod.queueServerWork(10, () -> {
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 1), z, (new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								BlockEntity _ent = world.getBlockEntity(pos);
-								if (_ent != null)
-									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-								return _retval.get();
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 0)));
-						entityToSpawn.setPickUpDelay(5);
+						ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.6), (z + 0.5), (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()));
+						entityToSpawn.setPickUpDelay(10);
 						_level.addFreshEntity(entityToSpawn);
 					}
+					(findEntityInWorldRange(world, ItemEntity.class, x, y, z, 4)).makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 					{
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
@@ -151,5 +134,24 @@ public class SmallChestOnRightClickProcedure {
 				});
 			}
 		}
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor level, BlockPos pos, int slot) {
+		AtomicReference<ItemStack> result = new AtomicReference<>(ItemStack.EMPTY);
+		BlockEntity entity = level.getBlockEntity(pos);
+		if (entity != null)
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> result.set(capability.getStackInSlot(slot)));
+		return result.get();
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

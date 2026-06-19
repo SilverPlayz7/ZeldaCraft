@@ -5,7 +5,7 @@
     "toolType": "Special",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "oot3d_megaton_hammer_icon",
+    "texture": "megaton_hammer",
     "customModelName": "megatonhammer:default",
     "blockingModelName": "Normal blocking",
     "guiTexture": "",

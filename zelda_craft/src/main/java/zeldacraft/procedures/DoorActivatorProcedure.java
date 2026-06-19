@@ -47,17 +47,7 @@ public class DoorActivatorProcedure {
 					}
 				}.convert(DoorSizeRegistrationProcedure.execute(blockstate).substring((int) DoorSizeRegistrationProcedure.execute(blockstate).indexOf(",") + ",".length(), (int) DoorSizeRegistrationProcedure.execute(blockstate).indexOf("]")));
 				openValue = width * height;
-				if ((new Object() {
-					public Direction getDirection(BlockState _bs) {
-						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (_prop instanceof DirectionProperty _dp)
-							return _bs.getValue(_dp);
-						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-								: Direction.NORTH;
-					}
-				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
+				if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 					posX = x;
 					posY = y;
 					posZ = z;
@@ -194,17 +184,7 @@ public class DoorActivatorProcedure {
 						}
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockState _bs) {
-						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (_prop instanceof DirectionProperty _dp)
-							return _bs.getValue(_dp);
-						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-								: Direction.NORTH;
-					}
-				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
+				if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 					posX = x;
 					posY = y;
 					posZ = z;
@@ -341,17 +321,7 @@ public class DoorActivatorProcedure {
 						}
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockState _bs) {
-						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (_prop instanceof DirectionProperty _dp)
-							return _bs.getValue(_dp);
-						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-								: Direction.NORTH;
-					}
-				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
+				if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 					posX = x;
 					posY = y;
 					posZ = z;
@@ -488,17 +458,7 @@ public class DoorActivatorProcedure {
 						}
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockState _bs) {
-						Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (_prop instanceof DirectionProperty _dp)
-							return _bs.getValue(_dp);
-						_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-						return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-								? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-								: Direction.NORTH;
-					}
-				}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
+				if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 					posX = x;
 					posY = y;
 					posZ = z;
@@ -637,5 +597,13 @@ public class DoorActivatorProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 }

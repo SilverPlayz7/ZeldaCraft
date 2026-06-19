@@ -8,6 +8,6 @@ public class LensOfTruthPropertyValueProviderProcedure {
 	public static double execute(Entity entity) {
 		if (entity == null)
 			return 0;
-		return (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).UsingLens;
+		return (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).UsingLens;
 	}
 }

@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class SpiritOfTheLokomoItem extends Item {
 	public SpiritOfTheLokomoItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
 	}
 }

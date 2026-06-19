@@ -53,91 +53,55 @@ public class OwlStatueOnBlockRightClickedProcedure {
 				public ArrayList<Object> convert(String text, String separator) {
 					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 		}
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasName")) == true) {
-			if (entity.isShiftKeyDown()) {
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("StatueNameSet");
-						}
-
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new StatueNameSetMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
+		if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "hasName") == true) {
+			if (((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(getBlockNBTString(world, BlockPos.containing(x, y, z), "statueName"))
+					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(x))
+					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(y))
+					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(z))) {
+				if (world instanceof Level _level) {
+					if (_level.isClientSide()) {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.hit")), SoundSource.BLOCKS, (float) 0.1, 1, false);
+					}
 				}
 			} else {
-				if (((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new Object() {
-					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getString(tag);
+				{
+					statueList.add((getBlockNBTString(world, BlockPos.containing(x, y, z), "statueName")));
+				}
+				{
+					statueList.add(entity.level().dimension().location().toString());
+				}
+				{
+					statueList.add(x);
+				}
+				{
+					statueList.add(y);
+				}
+				{
+					statueList.add(z);
+				}
+				if ((new Object() {
+					public String get(ArrayList<?> list, int index) {
+						if (list.get(index) instanceof String text) {
+							return text;
+						}
 						return "";
 					}
-				}.getValue(world, BlockPos.containing(x, y, z), "statueName"))
-						&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(x))
-						&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(y))
-						&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(z))) {
-					if (world instanceof Level _level) {
-						if (_level.isClientSide()) {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.hit")), SoundSource.BLOCKS, (float) 0.1, 1, false);
-						}
-					}
-				} else {
+				}.get(statueList, 0)).isEmpty()) {
 					{
-						statueList.add((new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "statueName")));
+						statueList.remove(0);
 					}
-					{
-						statueList.add(entity.level().dimension().location().toString());
-					}
-					{
-						statueList.add(x);
-					}
-					{
-						statueList.add(y);
-					}
-					{
-						statueList.add(z);
-					}
-					if ((new Object() {
-						public String get(ArrayList<?> list, int index) {
-							if (list.get(index) instanceof String text) {
-								return text;
-							}
-							return "";
-						}
-					}.get(statueList, 0)).isEmpty()) {
-						{
-							statueList.remove(0);
-						}
-					}
-					{
-						String _setval = statueList.stream().map(String::valueOf).collect(Collectors.joining(","));
-						entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.owlStatue = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
+				}
+				{
+					String _setval = statueList.stream().map(String::valueOf).collect(Collectors.joining(","));
+					entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.owlStatue = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
+					if (world.isClientSide()) {
 						if (world instanceof Level)
 							((Level) world).playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")), SoundSource.BLOCKS, (float) 0.5, 1, false);
 						loop = 0;
@@ -150,9 +114,9 @@ public class OwlStatueOnBlockRightClickedProcedure {
 							loop = loop + 1;
 						}
 					}
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("Statue activated"), true);
 				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal("Statue activated"), true);
 			}
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
@@ -170,5 +134,19 @@ public class OwlStatueOnBlockRightClickedProcedure {
 				}, _bpos);
 			}
 		}
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

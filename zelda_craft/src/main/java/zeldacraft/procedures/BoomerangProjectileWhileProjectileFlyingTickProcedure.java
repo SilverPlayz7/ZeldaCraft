@@ -52,8 +52,19 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "data merge entity @s {NoGravity:1b}");
 			}
 		}
-		if (immediatesourceentity.getPersistentData().getDouble("SoundClock") < 10) {
-			if (immediatesourceentity.getPersistentData().getDouble("SoundClock") == 0) {
+		if (!world.isClientSide()) {
+			if (immediatesourceentity.getPersistentData().getDouble("SoundClock") < 10) {
+				if (immediatesourceentity.getPersistentData().getDouble("SoundClock") == 0) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
+						}
+					}
+				}
+				immediatesourceentity.getPersistentData().putDouble("SoundClock", (immediatesourceentity.getPersistentData().getDouble("SoundClock") + 1));
+			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
@@ -61,47 +72,22 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
 					}
 				}
+				immediatesourceentity.getPersistentData().putDouble("SoundClock", 1);
 			}
-			immediatesourceentity.getPersistentData().putDouble("SoundClock", (immediatesourceentity.getPersistentData().getDouble("SoundClock") + 1));
-		} else {
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1);
-				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:boomerang_flying_loop")), SoundSource.NEUTRAL, (float) 0.8, 1, false);
-				}
-			}
-			immediatesourceentity.getPersistentData().putDouble("SoundClock", 1);
 		}
 		if (immediatesourceentity.getPersistentData().getDouble("DistanceTime") < 25) {
-			if (!world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
-					(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())), 1.5, 1.5, 1.5), e -> true).isEmpty()) {
+			if (!world.getEntitiesOfClass(Mob.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()),
+					(immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()), (immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ()))).inflate(1.5 / 2d), e -> true).isEmpty()) {
 				immediatesourceentity.getPersistentData().putDouble("DistanceTime", 25);
-				((Entity) world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
-						(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())), 1.5, 1.5, 1.5), e -> true).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
-								(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())))
-						.findFirst().orElse(null))
+				(findEntityInWorldRange(world, Mob.class, (immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
+						(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ()), 1.5))
 						.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("zelda_craft:boomerang_damage")))), 5);
-				if (((Entity) world.getEntitiesOfClass(Mob.class, AABB.ofSize(new Vec3((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
-						(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())), 1.5, 1.5, 1.5), e -> true).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf((immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
-								(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ())))
-						.findFirst().orElse(null)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				if ((findEntityInWorldRange(world, Mob.class, (immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX()), (immediatesourceentity.getDeltaMovement().y() + immediatesourceentity.getY()),
+						(immediatesourceentity.getDeltaMovement().z() + immediatesourceentity.getZ()), 1.5)) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(ZeldaCraftModMobEffects.STUNNED.get(), 60, 1));
 			}
-			if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 1.25, 1.25, 1.25), e -> true).isEmpty()) {
-				((Entity) world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 1.25, 1.25, 1.25), e -> true).stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)).startRiding(immediatesourceentity);
+			if (!world.getEntitiesOfClass(ItemEntity.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(1.25 / 2d), e -> true).isEmpty()) {
+				(findEntityInWorldRange(world, ItemEntity.class, x, y, z, 1.25)).startRiding(immediatesourceentity);
 			}
 			if (!((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ()))).getBlock() == Blocks.AIR)) {
 				if ((world.getBlockState(BlockPos.containing(immediatesourceentity.getDeltaMovement().x() + immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ())))
@@ -189,5 +175,9 @@ public class BoomerangProjectileWhileProjectileFlyingTickProcedure {
 			MVZ = NDVZ * 0.15;
 			immediatesourceentity.setDeltaMovement(new Vec3(MVX, MVY, MVZ));
 		}
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

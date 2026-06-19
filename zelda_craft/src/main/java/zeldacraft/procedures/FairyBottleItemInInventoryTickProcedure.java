@@ -13,16 +13,20 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
 
 @Mod.EventBusSubscriber
 public class FairyBottleItemInInventoryTickProcedure {
@@ -40,7 +44,7 @@ public class FairyBottleItemInInventoryTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(ZeldaCraftModItems.FAIRY_BOTTLE.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(ZeldaCraftModItems.FAIRY_BOTTLE.get()))) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
@@ -67,5 +71,20 @@ public class FairyBottleItemInInventoryTickProcedure {
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player) {
+			Inventory inventory = player.getInventory();
+			List<NonNullList<ItemStack>> compartments = com.google.common.collect.ImmutableList.of(inventory.items, inventory.armor, inventory.offhand);
+			for (List<ItemStack> list : compartments) {
+				for (ItemStack itemstack2 : list) {
+					if (!itemstack2.isEmpty() && ItemStack.isSameItem(itemstack2, itemstack)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 }

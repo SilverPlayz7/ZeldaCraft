@@ -25,11 +25,14 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.TRIFORCE.get());
 				tabData.accept(ZeldaCraftModItems.KOKIRI_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.RAZOR_SWORD.get());
+				tabData.accept(ZeldaCraftModItems.GILDED_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.RECRUIT_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.PHANTOM_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.LOKOMO_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.DEMON_TRIBE_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.GODDESS_SWORD.get());
+				tabData.accept(ZeldaCraftModItems.GODDESS_LONGSWORD.get());
+				tabData.accept(ZeldaCraftModItems.GODDESS_WHITESWORD.get());
 				tabData.accept(ZeldaCraftModItems.UN_POWERED_MASTER_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.MASTER_SWORD.get());
 				tabData.accept(ZeldaCraftModItems.GIANT_KNIFE.get());
@@ -54,6 +57,29 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.WARP_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.FAIRY_OCARINA.get());
 				tabData.accept(ZeldaCraftModItems.OCARINA_OF_TIME.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_MASTER.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_CURSED.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_ZELDAS_LULLABY.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_EPONAS_SONG.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SUNS_SONG.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SARIAS_SONG.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONG_OF_TIME.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONG_OF_STORMS.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_MINUET_OF_FOREST.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_BOLERO_OF_FIRE.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SERENADE_OF_WATER.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_NOCTURNE_OF_SHADOW.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_REQUIEM_OF_SPIRIT.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_PRELUDE_OF_LIGHT.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONG_OF_DOUBLE_TIME.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_INVERTED_SONG_OF_TIME.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONG_OF_HEALING.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONG_OF_SOARING.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_SONATA_OF_AWAKENING.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_GORON_LULLABY.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_NEW_WAVE_BOSSA_NOVA.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_ELEGY_OF_EMPTINESS.get());
+				tabData.accept(ZeldaCraftModItems.SONG_SHEET_OATH_TO_ORDER.get());
 				tabData.accept(ZeldaCraftModItems.SPIRIT_FLUTE.get());
 				tabData.accept(ZeldaCraftModItems.MAGIC_MIRROR.get());
 				tabData.accept(ZeldaCraftModItems.LENS_OF_TRUTH.get());
@@ -121,8 +147,10 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.SILVER_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.GOLD_RUPEE.get());
 				tabData.accept(ZeldaCraftModItems.SMALL_KEY.get());
-				tabData.accept(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModItems.BIG_KEY.get());
 				tabData.accept(ZeldaCraftModBlocks.DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.LOCKED_DUNGEON_DOOR.get().asItem());
+				tabData.accept(ZeldaCraftModBlocks.BIG_DUNGEON_DOOR.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.LOCKED_BIG_DUNGEON_DOOR.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.OWL_STATUE.get().asItem());
 				tabData.accept(ZeldaCraftModBlocks.SHEIKAH_LINK.get().asItem());
@@ -182,7 +210,6 @@ public class ZeldaCraftModTabs {
 				tabData.accept(ZeldaCraftModItems.GERUDO_COIN.get());
 				tabData.accept(ZeldaCraftModItems.SPINNER.get());
 				tabData.accept(ZeldaCraftModBlocks.SPINNER_RAIL.get().asItem());
-				tabData.accept(ZeldaCraftModBlocks.BIG_DUNGEON_DOOR.get().asItem());
 			}).build());
 
 	@SubscribeEvent

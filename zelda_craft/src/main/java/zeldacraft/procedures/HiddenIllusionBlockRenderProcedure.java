@@ -277,68 +277,28 @@ public class HiddenIllusionBlockRenderProcedure {
 									renderBlock(ZeldaCraftModBlocks.ILLUSION_BLOCK.get().defaultBlockState(), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, 1, false);
 								}
 								if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK.get()) {
-									if ((new Object() {
-										public Direction getDirection(BlockState _bs) {
-											Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (_prop instanceof DirectionProperty _dp)
-												return _bs.getValue(_dp);
-											_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-											return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-													? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-													: Direction.NORTH;
-										}
-									}.getDirection(blockstateiterator)) == Direction.NORTH) {
+									if ((getDirectionFromBlockState(blockstateiterator)) == Direction.NORTH) {
 										renderBlock((new Object() {
 											public BlockState with(BlockState _bs, String _property, int _newValue) {
 												Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
 												return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
 											}
 										}.with(ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, 1, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockState _bs) {
-											Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (_prop instanceof DirectionProperty _dp)
-												return _bs.getValue(_dp);
-											_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-											return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-													? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-													: Direction.NORTH;
-										}
-									}.getDirection(blockstateiterator)) == Direction.SOUTH) {
+									} else if ((getDirectionFromBlockState(blockstateiterator)) == Direction.SOUTH) {
 										renderBlock((new Object() {
 											public BlockState with(BlockState _bs, String _property, int _newValue) {
 												Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
 												return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
 											}
 										}.with(ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 180, 0, 0, 1, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockState _bs) {
-											Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (_prop instanceof DirectionProperty _dp)
-												return _bs.getValue(_dp);
-											_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-											return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-													? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-													: Direction.NORTH;
-										}
-									}.getDirection(blockstateiterator)) == Direction.EAST) {
+									} else if ((getDirectionFromBlockState(blockstateiterator)) == Direction.EAST) {
 										renderBlock((new Object() {
 											public BlockState with(BlockState _bs, String _property, int _newValue) {
 												Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
 												return _prop instanceof IntegerProperty _ip && _prop.getPossibleValues().contains(_newValue) ? _bs.setValue(_ip, _newValue) : _bs;
 											}
 										}.with(ZeldaCraftModBlocks.CLIMBABLE_HIDDEN_ILLUSION_BLOCK.get().defaultBlockState(), "blockstate", 1)), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 90, 0, 0, 1, false);
-									} else if ((new Object() {
-										public Direction getDirection(BlockState _bs) {
-											Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-											if (_prop instanceof DirectionProperty _dp)
-												return _bs.getValue(_dp);
-											_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-											return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis
-													? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE)
-													: Direction.NORTH;
-										}
-									}.getDirection(blockstateiterator)) == Direction.WEST) {
+									} else if ((getDirectionFromBlockState(blockstateiterator)) == Direction.WEST) {
 										renderBlock((new Object() {
 											public BlockState with(BlockState _bs, String _property, int _newValue) {
 												Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty(_property);
@@ -353,5 +313,13 @@ public class HiddenIllusionBlockRenderProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 }

@@ -5,7 +5,7 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "unnamed",
+    "texture": "goddess_sword1",
     "customModelName": "goddess_sword:default",
     "blockingModelName": "Normal blocking",
     "guiTexture": "",
@@ -23,7 +23,7 @@
     "efficiency": 4.0,
     "attackSpeed": 1.8,
     "enchantability": 2,
-    "damageVsEntity": 8.0,
+    "damageVsEntity": 10.0,
     "usageCount": 0,
     "glowCondition": {
       "fixedValue": false

@@ -11,18 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "textfield",
-        "data": {
-          "placeholder": "",
-          "name": "name",
-          "width": 120,
-          "height": 20,
-          "x": 154,
-          "y": 106,
-          "locked": false
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_set_timer_to_turn_off_in_ticks",
@@ -67,6 +55,18 @@
           "height": 20,
           "x": 154,
           "y": 130,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "statue",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 106,
           "locked": false
         }
       }

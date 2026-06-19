@@ -1,5 +1,5 @@
 {
-  "type": "zelda_craft:structure_feature",
+  "type": "zelda_craft:tomb_marker",
   "config": {
     "structure": "zelda_craft:tomb_marker",
     "random_rotation": true,

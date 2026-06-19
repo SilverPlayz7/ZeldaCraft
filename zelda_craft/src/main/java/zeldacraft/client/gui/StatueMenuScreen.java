@@ -125,24 +125,6 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 	}
 
 	@Override
-	protected void containerTick() {
-		super.containerTick();
-		this.button_empty.visible = Warp1ShowProcedure.execute(entity);
-		this.imagebutton_owlstatueactive.visible = Warp1ShowProcedure.execute(entity);
-		this.imagebutton_owlstatueactive1.visible = Warp2ShowProcedure.execute(entity);
-		this.imagebutton_owlstatueactive2.visible = Warp3ShowProcedure.execute(entity);
-		this.imagebutton_owlstatueactive3.visible = Warp4ShowProcedure.execute(entity);
-		this.imagebutton_owlstatueactive4.visible = Warp5ShowProcedure.execute(entity);
-		this.imagebutton_deletewarp.visible = Warp1ShowProcedure.execute(entity);
-		this.imagebutton_deletewarp1.visible = Warp2ShowProcedure.execute(entity);
-		this.imagebutton_deletewarp2.visible = Warp3ShowProcedure.execute(entity);
-		this.imagebutton_deletewarp3.visible = Warp4ShowProcedure.execute(entity);
-		this.imagebutton_deletewarp4.visible = Warp5ShowProcedure.execute(entity);
-		this.imagebutton_nextpageactive.visible = NextPageShowProcedure.execute(entity);
-		this.imagebutton_backpageactive.visible = BackPageShowProcedure.execute(entity);
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Name1Procedure.execute(world, entity), 45, 23, -12829636, false);
 		guiGraphics.drawString(this.font, Name2Procedure.execute(world, entity), 45, 53, -12829636, false);
@@ -265,5 +247,23 @@ public class StatueMenuScreen extends AbstractContainerScreen<StatueMenuMenu> im
 			}
 		});
 		this.addRenderableWidget(imagebutton_backpageactive);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_empty.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive1.visible = Warp2ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive2.visible = Warp3ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive3.visible = Warp4ShowProcedure.execute(entity);
+		this.imagebutton_owlstatueactive4.visible = Warp5ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp.visible = Warp1ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp1.visible = Warp2ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp2.visible = Warp3ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp3.visible = Warp4ShowProcedure.execute(entity);
+		this.imagebutton_deletewarp4.visible = Warp5ShowProcedure.execute(entity);
+		this.imagebutton_nextpageactive.visible = NextPageShowProcedure.execute(entity);
+		this.imagebutton_backpageactive.visible = BackPageShowProcedure.execute(entity);
 	}
 }

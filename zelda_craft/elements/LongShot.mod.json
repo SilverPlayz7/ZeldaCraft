@@ -5,11 +5,12 @@
     "renderType": 1,
     "texture": "longshot",
     "customModelName": "long_shot:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [
       {
         "renderType": 1,
-        "texture": "longshot",
+        "texture": "longshot_fired",
         "customModelName": "firedlong_shot:default",
         "stateMap": [
           {

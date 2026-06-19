@@ -7,6 +7,7 @@ import zeldacraft.init.ZeldaCraftModSounds;
 import zeldacraft.init.ZeldaCraftModMobEffects;
 import zeldacraft.init.ZeldaCraftModMenus;
 import zeldacraft.init.ZeldaCraftModItems;
+import zeldacraft.init.ZeldaCraftModFeatures;
 import zeldacraft.init.ZeldaCraftModEntities;
 import zeldacraft.init.ZeldaCraftModBlocks;
 import zeldacraft.init.ZeldaCraftModBlockEntities;
@@ -54,7 +55,7 @@ public class ZeldaCraftMod {
 		ZeldaCraftModEntities.REGISTRY.register(bus);
 
 		ZeldaCraftModTabs.REGISTRY.register(bus);
-
+		ZeldaCraftModFeatures.REGISTRY.register(bus);
 		StructureFeature.REGISTRY.register(bus);
 		ZeldaCraftModMobEffects.REGISTRY.register(bus);
 

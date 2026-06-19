@@ -1,27 +1,57 @@
 {
   "variants": {
-    "facing=north": {
+    "face=floor,facing=north": {
       "model": "zelda_craft:block/lullaby_switch"
     },
-    "facing=east": {
+    "face=floor,facing=east": {
       "model": "zelda_craft:block/lullaby_switch",
       "y": 90
     },
-    "facing=south": {
+    "face=floor,facing=south": {
       "model": "zelda_craft:block/lullaby_switch",
       "y": 180
     },
-    "facing=west": {
+    "face=floor,facing=west": {
       "model": "zelda_craft:block/lullaby_switch",
       "y": 270
     },
-    "facing=up": {
-      "model": "zelda_craft:block/lullaby_switch",
-      "x": 270
-    },
-    "facing=down": {
+    "face=wall,facing=north": {
       "model": "zelda_craft:block/lullaby_switch",
       "x": 90
+    },
+    "face=wall,facing=east": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 90,
+      "y": 90
+    },
+    "face=wall,facing=south": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 90,
+      "y": 180
+    },
+    "face=wall,facing=west": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 90,
+      "y": 270
+    },
+    "face=ceiling,facing=north": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 180,
+      "y": 180
+    },
+    "face=ceiling,facing=east": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 180,
+      "y": 270
+    },
+    "face=ceiling,facing=south": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 180
+    },
+    "face=ceiling,facing=west": {
+      "model": "zelda_craft:block/lullaby_switch",
+      "x": 180,
+      "y": 90
     }
   }
 }

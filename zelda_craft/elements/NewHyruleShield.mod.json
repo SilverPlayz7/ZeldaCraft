@@ -5,7 +5,7 @@
     "toolType": "Shield",
     "renderType": 1,
     "blockingRenderType": 1,
-    "texture": "wip",
+    "texture": "new_hyrule_shield",
     "customModelName": "newhryuleshield:default",
     "blockingModelName": "newhyruleshieldblocking:default",
     "guiTexture": "",

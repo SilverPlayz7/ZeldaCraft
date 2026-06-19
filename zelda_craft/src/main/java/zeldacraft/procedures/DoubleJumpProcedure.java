@@ -19,11 +19,11 @@ public class DoubleJumpProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!entity.onGround() && (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).jumpvar > 0 && entity instanceof LivingEntity lv
+		if (!entity.onGround() && (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).jumpvar > 0 && entity instanceof LivingEntity lv
 				? CuriosApi.getCuriosHelper().findEquippedCurio(ZeldaCraftModItems.ROC_CAPE.get(), lv).isPresent()
 				: false) {
 			{
-				double _setval = (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).jumpvar - 1;
+				double _setval = (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).jumpvar - 1;
 				entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.jumpvar = _setval;
 					capability.syncPlayerVariables(entity);

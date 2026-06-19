@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class CrimsonineItem extends Item {
 	public CrimsonineItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
 	}
 }

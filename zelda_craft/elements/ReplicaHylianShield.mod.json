@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "replicahylianshield",
     "name": "Replica Hylian Shield",
-    "idle": "animation.example.idle",
+    "idle": "animation.TPChest.new",
     "rarity": "COMMON",
     "displaySettings": "hylianshield.item.json",
     "leftArm": "",

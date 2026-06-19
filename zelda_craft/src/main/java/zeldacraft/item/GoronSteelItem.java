@@ -12,7 +12,7 @@ import java.util.List;
 
 public class GoronSteelItem extends Item {
 	public GoronSteelItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.RARE));
+		super(new Item.Properties().fireResistant().rarity(Rarity.RARE));
 	}
 
 	@Override

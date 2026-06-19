@@ -34,7 +34,7 @@ public class Warp3TeleportProcedure {
 					public ArrayList<Object> convert(String text, String separator) {
 						return new ArrayList<>(Arrays.asList(text.split(separator)));
 					}
-				}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+				}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 			}
 			index = 10;
 			if ((world.getBlockState(BlockPos.containing(new Object() {
@@ -60,7 +60,7 @@ public class Warp3TeleportProcedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+			}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -83,7 +83,7 @@ public class Warp3TeleportProcedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+			}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -106,21 +106,9 @@ public class Warp3TeleportProcedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))).getBlock() == ZeldaCraftModBlocks.OWL_STATUE
+			}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))))))).getBlock() == ZeldaCraftModBlocks.OWL_STATUE
 					.get()) {
-				if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing((int) new Object() {
+				if ((getBlockDirection(world, BlockPos.containing((int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -143,7 +131,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -166,7 +154,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -189,7 +177,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.NORTH) {
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))))))) == Direction.NORTH) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((new Object() {
@@ -215,7 +203,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -238,7 +226,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -261,7 +249,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5));
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) - 0.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((new Object() {
 								double convert(String s) {
@@ -286,7 +274,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -309,7 +297,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -332,23 +320,11 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), _ent.getYRot(),
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) - 0.5), _ent.getYRot(),
 									_ent.getXRot());
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing((int) new Object() {
+				if ((getBlockDirection(world, BlockPos.containing((int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -371,7 +347,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -394,7 +370,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -417,7 +393,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.SOUTH) {
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))))))) == Direction.SOUTH) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((new Object() {
@@ -443,7 +419,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -466,7 +442,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -489,7 +465,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5));
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 1.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((new Object() {
 								double convert(String s) {
@@ -514,7 +490,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), new Object() {
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -537,7 +513,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -560,23 +536,11 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), _ent.getYRot(),
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 1.5), _ent.getYRot(),
 									_ent.getXRot());
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing((int) new Object() {
+				if ((getBlockDirection(world, BlockPos.containing((int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -599,7 +563,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), new Object() {
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -622,7 +586,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -645,7 +609,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.WEST) {
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))))))) == Direction.WEST) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((new Object() {
@@ -671,7 +635,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), new Object() {
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) - 0.5), new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -694,7 +658,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -717,7 +681,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5));
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((new Object() {
 								double convert(String s) {
@@ -742,7 +706,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) - 0.5), new Object() {
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) - 0.5), new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -765,7 +729,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -788,23 +752,11 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), _ent.getYRot(),
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), _ent.getYRot(),
 									_ent.getXRot());
 					}
 				}
-				if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing((int) new Object() {
+				if ((getBlockDirection(world, BlockPos.containing((int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -827,7 +779,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -850,7 +802,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), (int) new Object() {
+				}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
@@ -873,7 +825,7 @@ public class Warp3TeleportProcedure {
 						}
 						return "";
 					}
-				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))))))) == Direction.EAST) {
+				}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))))))) == Direction.EAST) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((new Object() {
@@ -899,7 +851,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), new Object() {
+						}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 1.5), new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -922,7 +874,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+						}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 							double convert(String s) {
 								try {
 									return Double.parseDouble(s.trim());
@@ -945,7 +897,7 @@ public class Warp3TeleportProcedure {
 								}
 								return "";
 							}
-						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5));
+						}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((new Object() {
 								double convert(String s) {
@@ -970,7 +922,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 1.5), new Object() {
+							}.get(statueList, (int) (index + 2 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 1.5), new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -993,7 +945,7 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))), ((int) new Object() {
+							}.get(statueList, (int) (index + 3 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))), ((int) new Object() {
 								double convert(String s) {
 									try {
 										return Double.parseDouble(s.trim());
@@ -1016,11 +968,23 @@ public class Warp3TeleportProcedure {
 									}
 									return "";
 								}
-							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))))) + 0.5), _ent.getYRot(),
+							}.get(statueList, (int) (index + 4 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))))) + 0.5), _ent.getYRot(),
 									_ent.getXRot());
 					}
 				}
 			}
 		}
+	}
+
+	private static Direction getBlockDirection(LevelAccessor world, BlockPos pos) {
+		BlockState blockState = world.getBlockState(pos);
+		Property<?> property = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (property != null && blockState.getValue(property) instanceof Direction direction)
+			return direction;
+		else if (blockState.hasProperty(BlockStateProperties.AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+		else if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+		return Direction.NORTH;
 	}
 }

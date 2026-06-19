@@ -15,7 +15,7 @@ public class HiddenIllusionBlockOnTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if (entityiterator instanceof Player) {
-				if ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).UsingLens == 1) {
+				if ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).UsingLens == 1) {
 					if ((blockstate.getBlock().getStateDefinition().getProperty("lens") instanceof BooleanProperty _getbp2 && blockstate.getValue(_getbp2)) == false) {
 						{
 							BlockPos _pos = BlockPos.containing(x, y, z);

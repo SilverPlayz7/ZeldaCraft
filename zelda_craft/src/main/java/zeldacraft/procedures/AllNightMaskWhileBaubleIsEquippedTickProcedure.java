@@ -20,15 +20,7 @@ public class AllNightMaskWhileBaubleIsEquippedTickProcedure {
 		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(ZeldaCraftModItems.ALL_NIGHT_MASK.get(), lv).isPresent() : false) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 1200, 1, false, false));
-			if (new Object() {
-				public int getScore(String score, Entity _ent) {
-					Scoreboard _sc = _ent.level().getScoreboard();
-					Objective _so = _sc.getObjective(score);
-					if (_so != null)
-						return _sc.getOrCreatePlayerScore(_ent.getScoreboardName(), _so).getScore();
-					return 0;
-				}
-			}.getScore("minecraft:time_since_rest", entity) >= 72000) {
+			if (getEntityScore("minecraft:time_since_rest", entity) >= 72000) {
 				{
 					Entity _ent = entity;
 					Scoreboard _sc = _ent.level().getScoreboard();
@@ -42,5 +34,13 @@ public class AllNightMaskWhileBaubleIsEquippedTickProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.NIGHT_VISION);
 		}
+	}
+
+	private static int getEntityScore(String score, Entity entity) {
+		Scoreboard scoreboard = entity.level().getScoreboard();
+		Objective scoreboardObjective = scoreboard.getObjective(score);
+		if (scoreboardObjective != null)
+			return scoreboard.getOrCreatePlayerScore(entity.getScoreboardName(), scoreboardObjective).getScore();
+		return 0;
 	}
 }

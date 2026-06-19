@@ -15,10 +15,19 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.multiplayer.PlayerInfo;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -26,14 +35,16 @@ import javax.annotation.Nullable;
 public class DoorDestroyerProcedure {
 	@SubscribeEvent
 	public static void onBlockBreak(BlockEvent.BreakEvent event) {
-		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getState());
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getState(), event.getPlayer());
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
-		execute(null, world, x, y, z, blockstate);
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
+		execute(null, world, x, y, z, blockstate, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
+		if (entity == null)
+			return;
 		boolean foundBlock = false;
 		double posX = 0;
 		double posX2 = 0;
@@ -64,15 +75,7 @@ public class DoorDestroyerProcedure {
 				}
 			}.convert(DoorSizeRegistrationProcedure.execute(blockstate).substring((int) DoorSizeRegistrationProcedure.execute(blockstate).indexOf(",") + ",".length(), (int) DoorSizeRegistrationProcedure.execute(blockstate).indexOf("]")));
 			openValue = width * height;
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
+			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 				posX = x;
 				posY = y;
 				posZ = z;
@@ -178,15 +181,7 @@ public class DoorDestroyerProcedure {
 					}
 				}
 			}
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
+			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 				posX = x;
 				posY = y;
 				posZ = z;
@@ -292,15 +287,7 @@ public class DoorDestroyerProcedure {
 					}
 				}
 			}
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
+			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 				posX = x;
 				posY = y;
 				posZ = z;
@@ -406,15 +393,7 @@ public class DoorDestroyerProcedure {
 					}
 				}
 			}
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
+			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 				posX = x;
 				posY = y;
 				posZ = z;
@@ -470,7 +449,7 @@ public class DoorDestroyerProcedure {
 						if (Math.abs((world.getBlockState(BlockPos.containing(posX, posY, posZ))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip197
 								? (world.getBlockState(BlockPos.containing(posX, posY, posZ))).getValue(_getip197)
 								: -1) >= height + openValue) {
-							posZ = posZ + 1;
+							posZ = posZ - 1;
 						} else {
 							posY = posY - (Math.abs((world.getBlockState(BlockPos.containing(posX, posY, posZ))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip199
 									? (world.getBlockState(BlockPos.containing(posX, posY, posZ))).getValue(_getip199)
@@ -489,7 +468,7 @@ public class DoorDestroyerProcedure {
 						if (Math.abs((world.getBlockState(BlockPos.containing(posX, posY, posZ))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip206
 								? (world.getBlockState(BlockPos.containing(posX, posY, posZ))).getValue(_getip206)
 								: -1) >= height) {
-							posZ = posZ + 1;
+							posZ = posZ - 1;
 						} else {
 							posY = posY - Math.abs((world.getBlockState(BlockPos.containing(posX, posY, posZ))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip208
 									? (world.getBlockState(BlockPos.containing(posX, posY, posZ))).getValue(_getip208)
@@ -520,6 +499,34 @@ public class DoorDestroyerProcedure {
 					}
 				}
 			}
+			if (foundBlock) {
+				if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
+					if (world instanceof ServerLevel _level) {
+						ItemEntity entityToSpawn = new ItemEntity(_level, (posX + 0.5), (posY + 0.5), (posZ + 0.5), (new ItemStack(blockstate.getBlock())));
+						entityToSpawn.setPickUpDelay(10);
+						_level.addFreshEntity(entityToSpawn);
+					}
+				}
+			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

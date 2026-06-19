@@ -2,6 +2,8 @@ package zeldacraft.procedures;
 
 import zeldacraft.init.ZeldaCraftModItems;
 
+import zeldacraft.configuration.ZeldaCraftConfigConfiguration;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -37,25 +39,29 @@ public class RupeeDropsProcedure {
 		if (entity == null)
 			return;
 		double num = 0;
-		num = Mth.nextInt(RandomSource.create(), 1, 100);
-		if (entity instanceof EnderDragon || entity instanceof WitherBoss || entity instanceof ElderGuardian) {
-			if (world instanceof ServerLevel _level) {
-				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GOLD_RUPEE.get()));
-				entityToSpawn.setPickUpDelay(10);
-				_level.addFreshEntity(entityToSpawn);
-			}
-		} else {
-			if (num >= 10 && num <= 70) {
-				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GREEN_RUPEE.get()));
-					entityToSpawn.setPickUpDelay(10);
-					_level.addFreshEntity(entityToSpawn);
-				}
-			} else if (num <= 9) {
-				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()));
-					entityToSpawn.setPickUpDelay(10);
-					_level.addFreshEntity(entityToSpawn);
+		if (ZeldaCraftConfigConfiguration.RUPEE_DROP.get() == true) {
+			if (entity.getPersistentData().getBoolean("isEpona") == false) {
+				num = Mth.nextInt(RandomSource.create(), 1, 100);
+				if (entity instanceof EnderDragon || entity instanceof WitherBoss || entity instanceof ElderGuardian) {
+					if (world instanceof ServerLevel _level) {
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GOLD_RUPEE.get()));
+						entityToSpawn.setPickUpDelay(10);
+						_level.addFreshEntity(entityToSpawn);
+					}
+				} else {
+					if (num >= 10 && num <= 70) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.GREEN_RUPEE.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					} else if (num <= 9) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(ZeldaCraftModItems.BLUE_RUPEE.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					}
 				}
 			}
 		}

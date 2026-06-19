@@ -2,6 +2,6 @@
   "parent": "zelda_craft:custom/firedhook_shot",
   "textures": {
     "2": "zelda_craft:block/hookshot",
-    "particle": "zelda_craft:item/hookshot"
+    "particle": "zelda_craft:item/hookshot_fired"
   }
 }

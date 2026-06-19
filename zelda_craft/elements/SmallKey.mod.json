@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "small_key",
     "customModelName": "key:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Small Key",
@@ -14,7 +15,7 @@
         "value": "CUSTOM:ZeldaCraft"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -24,7 +25,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
-    "stayInGridWhenCrafting": false,
+    "stayInGridWhenCrafting": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,

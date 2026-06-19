@@ -5575,10 +5575,15 @@
       ]
     },
     "head": {
-      "translation": [
+      "rotation": [
         0,
-        17.5,
-        0
+        0,
+        -130
+      ],
+      "translation": [
+        -6,
+        19,
+        7
       ]
     },
     "fixed": {

@@ -33,22 +33,13 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Comparator;
 
 public class TreasureChestOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 0) == 0) {
+		if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() == 0) {
 			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
 				if (world instanceof ServerLevel)
 					((ServerLevel) world).sendParticles((ParticleTypes.CLOUD), (x + 0.5), y, (z + 0.5), 10, 0.1, 0.5, 0.1, 0.25);
@@ -89,14 +80,7 @@ public class TreasureChestOnBlockRightClickedProcedure {
 					_player.displayClientMessage(Component.literal("Item has been added"), true);
 			}
 		} else {
-			if ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "opening")) == false) {
+			if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "opening") == false) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -130,23 +114,11 @@ public class TreasureChestOnBlockRightClickedProcedure {
 						}
 					}
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 1), (z + 0.5), (new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-								BlockEntity _ent = world.getBlockEntity(pos);
-								if (_ent != null)
-									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-								return _retval.get();
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 0)));
+						ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 1), (z + 0.5), (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()));
 						entityToSpawn.setPickUpDelay(58);
 						_level.addFreshEntity(entityToSpawn);
 					}
-					((Entity) world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 4, 4, 4), e -> true).stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)).makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
+					(findEntityInWorldRange(world, ItemEntity.class, x, y, z, 4)).makeStuckInBlock(Blocks.AIR.defaultBlockState(), new Vec3(0.25, 0.05, 0.25));
 					{
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
@@ -179,5 +151,24 @@ public class TreasureChestOnBlockRightClickedProcedure {
 				});
 			}
 		}
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor level, BlockPos pos, int slot) {
+		AtomicReference<ItemStack> result = new AtomicReference<>(ItemStack.EMPTY);
+		BlockEntity entity = level.getBlockEntity(pos);
+		if (entity != null)
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> result.set(capability.getStackInSlot(slot)));
+		return result.get();
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

@@ -24,14 +24,7 @@ public class AnchientCapsuleMachineOnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "cranking")) == false) {
+		if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "cranking") == false) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -72,77 +65,28 @@ public class AnchientCapsuleMachineOnBlockRightClickedProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") <= 25) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") <= 25) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(ZeldaCraftModItems.TWILIGHT_ARMOR_BUNDLE.get()).copy();
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 					}
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") >= 26 && new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") <= 50) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") >= 26 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") <= 50) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(ZeldaCraftModItems.TIME_ARMOR_BUNDLE.get()).copy();
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 					}
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") >= 51 && new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") <= 75) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") >= 51 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") <= 75) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(ZeldaCraftModItems.WIND_ARMOR_BUNDLE.get()).copy();
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 					}
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") >= 76 && new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gacharoll") <= 100) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") >= 76 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gacharoll") <= 100) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(ZeldaCraftModItems.SALVAGER_ARMOR_BUNDLE.get()).copy();
 							_setstack.setCount(1);
@@ -161,5 +105,19 @@ public class AnchientCapsuleMachineOnBlockRightClickedProcedure {
 					_player.displayClientMessage(Component.literal("You need a coin to operate the machine"), true);
 			}
 		}
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

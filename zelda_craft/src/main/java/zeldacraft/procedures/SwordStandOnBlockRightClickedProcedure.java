@@ -34,6 +34,43 @@ public class SwordStandOnBlockRightClickedProcedure {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("minecraft:swords")))
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("minecraft:tools/swords")))) {
 				if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString()).contains("zelda_craft:")) {
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.GILDED_SWORD.get()) {
+						{
+							BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_ent != null) {
+								final int _slotid = 0;
+								final ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
+								_setstack.setCount(1);
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+									if (capability instanceof IItemHandlerModifiable)
+										((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+								});
+							}
+						}
+						{
+							int _value = 12;
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+						}
+						if (entity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("entity.glow_item_frame.add_item")), SoundSource.BLOCKS, (float) 0.85,
+										(float) Mth.nextDouble(RandomSource.create(), 0.73, 0.77));
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("entity.glow_item_frame.add_item")), SoundSource.BLOCKS, (float) 0.85,
+										(float) Mth.nextDouble(RandomSource.create(), 0.73, 0.77), false);
+							}
+						}
+					}
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ZeldaCraftModItems.PHANTOM_SWORD.get()) {
 						{
 							BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
@@ -48,7 +85,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 16;
+							int _value = 11;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -85,7 +122,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 15;
+							int _value = 10;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -122,7 +159,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 14;
+							int _value = 9;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -167,7 +204,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 13;
+							int _value = 8;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -204,7 +241,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 12;
+							int _value = 7;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -241,7 +278,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 11;
+							int _value = 6;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -278,7 +315,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 10;
+							int _value = 5;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -315,7 +352,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 9;
+							int _value = 4;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -352,7 +389,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 8;
+							int _value = 3;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -389,7 +426,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 							}
 						}
 						{
-							int _value = 7;
+							int _value = 2;
 							BlockPos _pos = BlockPos.containing(x, y, z);
 							BlockState _bs = world.getBlockState(_pos);
 							if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -453,15 +490,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 		} else {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy();
+					ItemStack _setstack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -474,15 +503,7 @@ public class SwordStandOnBlockRightClickedProcedure {
 					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
-				if ((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
-					}
-				}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == ZeldaCraftModItems.MASTER_SWORD.get()) {
+				if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == ZeldaCraftModItems.MASTER_SWORD.get()) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, (float) 0.4,
@@ -517,5 +538,13 @@ public class SwordStandOnBlockRightClickedProcedure {
 				}
 			}
 		}
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor level, BlockPos pos, int slot) {
+		AtomicReference<ItemStack> result = new AtomicReference<>(ItemStack.EMPTY);
+		BlockEntity entity = level.getBlockEntity(pos);
+		if (entity != null)
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> result.set(capability.getStackInSlot(slot)));
+		return result.get();
 	}
 }

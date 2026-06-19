@@ -4,6 +4,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,6 +16,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.multiplayer.PlayerInfo;
+import net.minecraft.client.Minecraft;
 
 public class WarpFlutePlayerFinishesUsingItemProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -30,6 +33,15 @@ public class WarpFlutePlayerFinishesUsingItemProcedure {
 				}
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 100);
+				if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
+					{
+						ItemStack _ist = itemstack;
+						if (_ist.hurt(1, RandomSource.create(), null)) {
+							_ist.shrink(1);
+							_ist.setDamageValue(0);
+						}
+					}
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(itemstack.getOrCreateTag().getDouble("TPX"), itemstack.getOrCreateTag().getDouble("TPY"), itemstack.getOrCreateTag().getDouble("TPZ")),
@@ -44,5 +56,16 @@ public class WarpFlutePlayerFinishesUsingItemProcedure {
 					_player.displayClientMessage(Component.literal("There is no warp set"), true);
 			}
 		}
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

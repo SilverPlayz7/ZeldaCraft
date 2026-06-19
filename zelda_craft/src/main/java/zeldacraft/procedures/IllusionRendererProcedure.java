@@ -269,15 +269,9 @@ public class IllusionRendererProcedure {
 							if (blockstateiterator.getBlock() == ZeldaCraftModBlocks.ILLUSION_BLOCK.get()) {
 								if ((blockstateiterator.getBlock().getStateDefinition().getProperty("lens") instanceof BooleanProperty _getbp3 && blockstateiterator.getValue(_getbp3)) == false
 										&& (blockstateiterator.getBlock().getStateDefinition().getProperty("has_illusion") instanceof BooleanProperty _getbp5 && blockstateiterator.getValue(_getbp5)) == true) {
-									renderBlock(ForgeRegistries.BLOCKS.getValue(ResourceLocation.parse(((new Object() {
-										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getString(tag);
-											return "";
-										}
-									}.getValue(world, new BlockPos(positionx, positiony, positionz), "illusion"))).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState(), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, 1,
-											false);
+									renderBlock(
+											ForgeRegistries.BLOCKS.getValue(ResourceLocation.parse(((getBlockNBTString(world, new BlockPos(positionx, positiony, positionz), "illusion"))).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState(),
+											(positionx + 0.5), (positiony + 0.5), (positionz + 0.5), 0, 0, 0, 1, false);
 								}
 							}
 						}
@@ -285,5 +279,12 @@ public class IllusionRendererProcedure {
 				}
 			}
 		}
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

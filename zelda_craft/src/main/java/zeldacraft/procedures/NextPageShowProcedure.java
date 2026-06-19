@@ -18,9 +18,9 @@ public class NextPageShowProcedure {
 				public ArrayList<Object> convert(String text, String separator) {
 					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 		}
-		if (statueList.size() > 25 * ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum + 1)) {
+		if (statueList.size() > 25 * ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum + 1)) {
 			if (!(new Object() {
 				public String get(ArrayList<?> list, int index) {
 					if (list.get(index) instanceof String text) {
@@ -28,7 +28,7 @@ public class NextPageShowProcedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (int) (25 * ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum + 1)))).isEmpty()) {
+			}.get(statueList, (int) (int) (25 * ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum + 1)))).isEmpty()) {
 				hasPage = true;
 			}
 		}

@@ -23,7 +23,7 @@ public class UnPoweredMasterSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 14f;
+				return 16f;
 			}
 
 			public int getLevel() {

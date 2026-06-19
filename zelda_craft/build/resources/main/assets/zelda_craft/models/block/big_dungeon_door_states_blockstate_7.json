@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zelda_craft:block/",
+    "up": "zelda_craft:block/",
+    "north": "zelda_craft:block/",
+    "east": "zelda_craft:block/",
+    "south": "zelda_craft:block/",
+    "west": "zelda_craft:block/",
+    "particle": "zelda_craft:block/lockedbigkeydoor"
+  },
+  "render_type": "cutout"
+}

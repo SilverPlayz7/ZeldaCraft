@@ -12,7 +12,7 @@ import java.util.List;
 
 public class RedRupeeItem extends Item {
 	public RedRupeeItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
+		super(new Item.Properties().rarity(Rarity.RARE));
 	}
 
 	@Override

@@ -24,8 +24,8 @@
     "surfaceDetectionType": "MOTION_BLOCKING",
     "useStartHeight": true,
     "startHeightProviderType": "UNIFORM",
-    "startHeightMin": 48,
-    "startHeightMax": 50,
+    "startHeightMin": 46,
+    "startHeightMax": 48,
     "size": 1,
     "maxDistanceFromCenter": 64,
     "jigsawPools": []

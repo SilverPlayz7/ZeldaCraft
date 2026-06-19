@@ -1,0 +1,9 @@
+{
+  "parent": "zelda_craft:custom/dungeonbigdoorlbo",
+  "textures": {
+    "all": "zelda_craft:block/",
+    "particle": "zelda_craft:block/lockedbigkeydoor",
+    "1": "zelda_craft:block/lockedbigkeydoor"
+  },
+  "render_type": "cutout"
+}

@@ -31,32 +31,14 @@ public class Withdraw20Procedure {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") >= dividen) {
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") - dividen * RupeeValueProcedure.execute(new ItemStack(ForgeRegistries.ITEMS
 									.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH))))) >= 0) {
-								if (new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-											ItemStack stack = _menu.getSlots().get(sltid).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get(0).getItem() : ItemStack.EMPTY)
+								if (getAmountInGUISlot(entity, 0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get(0).getItem() : ItemStack.EMPTY)
 										.getItem() == ForgeRegistries.ITEMS
 												.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 									if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 										ItemStack _setstack = new ItemStack(ForgeRegistries.ITEMS
 												.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH))))
 												.copy();
-										_setstack.setCount((int) (new Object() {
-											public int getAmount(int sltid) {
-												if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-													ItemStack stack = _menu.getSlots().get(sltid).getItem();
-													if (stack != null)
-														return stack.getCount();
-												}
-												return 0;
-											}
-										}.getAmount(0) + dividen));
+										_setstack.setCount((int) (getAmountInGUISlot(entity, 0) + dividen));
 										_menu.getSlots().get(0).set(_setstack);
 										_player.containerMenu.broadcastChanges();
 									}
@@ -70,16 +52,7 @@ public class Withdraw20Procedure {
 					} else {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("RupeeCount") >= RupeeValueProcedure.execute(new ItemStack(ForgeRegistries.ITEMS
 								.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))))) {
-							if (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-										ItemStack stack = _menu.getSlots().get(sltid).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(0) == 0
+							if (getAmountInGUISlot(entity, 0) == 0
 									|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu46 ? _menu46.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == ForgeRegistries.ITEMS
 											.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 								(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("RupeeCount",
@@ -89,16 +62,7 @@ public class Withdraw20Procedure {
 									ItemStack _setstack = new ItemStack(ForgeRegistries.ITEMS
 											.getValue(ResourceLocation.parse((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH))))
 											.copy();
-									_setstack.setCount(new Object() {
-										public int getAmount(int sltid) {
-											if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-												ItemStack stack = _menu.getSlots().get(sltid).getItem();
-												if (stack != null)
-													return stack.getCount();
-											}
-											return 0;
-										}
-									}.getAmount(0) + 1);
+									_setstack.setCount(getAmountInGUISlot(entity, 0) + 1);
 									_menu.getSlots().get(0).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
@@ -117,29 +81,12 @@ public class Withdraw20Procedure {
 								itemstackiterator.getOrCreateTag().putDouble("dividen", Math.floor(itemstackiterator.getOrCreateTag().getDouble("RupeeCount")
 										/ RupeeValueProcedure.execute(new ItemStack(ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))))));
 								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") >= itemstackiterator.getOrCreateTag().getDouble("dividen")) {
-									if (new Object() {
-										public int getAmount(int sltid) {
-											if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-												ItemStack stack = _menu.getSlots().get(sltid).getItem();
-												if (stack != null)
-													return stack.getCount();
-											}
-											return 0;
-										}
-									}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu83 ? _menu83.getSlots().get(0).getItem() : ItemStack.EMPTY)
-											.getItem() == ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
+									if (getAmountInGUISlot(entity, 0) == 0
+											|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu83 ? _menu83.getSlots().get(0).getItem() : ItemStack.EMPTY)
+													.getItem() == ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 										if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 											ItemStack _setstack = new ItemStack(ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-											_setstack.setCount((int) (new Object() {
-												public int getAmount(int sltid) {
-													if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-														ItemStack stack = _menu.getSlots().get(sltid).getItem();
-														if (stack != null)
-															return stack.getCount();
-													}
-													return 0;
-												}
-											}.getAmount(0) + itemstackiterator.getOrCreateTag().getDouble("dividen")));
+											_setstack.setCount((int) (getAmountInGUISlot(entity, 0) + itemstackiterator.getOrCreateTag().getDouble("dividen")));
 											_menu.getSlots().get(0).set(_setstack);
 											_player.containerMenu.broadcastChanges();
 										}
@@ -150,31 +97,14 @@ public class Withdraw20Procedure {
 							} else {
 								if (itemstackiterator.getOrCreateTag().getDouble("RupeeCount") >= RupeeValueProcedure
 										.execute(new ItemStack(ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))))) {
-									if (new Object() {
-										public int getAmount(int sltid) {
-											if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-												ItemStack stack = _menu.getSlots().get(sltid).getItem();
-												if (stack != null)
-													return stack.getCount();
-											}
-											return 0;
-										}
-									}.getAmount(0) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu110 ? _menu110.getSlots().get(0).getItem() : ItemStack.EMPTY)
-											.getItem() == ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
+									if (getAmountInGUISlot(entity, 0) == 0
+											|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu110 ? _menu110.getSlots().get(0).getItem() : ItemStack.EMPTY)
+													.getItem() == ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 										itemstackiterator.getOrCreateTag().putDouble("RupeeCount", (itemstackiterator.getOrCreateTag().getDouble("RupeeCount")
 												- RupeeValueProcedure.execute(new ItemStack(ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))))));
 										if (entity instanceof Player _player && _player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
 											ItemStack _setstack = new ItemStack(ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(((itemstackiterator.getOrCreateTag().getString("rupee"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-											_setstack.setCount(new Object() {
-												public int getAmount(int sltid) {
-													if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor _menu) {
-														ItemStack stack = _menu.getSlots().get(sltid).getItem();
-														if (stack != null)
-															return stack.getCount();
-													}
-													return 0;
-												}
-											}.getAmount(0) + 1);
+											_setstack.setCount(getAmountInGUISlot(entity, 0) + 1);
 											_menu.getSlots().get(0).set(_setstack);
 											_player.containerMenu.broadcastChanges();
 										}
@@ -186,5 +116,14 @@ public class Withdraw20Procedure {
 				}
 			}
 		}
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof ZeldaCraftModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

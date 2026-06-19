@@ -37,6 +37,10 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("timer_length"))
+				timer_length.setValue(stringState);
+		}
 		menuStateUpdateActive = false;
 	}
 
@@ -71,12 +75,6 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	}
 
 	@Override
-	protected void containerTick() {
-		super.containerTick();
-		timer_length.tick();
-	}
-
-	@Override
 	public void resize(Minecraft minecraft, int width, int height) {
 		String timer_lengthValue = timer_length.getValue();
 		super.resize(minecraft, width, height);
@@ -93,12 +91,18 @@ public class SwitchTimerSetScreen extends AbstractContainerScreen<SwitchTimerSet
 	public void init() {
 		super.init();
 		timer_length = new EditBox(this.font, this.leftPos + 28, this.topPos + 35, 118, 18, Component.translatable("gui.zelda_craft.switch_timer_set.timer_length"));
-		timer_length.setHint(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length"));
 		timer_length.setMaxLength(8192);
 		timer_length.setResponder(content -> {
 			if (!menuStateUpdateActive)
 				menu.sendMenuStateUpdate(entity, 0, "timer_length", content, false);
 		});
+		timer_length.setHint(Component.translatable("gui.zelda_craft.switch_timer_set.timer_length"));
 		this.addWidget(this.timer_length);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		timer_length.tick();
 	}
 }

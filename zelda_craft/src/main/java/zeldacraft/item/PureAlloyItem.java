@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class PureAlloyItem extends Item {
 	public PureAlloyItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
+		super(new Item.Properties().rarity(Rarity.RARE));
 	}
 }

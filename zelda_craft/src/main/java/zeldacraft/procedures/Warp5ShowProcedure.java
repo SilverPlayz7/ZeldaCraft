@@ -24,9 +24,9 @@ public class Warp5ShowProcedure {
 				public ArrayList<Object> convert(String text, String separator) {
 					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 		}
-		if (!(statueList.size() < 21 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
+		if (!(statueList.size() < 21 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)) {
 			if (!(new Object() {
 				public String get(ArrayList<?> list, int index) {
 					if (list.get(index) instanceof String text) {
@@ -34,7 +34,7 @@ public class Warp5ShowProcedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (int) (20 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))).isEmpty()) {
+			}.get(statueList, (int) (int) (20 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))).isEmpty()) {
 				hasWarp = true;
 			}
 		}

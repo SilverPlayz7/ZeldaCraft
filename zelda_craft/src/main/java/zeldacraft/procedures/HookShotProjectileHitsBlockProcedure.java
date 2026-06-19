@@ -21,6 +21,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -76,6 +77,8 @@ public class HookShotProjectileHitsBlockProcedure {
 				}
 				if (!immediatesourceentity.level().isClientSide())
 					immediatesourceentity.discard();
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, (immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ()), 8, 0.1, 0.1, 0.1, 1.75);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(ResourceLocation.parse("zelda_craft:hookshot_miss")), SoundSource.PLAYERS, (float) 1.2,

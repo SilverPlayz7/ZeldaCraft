@@ -22,7 +22,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -55,7 +55,7 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
+    "hardness": 8.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -68,7 +68,7 @@
         "value": "CUSTOM:ZeldaCraft"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -146,6 +146,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "BigDungeonDoorOnBlockRightClicked"
+    },
     "onBlockPlayedBy": {
       "name": "DoorGenerator"
     },

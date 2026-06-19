@@ -23,17 +23,10 @@ public class Name2Procedure {
 				public ArrayList<Object> convert(String text, String separator) {
 					return new ArrayList<>(Arrays.asList(text.split(separator)));
 				}
-			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
+			}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 		}
-		if (!(statueList.size() < 9 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)) {
-			name = new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing((int) new Object() {
+		if (!(statueList.size() < 9 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)) {
+			name = getBlockNBTString(world, BlockPos.containing((int) new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -48,7 +41,7 @@ public class Name2Procedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (7 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))), (int) new Object() {
+			}.get(statueList, (int) (7 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))), (int) new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -63,7 +56,7 @@ public class Name2Procedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (8 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum))), (int) new Object() {
+			}.get(statueList, (int) (8 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum))), (int) new Object() {
 				double convert(String s) {
 					try {
 						return Double.parseDouble(s.trim());
@@ -78,8 +71,15 @@ public class Name2Procedure {
 					}
 					return "";
 				}
-			}.get(statueList, (int) (9 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).pageNum)))), "statueName");
+			}.get(statueList, (int) (9 + 25 * (entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).pageNum)))), "statueName");
 		}
 		return name;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

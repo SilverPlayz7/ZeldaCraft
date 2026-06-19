@@ -26,7 +26,7 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox name;
+	EditBox statue;
 	Button button_confirm;
 	Button button_cancel;
 
@@ -44,6 +44,10 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("statue"))
+				statue.setValue(stringState);
+		}
 		menuStateUpdateActive = false;
 	}
 
@@ -53,7 +57,7 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		name.render(guiGraphics, mouseX, mouseY, partialTicks);
+		statue.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -72,22 +76,16 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		if (name.isFocused())
-			return name.keyPressed(key, b, c);
+		if (statue.isFocused())
+			return statue.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
-	protected void containerTick() {
-		super.containerTick();
-		name.tick();
-	}
-
-	@Override
 	public void resize(Minecraft minecraft, int width, int height) {
-		String nameValue = name.getValue();
+		String statueValue = statue.getValue();
 		super.resize(minecraft, width, height);
-		name.setValue(nameValue);
+		statue.setValue(statueValue);
 	}
 
 	@Override
@@ -98,13 +96,13 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 	@Override
 	public void init() {
 		super.init();
-		name = new EditBox(this.font, this.leftPos + 28, this.topPos + 24, 118, 18, Component.translatable("gui.zelda_craft.statue_name_set.name"));
-		name.setMaxLength(8192);
-		name.setResponder(content -> {
+		statue = new EditBox(this.font, this.leftPos + 28, this.topPos + 24, 118, 18, Component.translatable("gui.zelda_craft.statue_name_set.statue"));
+		statue.setMaxLength(8192);
+		statue.setResponder(content -> {
 			if (!menuStateUpdateActive)
-				menu.sendMenuStateUpdate(entity, 0, "name", content, false);
+				menu.sendMenuStateUpdate(entity, 0, "statue", content, false);
 		});
-		this.addWidget(this.name);
+		this.addWidget(this.statue);
 		button_confirm = Button.builder(Component.translatable("gui.zelda_craft.statue_name_set.button_confirm"), e -> {
 			int x = StatueNameSetScreen.this.x;
 			int y = StatueNameSetScreen.this.y;
@@ -123,5 +121,11 @@ public class StatueNameSetScreen extends AbstractContainerScreen<StatueNameSetMe
 			}
 		}).bounds(this.leftPos + 27, this.topPos + 47, 56, 20).build();
 		this.addRenderableWidget(button_cancel);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		statue.tick();
 	}
 }

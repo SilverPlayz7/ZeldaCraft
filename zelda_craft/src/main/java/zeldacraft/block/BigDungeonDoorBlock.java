@@ -1,12 +1,14 @@
 package zeldacraft.block;
 
 import zeldacraft.procedures.DoorGeneratorProcedure;
+import zeldacraft.procedures.BigDungeonDoorOnBlockRightClickedProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
@@ -25,18 +27,21 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class BigDungeonDoorBlock extends Block {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 5);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 11);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 	public static final EnumProperty<DoorHingeSide> DOOR_HINGE = BlockStateProperties.DOOR_HINGE;
 
 	public BigDungeonDoorBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(8f, 10f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -47,6 +52,18 @@ public class BigDungeonDoorBlock extends Block {
 				if (s.getValue(BLOCKSTATE) == 4)
 					return 0;
 				if (s.getValue(BLOCKSTATE) == 5)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 6)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 7)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 8)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 9)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 10)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 11)
 					return 0;
 				return 0;
 			}
@@ -102,5 +119,19 @@ public class BigDungeonDoorBlock extends Block {
 	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
 		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
 		DoorGeneratorProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
+	}
+
+	@Override
+	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+		super.use(blockstate, world, pos, entity, hand, hit);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		BigDungeonDoorOnBlockRightClickedProcedure.execute(world, x, y, z, blockstate);
+		return InteractionResult.SUCCESS;
 	}
 }

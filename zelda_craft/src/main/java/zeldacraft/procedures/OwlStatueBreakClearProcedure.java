@@ -27,124 +27,120 @@ import java.util.ArrayList;
 public class OwlStatueBreakClearProcedure {
 	@SubscribeEvent
 	public static void onBlockBreak(BlockEvent.BreakEvent event) {
-		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getState(), event.getPlayer());
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getState());
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
-		execute(null, world, x, y, z, blockstate, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+		execute(null, world, x, y, z, blockstate);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate, Entity entity) {
-		if (entity == null)
-			return;
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, BlockState blockstate) {
 		double removeIndex = 0;
 		double checkIndex = 0;
 		ArrayList<Object> statueList = new ArrayList<>();
-		if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
-			{
-				statueList.addAll((new Object() {
-					public ArrayList<Object> convert(String text, String separator) {
-						return new ArrayList<>(Arrays.asList(text.split(separator)));
-					}
-				}.convert(((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue), ",")));
-			}
-			checkIndex = 0;
-			removeIndex = 0;
-			if (((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
+		for (Entity entityiterator : new ArrayList<>(world.players())) {
+			if (blockstate.getBlock() == ZeldaCraftModBlocks.OWL_STATUE.get()) {
+				{
+					statueList.addAll((new Object() {
+						public ArrayList<Object> convert(String text, String separator) {
+							return new ArrayList<>(Arrays.asList(text.split(separator)));
+						}
+					}.convert(((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue), ",")));
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "statueName"))
-					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(x))
-					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(y))
-					&& ((entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ZeldaCraftModVariables.PlayerVariables())).owlStatue).contains(new java.text.DecimalFormat("##.##").format(z))) {
-				for (int index0 = 0; index0 < (int) statueList.size(); index0++) {
-					if ((new Object() {
-						public String get(ArrayList<?> list, int index) {
-							if (list.get(index) instanceof String text) {
-								return text;
-							}
-							return "";
-						}
-					}.get(statueList, (int) checkIndex)).contains(new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "statueName"))) {
-						if (new Object() {
-							double convert(String s) {
-								try {
-									return Double.parseDouble(s.trim());
-								} catch (Exception e) {
-								}
-								return 0;
-							}
-						}.convert(new Object() {
+				checkIndex = 0;
+				removeIndex = 0;
+				if (((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue)
+						.contains(getBlockNBTString(world, BlockPos.containing(x, y, z), "statueName"))
+						&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(x))
+						&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(y))
+						&& ((entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElseGet(ZeldaCraftModVariables.PlayerVariables::new)).owlStatue).contains(new java.text.DecimalFormat("##.##").format(z))) {
+					for (int index0 = 0; index0 < (int) statueList.size(); index0++) {
+						if ((new Object() {
 							public String get(ArrayList<?> list, int index) {
 								if (list.get(index) instanceof String text) {
 									return text;
 								}
 								return "";
 							}
-						}.get(statueList, (int) (checkIndex + 2))) == x && new Object() {
-							double convert(String s) {
-								try {
-									return Double.parseDouble(s.trim());
-								} catch (Exception e) {
+						}.get(statueList, (int) checkIndex)).contains(getBlockNBTString(world, BlockPos.containing(x, y, z), "statueName"))) {
+							if (new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
 								}
-								return 0;
-							}
-						}.convert(new Object() {
-							public String get(ArrayList<?> list, int index) {
-								if (list.get(index) instanceof String text) {
-									return text;
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
 								}
-								return "";
-							}
-						}.get(statueList, (int) (checkIndex + 3))) == y && new Object() {
-							double convert(String s) {
-								try {
-									return Double.parseDouble(s.trim());
-								} catch (Exception e) {
+							}.get(statueList, (int) (checkIndex + 2))) == x && new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
 								}
-								return 0;
-							}
-						}.convert(new Object() {
-							public String get(ArrayList<?> list, int index) {
-								if (list.get(index) instanceof String text) {
-									return text;
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
 								}
-								return "";
-							}
-						}.get(statueList, (int) (checkIndex + 4))) == z) {
-							removeIndex = checkIndex;
-							for (int index1 = 0; index1 < 5; index1++) {
-								{
-									statueList.remove((int) (int) removeIndex);
+							}.get(statueList, (int) (checkIndex + 3))) == y && new Object() {
+								double convert(String s) {
+									try {
+										return Double.parseDouble(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
 								}
+							}.convert(new Object() {
+								public String get(ArrayList<?> list, int index) {
+									if (list.get(index) instanceof String text) {
+										return text;
+									}
+									return "";
+								}
+							}.get(statueList, (int) (checkIndex + 4))) == z) {
+								removeIndex = checkIndex;
+								for (int index1 = 0; index1 < 5; index1++) {
+									{
+										statueList.remove((int) (int) removeIndex);
+									}
+								}
+								if (!world.isClientSide()) {
+									{
+										String _setval = statueList.stream().map(String::valueOf).collect(Collectors.joining(","));
+										entityiterator.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.owlStatue = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
+									}
+								}
+								break;
+							} else {
+								checkIndex = checkIndex + 5;
 							}
-							{
-								String _setval = statueList.stream().map(String::valueOf).collect(Collectors.joining(","));
-								entity.getCapability(ZeldaCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.owlStatue = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-							break;
 						} else {
 							checkIndex = checkIndex + 5;
 						}
-					} else {
-						checkIndex = checkIndex + 5;
 					}
 				}
 			}
 		}
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

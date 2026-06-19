@@ -104,15 +104,6 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> implem
 	}
 
 	@Override
-	protected void containerTick() {
-		super.containerTick();
-		this.button_empty.visible = BuyButtonShowProcedure.execute(entity);
-		this.button_empty1.visible = ContractShowProcedure.execute(entity);
-		this.imagebutton_buy_button.visible = BuyButtonShowProcedure.execute(entity);
-		this.imagebutton_contract_button.visible = ContractShowProcedure.execute(entity);
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, RupeeCounterProcedure.execute(world, entity), 80, 126, -12829636, false);
 		guiGraphics.drawString(this.font, MaskPriceProcedure.execute(entity), 145, 91, -12829636, false);
@@ -175,5 +166,14 @@ public class MaskShopScreen extends AbstractContainerScreen<MaskShopMenu> implem
 			}
 		});
 		this.addRenderableWidget(imagebutton_contract_button);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_empty.visible = BuyButtonShowProcedure.execute(entity);
+		this.button_empty1.visible = ContractShowProcedure.execute(entity);
+		this.imagebutton_buy_button.visible = BuyButtonShowProcedure.execute(entity);
+		this.imagebutton_contract_button.visible = ContractShowProcedure.execute(entity);
 	}
 }

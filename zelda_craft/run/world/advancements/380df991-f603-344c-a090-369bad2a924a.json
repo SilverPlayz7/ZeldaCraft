@@ -1,0 +1,21 @@
+{
+  "zelda_craft:zelda_craft_advancement_page": {
+    "criteria": {
+      "zelda_craft_advancement_page_0": "2026-06-05 19:30:26 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-06-05 19:30:26 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:snowy_taiga": "2026-06-05 19:30:27 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 3465
+}
